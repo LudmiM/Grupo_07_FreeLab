@@ -24,9 +24,9 @@ Nuestra plataforma está dirigida a cualquier persona mayor de edad que desee tr
 
 ## **Sitios de referencia:**
 
-- [Fivers:](https://www.fiverr.com/)
-- [Workana:](https://www.workana.com/es)
-- [Freelancer:](https://www.freelancer.com/)
+- [Fivers:](https://www.fiverr.com/) 
+- [Workana:](https://www.workana.com/es) 
+- [Freelancer:](https://www.freelancer.com/) 
 
 ## **Sobre nuestro equipo:**
 
