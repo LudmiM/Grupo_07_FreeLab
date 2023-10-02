@@ -22,6 +22,12 @@ Nuestra plataforma está dirigida a cualquier persona mayor de edad que desee tr
 
 - **Emprendedores**: Personas que desean externalizar proyectos o encontrar colaboradores para llevar a cabo sus ideas.
 
+## **Sitios de referencia:**
+
+- ***[Fivers: ]*** (https://www.fiverr.com/)
+- ***[Workana: ]*** (https://www.workana.com/es)
+- ***[Freelancer: ]*** (https://www.freelancer.com/)
+
 ## **Sobre nuestro equipo:**
 
     - Falcon Salvador,Marco Antonio:
