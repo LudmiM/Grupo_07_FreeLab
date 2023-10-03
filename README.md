@@ -34,6 +34,6 @@ Nuestra plataforma está dirigida a cualquier persona mayor de edad que desee tr
 
     - Muñoz Loza, Ludmila: Soy una estudiante de la carrera de desarrollo full stack en digital house.
     
-    - Palladini, Nahuel:
+    - Palladini, Nahuel: Estudiante de Programación Full Stack. 24 Años. Argentina, Buenos Aires
 
     - Rony, Mari:
