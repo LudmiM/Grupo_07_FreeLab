@@ -36,4 +36,4 @@ Nuestra plataforma está dirigida a cualquier persona mayor de edad que desee tr
     
     - Palladini, Nahuel: Estudiante de Programación Full Stack. 24 Años. Argentina, Buenos Aires
 
-    - Rony, Mari:
+    - Mari, Rony: Estudiante de programación full Stack, profesorado en educacion tecnologica y Lic. en informatica, 24 años, Argentina - Chaco
