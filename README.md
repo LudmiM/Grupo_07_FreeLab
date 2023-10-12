@@ -30,7 +30,7 @@ Nuestra plataforma está dirigida a cualquier persona mayor de edad que desee tr
 
 ## **Sobre nuestro equipo:**
 
-    - Falcon Salvador,Marco Antonio:
+    - Falcon Salvador,Marco Antonio: Estudiante de Formar en programación, 23 años de Argentina, Buenos Aires CABA.
 
     - Muñoz Loza, Ludmila: Soy una estudiante de la carrera de desarrollo full stack en digital house.
     
