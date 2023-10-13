@@ -32,7 +32,7 @@ Nuestra plataforma está dirigida a cualquier persona mayor de edad que desee tr
 
     - Falcon Salvador,Marco Antonio: Estudiante de Formar en programación, 23 años de Argentina, Buenos Aires CABA.
 
-    - Muñoz Loza, Ludmila: Soy una estudiante de la carrera de desarrollo full stack en digital house.
+    - Muñoz Loza, Ludmila: Estudiante de Fundacion formar, Buenos Aires.
     
     - Palladini, Nahuel: Estudiante de Programación Full Stack. 24 Años. Argentina, Buenos Aires
 
