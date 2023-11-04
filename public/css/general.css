@@ -1,0 +1,15 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+:root{
+    --colorAzulOscuro: #193A4F;
+    --colorCelesteOscuro: #1F8DB4;
+    --colorCeleste: #5EB1CD;
+    --colorCelesteClaro: #C8F3FA;
+    --colorGris: #A9BCC6;
+}
