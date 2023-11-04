@@ -1,0 +1,14 @@
+{
+  "name": "grupo_07_freelab",
+  "version": "1.0.0",
+  "description": "Nuestro sitio web ofrece un espacio para la comunidad de trabajadores freelance y empleadores en busca de talento remoto.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grupo 7",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
