@@ -1,0 +1,34 @@
+body {
+    background-color: var(--colorAzulOscuro);
+    
+}
+
+.main__busqueda {
+   
+  height: 31px;
+  right: 100px; 
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #ffffff;
+    border-radius: 18px 18px 0px ;
+}
+ .main__lupa {
+    border: 1px solid var(--colorCelesteOscuro);
+    background-color: var(--colorCelesteOscuro);
+    height: 31px;
+    left: px;
+    width: 40px;
+    border-radius: 18px;
+    padding-left: 10px;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+
+}
+
+.main__alineacion {
+    display: flex;
+    flex-direction: row;
+    
+    
+} 
