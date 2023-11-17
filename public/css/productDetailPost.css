@@ -1,21 +1,26 @@
-.main__productDetailPost{
+.main__PDPost{
     width: 100%;
 }
-.main__productDetailPost__section{
+.main__PDPost__section{
     width:90%;
     margin: 0 auto;
+    color:#FFF;
     /*padding: 0 5%;*/
-
 }
 .section__explicacion{
     background-color: var(--colorCelesteOscuro);
-    color:#FFF
+    color:#FFF;
+    padding: 2%;
 }
-
 .section__sobreEmpresa{
     display: flex;
 }
-.main__productDetailPost__section--img{
-    width: 25%;
-    margin-right: 50px;
+.main__PDPost__section__article{
+    display:flex;
 }
+.main__PDPost__section--img{
+    width: 15%;
+    margin-right: 50px;
+    border-radius: 50%;
+}
+
