@@ -1,0 +1,10 @@
+footer{
+    width: 100%;
+    background-color: var(--colorAzulOscuro);
+    color:#FFF;
+    display:flex;
+    flex-wrap: wrap;
+}
+.footer__section{
+    margin:10px;
+}
