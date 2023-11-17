@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 @import './general.css';
 @import './footer.css';
 @import './header.css';
@@ -6,3 +7,11 @@
 @import './productCart.css';
 @import './productDetail.css';
 @import './register.css';
+
+/*
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&italic&display=swap');
+}*/
