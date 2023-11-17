@@ -1,0 +1,11 @@
+.footer{
+    background-color: var(--colorAzulOscuro);
+    width: 100%;
+    color: #FFF; 
+}
+.footer__section{
+    
+}
+.footer__section--p{
+    width: 100%;
+}
