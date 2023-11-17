@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <script src="https://kit.fontawesome.com/8bf00d99ea.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
-    
+  <div class="container">
+    <div class="log-form">
+      <img src="/img/Logo_FreeLab.png" alt="Logo de FreeLab" class="logo">
+      <form>
+        <h1>LOGIN</h1>
+        <label for="username">Correo</label>
+        <div class="input-line">
+          <input type="text" id="username" name="username" placeholder="ejemplo@ejemplo.com" required />
+        </div>
+        <label for="password">Contraseña:</label>
+        <div class="input-line">
+          <input type="password" id="password" name="password" placeholder="*************" required />
+          <a class="forgot" href="#">¿Olvidó su <span class="underline">contraseña</span>?</a>
+        </div>
+        <button type="submit" class="btn">Ingresar</button>
+      </form>
+    </div>
+
+    <div class="log-redes">
+      <div class="container-line">
+        <div class="line"></div>
+        <div class="circle"></div>
+        <div class="line"></div>
+      </div>
+      <ul class="social-buttons">
+        <li><button type="button" class="btn"><i class="fab fa-facebook"></i> Ingresar con Facebook</button></li>
+        <li><button type="button" class="btn"><i class="fab fa-linkedin"></i> Ingresar con LinkedIn</button></li>
+        <li><button type="button" class="btn"><i class="fab fa-google"></i> Ingresar con Google</button></li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <section class="footer__section">
+        <h3 class="footer__section--h3">Quiénes somos</h3>
+        <ul>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Sobre nosotros</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Únete al equipo</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Contáctanos</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Políticas de FreeLab</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Política de privacidad</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Términos de servicio</a></li>
+        </ul>
+    </section>
+    <section class="footer__section">
+        <h3 class="footer__section--h3">Quiénes somos</h3>
+        <ul>
+
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Sobre nosotros</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Únete al equipo</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Contáctanos</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Políticas de FreeLab</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Política de privacidad</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Términos de servicio</a></li>
+        </ul>
+    </section>
+    <section class="footer__section">
+        <h3 class="footer__section--h3">Quiénes somos</h3>
+        <ul class="footer__section__ul">
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Sobre nosotros</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Únete al equipo</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Contáctanos</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Políticas de FreeLab</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Política de privacidad</a></li>
+            <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Términos de servicio</a></li>
+        </ul>
+    </section>
+    <section class="footer__section siguenos__iconos">
+        <h3 class="footer__section--h3">Siguenos</h3>
+        <ul class="ul__iconos">
+            <li><i class="fa-brands fa-linkedin-in"></i></li>
+            <li><i class="fa-brands fa-linkedin-in"></i></li>
+            <li><i class="fa-brands fa-linkedin-in"></i></li>
+            <li><i class="fa-brands fa-linkedin-in"></i></li>
+            <li><i class="fa-brands fa-linkedin-in"></i></li>
+        </ul>
+    </section>
+    <p class="footer__p__derechos">© 2023 - 2023 | FreeLab - Todos los derechos reservados</p>
+</footer>
 </body>
+
 </html>
