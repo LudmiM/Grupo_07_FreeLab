@@ -7,6 +7,15 @@
     /*padding: 0 5%;*/
 
 }
-.main__productDetailPost__section__article{
+.section__explicacion{
+    background-color: var(--colorCelesteOscuro);
+    color:#FFF
+}
 
+.section__sobreEmpresa{
+    display: flex;
+}
+.main__productDetailPost__section--img{
+    width: 25%;
+    margin-right: 50px;
 }
