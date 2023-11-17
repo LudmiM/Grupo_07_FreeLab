@@ -11,4 +11,8 @@ app.get('/register', (req,res) => res.sendFile(path.join(__dirname, 'views','reg
 app.get('/productCart', (req,res) => res.sendFile(path.join(__dirname, 'views','productCart.html')));
 app.get('/productDetail', (req,res) => res.sendFile(path.join(__dirname, 'views','productDetail.html')));
 
+app.get('/header', (req,res) => res.sendFile(path.join(__dirname, 'views','partials','header.html')));
+app.get('/footer', (req,res) => res.sendFile(path.join(__dirname, 'views','partials','footer.html')));
+
+
 app.listen(PORT,() => console.log(`Servidor corriendo en http://localhost:${PORT}`));
