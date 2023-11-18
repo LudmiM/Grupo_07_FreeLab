@@ -1,12 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8bf00d99ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
+    <title>Registro - FreeLab</title>
 </head>
 <body>
-    
+    <div class="register-container">
+
+        <!-- Formulario de registro -->
+        <form id="registration-form" class="register-form">
+                    <!-- Botones de alternancia -->
+        <div class="toggle-container">
+            <button id="freelancer-toggle" class="toggle-btn active" data-type="freelancer">Freelancer</button>
+            <button id="employer-toggle" class="toggle-btn" data-type="employer">Empresa</button>
+        </div>
+        
+            <div id="freelancer-registration" class="registration-section freelancer">
+                <h1>Registro Freelancer</h1>
+                <label for="freelancer-firstname">Nombre <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="text" id="freelancer-firstname" name="freelancer-firstname" placeholder="Nombre" required>
+                </div>
+                
+                <label for="freelancer-lastname">Apellido <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="text" id="freelancer-lastname" name="freelancer-lastname" placeholder="Apellido" required>
+                </div>
+                
+                <label for="freelancer-email">Correo <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="text" id="freelancer-email" name="freelancer-email" placeholder="ejemplo@ejemplo.com" required>
+                </div>
+                
+                <label for="freelancer-password">Contraseña <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="password" id="freelancer-password" name="freelancer-password" required>
+                </div>
+                
+                <label for="freelancer-confirm-password">Confirmar Contraseña <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="password" id="freelancer-confirm-password" name="freelancer-confirm-password" required>
+                </div>
+                
+                <label for="freelancer-phone">Teléfono Celular</label>
+                <div class="input-line">
+                    <select id="freelancer-phone-code" name="freelancer-phone-code" required>
+                        <option value="+1">+1 (EE. UU.)</option>
+                        <option value="+44">+44 (Reino Unido)</option>
+                    </select>
+                    <input type="text" id="freelancer-phone" name="freelancer-phone" placeholder="Número de teléfono celular" pattern="[0-9]+" required>
+                </div>
+                
+                <label for="freelancer-social">Redes Sociales</label>
+                <div class="input-line">
+                    <input type="text" id="freelancer-social" name="freelancer-social" placeholder="Redes sociales">
+                </div>
+                
+                <label for="freelancer-skills">Descripción de Habilidades</label>
+                <div class="input-line">
+                    <textarea id="freelancer-skills" name="freelancer-skills" placeholder="Descripción de habilidades"></textarea>
+                </div>
+                
+                <div class="checkbox-line">
+                    <input type="checkbox" id="freelancer-terms" name="freelancer-terms" required>
+                    <label for="freelancer-terms">Acepto los términos, condiciones y aviso de privacidad</label>
+                </div>
+                
+                <div class="checkbox-line">
+                    <input type="checkbox" id="freelancer-notifications" name="freelancer-notifications">
+                    <label for="freelancer-notifications">Acepto recibir notificaciones por correo</label>
+                </div>
+                
+                <button type="submit" class="btn">Registrarse como Freelancer</button>
+            </div>
+            
+            <div id="employer-registration" class="registration-section employer">
+                <h1>Registro Empresa</h1>
+
+                <label for="company-name">Nombre de la Empresa <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="text" id="company-name" name="company-name" placeholder="Nombre de la Empresa" required>
+                </div>
+                <label for="employer-email">Correo <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="text" id="employer-email" name="employer-email" placeholder="ejemplo@empresa.com" required>
+                </div>
+                
+                <label for="employer-password">Contraseña <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="password" id="employer-password" name="employer-password" required>
+                </div>
+                
+                <label for="employer-confirm-password">Confirmar Contraseña <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="password" id="employer-confirm-password" name="employer-confirm-password" required>
+                </div>
+                
+                <label for="employer-phone">Teléfono Celular</label>
+                <div class="input-line">
+                    <select id="employer-phone-code" name="employer-phone-code" required>
+                        <option value="+1">+1 (EE. UU.)</option>
+                        <option value="+44">+44 (Reino Unido)</option>
+                    </select>
+                    <input type="text" id="employer-phone" name="employer-phone" placeholder="Número de teléfono celular" pattern="[0-9]+" required>
+                </div>
+                
+                <label for="company-description">Breve Descripción de la Empresa <span class="required">*</span></label>
+                <div class="input-line">
+                    <textarea id="company-description" name="company-description" placeholder="Breve descripción de la empresa" required></textarea>
+                </div>
+                
+                <div class="checkbox-line">
+                    <input type="checkbox" id="employer-terms" name="employer-terms" required>
+                    <label for="employer-terms">Acepto los términos, condiciones y aviso de privacidad</label>
+                </div>
+                
+                <div class="checkbox-line">
+                    <input type="checkbox" id="employer-notifications" name="employer-notifications">
+                    <label for="employer-notifications">Acepto recibir notificaciones por correo</label>
+                </div>
+                
+                <button type="submit" class="btn">Registrarse como Empresa</button>
+            </div>
+        </form>
+        
+        <!-- Caja de inicio de sesión -->
+        <div class="login-box">
+            <p>Ingrese desde:</p>
+            <div class="social-buttons">
+                <button class="btn"><i class="fab fa-linkedin"></i> LinkedIn</button>
+                <button class="btn"><i class="fab fa-facebook"></i> Facebook</button>
+                <button class="btn"><i class="fab fa-google"></i> Google</button>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const freelancerToggle = document.getElementById('freelancer-toggle');
+            const employerToggle = document.getElementById('employer-toggle');
+            const registrationForm = document.getElementById('registration-form');
+            const freelancerRegistration = document.getElementById('freelancer-registration');
+            const employerRegistration = document.getElementById('employer-registration');
+
+            freelancerToggle.addEventListener('click', () => {
+                if (!freelancerToggle.classList.contains('active')) {
+                    freelancerToggle.classList.add('active');
+                    employerToggle.classList.remove('active');
+                    freelancerRegistration.style.display = 'block';
+                    employerRegistration.style.display = 'none';
+                }
+            });
+
+            employerToggle.addEventListener('click', () => {
+                if (!employerToggle.classList.contains('active')) {
+                    employerToggle.classList.add('active');
+                    freelancerToggle.classList.remove('active');
+                    freelancerRegistration.style.display = 'none';
+                    employerRegistration.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
