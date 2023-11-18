@@ -1,6 +1,6 @@
 .main__PDPost{
     width: 100%;
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
 }
 .main__PDPost__section{
     padding: 3%;
@@ -29,10 +29,13 @@
     margin-top: 10px;
 }
 /*Seccion sobre el puesto, info extra del puesto [2]*/
-
+.section__habilidades{
+    background-color: var(--colorCeleste);
+}
 
 /*Seccion sobre el puesto, info extra del puesto [3]*/
 .section__sobreEmpresa{
+    background-color: var(--colorCelesteOscuro);
     display: flex;
 }
 .section__sobreEmpresa--img{
@@ -40,6 +43,7 @@
     margin-right: 50px;
     border-radius: 50%;
 }
-.main__PDPost__section__article{
+.section__sobreEmpresa__contenedor__article{
     display:flex;
 }
+
