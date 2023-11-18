@@ -1,0 +1,208 @@
+.body-login {
+  font-family: 'Montserrat';
+  background: var(--colorAzulOscuro);
+
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -8%;
+  
+}
+
+.log-form {
+  width: 80%;
+  max-width: 350px;
+  background: var(--colorCelesteOscuro);
+  margin: 10% auto 0;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  
+}
+
+.log-redes {
+  width: 80%;
+  max-width: 350px;
+  background: var(--colorCelesteClaro);
+  margin-top: -10px; /* Ajusta según tus preferencias */
+  margin-bottom: 10%;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin: -30px auto 10px; 
+  display: block; 
+}
+
+.log-form h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: white;
+  border-radius: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ajusta estos valores según tus preferencias */
+}
+
+
+.log-form .input-line {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.log-form label {
+  color: white;
+  font-weight: bold; /* Puedes ajustar este valor según tus preferencias */
+  font-size: 12px; /* Puedes ajustar el tamaño de la letra según tus preferencias */
+}
+
+.log-form .input-line input {
+  width: 80%;
+  padding: 5px 0 3px;
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  color: white;
+  background: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.log-form .input-line input::placeholder {
+  color: #4d4b4b;
+  font-size: 14px;
+}
+
+.log-form .input-line input:focus + label,
+.log-form .input-line input:not(:placeholder-shown) + label {
+  top: -1.25em;
+  font-size: 12px;
+  color: #23c2cb;
+}
+
+.log-form .btn {
+  display: block;
+  width: 30%;
+  margin: 25px auto 20px; 
+  height: 27px; 
+  background: var(--colorAzulOscuro);
+  border: 1px solid #1a939e;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.log-form .btn:hover {
+  background: #23c2cb;
+}
+
+
+.log-form .forgot {
+  color: #fdffff;
+  line-height: .5em;
+  position: relative;
+  top: 1em;
+  text-decoration: none;
+  font-size: 8px;
+  font-weight: bold;
+  margin-right: 20%;
+  padding: 0;
+  float: right;
+}
+
+.log-form .forgot .underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* Ajusta el grosor según tus preferencias */
+  font-weight: bold; /* Ajusta el grosor de la letra según tus preferencias */
+  color: #fdffff; /* Puedes ajustar el color según tus preferencias */
+}
+
+.container-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  width: 30%; /* ajusta el largo de la línea según sea necesario */
+  height: 1px;
+  background: black;
+}
+
+.circle {
+  height: 10px;
+  width: 10px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background: transparent;
+  margin: 0 20px;
+}
+
+
+.log-redes {
+  text-align: center;
+}
+
+.log-redes .social-buttons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.log-redes .social-buttons li {
+  margin-bottom: 10px;
+}
+
+.log-redes .social-buttons .btn {
+  background-color: #1fb5bf;
+  border: 1px solid #1a939e;
+  color: white;
+  margin-top: 10px;
+  padding: 3px 0; /* Ajusta el relleno (alto) según tus preferencias */
+  width: 190px; /* Ajusta el ancho según tus preferencias */
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra horizontalmente los elementos dentro del botón */
+  border-radius: 6px;
+}
+
+.log-redes .social-buttons .btn i {
+  margin-right: 10px; /* Ajusta el espacio entre el icono y el texto */
+}
+
+.log-redes .social-buttons .btn:hover {
+  background-color: #23c2cb;
+}
+
+
+/* Media Query adicional para pantallas pequeñas */
+@media (max-width: 426px) {
+  .log-form h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .log-form .input-line label {
+    font-size: 14px;
+  }
+
+  .log-form .input-line input {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .log-form .forgot {
+    font-size: 8px;
+  }
+}

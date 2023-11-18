@@ -1,0 +1,247 @@
+.body-register {
+    font-family: 'Montserrat', ;
+    background: var(--colorCelesteClaro);
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: white;
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-bottom: 5%;
+}
+
+.register-form {
+    width: 80%;
+    max-width: 350px;
+    background: var(--colorCelesteOscuro);
+    margin: 5% auto 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.register-redes {
+    width: 80%;
+    max-width: 350px;
+    background: var(--colorCelesteClaro);
+    margin-top: -10px;
+    margin-bottom: 5%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin: 60px auto 20px;
+    display: block;
+}
+
+.register-form h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.input-line {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+label {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+}
+
+.input-line input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-line input::placeholder {
+    color: #999;
+}
+
+.input-line input:focus + label,
+.input-line input:not(:placeholder-shown) + label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+.input-line select {
+    width: 30%;
+    padding: 10px;
+    margin-right: 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-line input[type="text"][name="freelancer-phone"] {
+    width: 65%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    height: 40px;
+    background: var(--colorAzulOscuro);
+    border: 1px solid #1a939e;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background: #23c2cb;
+}
+
+.register-redes {
+    text-align: center;
+}
+
+.social-buttons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-buttons .btn {
+    background-color: #1fb5bf;
+    border: 1px solid #1a939e;
+    color: white;
+    padding: 8px;
+    width: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.social-buttons .btn i {
+    margin-right: 5px;
+}
+
+.social-buttons .btn:hover {
+    background-color: #23c2cb;
+}
+#freelancer-registration {
+    display: block; /* Puedes cambiar a 'none' para ocultar el formulario de Freelancer inicialmente */
+}
+
+#employer-registration {
+    display: none; /* Puedes cambiar a 'block' para mostrar el formulario de Empresa inicialmente */
+}
+
+
+@media (max-width: 426px) {
+    .register-form h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .register-form label {
+        font-size: 14px;
+    }
+
+    .register-form input {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        margin: 15px 0;
+    }
+
+    .social-buttons .btn {
+        width: 80px;
+        padding: 5px;
+    }
+}
+
+.toggle-container {
+    display: flex;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: var(--colorCelesteOscuro);
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn.freelancer {
+    background-color: var(--colorAzulOscuro);
+}
+
+.toggle-btn.employer {
+    background-color: var(--colorCelesteOscuro);
+}
+
+.toggle-btn.active {
+    background-color: var(--colorCelesteClaro);
+    color: var(--colorAzulOscuro);
+}
+
+.login-box {
+    position: absolute;
+    top: 500px; /* Ajusta la posición desde la parte superior según tus necesidades */
+    right: 300px; /* Ajusta la posición desde la derecha según tus necesidades */
+    padding: 20px;
+    background: var(--colorAzulOscuro);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-box p {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-buttons .btn {
+    margin-bottom: 10px;
+}
