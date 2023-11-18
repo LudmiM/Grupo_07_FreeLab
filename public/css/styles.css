@@ -6,6 +6,7 @@
 @import './login.css';
 @import './productCart.css';
 @import './productDetail.css';
+<<<<<<< HEAD
 @import './register.css';
 
 /*
@@ -15,3 +16,7 @@
     font-weight: 400;
     src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&italic&display=swap');
 }*/
+=======
+@import './productDetailPost.css';
+@import './register.css';
+>>>>>>> PI-24-Ludmila
