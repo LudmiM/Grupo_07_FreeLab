@@ -13,3 +13,6 @@
     --colorCelesteClaro: #c8f3fa;
     --colorGris: #A9BCC6;
 }
+body{
+    font-family: 'Montserrat', sans-serif;
+}
