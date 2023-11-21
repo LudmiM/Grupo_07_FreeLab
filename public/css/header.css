@@ -1,0 +1,14 @@
+.header{
+    background-color: var(--colorAzulOscuro);
+    width: 100%;
+}
+.header__nav{
+    display: none;
+}
+.header--logo{
+    width: 18%;
+}
+.header--iconoHam{
+    font-size: 50px;
+    background-color: #FFF;
+}
