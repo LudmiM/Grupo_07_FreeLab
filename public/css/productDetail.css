@@ -1,3 +1,16 @@
-.main__productDetailPost__section--iconStart{
-    
+.main__PD{
+    width: 100%;
+}
+.main__PD__section{
+    width: 90%;
+    margin: 0 auto;
+}
+.section__misDatos{
+    background-color: var(--colorCeleste);
+}
+.section__misDatos--h3{
+    font-size: 30px;
+}
+.section__misDatos--img{
+    width: 150px;
 }
