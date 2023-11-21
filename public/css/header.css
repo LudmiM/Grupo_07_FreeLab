@@ -21,14 +21,18 @@
     display: none;
 }
 .header__nav{
+    margin-top: 90px;
     display: none;
 }
 .header__nav__ul{
     display: flex;
 }
 .header__nav__ul__li{
+    margin-left: 25px;
+}
+.header__nav__ul__li--a{
+    font-size: 30px;
     color: #FFF;
-    font-size: 15px;
 }
 @media (min-width: 500px) {
     .header__contIconos .header--iconoUser{
