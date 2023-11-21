@@ -1,14 +1,45 @@
 .header{
     background-color: var(--colorAzulOscuro);
     width: 100%;
-}
-.header__nav{
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    color: #FFF;
 }
 .header--logo{
     width: 18%;
 }
-.header--iconoHam{
+.header__contIconos{
+    display: flex;
+}
+.header__contIconos .header--iconoHam, .header__contIconos .header--iconoUser{
     font-size: 50px;
-    background-color: #FFF;
+    align-self: center;
+}
+.header__contIconos .header--iconoUser{
+    margin-right: 30px;
+    display: none;
+}
+.header__nav{
+    display: none;
+}
+.header__nav__ul{
+    display: flex;
+}
+.header__nav__ul__li{
+    color: #FFF;
+    font-size: 15px;
+}
+@media (min-width: 500px) {
+    .header__contIconos .header--iconoUser{
+        display: block;
+    }
+}
+@media (min-width: 1024px) {
+    .header__contIconos .header--iconoHam, .header__contIconos .header--iconoUser{
+        display: none;
+    }
+    .header__nav{
+        display: block;
+    }
 }
