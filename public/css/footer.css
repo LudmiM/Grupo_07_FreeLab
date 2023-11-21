@@ -1,11 +1,30 @@
-.footer{
-    background-color: var(--colorAzulOscuro);
+footer{
     width: 100%;
-    color: #FFF; 
+    background-color: var(--colorAzulOscuro);
+    color:#FFF;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .footer__section{
-    
+    margin:10px;
 }
-.footer__section--p{
+.siguenos__iconos .ul__iconos{
+    display: flex;
+    margin: 5px;
+}
+.footer__section__ul__li--a{
+    color: #FFF;
+}
+.siguenos__iconos .ul__iconos i{
+    margin: 3px;
+}
+.footer__p__derechos{
+    text-align: center;
     width: 100%;
 }
+
+@media (min-width: 600px) {
+
+}
+@media (min-width: 1024px) {}
