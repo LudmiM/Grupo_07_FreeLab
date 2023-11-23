@@ -16,4 +16,4 @@ app.get('/header', (req,res) => res.sendFile(path.join(__dirname, 'views','parti
 app.get('/footer', (req,res) => res.sendFile(path.join(__dirname, 'views','partials','footer.html')));
 
 
-app.listen(PORT,() => console.log(`Servidor corriendo en http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));

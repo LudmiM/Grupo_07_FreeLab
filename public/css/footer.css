@@ -31,10 +31,6 @@ footer {
 }
 
 @media (min-width: 600px) {
-    /* Estilos para pantallas de al menos 600px de ancho */
-}
 
-@media (min-width: 1024px) {
-    /* Estilos para pantallas de al menos 1024px de ancho */
 }
-
+@media (min-width: 1024px) {}
