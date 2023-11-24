@@ -7,7 +7,7 @@
   font-size: 16px;
 }
 
-.container {
+.container-login {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +23,25 @@
   padding: 20px;
   border-radius: 10px 10px 0 0;
   
+}
+.log-form p {
+  color: white;
+  font-size: 14px;
+  margin-top: 15px; /* Ajusta según tus preferencias */
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.log-form a {
+  color: var(--colorAzulOscuro); /* Cambia el color del enlace según tus preferencias */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.log-form a:hover {
+  text-decoration: underline; /* Añade subrayado al pasar el mouse sobre el enlace */
+  color: var(--colorCelesteClaro);
 }
 
 .log-redes {
