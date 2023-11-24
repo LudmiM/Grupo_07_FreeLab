@@ -12,12 +12,12 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 5%;
-    height: 100%; /* Set the height to 100% of the viewport height */
+    height: 100%; 
 }
 
-/* Estilos para teléfonos */
+
 .register-form {
-    width: 90%; /* Ajusta según sea necesario para teléfonos */
+    width: 90%; 
     background: var(--colorCelesteOscuro);
     margin: 5% auto 0;
     padding: 20px;
@@ -107,7 +107,7 @@ label {
 .input-line-phone {
     position: relative;
     margin-bottom: 20px;
-    height: 50px; /* Establecer la altura en píxeles */
+    height: 50px; 
 }
 
 .phone-input-container {
@@ -275,7 +275,7 @@ label {
 /* telefonos */
 @media (max-width: 429px) {
     .register-form {
-        width: 90%; /* Ajusta según sea necesario para tabletas */
+        width: 90%; 
         border-radius: 5px 5px 0 0;
     }
     .input-line input {
@@ -300,19 +300,19 @@ label {
     }
 
     .social-buttons .btn {
-        width: 250px; /* Ajusta el ancho según tus necesidades */
+        width: 250px; 
         height: 50px;
-        background: var(--colorAzulOscuro); /* Fondo celeste claro para los botones en escritorio */
-        border-radius: 35px; /* Redondea los bordes de los botones en escritorio */
-        display: flex; /* Utiliza el modelo de caja flexible */
-        align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+        background: var(--colorAzulOscuro); 
+        border-radius: 35px; 
+        display: flex; 
+        align-items: center; 
     }
     
     .social-buttons .btn i {
-        background: #87CEEB; /* Fondo celeste claro para el icono */
-        border-radius: 50%; /* Redondea los bordes del icono */
-        padding: 10px; /* Ajusta el relleno según sea necesario */
-        font-size: 22px; /* Ajusta el tamaño del icono según tus necesidades */
+        background: #87CEEB; 
+        border-radius: 50%;
+        padding: 10px; 
+        font-size: 22px; 
     }
 
     .logo {
@@ -329,11 +329,11 @@ label {
         position: relative;
         margin-bottom: 20px;
         height: 60px;
-        width: 130%; /* Establecer la altura en píxeles */
+        width: 130%; 
     
     }
     .input-line-phone input {
-        width: 70%; /* Puedes ajustar este valor según tus necesidades para el input */
+        width: 70%; 
         padding: 0px;
         margin-bottom: 10px;
         border: 1px solid #ccc;
@@ -353,16 +353,16 @@ label {
         top: auto;
         left: auto;
         transform: none;
-        width: 90%; /* Ajusta según sea necesario */
+        width: 90%; 
         border-radius: 0 0 5px 5px;
     }
 
     .toggle-container {
-        width: 80%; /* Puedes ajustar el ancho según tus necesidades */
+        width: 80%; 
     }
 
     .toggle-btn {
-        font-size: 14px; /* Ajustar el tamaño del texto para dispositivos más pequeños */
+        font-size: 14px; 
     }
     .input-line-habilidades textarea,
 .input-line-empresa textarea {
@@ -373,7 +373,7 @@ label {
 /* Estilos para tabletas */
 @media (min-width: 429px) and (max-width: 768px) {
     .register-form {
-        width: 70%; /* Ajusta según sea necesario para tabletas */
+        width: 70%; 
     }
     
     .register-box {
@@ -388,21 +388,21 @@ label {
     
     .social-buttons {
         margin-top: 20%; 
-        text-align: center; /* Centra los botones horizontalmente */
+        text-align: center; 
     }
     
     .social-buttons .btn {
-        width: 140%; /* Ajusta el ancho según tus necesidades */
-        height: 80%; /* Ajusta la altura según tus necesidades */
+        width: 140%; 
+        height: 80%; 
         border-radius: 20px;
-        margin: 10%; /* Ajusta el margen entre los botones si es necesario */
+        margin: 10%; 
     }
     
     
     .vertical-line {
-        height: 90%; /* Ajusta la altura de la línea según tus necesidades */
-        border-left: 1px solid #4a4949; /* Puedes cambiar el color según tu diseño */
-        margin: 0 5px; /* Ajusta el margen de la línea según tus necesidades */
+        height: 90%; 
+        border-left: 1px solid #4a4949; 
+        margin: 0 5px; 
     }
     
 }    
@@ -410,34 +410,34 @@ label {
 /* Estilos para escritorio */
 @media (min-width: 769px) {
     .register-form {
-        width: 60%; /* Ajusta según sea necesario para escritorio */
+        width: 60%; 
     }
 
     .register-box {
-        background: none; /* Elimina el fondo para la vista de escritorio */
-        box-shadow: none; /* Elimina la sombra para la vista de escritorio */
+        background: none; 
+        box-shadow: none; 
         border: none; 
     }
     .register-box p {
-        display: none; /* Oculta el elemento <p> en escritorio */
+        display: none; 
     }
 
     .social-buttons .btn {
-        width: 325px; /* Ajusta el ancho según tus necesidades */
+        width: 325px; 
         height: 60px;
         margin-left: 85px;
-        background: var(--colorAzulOscuro); /* Fondo celeste claro para los botones en escritorio */
-        border-radius: 35px 0 0 35px; /* Redondea los bordes de los botones en escritorio */
-        display: flex; /* Utiliza el modelo de caja flexible */
-        align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+        background: var(--colorAzulOscuro); 
+        border-radius: 35px 0 0 35px; 
+        display: flex; 
+        align-items: center; 
     }
     
     .social-buttons .btn i {
-        background: #87CEEB; /* Fondo celeste claro para el icono */
-        border-radius: 50%; /* Redondea los bordes del icono */
-        padding: 10px; /* Ajusta el relleno según sea necesario */
-        font-size: 24px; /* Ajusta el tamaño del icono según tus necesidades */
-        margin-right: 20px; /* Ajusta el espacio entre el icono y el texto según tus necesidades */
+        background: #87CEEB; 
+        border-radius: 50%;
+        padding: 10px; 
+        font-size: 24px; 
+        margin-right: 20px; 
     }
 
 }

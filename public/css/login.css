@@ -27,20 +27,20 @@
 .log-form p {
   color: white;
   font-size: 14px;
-  margin-top: 15px; /* Ajusta según tus preferencias */
+  margin-top: 15px; 
   transition: color 0.3s ease;
   text-align: center;
 }
 
 .log-form a {
-  color: var(--colorAzulOscuro); /* Cambia el color del enlace según tus preferencias */
+  color: var(--colorAzulOscuro); 
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .log-form a:hover {
-  text-decoration: underline; /* Añade subrayado al pasar el mouse sobre el enlace */
+  text-decoration: underline; 
   color: var(--colorCelesteClaro);
 }
 
@@ -48,7 +48,7 @@
   width: 80%;
   max-width: 350px;
   background: var(--colorCelesteClaro);
-  margin-top: -10px; /* Ajusta según tus preferencias */
+  margin-top: -10px; 
   margin-bottom: 10%;
   padding: 20px;
   border-radius: 0 0 10px 10px;
@@ -66,7 +66,7 @@
   font-size: 24px;
   color: white;
   border-radius: 5px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ajusta estos valores según tus preferencias */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 
@@ -77,8 +77,8 @@
 
 .log-form label {
   color: white;
-  font-weight: bold; /* Puedes ajustar este valor según tus preferencias */
-  font-size: 12px; /* Puedes ajustar el tamaño de la letra según tus preferencias */
+  font-weight: bold; 
+  font-size: 12px; 
 }
 
 .log-form .input-line-login input {
@@ -139,9 +139,9 @@
 
 .log-form .forgot .underline {
   text-decoration: underline;
-  text-decoration-thickness: 2px; /* Ajusta el grosor según tus preferencias */
-  font-weight: bold; /* Ajusta el grosor de la letra según tus preferencias */
-  color: #fdffff; /* Puedes ajustar el color según tus preferencias */
+  text-decoration-thickness: 2px;
+  font-weight: bold; 
+  color: #fdffff;
 }
 
 .container-line {
@@ -151,7 +151,7 @@
 }
 
 .line {
-  width: 30%; /* ajusta el largo de la línea según sea necesario */
+  width: 30%; 
   height: 1px;
   background: black;
 }
@@ -186,18 +186,18 @@
   border: 1px solid #1a939e;
   color: white;
   margin-top: 10px;
-  padding: 3px 0; /* Ajusta el relleno (alto) según tus preferencias */
-  width: 190px; /* Ajusta el ancho según tus preferencias */
+  padding: 3px 0;
+  width: 190px; 
   cursor: pointer;
   text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centra horizontalmente los elementos dentro del botón */
+  justify-content: center; 
   border-radius: 6px;
 }
 
 .log-redes .social-buttons-login .btn i {
-  margin-right: 10px; /* Ajusta el espacio entre el icono y el texto */
+  margin-right: 10px; 
 }
 
 .log-redes .social-buttons-login .btn:hover {
@@ -205,7 +205,7 @@
 }
 
 
-/* Media Query adicional para pantallas pequeñas */
+/* telefonos */
 @media (max-width: 426px) {
   .log-form h1 {
     font-size: 20px;
