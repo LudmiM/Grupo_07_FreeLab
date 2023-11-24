@@ -35,7 +35,7 @@
   border-radius: 0 0 10px 10px;
 }
 
-.logo {
+.logo-login {
   width: 150px;
   height: auto;
   margin: -30px auto 10px; 
@@ -51,7 +51,7 @@
 }
 
 
-.log-form .input-line {
+.log-form .input-line-login {
   position: relative;
   margin-bottom: 20px;
 }
@@ -62,7 +62,7 @@
   font-size: 12px; /* Puedes ajustar el tamaño de la letra según tus preferencias */
 }
 
-.log-form .input-line input {
+.log-form .input-line-login input {
   width: 80%;
   padding: 5px 0 3px;
   border: none;
@@ -73,13 +73,13 @@
   font-size: 16px;
 }
 
-.log-form .input-line input::placeholder {
+.log-form .input-line-login input::placeholder {
   color: #4d4b4b;
   font-size: 14px;
 }
 
-.log-form .input-line input:focus + label,
-.log-form .input-line input:not(:placeholder-shown) + label {
+.log-form .input-line-login input:focus + label,
+.log-form .input-line-login input:not(:placeholder-shown) + label {
   top: -1.25em;
   font-size: 12px;
   color: #23c2cb;
@@ -193,11 +193,11 @@
     margin-bottom: 15px;
   }
 
-  .log-form .input-line label {
+  .log-form .input-line-login label {
     font-size: 14px;
   }
 
-  .log-form .input-line input {
+  .log-form .input-line-login input {
     font-size: 14px;
     margin-bottom: 10px;
   }
