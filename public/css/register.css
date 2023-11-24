@@ -1,5 +1,5 @@
 .body-register {
-    font-family: 'Montserrat', ;
+    font-family: 'Montserrat', sans-serif;
     background: var(--colorCelesteClaro);
     margin: 0;
     padding: 0;
@@ -11,30 +11,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     margin-bottom: 5%;
+    height: 100%; /* Set the height to 100% of the viewport height */
 }
 
+/* Estilos para teléfonos */
 .register-form {
-    width: 80%;
-    max-width: 350px;
+    width: 90%; /* Ajusta según sea necesario para teléfonos */
     background: var(--colorCelesteOscuro);
     margin: 5% auto 0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
-}
-
-.register-redes {
-    width: 80%;
-    max-width: 350px;
-    background: var(--colorCelesteClaro);
-    margin-top: -10px;
-    margin-bottom: 5%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -65,11 +54,24 @@ label {
 }
 
 .input-line input {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.input-line-habilidades textarea,
+.input-line-empresa textarea {
+    width: 80%;
+    height: 80px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    line-height: 20px;
+    resize: vertical;
+    overflow-y: auto;
 }
 
 .input-line input::placeholder {
@@ -100,6 +102,43 @@ label {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.input-line-phone {
+    position: relative;
+    margin-bottom: 20px;
+    height: 50px; /* Establecer la altura en píxeles */
+}
+
+.phone-input-container {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 70%;
+    height: 90%; 
+}
+
+.phone-input-container select {
+    flex-grow: 1;
+    border: none;
+    padding: 5px;
+    width: 30%;
+    background-color: #ffffff;
+    
+}
+
+.phone-input-container .separator {
+    height: 100%;
+    border-left: 1px solid #727272; /* Línea negra a la izquierda */
+    display: inline-block;
+}
+
+
+.phone-input-container input {
+    flex-grow: 1;
+    border: none;
+    padding: 5px;
+    width: 70%;
 }
 
 .btn {
@@ -154,43 +193,20 @@ label {
 .social-buttons .btn:hover {
     background-color: #23c2cb;
 }
+
 #freelancer-registration {
-    display: block; /* Puedes cambiar a 'none' para ocultar el formulario de Freelancer inicialmente */
+    display: block;
 }
 
 #employer-registration {
-    display: none; /* Puedes cambiar a 'block' para mostrar el formulario de Empresa inicialmente */
-}
-
-
-@media (max-width: 426px) {
-    .register-form h1 {
-        font-size: 20px;
-        margin-bottom: 15px;
-    }
-
-    .register-form label {
-        font-size: 14px;
-    }
-
-    .register-form input {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-    .btn {
-        margin: 15px 0;
-    }
-
-    .social-buttons .btn {
-        width: 80px;
-        padding: 5px;
-    }
+    display: none;
 }
 
 .toggle-container {
     display: flex;
     margin-bottom: 20px;
+    height: 30%;
+    width: 50%;
     overflow: hidden;
     border-radius: 15px;
     background-color: var(--colorCelesteOscuro);
@@ -220,17 +236,28 @@ label {
     color: var(--colorAzulOscuro);
 }
 
-.login-box {
+.register-container {
+    position: relative;
+}
+
+.register-box {
     position: absolute;
-    top: 500px; /* Ajusta la posición desde la parte superior según tus necesidades */
-    right: 300px; /* Ajusta la posición desde la derecha según tus necesidades */
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 300px;
     padding: 20px;
     background: var(--colorAzulOscuro);
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.login-box p {
+.register-box p {
     margin-bottom: 10px;
     color: white;
     font-size: 14px;
@@ -239,9 +266,178 @@ label {
 .social-buttons {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .social-buttons .btn {
     margin-bottom: 10px;
+}
+/* telefonos */
+@media (max-width: 429px) {
+    .register-form {
+        width: 90%; /* Ajusta según sea necesario para tabletas */
+        border-radius: 5px 5px 0 0;
+    }
+    .input-line input {
+        width: 90%;
+    }
+    .register-form h1 {
+        font-size: 20px;
+        
+    }
+
+    .register-form label {
+        font-size: 14px;
+    }
+
+    .register-form input {
+        font-size: 14px;
+        
+    }
+
+    .btn {
+        margin: 15px 0;
+    }
+
+    .social-buttons .btn {
+        width: 250px; /* Ajusta el ancho según tus necesidades */
+        height: 50px;
+        background: var(--colorAzulOscuro); /* Fondo celeste claro para los botones en escritorio */
+        border-radius: 35px; /* Redondea los bordes de los botones en escritorio */
+        display: flex; /* Utiliza el modelo de caja flexible */
+        align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    }
+    
+    .social-buttons .btn i {
+        background: #87CEEB; /* Fondo celeste claro para el icono */
+        border-radius: 50%; /* Redondea los bordes del icono */
+        padding: 10px; /* Ajusta el relleno según sea necesario */
+        font-size: 22px; /* Ajusta el tamaño del icono según tus necesidades */
+    }
+
+    .logo {
+        width: 100px;
+        height: auto;
+        margin: 40px auto 20px;
+        display: block;
+    }
+    .phone-input-container .separator {
+        height: 80%;
+    }
+
+    .input-line-phone {
+        position: relative;
+        margin-bottom: 20px;
+        height: 60px;
+        width: 130%; /* Establecer la altura en píxeles */
+    
+    }
+    .input-line-phone input {
+        width: 70%; /* Puedes ajustar este valor según tus necesidades para el input */
+        padding: 0px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 0 5px 5px 0;
+    }
+    
+    .input-line-phone select {
+        width: 30%;
+        padding: 0px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px 0 0 5px;
+    }
+    
+    .register-box {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 90%; /* Ajusta según sea necesario */
+        border-radius: 0 0 5px 5px;
+    }
+
+    .toggle-container {
+        width: 80%; /* Puedes ajustar el ancho según tus necesidades */
+    }
+
+    .toggle-btn {
+        font-size: 14px; /* Ajustar el tamaño del texto para dispositivos más pequeños */
+    }
+    .input-line-habilidades textarea,
+.input-line-empresa textarea {
+    width: 90%;
+    height: 80px;}
+
+}
+/* Estilos para tabletas */
+@media (min-width: 429px) and (max-width: 768px) {
+    .register-form {
+        width: 70%; /* Ajusta según sea necesario para tabletas */
+    }
+    
+    .register-box {
+        position: absolute;
+        top: 50%;
+        left: 87%;
+        height: 35%;
+        border-radius: 10px 0 0 10px;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+    }
+    
+    .social-buttons {
+        margin-top: 20%; 
+        text-align: center; /* Centra los botones horizontalmente */
+    }
+    
+    .social-buttons .btn {
+        width: 140%; /* Ajusta el ancho según tus necesidades */
+        height: 80%; /* Ajusta la altura según tus necesidades */
+        border-radius: 20px;
+        margin: 10%; /* Ajusta el margen entre los botones si es necesario */
+    }
+    
+    
+    .vertical-line {
+        height: 90%; /* Ajusta la altura de la línea según tus necesidades */
+        border-left: 1px solid #4a4949; /* Puedes cambiar el color según tu diseño */
+        margin: 0 5px; /* Ajusta el margen de la línea según tus necesidades */
+    }
+    
+}    
+
+/* Estilos para escritorio */
+@media (min-width: 769px) {
+    .register-form {
+        width: 60%; /* Ajusta según sea necesario para escritorio */
+    }
+
+    .register-box {
+        background: none; /* Elimina el fondo para la vista de escritorio */
+        box-shadow: none; /* Elimina la sombra para la vista de escritorio */
+        border: none; 
+    }
+    .register-box p {
+        display: none; /* Oculta el elemento <p> en escritorio */
+    }
+
+    .social-buttons .btn {
+        width: 325px; /* Ajusta el ancho según tus necesidades */
+        height: 60px;
+        margin-left: 85px;
+        background: var(--colorAzulOscuro); /* Fondo celeste claro para los botones en escritorio */
+        border-radius: 35px 0 0 35px; /* Redondea los bordes de los botones en escritorio */
+        display: flex; /* Utiliza el modelo de caja flexible */
+        align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    }
+    
+    .social-buttons .btn i {
+        background: #87CEEB; /* Fondo celeste claro para el icono */
+        border-radius: 50%; /* Redondea los bordes del icono */
+        padding: 10px; /* Ajusta el relleno según sea necesario */
+        font-size: 24px; /* Ajusta el tamaño del icono según tus necesidades */
+        margin-right: 20px; /* Ajusta el espacio entre el icono y el texto según tus necesidades */
+    }
+
 }

@@ -151,18 +151,18 @@
   text-align: center;
 }
 
-.log-redes .social-buttons {
+.log-redes .social-buttons-login {
   list-style: none;
   padding: 0;
   margin: 0;
   display: inline-block;
 }
 
-.log-redes .social-buttons li {
+.log-redes .social-buttons-login li {
   margin-bottom: 10px;
 }
 
-.log-redes .social-buttons .btn {
+.log-redes .social-buttons-login .btn {
   background-color: #1fb5bf;
   border: 1px solid #1a939e;
   color: white;
@@ -177,11 +177,11 @@
   border-radius: 6px;
 }
 
-.log-redes .social-buttons .btn i {
+.log-redes .social-buttons-login .btn i {
   margin-right: 10px; /* Ajusta el espacio entre el icono y el texto */
 }
 
-.log-redes .social-buttons .btn:hover {
+.log-redes .social-buttons-login .btn:hover {
   background-color: #23c2cb;
 }
 

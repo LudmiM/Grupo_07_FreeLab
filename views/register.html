@@ -5,30 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8bf00d99ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Registro - FreeLab</title>
+    <title>FreeLab | Registro</title>
 </head>
 <body class="body-register">
+    <header class="header">
+        <img src="/img/Logo_FreeLab.png" alt="logo" class="header--logo">
+        <div class="header__contIconos">
+            <i class="fa-solid fa-user header--iconoUser"></i>
+            <i class="fa-solid fa-bars-staggered header--iconoHam"></i>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav__ul">
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/login.html">Login</a></li>
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/productCart">Carrito</a></li>
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="#">Trabajos</a></li>
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="#">¿Quienes somos?</a></li>
+            </ul> 
+        </nav>
+    </header>
     <div class="register-container">
 
         <!-- Formulario de registro -->
         <form id="registration-form" class="register-form">
                     <!-- Botones de alternancia -->
         <div class="toggle-container">
-            <button id="freelancer-toggle" class="toggle-btn active" data-type="freelancer">Freelancer</button>
-            <button id="employer-toggle" class="toggle-btn" data-type="employer">Empresa</button>
+            <button type="button" id="freelancer-toggle" class="toggle-btn active" data-type="freelancer" aria-label="Alternar Registro Freelancer">Freelancer</button>
+            <button type="button" id="employer-toggle" class="toggle-btn" data-type="employer" aria-label="Alternar Registro Empresa">Empresa </button>
+
         </div>
         
             <div id="freelancer-registration" class="registration-section freelancer">
                 <h1>Registro Freelancer</h1>
                 <label for="freelancer-firstname">Nombre <span class="required">*</span></label>
                 <div class="input-line">
-                    <input type="text" id="freelancer-firstname" name="freelancer-firstname" placeholder="Nombre" required>
+                    <input type="text" id="freelancer-firstname" name="freelancer-firstname" placeholder="Nombre" required pattern="[A-Za-zÁ-ÿ\s']{1,}">
                 </div>
                 
                 <label for="freelancer-lastname">Apellido <span class="required">*</span></label>
                 <div class="input-line">
-                    <input type="text" id="freelancer-lastname" name="freelancer-lastname" placeholder="Apellido" required>
+                    <input type="text" id="freelancer-lastname" name="freelancer-lastname" placeholder="Apellido" required pattern="[A-Za-zÁ-ÿ\s']{1,}">
                 </div>
+                
                 
                 <label for="freelancer-email">Correo <span class="required">*</span></label>
                 <div class="input-line">
@@ -46,23 +63,34 @@
                 </div>
                 
                 <label for="freelancer-phone">Teléfono Celular</label>
-                <div class="input-line">
-                    <select id="freelancer-phone-code" name="freelancer-phone-code" required>
+                <div class="input-line-phone">
+                    <div class="phone-input-container">
+                        <select id="freelancer-phone-code" name="freelancer-phone-code" required>
+                        <option value="+54">+54 (Argentina)</option>
+                        <option value="+55">+55 (Brasil)</option>
+                        <option value="+56">+56 (Chile)</option>
+                        <option value="+57">+57 (Colombia)</option>
+                        <option value="+51">+51 (Perú)</option>
+                        <option value="+595">+595 (Paraguay)</option>
+                        <option value="+598">+598 (Uruguay)</option>
                         <option value="+1">+1 (EE. UU.)</option>
                         <option value="+44">+44 (Reino Unido)</option>
-                    </select>
-                    <input type="text" id="freelancer-phone" name="freelancer-phone" placeholder="Número de teléfono celular" pattern="[0-9]+" required>
+                        <option value="+81">+81 (Japón)</option>
+                        <option value="+86">+86 (China)</option>
+                        <option value="+91">+91 (India)</option>
+                  </select>
+                  <div class="separator-container">
+                    <div class="separator"></div>
                 </div>
-                
-                <label for="freelancer-social">Redes Sociales</label>
-                <div class="input-line">
-                    <input type="text" id="freelancer-social" name="freelancer-social" placeholder="Redes sociales">
+                  <input type="text" id="freelancer-phone" name="freelancer-phone" placeholder="Número de teléfono celular" pattern="[0-9]+" required>
                 </div>
+            </div>
                 
                 <label for="freelancer-skills">Descripción de Habilidades</label>
-                <div class="input-line">
+                <div class="input-line-habilidades">
                     <textarea id="freelancer-skills" name="freelancer-skills" placeholder="Descripción de habilidades"></textarea>
                 </div>
+                
                 
                 <div class="checkbox-line">
                     <input type="checkbox" id="freelancer-terms" name="freelancer-terms" required>
@@ -100,16 +128,33 @@
                 </div>
                 
                 <label for="employer-phone">Teléfono Celular</label>
-                <div class="input-line">
-                    <select id="employer-phone-code" name="employer-phone-code" required>
+                <div class="input-line-phone">
+                    <div class="phone-input-container">
+                        <select id="employer-phone-code" name="employer-phone-code" required>
                         <option value="+1">+1 (EE. UU.)</option>
                         <option value="+44">+44 (Reino Unido)</option>
+                        <option value="+54">+54 (Argentina)</option>
+                        <option value="+55">+55 (Brasil)</option>
+                        <option value="+56">+56 (Chile)</option>
+                        <option value="+57">+57 (Colombia)</option>
+                        <option value="+51">+51 (Perú)</option>
+                        <option value="+595">+595 (Paraguay)</option>
+                        <option value="+598">+598 (Uruguay)</option>
+                        <option value="+1">+1 (EE. UU.)</option>
+                        <option value="+44">+44 (Reino Unido)</option>
+                        <option value="+81">+81 (Japón)</option>
+                        <option value="+86">+86 (China)</option>
+                        <option value="+91">+91 (India)</option>
                     </select>
+                    <div class="separator-container">
+                        <div class="separator"></div>
+                    </div>
                     <input type="text" id="employer-phone" name="employer-phone" placeholder="Número de teléfono celular" pattern="[0-9]+" required>
                 </div>
+            </div>
                 
                 <label for="company-description">Breve Descripción de la Empresa <span class="required">*</span></label>
-                <div class="input-line">
+                <div class="input-line-empresa">
                     <textarea id="company-description" name="company-description" placeholder="Breve descripción de la empresa" required></textarea>
                 </div>
                 
@@ -128,45 +173,91 @@
         </form>
         
         <!-- Caja de inicio de sesión -->
-        <div class="login-box">
-            <p>Ingrese desde:</p>
+        <div class="register-box">
+            <p>Ingrese desde</p>
             <div class="social-buttons">
-                <button class="btn"><i class="fab fa-linkedin"></i> LinkedIn</button>
-                <button class="btn"><i class="fab fa-facebook"></i> Facebook</button>
-                <button class="btn"><i class="fab fa-google"></i> Google</button>
+                <button class="btn"><i class="fab fa-linkedin"></i><span class="vertical-line"></span>LinkedIn</button>
+                <button class="btn"><i class="fab fa-facebook"></i><span class="vertical-line"></span>Facebook</button>
+                <button class="btn"><i class="fab fa-google"></i><span class="vertical-line"></span>Google</button>
             </div>
         </div>
         
-        
     </div>
+    <footer>
+        <section class="footer__section">
+            <h3 class="footer__section--h3">Quiénes somos</h3>
+            <ul>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Sobre nosotros</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Únete al equipo</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Contáctanos</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Políticas de FreeLab</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Política de privacidad</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Términos de servicio</a></li>
+            </ul>
+        </section>
+        <section class="footer__section">
+            <h3 class="footer__section--h3">Quiénes somos</h3>
+            <ul>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const freelancerToggle = document.getElementById('freelancer-toggle');
-            const employerToggle = document.getElementById('employer-toggle');
-            const registrationForm = document.getElementById('registration-form');
-            const freelancerRegistration = document.getElementById('freelancer-registration');
-            const employerRegistration = document.getElementById('employer-registration');
-
-            freelancerToggle.addEventListener('click', () => {
-                if (!freelancerToggle.classList.contains('active')) {
-                    freelancerToggle.classList.add('active');
-                    employerToggle.classList.remove('active');
-                    freelancerRegistration.style.display = 'block';
-                    employerRegistration.style.display = 'none';
-                }
-            });
-
-            employerToggle.addEventListener('click', () => {
-                if (!employerToggle.classList.contains('active')) {
-                    employerToggle.classList.add('active');
-                    freelancerToggle.classList.remove('active');
-                    freelancerRegistration.style.display = 'none';
-                    employerRegistration.style.display = 'block';
-                }
-            });
-        });
-    </script>
-
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Sobre nosotros</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Únete al equipo</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Contáctanos</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Políticas de FreeLab</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Política de privacidad</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Términos de servicio</a></li>
+            </ul>
+        </section>
+        <section class="footer__section">
+            <h3 class="footer__section--h3">Quiénes somos</h3>
+            <ul class="footer__section__ul">
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Sobre nosotros</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Únete al equipo</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Contáctanos</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Políticas de FreeLab</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Política de privacidad</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Términos de servicio</a></li>
+            </ul>
+        </section>
+        <section class="footer__section siguenos__iconos">
+            <h3 class="footer__section--h3">Siguenos</h3>
+            <ul class="ul__iconos">
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+            </ul>
+        </section>
+        <p class="footer__p__derechos">© 2023 - 2023 | FreeLab - Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>
+
+
+<script >
+    document.addEventListener('DOMContentLoaded', function () {
+        const freelancerToggle = document.getElementById('freelancer-toggle');
+        const employerToggle = document.getElementById('employer-toggle');
+        const registrationForm = document.getElementById('registration-form');
+        const freelancerRegistration = document.getElementById('freelancer-registration');
+        const employerRegistration = document.getElementById('employer-registration');
+
+        freelancerToggle.addEventListener('click', () => {
+            if (!freelancerToggle.classList.contains('active')) {
+                freelancerToggle.classList.add('active');
+                employerToggle.classList.remove('active');
+                freelancerRegistration.style.display = 'block';
+                employerRegistration.style.display = 'none';
+            }
+        });
+
+        employerToggle.addEventListener('click', () => {
+            if (!employerToggle.classList.contains('active')) {
+                employerToggle.classList.add('active');
+                freelancerToggle.classList.remove('active');
+                freelancerRegistration.style.display = 'none';
+                employerRegistration.style.display = 'block';
+            }
+        });
+    });
+</script>
