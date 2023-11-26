@@ -4,6 +4,7 @@
 .main__PD__section{
     width: 90%;
     margin: 0 auto;
+    background-color: var(--colorCeleste);/*Sacar*/
 }
 /*Section mis datos*/
 .section__misDatos{
@@ -20,3 +21,9 @@
     background-color: var(--colorCeleste);
 }
 /*Section review*/
+.section__review__proOf{
+    display: flex;
+}
+.section__review__ordenC{
+    display: flex;
+}
