@@ -1,14 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const {index, card} = require('../controllers/indexController');
 
-/* Dirige a la pagina home*/
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+/* Dirige a la pagina home y carrito*/
+
+router
+  .get('/',index)
+  .get('/carrito',card)
 
 module.exports = router;
-
-/*
-app.get('/', (req,res) => res.sendFile(path.join(__dirname, 'views','index.html')));
-app.get('/productCart', (req,res) => res.sendFile(path.join(__dirname, 'views','productCart.html')));
-*/
