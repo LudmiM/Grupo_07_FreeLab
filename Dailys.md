@@ -8,7 +8,7 @@
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** :
+**Ludmila** : Empece con incidencias del sprint3, adaptando la estructura. Sin impedimentos. Arreglar incidencias de detalle de produucto
 **Rony** :
 **Mauricio**:
 
