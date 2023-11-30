@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,37 @@
     <title>Detalle de producto</title>
 </head>
 <body>
+    <header class="header">
+        <img src="/img/Logo_FreeLab.png" alt="logo" class="header--logo">
+        <div class="header__contIconos">
+            <i class="fa-solid fa-user header--iconoUser"></i>
+            <i class="fa-solid fa-bars-staggered header--iconoHam"></i>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav__ul">
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/login">Login</a></li>
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/productCart">Carrito</a></li>
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="#">Trabajos</a></li>
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="#">¿Quienes somos?</a></li>
+            </ul> 
+        </nav>
+    </header>
     <main class="main__PD">
         <section class="main__PD__section section__misDatos">
-            <img src="/img/perfil.png" alt="imagen de perfil" class="section__misDatos--img">
+            <div class="section__misDatos__contImg">
+                <img src="/img/imagen-ejemplo.jpg" alt="imagen de perfil" class="section__misDatos--img">
+            </div>
             <h3 class="section__misDatos--h3">Guida Lurdes Rossi</h3>
+            <div class="section__misDatos__icons">
+                <div class="section__misDatos__ContStart">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <i class="fa-solid fa-heart"></i>
+            </div>
             <div class="section__misDatos__ContLinks">
                 <p>
                     Linkedin
@@ -23,18 +50,31 @@
                     Linkedin
                 </p>
             </div>
-            <div class="section__misDatos__ContStart">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-            </div>
         </section>
         <section class="main__PD__section section__sobreMi">
             <h3 class="section__sobreMi--h3">Sobre mi</h3>
             <p class="section__sobreMi--p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue lectus lacus, eu aliquet risus feugiat nec. Nulla facilisi. Etiam in sollicitudin diam. Quisque viverra ante est, a feugiat mauris elementum et. Duis a feugiat sem. Ut in orci eget est fermentum rhoncus in eu sapien. Integer quis commodo ex, et finibus velit. Donec semper sed mauris ut suscipit. Donec sit amet iaculis magna.</p>
         </section>
+        <div class=" main__PD__section section__skills">
+            <article class="section__skills__article">
+                <h3 class="section__skills__article--h3">Habilidades interpersonales</h3>
+                <p class="section__skills__article__interpersonales--p skills--p">Comunicación efectiva</p>
+                <p class="section__skills__article__interpersonales--p skills--p">Trabajo en equipo</p>
+                <p class="section__skills__article__interpersonales--p skills--p">Empatía</p>
+                <p class="section__skills__article__interpersonales--p skills--p">Resolución de conflictos</p>
+                <p class="section__skills__article__interpersonales--p skills--p">Adaptabilidad</p>
+                <p class="section__skills__article__interpersonales--p skills--p">Liderazgo</p>
+            </article>
+            <article class="section__skills__article">
+                <h3 class="section__skills__article--h3">Habilidades técnicas</h3>
+                <p class="section__skills__article__tecnicas--p skills--p">HTML</p>
+                <p class="section__skills__article__tecnicas--p skills--p">CSS</p>
+                <p class="section__skills__article__tecnicas--p skills--p">PHP</p>
+                <p class="section__skills__article__tecnicas--p skills--p">JAVASCRIPT</p>
+                <p class="section__skills__article__tecnicas--p skills--p">FIGMA</p>
+                <p class="section__skills__article__tecnicas--p skills--p">VISUALSTUDIO</p>
+            </article>
+        </div>
         <section class="main__PD__section section__review">
             <div class="section__review__proOf">
                 <h3 class="section__review__proOf--h3">4.5</h3>
@@ -72,6 +112,57 @@
                 <p class="section__review__article--nombre">opiin fruta silvestre</p>
             </article>
         </section>
+        <section class="main__PD__section section__contacto">
+            <i class="fa-regular fa-paper-plane section__contacto--iconContac"></i>
+            <h3 class="section__contacto--h3">Contáctame</h3>
+        </section>
     </main>
+    <footer>
+        <section class="footer__section">
+            <h3 class="footer__section--h3">Quiénes somos</h3>
+            <ul>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Sobre nosotros</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Únete al equipo</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Contáctanos</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Políticas de FreeLab</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Política de privacidad</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Términos de servicio</a></li>
+            </ul>
+        </section>
+        <section class="footer__section">
+            <h3 class="footer__section--h3">Quiénes somos</h3>
+            <ul>
+
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Sobre nosotros</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Únete al equipo</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Contáctanos</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Políticas de FreeLab</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Política de privacidad</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Términos de servicio</a></li>
+            </ul>
+        </section>
+        <section class="footer__section">
+            <h3 class="footer__section--h3">Quiénes somos</h3>
+            <ul class="footer__section__ul">
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Sobre nosotros</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Únete al equipo</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Contáctanos</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Políticas de FreeLab</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Política de privacidad</a></li>
+                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Términos de servicio</a></li>
+            </ul>
+        </section>
+        <section class="footer__section siguenos__iconos">
+            <h3 class="footer__section--h3">Siguenos</h3>
+            <ul class="ul__iconos">
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+            </ul>
+        </section>
+        <p class="footer__p__derechos">© 2023 - 2023 | FreeLab - Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>

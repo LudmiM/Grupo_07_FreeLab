@@ -1,29 +1,114 @@
-.main__PD{
+.main__PD {
     width: 100%;
-}
-.main__PD__section{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
     width: 90%;
     margin: 0 auto;
-    background-color: var(--colorCeleste);/*Sacar*/
+    position: relative;
+    /*Para el boton contactamee*/
 }
+
+/*Clase que todas las section comparten*/
+.main__PD__section {
+    padding: 1%;
+}
+
 /*Section mis datos*/
-.section__misDatos{
-    background-color: var(--colorCeleste);
+.section__misDatos {
+    background-color: var(--colorCelesteClaro);
 }
-.section__misDatos--h3{
-    font-size: 30px;
+
+.section__misDatos__contImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.section__misDatos--img{
+
+.section__misDatos--img {
     width: 150px;
+    border-radius: 15px;
 }
+
+.section__misDatos--h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.section__misDatos__icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section__misDatos__ContLinks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 /*Section sobre mi*/
-.section__sobreMi{
-    background-color: var(--colorCeleste);
+.section__sobreMi {
+    margin: 4% 1%;
 }
+
+/*Section skills*/
+.section__skills__article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section__skills__article--h3 {
+    width: 100%;
+}
+
+.skills--p {
+    background-color: var(--colorCelesteClaro);
+    border-radius: 15px;
+    padding: 1% 2%;
+    margin: 5px;
+}
+
 /*Section review*/
-.section__review__proOf{
+.section__review__proOf {
     display: flex;
 }
-.section__review__ordenC{
+
+.section__review__ordenC {
     display: flex;
 }
+
+/*section contacto*/
+.section__contacto {
+    /*
+    background-color: var(--colorCelesteClaro);
+    border-radius: 15px;*/
+    display: flex;
+      position: sticky;
+    /*    flex-wrap: wrap;
+    width: 20%;*/
+}
+
+.section__contacto--iconContac {
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    /*border: 1px solid var(--colorVerde);*//*
+    background-color: var(--colorCelesteClaro);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 3%;
+    right: 6%;
+    cursor: pointer;*/
+}
+
+.section__contacto--h3 {
+    display: none;
+}
+
+@media (min-width: 500px) {
+    .section__misDatos--img {
+        width: 250px;
+    }
+}
+
+@media (min-width: 1024px) {}
