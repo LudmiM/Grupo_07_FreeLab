@@ -1,8 +1,8 @@
 module.exports = {
     detail: (req,res) => {
-        res.render('/products/productDetail');
+        res.render('products/productDetail');
     },
     detailPost: (req,res) => {
-        read.render('products/productDetailPost');
+        res.render('products/productDetailPost');
     }
 }

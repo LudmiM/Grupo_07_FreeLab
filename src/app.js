@@ -4,9 +4,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const indexRouter = require('./src/routes/index.routes');
-const usersRouter = require('./src/routes/users.routes');
-const productsRouter = require('./src/routes/products.routes');
+const indexRouter = require('./routes/index.routes');
+const usersRouter = require('./routes/users.routes');
+const productsRouter = require('./routes/products.routes');
 
 const app = express();
 
@@ -24,12 +24,12 @@ app
   .use(express.urlencoded({ extended: false }))
 
   //Recurso estatico
-  .use(express.static(path.join(__dirname, 'public')))
+  .use(express.static(path.join(__dirname,'..', 'public')))
 
   //Rutas
   .use('/', indexRouter)
-  .use('/users', usersRouter)
-  .use('/products', productsRouter)
+  .use('/usuarios', usersRouter)
+  .use('/productos', productsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
