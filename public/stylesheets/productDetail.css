@@ -64,9 +64,13 @@
     border-radius: 15px;
     padding: 1% 2%;
     margin: 5px;
+    font-weight: bold;
 }
 
 /*Section review*/
+.section__review{
+    background-color: var(--colorGris);
+}
 .section__review__proOf {
     display: flex;
 }
