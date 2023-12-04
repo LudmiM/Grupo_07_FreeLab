@@ -105,11 +105,24 @@
 .section__contacto--h3 {
     display: none;
 }
+.quieto {
+    
+    bottom: 10px; /* Puedes ajustar este valor según tus necesidades */
+    left: 0;
+    z-index: 1; /* Asegúrate de tener un valor de z-index mayor que el icono si se superponen */
+}
 
 @media (min-width: 500px) {
     .section__misDatos--img {
         width: 250px;
     }
+    .section__contacto--iconContac{
+        margin-left: 92%;
+    }
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    .section__contacto--iconContac{
+        margin-left: 95%;
+    }
+}
