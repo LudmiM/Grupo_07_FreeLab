@@ -3,11 +3,13 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 3%;
     color: #FFF;
 }
-.header--logo{
-    width: 18%;
+
+.header__a--logo{
+    width: 120px;
 }
 .header__contIconos{
     display: flex;
@@ -21,7 +23,6 @@
     display: none;
 }
 .header__nav{
-    margin-top: 90px;
     display: none;
 }
 .header__nav__ul{

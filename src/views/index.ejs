@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- 
+    include('./partials/head', {title: 'Home | FreeLab'})
+%>
+<body>
+    <%- include('./partials/header')%>
+    <main class="main">
+        <section class="main__section">
+        <h1 class="Main__section__primerTitulo">
+           Busca una solucion para tu proyecto!
+        </h1>
+     <div class="main__alineacion">
+        <input class="main__busqueda" type="text" placeholder="Busca Servicios..">
+        <div class="main__lupa">
+            <i class="fa-solid fa-magnifying-glass"></i> 
+        </div>
+    </section>
+    <section class="main__section__2">
+        <article class="article__1">
+            <img src="/images/RedCliente.png" alt="RedCliente" id="image1">
+            <p class="article__1__p"> En Freelab, nos dedicamos a simplificar la conexión entre freelancers altamente calificados</p>
+        </article>
+        <article class="article__2">
+            <img src="/images/Saludo.png" alt="Saludo" id="image2">
+            <div class="article__2__leyenda">
+                <p>Somos un equipo apasionado</p>
+            </div>
+        </article>
+        <article class="article__3">
+            <p>Proporcionamos una amplia Red de busqueda para cumplir tus necesidades</p>
+            <img src="/images/RedFreeLab.jpg" alt="equipo freelancers" id="image3">
+        </article>
+    </section>
+    </main>
+    <%- include('./partials/footer')%>
+</body>
+</html>

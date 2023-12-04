@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- 
+    include('./../partials/head', {title: 'detalle | FreeLab'})
+%>
+<body>
+    <%- include('./../partials/header')%>
+    <main class="main__PD">
+        <section class="main__PD__section section__misDatos">
+            <div class="section__misDatos__contImg">
+                <img src="/images/imagen-ejemplo.jpg" alt="imagen de perfil" class="section__misDatos--img">
+            </div>
+            <h3 class="section__misDatos--h3">Guida Lurdes Rossi</h3>
+            <div class="section__misDatos__icons">
+                <div class="section__misDatos__ContStart">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="section__misDatos__ContLinks">
+                <p>
+                    Linkedin
+                </p>
+                <p>
+                    Linkedin
+                </p>
+                <p>
+                    Linkedin
+                </p>
+            </div>
+        </section>
+        <section class="main__PD__section section__sobreMi">
+            <h3 class="section__sobreMi--h3">Sobre mi</h3>
+            <p class="section__sobreMi--p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue lectus lacus, eu aliquet risus feugiat nec. Nulla facilisi. Etiam in sollicitudin diam. Quisque viverra ante est, a feugiat mauris elementum et. Duis a feugiat sem. Ut in orci eget est fermentum rhoncus in eu sapien. Integer quis commodo ex, et finibus velit. Donec semper sed mauris ut suscipit. Donec sit amet iaculis magna.</p>
+        </section>
+        <div class=" main__PD__section section__skills">
+            <article class="section__skills__article">
+                <h3 class="section__skills__article--h3">Habilidades interpersonales</h3>
+                <p class="section__skills__article__interpersonales--p skills--p">Comunicación efectiva</p>
+                <p class="section__skills__article__interpersonales--p skills--p">Trabajo en equipo</p>
+                <p class="section__skills__article__interpersonales--p skills--p">Empatía</p>
+                <p class="section__skills__article__interpersonales--p skills--p">Resolución de conflictos</p>
+                <p class="section__skills__article__interpersonales--p skills--p">Adaptabilidad</p>
+                <p class="section__skills__article__interpersonales--p skills--p">Liderazgo</p>
+            </article>
+            <article class="section__skills__article">
+                <h3 class="section__skills__article--h3">Habilidades técnicas</h3>
+                <p class="section__skills__article__tecnicas--p skills--p">HTML</p>
+                <p class="section__skills__article__tecnicas--p skills--p">CSS</p>
+                <p class="section__skills__article__tecnicas--p skills--p">PHP</p>
+                <p class="section__skills__article__tecnicas--p skills--p">JAVASCRIPT</p>
+                <p class="section__skills__article__tecnicas--p skills--p">FIGMA</p>
+                <p class="section__skills__article__tecnicas--p skills--p">VISUALSTUDIO</p>
+            </article>
+        </div>
+        <section class="main__PD__section section__review">
+            <div class="section__review__proOf">
+                <h3 class="section__review__proOf--h3">4.5</h3>
+                <p class="section__review__proOf--promedio">Promedio de 2 opiniones</p>
+            </div>
+            <div class="section__review__ordenC">
+                <p class="section__review__ordenC--OrdenarPor">Ordenar por: </p>
+                <h5 class="section__review__ordenC--filtro">Más relevantes</h5>
+                <i class="fa-solid fa-v section__review__ordenC--icon"></i>
+            </div>
+            <article class="section__review__article">
+                <div class="Start__review">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="section__review__article--fecha">05/10/2023</p>
+                <h2 class="section__review__article--tituloTrabajo">Develop full stack</h2>
+                <p class="section__review__article--comentario">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue lectus lacus, eu aliquet risus feugiat nec.</p>
+                <p class="section__review__article--nombre">opiin fruta silvestre</p>
+            </article>
+            <article>
+                <div class="Start__review">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="section__review__article--fecha">05/10/2023</p>
+                <h2 class="section__review__article--tituloTrabajo">Develop full stack</h2>
+                <p class="section__review__article--comentario">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue lectus lacus, eu aliquet risus feugiat nec.</p>
+                <p class="section__review__article--nombre">opiin fruta silvestre</p>
+            </article>
+        </section>
+       <section class="main__PD__section section__contacto">
+            <i class="fa-regular fa-paper-plane section__contacto--iconContac"></i>
+            <h3 class="section__contacto--h3">Contáctame</h3>
+        </section>
+    </main>
+    <%- include('./../partials/footer')%>
+</body>
+</html>
