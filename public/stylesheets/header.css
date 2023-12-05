@@ -7,7 +7,6 @@
     padding: 3%;
     color: #FFF;
 }
-
 .header__a--logo{
     width: 120px;
 }
@@ -15,7 +14,7 @@
     display: flex;
 }
 .header__contIconos .header--iconoHam, .header__contIconos .header--iconoUser{
-    font-size: 50px;
+    font-size: 40px;
     align-self: center;
 }
 .header__contIconos .header--iconoUser{
@@ -32,7 +31,7 @@
     margin-left: 25px;
 }
 .header__nav__ul__li--a{
-    font-size: 30px;
+    font-size: 20px;
     color: #FFF;
 }
 @media (min-width: 500px) {
@@ -47,4 +46,5 @@
     .header__nav{
         display: block;
     }
+
 }
