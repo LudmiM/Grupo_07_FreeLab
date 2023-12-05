@@ -1,0 +1,54 @@
+{
+    "servicios": [
+      {
+        "id": 1,
+        "name": "Diseño de Logotipos",
+        "description": "Servicio de diseño de logotipos para empresas y emprendedores.",
+        "images": [],
+        "category": "Diseño Gráfico",
+        "price": 150
+      },
+      {
+        "id": 2,
+        "name": "Redacción de Contenido",
+        "description": "Creación de contenido único y atractivo para blogs y páginas web.",
+        "images": [],
+        "category": "Redacción",
+        "price": 80
+      },
+      {
+        "id": 3,
+        "name": "Desarrollo Web",
+        "description": "Construcción de sitios web personalizados y funcionales.",
+        "images": [],
+        "category": "Desarrollo Web",
+        "price": 300
+      },
+
+      {
+        "id": 4,
+        "name": "Desarrollo de Aplicación Móvil",
+        "description": "Creación de una aplicación móvil para iOS y Android con funcionalidades específicas.",
+        "images": [],
+        "category": "Desarrollo de Software",
+        "price": 500
+      },
+      {
+        "id": 5,
+        "name": "Campaña de Marketing Digital",
+        "description": "Planificación y ejecución de una campaña de marketing digital para aumentar la visibilidad en línea.",
+        "images": [],
+        "category": "Marketing Digital",
+        "price": 250
+      },
+      {
+        "id": 6,
+        "name": "Diseño de Interiores",
+        "description": "Servicio completo de diseño de interiores para hogares y espacios comerciales.",
+        "images": [],
+        "category": "Diseño de Interiores",
+        "price": 800
+      }
+    ]
+  }
+  

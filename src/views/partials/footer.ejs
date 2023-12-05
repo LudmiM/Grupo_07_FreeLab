@@ -4,58 +4,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer__section {
+            margin-bottom: 20px;
+            display: inline-block;
+            text-align: left;
+            width: 25%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .footer__section h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #ddd;
+            transition: color 0.3s ease-in-out;
+        }
+
+        ul li a:hover {
+            color: #fff;
+        }
+
+        .ul__iconos {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ul__iconos li {
+            margin: 0 10px;
+        }
+
+        .footer__p__derechos {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #ddd;
+        }
+
+        /* Estilos específicos para cada sección */
+        .acerca-nosotros {
+            background-color: #444;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .nuestros-servicios {
+            background-color: #555;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .contactanos {
+            background-color: #666;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .redes-sociales {
+            background-color: #777;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        @media (min-width: 600px) {
+            /* Estilos adicionales para pantallas más grandes (opcional) */
+        }
+
+        @media (min-width: 1024px) {
+            /* Estilos adicionales para pantallas aún más grandes (opcional) */
+        }
+    </style>
     <script src="https://kit.fontawesome.com/62a6949a36.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
+    <title>Tu Empresa - Conectando Ideas</title>
 </head>
 
 <body>
     <footer>
-        <section class="footer__section">
-            <h3 class="footer__section--h3">Quiénes somos</h3>
+        <section class="footer__section acerca-nosotros">
+            <h3>Acerca de Nosotros</h3>
             <ul>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Sobre nosotros</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Únete al equipo</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Contáctanos</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Políticas de FreeLab</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Política de privacidad</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Términos de servicio</a></li>
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="#">Únete al equipo</a></li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Políticas de FreeLab</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos de servicio</a></li>
             </ul>
         </section>
-        <section class="footer__section">
-            <h3 class="footer__section--h3">Quiénes somos</h3>
-            <ul>
 
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Sobre nosotros</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Únete al equipo</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Contáctanos</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Políticas de FreeLab</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Política de privacidad</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Términos de servicio</a></li>
+        <section class="footer__section nuestros-servicios">
+            <h3>Nuestros Servicios</h3>
+            <p>
+                Nuestro sitio web, FreeLab, proporciona un espacio para la comunidad de trabajadores freelance y empleadores en busca de talento remoto. Ofrecemos una variedad de servicios, incluyendo:
+            </p>
+            <ul>
+                <li>Registro y Perfil Personalizado: Los usuarios pueden crear perfiles personalizados que resalten sus habilidades, experiencia y preferencias de trabajo.</li>
+                <li>Búsqueda de Trabajos Freelancer: Ofrecemos una amplia variedad de trabajos freelance en diversas industrias.</li>
+                <li>Publicación de Trabajos: Los empleadores pueden publicar oportunidades de trabajo freelance y conectarse con profesionales calificados de todo el mundo.</li>
+                <li>Calificaciones y Comentarios: Los usuarios pueden dejar y recibir calificaciones y comentarios para establecer una reputación confiable en la comunidad.</li>
             </ul>
         </section>
-        <section class="footer__section">
-            <h3 class="footer__section--h3">Quiénes somos</h3>
-            <ul class="footer__section__ul">
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Sobre nosotros</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Únete al equipo</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Contáctanos</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Políticas de FreeLab</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Política de privacidad</a></li>
-                <li class="footer__section__ul__li"><a class="footer__section__ul__li--a" href="#">Términos de servicio</a></li>
+
+        <section class="footer__section contactanos">
+            <h3>Contáctanos</h3>
+            <p>
+                ¿Tienes preguntas o comentarios? Estamos aquí para ayudarte. Contáctanos para obtener más información sobre nuestros servicios y oportunidades. ¡Esperamos saber de ti pronto!
+            </p>
+            <ul>
+                <li><a href="mailto:info@tuempresa.com">Correo Electrónico</a></li>
+                <li><a href="tel:+123456789">Teléfono</a></li>
+                <li><a href="#">Formulario de Contacto</a></li>
             </ul>
         </section>
-        <section class="footer__section siguenos__iconos">
-            <h3 class="footer__section--h3">Siguenos</h3>
+
+        <section class="footer__section redes-sociales">
+            <h3>Síguenos</h3>
             <ul class="ul__iconos">
-                <li><i class="fa-brands fa-linkedin-in"></i></li>
-                <li><i class="fa-brands fa-linkedin-in"></i></li>
-                <li><i class="fa-brands fa-linkedin-in"></i></li>
-                <li><i class="fa-brands fa-linkedin-in"></i></li>
-                <li><i class="fa-brands fa-linkedin-in"></i></li>
+                <li><i class="fab fa-linkedin-in"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-facebook-f"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
             </ul>
         </section>
-        <p class="footer__p__derechos">© 2023 - 2023 | FreeLab - Todos los derechos reservados</p>
+
+        <p class="footer__p__derechos">© 2023 - 2023 | Tu Empresa - Todos los derechos reservados</p>
     </footer>
 </body>
 

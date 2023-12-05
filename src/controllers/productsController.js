@@ -4,5 +4,8 @@ module.exports = {
     },
     detailPost: (req,res) => {
         res.render('products/productDetailPost');
+    },
+    edit : (req,res) => {
+        return res.render('products/product-edit')
     }
 }
