@@ -1,23 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-
-
+  <%- include('../partials/head', {title: 'Home | FreeLab' }) %>
 <body class="body-login">
-  <header class="header">
-    <img src="/images/Logo_FreeLab.png" alt="logo" class="header--logo">
-    <div class="header__contIconos">
-        <i class="fa-solid fa-user header--iconoUser"></i>
-        <i class="fa-solid fa-bars-staggered header--iconoHam"></i>
-    </div>
-    <nav class="header__nav">
-        <ul class="header__nav__ul">
-            <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/login">Login</a></li>
-            <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/productCart">Carrito</a></li>
-            <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="#">Trabajos</a></li>
-            <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="#">¿Quienes somos?</a></li>
-        </ul> 
-    </nav>
-</header>
+  <%- include('../partials/header')%>
 <div class="container-login">
   <div class="log-form">
     <img src="/images/Logo_FreeLab.png" alt="Logo de FreeLab" class="logo-login">
@@ -53,7 +38,7 @@
   </div>
 </div>
 
-
+<%- include('../partials/footer')%>
 </body>
 
 </html>
