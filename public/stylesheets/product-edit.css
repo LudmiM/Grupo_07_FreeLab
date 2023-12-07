@@ -1,37 +1,181 @@
 /* Estilos generales */
-body {
+.body-pe {
     font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
 }
 
-.container {
+.container-pe {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
+}
+
+/* Estilos para la clase única */
+.form-editpe {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Estilos específicos para las etiquetas flotantes de Bootstrap con la clase única */
+.form-editpe.form-floating label {
+    color: #777;
 }
 
 /* Estilos del formulario */
 .edit-product-card {
     margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--colorCelesteClaro);
 }
 
-.edit-product-label {
-    font-weight: bold;
-}
-
-.edit-product-input,
-.edit-product-textarea,
-.edit-product-file,
-.edit-product-select {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.edit-product-btn {
+.card-header {
+    border-radius: 10px 10px 0 0;
     background-color: #007bff;
     color: #fff;
+    padding: 15px;
 }
 
-.edit-product-btn:hover {
-    background-color: #0056b3;
+.card-body-pe {
+    padding: 20px;
+    border-top: 2px solid var(--colorCeleste);
 }
 
-/* Otros estilos según sea necesario */
+.form-floating {
+    position: relative;
+}
+
+.form-floating input,
+.form-floating textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.form-control-file {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para el botón */
+.btn-dark {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #1d2124;
+}
+
+/* Estilos generales para pantallas pequeñas (celulares) */
+@media (max-width: 576px) {
+    .container-pe {
+        max-width: 100%;
+    }
+
+    .edit-product-card {
+        margin-top: 10px;
+    }
+
+    .form-floating input,
+    .form-floating textarea,
+    .form-control-file {
+        padding: 10px;
+    }
+
+/* Estilos para el botón "Guardar Cambios" */
+.btn-dark-custom {
+    background-color: var(--colorCelesteOscuro);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-dark-custom:hover {
+    background-color: var(--colorCeleste);
+}
+
+    .form-floating textarea {
+        height: 80px;
+    }
+}
+
+/* Estilos generales para pantallas medianas (tabletas) */
+@media (min-width: 577px) and (max-width: 992px) {
+    .edit-product-card {
+        margin-top: 15px;
+    }
+}
+
+/* Estilos generales para pantallas grandes (escritorios) */
+@media (min-width: 993px) {
+    .form-editpe {
+        font-size: 18px;
+        color: var(--colorAzulOscuro);
+    }
+}
+
+/* Hacer que las imágenes sean responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustar estilos para el textarea en pantallas pequeñas */
+@media (max-width: 576px) {
+    /* Puedes agregar estilos específicos si es necesario */
+}
+
+/* Colores personalizados */
+:root {
+    --colorAzulOscuro: #193A4F;
+    --colorCelesteOscuro: #1f8db4;
+    --colorCeleste: #5eb1cd;
+    --colorCelesteClaro: #c8f3fa;
+    --colorGris: #A9BCC6;
+}
+
+/* Estilos para el botón personalizado */
+.btn-custom {
+    background-color: var(--colorCeleste);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--colorCelesteOscuro);
+}
+
+/* Estilos para el enlace personalizado */
+.link-custom {
+    color: var(--colorAzulOscuro);
+    text-decoration: underline;
+}
+
+.link-custom:hover {
+    color: var(--colorCelesteOscuro);
+}
