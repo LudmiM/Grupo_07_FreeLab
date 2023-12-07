@@ -1,4 +1,4 @@
-<header class="admin__header">
+<!-- <header class="admin__header">
   <div class="admin__header__div">
     <h1 class="admin__header__div__nombre">FreeLab</h1>
     <form action="" method="get" class="admin__header__div__form">
@@ -14,4 +14,25 @@
     </select>
   </div>
   </div>
+</header> -->
+
+
+<header class="admin__header">
+    <div class="admin__logo">
+        <a class="admin__logo--a" href="/"><h1>FreeLab</h1></a>
+    </div>
+    <div class="admin__busqueda">
+        <form class="admin__formulario-busqueda">
+            <input type="text" placeholder="Buscar..." class="admin__entrada-busqueda">
+            <button type="submit" class="admin__boton-busqueda">Buscar</button>
+        </form>
+    </div>
+    <div class="admin__filtro">
+        <label class="admin__etiqueta-filtro">Filtrar por:</label>
+        <select class="admin__select-filtro">
+            <option value="todos" selected>Todos</option>
+            <option value="contratados">Contratados</option>
+            <option value="contratantes">Contratantes</option>
+        </select>
+    </div>
 </header>

@@ -6,36 +6,33 @@
 
   <%- include('./partials/headerAdmin') %>
 
-  <table>
+  <table class="admin__table">
     <thead>
       <tr>
-        <th id="admin__table__thead__tr__th--id">ID</th>
-        <th id="admin__table__thead__tr__th--nombre">Nombre</th>
-        <th id="admin__table__thead__tr__th--email">Email</th>
-        <th id="admin__table__thead__tr__th--acciones">Acciones</th>
+        <th class="admin__table__header admin__table__header--id">ID</th>
+        <th class="admin__table__header admin__table__header--nombre">Nombre</th>
+        <th class="admin__table__header admin__table__header--email">Email</th>
+        <th class="admin__table__header admin__table__header--acciones">Acciones</th>
       </tr>
     </thead>
     <tbody>
       <% products.forEach(user => { %>
         <tr>
-          <td class="tbody__tr__td--id"><%= user.id %></td>
-          <td><%= user.name %></td>
-          <td><%= user.email %></td>
-          <td>
-            <div class="admin__acciones">
-             <!--  <a href=""><i class="fa-solid fa-eye"></i></a>
-              <a href=""><i class="fa-solid fa-pencil"></i></a>
-              <a href=""><i class="fa-solid fa-trash"></i></a> -->
-
-              <a href=""><i class="fa-solid fa-file"></i></a>
-              <a href=""><i class="fa-solid fa-file-pen"></i></a>
-              <a href=""><i class="fa-solid fa-file-circle-xmark"></i></a>
+          <td class="admin__table__tbody__tr__td admin__table__tbody__tr__td--id"><%= user.id %></td>
+          <td class="admin__table__tbody__tr__td admin__table__tbody__tr__td--nombre"><%= user.name %></td>
+          <td class="admin__table__tbody__tr__td admin__table__tbody__tr__td--email"><%= user.email %></td>
+          <td class="admin__table__tbody__tr__td admin__table__tbody__tr__td--acciones">
+            <div class="admin__table__tbody__tr__div">
+              <a href="#" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--eye"><i class="fa-solid fa-eye"></i></a>
+              <a href="#" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--pencill"><i class="fa-solid fa-pencil"></i></a>
+              <a href="#" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--trash"><i class="fa-solid fa-trash"></i></a>
             </div>
-        </td>
+          </td>
         </tr>
       <% }); %>
     </tbody>
   </table>
+  
 
   <% include('./partials/scripts') %>
 </body>
