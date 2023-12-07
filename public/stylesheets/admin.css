@@ -1,0 +1,107 @@
+/* admin-header.css */
+
+.admin__header {
+  background-color: #193a4f;
+  color: #ffffff;
+  padding: 10px 0;
+}
+
+.admin__header__div {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin__header__nav__nombre {
+
+}
+
+.admin__header__div__button-buscar {
+  
+}
+
+.admin__header__div__form {
+  margin-right: 10px;
+}
+
+.admin__header__div__barra-busqueda {
+  padding: 8px;
+}
+
+.admin__header__div__button-buscar {
+  padding: 8px;
+  background-color: #1f8db4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.admin__header__div__lable {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.admin__header__div__select {
+  padding: 8px;
+}
+   
+
+/* Main */
+
+.admin__home {
+    background-color: #ffffff;
+}
+
+table {
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #a9bcc6;
+}
+
+#admin__table__thead__tr__th--id {
+ text-align: center;
+}
+
+#admin__table__thead__tr__th--nombre {
+
+}
+
+#admin__table__thead__tr__th--email {
+
+}
+
+#admin__table__thead__tr__th--acciones {
+    width: 10rem;
+}
+
+th, td {
+    border: 2px solid #ddd;
+    background-color: #f2f2f2;
+    padding: 5px 8px;
+    text-align: left;
+}
+
+td {
+}
+
+th {
+}
+
+.tbody__tr__td--id {
+    text-align: center;
+}
+
+.admin__acciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.admin__acciones i {
+    color: black;
+    padding: 0px 8px;
+}
