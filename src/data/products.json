@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 {
     "servicios": [
       {
@@ -52,56 +52,3 @@
       }
     ]
   }
-  
-=======
-[
-  {
-    "id": 1,
-    "name": "Juan Pérez",
-    "age": 30,
-    "email": "juan.perez@example.com",
-    "address": "Calle Principal 123",
-    "phone": "123-456-7890"
-  },
-  {
-    "id": 2,
-    "name": "María Rodríguez",
-    "age": 25,
-    "email": "maria.rodriguez@example.com",
-    "address": "Avenida Secundaria 456",
-    "phone": "987-654-3210"
-  },
-  {
-    "id": 3,
-    "name": "Carlos García",
-    "age": 35,
-    "email": "carlos.garcia@example.com",
-    "address": "Plaza Central 789",
-    "phone": "555-123-4567"
-  },
-  {
-    "id": 4,
-    "name": "Ana Martínez",
-    "age": 28,
-    "email": "ana.martinez@example.com",
-    "address": "Calle Tranquila 321",
-    "phone": "333-999-8888"
-  },
-  {
-    "id": 5,
-    "name": "Luisa Sánchez",
-    "age": 40,
-    "email": "luisa.sanchez@example.com",
-    "address": "Esquina Famosa 567",
-    "phone": "777-444-2222"
-  },
-  {
-    "id": 6,
-    "name": "Pedro López",
-    "age": 32,
-    "email": "pedro.lopez@example.com",
-    "address": "Calle Animada 987",
-    "phone": "111-000-5555"
-  }
-]
->>>>>>> a9cd7b752580949138990e112933e68cb3e2c753
