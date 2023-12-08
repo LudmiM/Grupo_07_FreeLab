@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <%- include('./partials/head', {title: 'Home | FreeLab' }) %>
 <body class="carrito">
-
+    <%- include('./partials/header')%>
     <main class="main--carrito">
         <section class="main__section--carrito">
             <h2>Carrito de compras:</h2>
@@ -74,6 +74,7 @@
             </div>
         </div>
     </main>
-
+    <%- include('./partials/footer')%>
+    <%- include('./partials/scripts') %>
 </body>
 </html>
