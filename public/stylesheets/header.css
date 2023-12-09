@@ -3,17 +3,18 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 3%;
     color: #FFF;
 }
-.header--logo{
-    width: 18%;
+.header__a--logo{
+    width: 120px;
 }
 .header__contIconos{
     display: flex;
 }
 .header__contIconos .header--iconoHam, .header__contIconos .header--iconoUser{
-    font-size: 50px;
+    font-size: 40px;
     align-self: center;
 }
 .header__contIconos .header--iconoUser{
@@ -21,7 +22,6 @@
     display: none;
 }
 .header__nav{
-    margin-top: 90px;
     display: none;
 }
 .header__nav__ul{
@@ -31,7 +31,7 @@
     margin-left: 25px;
 }
 .header__nav__ul__li--a{
-    font-size: 30px;
+    font-size: 20px;
     color: #FFF;
 }
 @media (min-width: 500px) {
@@ -46,4 +46,5 @@
     .header__nav{
         display: block;
     }
+
 }
