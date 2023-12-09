@@ -1,9 +1,17 @@
 .main__PDPost{
     width: 100%;
+    position: relative;
     /*background-color: blueviolet;*/
 }
 .main__PDPost__section{
     padding: 3%;
+}
+/*Imagen*/
+.main__logo{
+    width: 100%;
+}
+.main__logo--img{
+    width: 100%;
 }
 /*Todas las secciones llevan esta clase*/
 .main__PDPost__section{
@@ -46,4 +54,19 @@
 .section__sobreEmpresa__contenedor__article{
     display:flex;
 }
-
+/*Botones flotantes: postularme y guardar*/
+.section__acciones{
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+.section__acciones--h3{
+    padding: 10px;
+    background-color: var(--colorAzulOscuro);
+}
+.section__acciones--iconoGuardar{
+    padding: 1px 10px;
+    background-color: #FFF;
+    color: var(--colorPrueba);
+}
