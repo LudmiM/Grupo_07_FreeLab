@@ -17,13 +17,15 @@
 .main__PDPost__section{
     width:90%;
     margin: 0 auto;
-    color:#FFF;
+    /*color:#FFF;*/
 } 
 /**Seccion explicacion de oferta [1]*/
 .section__explicacion{
-    background-color: var(--colorCelesteOscuro);
+    /*background-color: var(--colorCelesteOscuro);
     color:#FFF;
     /*padding: 2%;*/
+    background-color: var(--colorGris);
+    border-radius: 15px;
 }
 .section__explicacion__contenedor{
     display:flex;
@@ -38,12 +40,12 @@
 }
 /*Seccion sobre el puesto, info extra del puesto [2]*/
 .section__habilidades{
-    background-color: var(--colorCeleste);
+    /*background-color: var(--colorCeleste);*/
 }
 
 /*Seccion sobre el puesto, info extra del puesto [3]*/
 .section__sobreEmpresa{
-    background-color: var(--colorCelesteOscuro);
+    /*background-color: var(--colorCelesteOscuro);*/
     display: flex;
 }
 .section__sobreEmpresa--img{
@@ -53,6 +55,7 @@
 }
 .section__sobreEmpresa__contenedor__article{
     display:flex;
+    flex-wrap: wrap;
 }
 /*Botones flotantes: postularme y guardar*/
 .section__acciones{
@@ -72,8 +75,11 @@
 }
 .section__acciones--h3{
     background-color: var(--colorAzulOscuro);
+    color:#FFF;
     margin-left: 26%;
     padding: 10px 20px;
     border-radius: 10px;
 }
-
+.botonesDP{
+    background-color: aquamarine;
+}
