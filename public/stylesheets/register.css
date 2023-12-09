@@ -410,10 +410,15 @@ label {
 /* Estilos para escritorio */
 @media (min-width: 769px) {
     .register-form {
-        width: 60%; 
+        width: 60%; /* Puedes ajustar este valor según tus necesidades */
+        max-width: none; /* Elimina el ancho máximo si es necesario */
     }
 
     .register-box {
+
+            width: 40%; /* Puedes ajustar este valor según tus necesidades */
+            max-width: none; /* Elimina el ancho máximo si es necesario */
+            left: 80%; /* Ajusta la posición izquierda según tus necesidades */
         background: none; 
         box-shadow: none; 
         border: none; 
@@ -431,6 +436,7 @@ label {
         display: flex; 
         align-items: center; 
     }
+    
     
     .social-buttons .btn i {
         background: #87CEEB; 
