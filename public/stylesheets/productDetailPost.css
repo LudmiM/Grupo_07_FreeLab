@@ -61,12 +61,19 @@
     bottom: 0;
     left: 0;
 }
-.section__acciones--h3{
-    padding: 10px;
-    background-color: var(--colorAzulOscuro);
-}
 .section__acciones--iconoGuardar{
-    padding: 1px 10px;
     background-color: #FFF;
     color: var(--colorPrueba);
+    font-size: 25px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: solid 1px var(--colorAzulOscuro);
+    height: 50px;
 }
+.section__acciones--h3{
+    background-color: var(--colorAzulOscuro);
+    margin-left: 26%;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
