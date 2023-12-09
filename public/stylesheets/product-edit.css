@@ -1,0 +1,136 @@
+/* Estilos generales */
+.body-pe {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+.container-pe {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Estilos para la clase única */
+.form-editpe {
+    font-size: 18px;
+    color: var(--colorAzulOscuro);
+    justify-content: center; /* Alineación horizontal al centro */
+    align-items: center;
+    
+}
+
+
+.form-editpe.form-floating label {
+    color: #777;
+}
+
+/* Estilos del formulario */
+.edit-product-card {
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--colorCelesteClaro);
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px;
+}
+
+.card-body-pe {
+    padding: 20px;
+    border-top: 2px solid var(--colorCeleste);
+}
+
+.form-floating {
+    position: relative;
+}
+
+.form-floating input,
+.form-floating textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+#precio {
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    padding: 8px;
+    width: 60%; /* Ajusta el ancho según tus necesidades */
+}
+
+/* Estilos para el select de divisa */
+#divisa {
+    background-color:  #E9ECEF;
+    border: 1px solid #bdbdbd;
+    padding: 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+
+/* Estilos para el botón */
+.btn-dark-custom {
+    background-color: var(--colorCelesteOscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:  0.9s ease;
+}
+.btn-dark-custom:hover {
+ background-color: var(--colorCeleste);
+    
+}
+
+
+
+/* Estilos generales para pantallas pequeñas (celulares) */
+@media (max-width: 576px) {
+    .container-pe {
+        max-width: 90%;
+    }
+
+    .edit-product-card {
+        margin-top: 10px;
+    }
+
+    .form-floating input,
+    .form-floating textarea{
+        padding: 10px;
+    }
+
+    /* Estilos para el botón "Guardar Cambios" */
+
+    .form-floating textarea {
+        height: 80px;
+    }
+}
+
+/* Estilos generales para pantallas medianas (tabletas) */
+@media (min-width: 577px) and (max-width: 992px) {
+    .container-pe {
+        max-width: 800px;
+        margin: 10% 10%;
+    }
+    
+    .edit-product-card {
+        margin-top: 15px;
+    }
+}
+
+/* Estilos generales para pantallas grandes (escritorios) */
+@media (min-width: 993px) {
+
+}
+
+/* Hacer que las imágenes sean responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
