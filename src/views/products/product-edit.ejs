@@ -21,7 +21,7 @@
                         <div class="col-12 mb-3">
                             <label for="nombre"  class="form-editpe">Nombre del Servicio/Proyecto</label>
                             <div class="form-floating">
-                                <input name="nombre" type="text" class="form-control" id="nombre"
+                                <input name="nombre" type="text" class="form-pe" id="nombre"
                                     value="<%= product && product.name || '' %>" required>
                                     
                             </div>
@@ -30,7 +30,7 @@
                         <div class="col-12 mb-3">
                             <label for="descripcion"  class="form-editpe">Descripción</label>
                             <div class="form-floating">
-                                <textarea name="descripcion" class="form-control" id="descripcion"
+                                <textarea name="descripcion" class="form-pe" id="descripcion"
                                     style="height: 150px;"><%= product && product.description || '' %></textarea>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
                         <div class="col-12 mb-3">
                             <label for="habilidades"  class="form-editpe">Descripción de habilidades</label>
                             <div class="form-floating">
-                                <textarea name="habilidades" class="form-control" id="habilidades"
+                                <textarea name="habilidades" class="form-pe" id="habilidades"
                                     style="height: 150px;"><%= product && product.skills || '' %></textarea>
                                 
                             </div>
@@ -47,7 +47,7 @@
                         <div class="col-12 mb-3">
                             <label for="portfolio"  class="form-editpe">Link a Portfolio</label>
                             <div class="form-floating">
-                                <input name="portfolio" type="url" class="form-control" id="portfolio"
+                                <input name="portfolio" type="url" class="form-pe" id="portfolio"
                                     value="<%= product && product.portfolio || '' %>">
                                 
                             </div>
@@ -56,24 +56,16 @@
                         <div class="col-12 mb-3">
                             <label for="redes_sociales"  class="form-editpe">Links a Redes Sociales</label>
                             <div class="form-floating">
-                                <input name="redes_sociales" type="url" class="form-control" id="redes_sociales"
+                                <input name="redes_sociales" type="url" class="form-pe" id="redes_sociales"
                                     value="<%= product && product.redes_sociales || '' %>">
                                 
                             </div>
                         </div>
                         
                         <div class="col-12 mb-3">
-                            <label for="imagenes" class="form-editpe">Imágenes del Proyecto/Servicio (separadas por
-                                comas):</label>
-                            <input type="file" class="form-control-file" id="imagenes" name="imagenes[]" multiple
-                                accept="image/*">
-                            
-                        </div>
-
-                        <div class="col-12 mb-3">
                             <label for="categoria"  class="form-editpe">Categoría</label>
                             <div class="form-floating">
-                                <input name="categoria" type="text" class="form-control" id="categoria"
+                                <input name="categoria" type="text" class="form-pe" id="categoria"
                                     value="<%= product && product.category || '' %>">
                             </div>
                         </div>
@@ -82,27 +74,27 @@
                             <div class="input-group">
                                 <label for="precio" class="form-editpe me-2" >Precio:</label>
                                 <div class="input-group">
-                                    <span class="input-group-text" class="form-editpe">$</span>
-                                    <input name="precio" type="number" class="form-control" id="precio"
+                                    <span class="input-group-text"> $</span>
+                                    <input name="" type="number" class="form-editpe" id="precio"
                                         value="<%= product && product.price || '' %>" required>
+                                        <select class="custom-selectpe" id="divisa" name="divisa" required>
+                                            <option value="ARS" <%= product && product.divisa === 'ARS' ? 'selected' : '' %>>ARS
+                                            </option>
+                                            <option value="USD" <%= product && product.divisa === 'USD' ? 'selected' : '' %>>USD
+                                            </option>
+                                            <option value="EUR" <%= product && product.divisa === 'EUR' ? 'selected' : '' %>>EUR
+                                            </option>
+                                        </select>
                                 </div>
-                                <select class="custom-select" id="divisa" name="divisa" required>
-                                    <option value="ARS" <%= product && product.divisa === 'ARS' ? 'selected' : '' %>>ARS
-                                    </option>
-                                    <option value="USD" <%= product && product.divisa === 'USD' ? 'selected' : '' %>>USD
-                                    </option>
-                                    <option value="EUR" <%= product && product.divisa === 'EUR' ? 'selected' : '' %>>EUR
-                                    </option>
-                                </select>
+                               
                             </div>
                         </div>
 
                         <div class="col-12 d-flex justify-content-end">
                             <a href="#" class="btn btn-lg btn-dark-custom">Guardar Cambios</a>
-
-
-
                         </div>
+
+
                     </div>
                 </form>
             </div>
