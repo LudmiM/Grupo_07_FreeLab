@@ -76,6 +76,7 @@
 /*Botones para desplazarme por la paginaa*/
 .section__acciones--h3{
     background-color: var(--colorAzulOscuro);
+    background-color: var(--colorNaranja);;
     color:#FFF;
     margin-left: 26%;
     padding: 10px 20px;
