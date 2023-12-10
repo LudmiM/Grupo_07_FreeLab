@@ -15,3 +15,11 @@
     transition: all 3s;
     background-color: var(--colorAzulOscuro);
 }
+.boton__Cuaternario{
+    background-color: #FFF;
+    color: var(--colorPrueba);
+    font-size: 25px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: solid 1px var(--colorAzulOscuro);
+}

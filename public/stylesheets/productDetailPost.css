@@ -65,14 +65,15 @@
     left: 0;
 }
 .section__acciones--iconoGuardar{
-    background-color: #FFF;
+    /*background-color: #FFF;
     color: var(--colorPrueba);
     font-size: 25px;
     padding: 12px 20px;
     border-radius: 10px;
-    border: solid 1px var(--colorAzulOscuro);
+    border: solid 1px var(--colorAzulOscuro);*/
     height: 50px;
 }
+/*Botones para desplazarme por la paginaa*/
 .section__acciones--h3{
     background-color: var(--colorAzulOscuro);
     color:#FFF;
