@@ -42,7 +42,25 @@
 .section__habilidades{
     /*background-color: var(--colorCeleste);*/
 }
-
+/*Botones flotantes: postularme y guardar*/
+.section__acciones{
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+.section__acciones__botonGuardar{
+    /*background-color: #FFF;
+    color: var(--colorPrueba);
+    font-size: 25px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: solid 1px var(--colorAzulOscuro);*/
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /*Seccion sobre el puesto, info extra del puesto [3]*/
 .section__sobreEmpresa{
     /*background-color: var(--colorCelesteOscuro);*/
@@ -57,25 +75,10 @@
     display:flex;
     flex-wrap: wrap;
 }
-/*Botones flotantes: postularme y guardar*/
-.section__acciones{
-    display: flex;
-    position: sticky;
-    bottom: 0;
-    left: 0;
-}
+/*Botones para desplazarme por la paginaa: Guardar y Postualrame*/
 .section__acciones__botonPostularme{
-    /*background-color: #FFF;
-    color: var(--colorPrueba);
-    font-size: 25px;
-    padding: 12px 20px;
-    border-radius: 10px;
-    border: solid 1px var(--colorAzulOscuro);*/
     height: 50px;
-}
-/*Botones para desplazarme por la paginaa*/
-.section__acciones__botonPostularme{
-    margin-left: 38%;
+    margin-left: 34%;
 }
 .botones__PDPost{
     display: flex;
