@@ -80,6 +80,7 @@
     padding: 10px 20px;
     border-radius: 10px;
 }
-.botonesDP{
-    background-color: aquamarine;
+.botones__PDPost{
+    display: flex;
+    flex-wrap: wrap;
 }
