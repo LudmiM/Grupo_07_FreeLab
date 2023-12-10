@@ -1,4 +1,11 @@
-.boton__primario{}
+/*Boton con relleno narajan y letras color blancas*/
+.boton__primario{
+    background-color: var(--colorAzulOscuro);
+    background-color: var(--colorNaranja);;
+    color:#FFF;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
 .boton__secundario{}
 /*Boton con etiqueta a*/
 .boton__terciario{
@@ -15,7 +22,7 @@
     transition: all 3s;
     background-color: var(--colorAzulOscuro);
 }
-.boton__Cuaternario{
+.boton__cuaternario{
     background-color: #FFF;
     color: var(--colorNaranja);
     font-size: 25px;

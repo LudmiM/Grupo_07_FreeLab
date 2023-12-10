@@ -64,7 +64,7 @@
     bottom: 0;
     left: 0;
 }
-.section__acciones--iconoGuardar{
+.section__acciones__botonPostularme{
     /*background-color: #FFF;
     color: var(--colorPrueba);
     font-size: 25px;
@@ -74,13 +74,8 @@
     height: 50px;
 }
 /*Botones para desplazarme por la paginaa*/
-.section__acciones--h3{
-    background-color: var(--colorAzulOscuro);
-    background-color: var(--colorNaranja);;
-    color:#FFF;
-    margin-left: 26%;
-    padding: 10px 20px;
-    border-radius: 10px;
+.section__acciones__botonPostularme{
+    margin-left: 38%;
 }
 .botones__PDPost{
     display: flex;
