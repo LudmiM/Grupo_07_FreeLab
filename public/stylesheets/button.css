@@ -1,0 +1,16 @@
+.boton__primario{}
+.boton__secundario{}
+/*Boton con etiqueta a*/
+.boton__terciario{
+    background-color: var(--colorCelesteOscuro);
+    border-radius: 15px;
+    padding: 5px 13px;
+    margin: 20px 10px;
+    font-size: 16px;
+    text-align: center;
+    width: 95px;
+}
+.boton__terciario:hover{
+    transition: all 3s;
+    background-color: pink;
+}

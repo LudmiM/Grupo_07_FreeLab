@@ -83,4 +83,6 @@
 .botones__PDPost{
     display: flex;
     flex-wrap: wrap;
+    margin: 20px 4%;
+    color: #FFF;
 }
