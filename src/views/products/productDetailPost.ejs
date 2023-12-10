@@ -2,7 +2,7 @@
 <html lang="en">
   <%-include('../partials/head')%>
   <body>
-    <%-include('../partials/header')%>
+    <%-include('../partials/header', {title: 'Home | FreeLab' })%>
 
     <main class="main__PDPost w-100">
       <section class="main__section__PDPost col-11 col-md-7 col-lg-5 mx-auto">
@@ -110,6 +110,7 @@
         </div>
       </section>
     </main>
-    <%-include('../partials/footer')%> <%-include('../partials/scripts')%>
+    <%-include('../partials/footer')%>
+    <%-include('../partials/scripts')%>
   </body>
 </html>
