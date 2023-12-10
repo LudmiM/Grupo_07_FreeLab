@@ -9,7 +9,7 @@
 **Nahuel** : 
 **Marco** :
 **Ludmila** : Empece con incidencias del sprint3, adaptando la estructura. Sin impedimentos. Arreglar incidencias de detalle de produucto
-**Rony** :
+**Rony** : empece con la relizacion del formulario y la correcciones solicitadas.
 **Mauricio**:
 
 ### Lunes 4/12

@@ -1,4 +1,4 @@
-body {
+.body__index {
     background-color: var(--colorAzulOscuro);
 }
 
@@ -10,7 +10,7 @@ body {
     gap: 16px;
 }
 
-main{
+.main{
     box-shadow: 100px 100px 100px 100px rgba(0, 0, 0, 0.5);
  padding: 10px;
 }
