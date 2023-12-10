@@ -54,11 +54,9 @@
     display: flex;
     flex-wrap: wrap;
 }
-
 .section__skills__article--h3 {
     width: 100%;
 }
-
 .skills--p {
     background-color: var(--colorCelesteClaro);
     border-radius: 15px;
@@ -74,19 +72,17 @@
 .section__review__proOf {
     display: flex;
 }
-
 .section__review__ordenC {
     display: flex;
 }
 
 /*section contacto*/
 .section__contacto {
-    position: -webkit-sticky;
+    /*position: -webkit-sticky;*/
     position: sticky;
     bottom: 10px;
     left: 0;
 }
-
 .section__contacto--iconContac {
     background-color: var(--colorCelesteClaro);
     border-radius: 50%;
@@ -95,21 +91,9 @@
     margin-left: 85%;
     width: 50px;
     height: 50px;
-    /*
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 10px;
-    left: 0;*/
 }
-
 .section__contacto--h3 {
     display: none;
-}
-.quieto {
-    
-    bottom: 10px; /* Puedes ajustar este valor según tus necesidades */
-    left: 0;
-    z-index: 1; /* Asegúrate de tener un valor de z-index mayor que el icono si se superponen */
 }
 
 @media (min-width: 500px) {

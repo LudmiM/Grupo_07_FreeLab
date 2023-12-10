@@ -1,25 +1,32 @@
 .main__PDPost{
     width: 100%;
     position: relative;
-    /*background-color: blueviolet;*/
-}
-.main__PDPost__section{
-    padding: 3%;
-}
-/*Posible logo Imagen*/
-.main__logo{
-    width: 100%;
-}
-.main__logo--img{
-    width: 100%;
 }
 /*Todas las secciones llevan esta clase*/
 .main__PDPost__section{
     width:90%;
     margin: 0 auto;
-    /*color:#FFF;*/
-} 
+    padding: 3%;
+}
+/*Posible logo Imagen
+.main__logo{
+    width: 100%;
+}
+.main__logo--img{
+    width: 100%;
+}*/
 /**Seccion explicacion de oferta [1]*/
+
+
+/*Section explicacion > article mamejo*/
+.section__explicacion__article__manejo{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section__explicacion__article__manejo--h3{
+    width: 100%;
+}
+
 
 /*Botones flotantes: postularme y guardar*/
 .section__acciones{
