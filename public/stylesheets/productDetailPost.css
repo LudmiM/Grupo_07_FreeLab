@@ -19,14 +19,7 @@
 .main__logo--img{
     width: 100%;
 }*/
-/**Seccion explicacion de oferta [1]*/
-
-
 /*Section explicacion > article mamejo*/
-.section__explicacion{
-    border-radius: 20px;
-    box-shadow:  2px 2px 4px var(--colorAzulOscuro);
-}
 .section__explicacion__article__manejo{
     display: flex;
     flex-wrap: wrap;
@@ -34,8 +27,32 @@
 .section__explicacion__article__manejo--h3{
     width: 100%;
 }
+/*Section sobreEmpresa*/
+.section__sobreEmpresa{
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+}
+.section__sobreEmpresa--img{
+    width: 100px;
+    margin-right: 50px;
+    border-radius: 50%;
+}
+.section__sobreEmpresa__contenedor__article{
+    display:flex;
+    flex-wrap: wrap;
+}
+.section__sobreEmpresa__contenedor__article--h4{
+    margin-left: 10px;
+}
 
-
+/*Botones para desplazarme por la paginaa: sobrePublicaion, sobreempresa, sobrealgomas*/
+.botones__PDPost{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 4%;
+    color: #FFF;
+}
 /*Botones flotantes: postularme y guardar*/
 .section__acciones{
     display: flex;
@@ -44,39 +61,12 @@
     left: 0;
 }
 .section__acciones__botonGuardar{
-    /*background-color: #FFF;
-    color: var(--colorPrueba);
-    font-size: 25px;
-    padding: 12px 20px;
-    border-radius: 10px;
-    border: solid 1px var(--colorAzulOscuro);*/
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-/*Seccion sobre el puesto, info extra del puesto [3]*/
-.section__sobreEmpresa{
-    /*background-color: var(--colorCelesteOscuro);*/
-    display: flex;
-}
-.section__sobreEmpresa--img{
-    width: 18%;
-    margin-right: 50px;
-    border-radius: 50%;
-}
-.section__sobreEmpresa__contenedor__article{
-    display:flex;
-    flex-wrap: wrap;
-}
-/*Botones para desplazarme por la paginaa: Guardar y Postualrame*/
 .section__acciones__botonPostularme{
     height: 50px;
     margin-left: 34%;
-}
-.botones__PDPost{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px 4%;
-    color: #FFF;
 }
