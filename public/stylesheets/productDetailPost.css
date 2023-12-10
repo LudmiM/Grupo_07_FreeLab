@@ -8,6 +8,10 @@
     margin: 0 auto;
     padding: 3%;
 }
+.main__PDPost__section:not(:last-child){
+    border-radius: 20px;
+    box-shadow:  2px 2px 4px var(--colorAzulOscuro);
+}
 /*Posible logo Imagen
 .main__logo{
     width: 100%;
@@ -19,6 +23,10 @@
 
 
 /*Section explicacion > article mamejo*/
+.section__explicacion{
+    border-radius: 20px;
+    box-shadow:  2px 2px 4px var(--colorAzulOscuro);
+}
 .section__explicacion__article__manejo{
     display: flex;
     flex-wrap: wrap;
