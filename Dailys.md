@@ -16,7 +16,7 @@
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** :
+**Ludmila** : Termine incidencia de sprint3. Empece con incidencia de sprint2: newsletter y formulario de contacto
 **Rony** :
 **Mauricio**:
 
@@ -24,7 +24,7 @@
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** :
+**Ludmila** : Continuo con incidencia de sprint2: newsletter y formulario de contacto
 **Rony** :
 **Mauricio**:
 
@@ -32,7 +32,7 @@
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** :
+**Ludmila** : Empece con incidencia de sprint2 #PI33: dar mas estilos al detalle de producto
 **Rony** :
 **Mauricio**:
 
@@ -40,7 +40,7 @@
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** :
+**Ludmila** : Continuo con incidencia de sprint2: dar mas estilos al detalle de producto
 **Rony** :
 **Mauricio**:
 
@@ -48,6 +48,6 @@
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** :
+**Ludmila** : Continuo con incidencia de sprint2: dar mas estilos al detalle de producto
 **Rony** :
 **Mauricio**:
