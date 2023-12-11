@@ -5,6 +5,7 @@ const crypto = require('crypto')
 module.exports = {
     detail: (req, res) => res.render('products/productDetail'),
     detailPost: (req, res) => res.render('products/productDetailPost'),
+    formProduct:(req,res) => res.render('products/product-create'),
     edit: (req, res) => {
         const { id } = req.params;
         const product = data.leerJSON('products').servicios.find((p) => p.id == id); 
