@@ -1,0 +1,16 @@
+.article__review{
+    background-color: #FFF;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px auto;
+}
+.article__review__proFecha{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article__review--nombre{
+    display: flex;
+    justify-content: end;
+}
