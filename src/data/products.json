@@ -1,0 +1,64 @@
+{
+  "servicios": [
+    {
+      "id": 1,
+      "name": "Diseño de Logotipos",
+      "description": "Servicio de diseño de logotipos para empresas y emprendedores.",
+      "skills": ["Diseño Gráfico", "Creatividad"],
+      "portfolio": "www.portfolio.port",
+      "redes_sociales": "www.redsocial.red",
+      "category": "Diseño Gráfico",
+      "price": 150
+    },
+    {
+      "id": 2,
+      "name": "Redacción de Contenido",
+      "description": "Creación de contenido único y atractivo para blogs y páginas web.",
+      "skills": ["Redacción", "SEO"],
+      "portfolio": "www.portfolio.port",
+      "redes_sociales": "www.redsocial.red",
+      "category": "Redacción",
+      "price": 80
+    },
+    {
+      "id": 3,
+      "name": "Desarrollo Web",
+      "description": "Construcción de sitios web personalizados y funcionales.",
+      "skills": ["Desarrollo Web", "Diseño UX/UI"],
+      "portfolio": "www.portfolio.port",
+      "redes_sociales": "www.redsocial.red",
+      "category": "Desarrollo Web",
+      "price": 300
+    },
+    {
+      "id": 4,
+      "name": "Desarrollo de Aplicación Móvil",
+      "description": "Creación de una aplicación móvil para iOS y Android con funcionalidades específicas.",
+      "skills": ["Desarrollo de Software", "Programación Móvil"],
+      "portfolio": "www.portfolio.port",
+      "redes_sociales": "www.redsocial.red",
+      "category": "Desarrollo de Software",
+      "price": 500
+    },
+    {
+      "id": 5,
+      "name": "Campaña de Marketing Digital",
+      "description": "Planificación y ejecución de una campaña de marketing digital para aumentar la visibilidad en línea.",
+      "skills": ["Marketing Digital", "Analítica Web"],
+      "portfolio": "www.portfolio.port",
+      "redes_sociales": "www.redsocial.red",
+      "category": "Marketing Digital",
+      "price": 250
+    },
+    {
+      "id": 6,
+      "name": "Diseño de Interiores",
+      "description": "Servicio completo de diseño de interiores para hogares y espacios comerciales.",
+      "skills": ["Diseño de Interiores", "Arquitectura"],
+      "portfolio": "www.portfolio.port",
+      "redes_sociales": "www.redsocial.red",
+      "category": "Diseño de Interiores",
+      "price": 800
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+.main__section__PDPost{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.formulario__PDPost{
+    padding: 15px;
+    border: 1px solid #141414;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.form__PDPost label{
+    color: black;
+}
+
+.form__PDPost textarea{
+    resize: none;
+}
+
+.form__PDPost button{
+    background-color: var(--colorCelesteOscuro);
+}
+
+
+.caja__botones a{
+    color: #ffffff;
+    text-decoration: none;
+}
