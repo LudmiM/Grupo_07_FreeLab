@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 @import './general.css';
+@import './extrasPartials.css';
 @import './button.css';
 @import './footer.css';
 @import './form.css';

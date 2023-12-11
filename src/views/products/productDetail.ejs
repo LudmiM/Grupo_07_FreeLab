@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <%- include('../partials/head', {title: 'Home | FreeLab' }) %>
 <body>
     <%- include('../partials/header')%>
@@ -46,16 +46,17 @@
             <%- include('../partials/comentario')%>
         </section>
         <section class="main__PD__section section__contacto">
-            <article>
-                <h4>$98.000</h4>
-                <p>Por Hora</p>
+            <article class="section__contacto__article PD__article__precio boton__cuaternario">
+                <h4 class="PD__article__precio--h4">$98.000</h4>
+                <p class="PD__article__precio--p">Por Hora</p>
             </article>
-            <article>
-                <button class="section__acciones__botonGuardar boton__cuaternario">
-                    <i class="fa-regular fa-paper-plane section__contacto--iconContac">
-                    <h3 class="section__contacto--h3">Contáctame</h3></i>
-                </button>
+            <article class="section__contacto__article PD__article__contactame">
+                <a href="#" class="PD__article__contactame__a boton__primario" >
+                    <i class="fa-regular fa-paper-plane PD__article__contactame__a--iconContac"></i>
+                    <h3 class="PD__article__contactame__a--h3">Contactame</h3>
+                </a>
             </article>
+            <!--Cont&aacute;ctame-->
         </section>
     </main>
     <%- include('../partials/footer')%>

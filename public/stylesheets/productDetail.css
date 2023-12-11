@@ -45,23 +45,6 @@
 .section__sobreMi {
     margin: 4% 1%;
 }
-
-/*Section skills*/
-.section__skills {
-    display: flex;
-    flex-wrap: wrap;
-}
-.section__skills--h3 {
-    width: 100%;
-}
-.skills--p {
-    background-color: var(--colorCelesteClaro);
-    border-radius: 15px;
-    padding: 1% 2%;
-    margin: 5px;
-    font-weight: bold;
-}
-
 /*Section review*/
 .section__review{
     background-color: var(--colorGris);
@@ -74,27 +57,48 @@
 }
 
 /*section contacto*/
-.section__contacto {
-    /*position: -webkit-sticky;*/
+.section__contacto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:15px;
     position: sticky;
-    bottom: 10px;
+    bottom: 0px;
     left: 0;
 }
-.section__contacto--h3 {
+.PD__article__precio--h4, .PD__article__contactame__a--h3, .PD__article__contactame__a--iconContac, .PD__article__precio--p{
+    font-size: 15px;
+}
+.PD__article__precio{
+    width: 90px;
+    height: 60px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+.PD__article__precio--h4{
+    font-size: 20px;
+}
+.PD__article__contactame{
+    margin-top: 15px;
+}
+.PD__article__contactame__a--iconContac{
+    font-size: 25px;
+}
+.PD__article__contactame__a{
+    width: 90px;
+    padding: 20px;
+}
+.PD__article__contactame__a--h3{
     display: none;
 }
 
 @media (min-width: 500px) {
-    .section__misDatos--img {
-        width: 250px;
-    }
-    .section__contacto--iconContac{
-        margin-left: 92%;
-    }
+
 }
 
 @media (min-width: 1024px) {
-    .section__contacto--iconContac{
-        margin-left: 95%;
-    }
+
 }
