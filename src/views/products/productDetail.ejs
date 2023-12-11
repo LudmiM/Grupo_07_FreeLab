@@ -30,15 +30,7 @@
                     quis commodo ex, et finibus velit. Donec semper sed mauris ut suscipit. Donec sit amet iaculis magna.
                 </p>
             </article>
-            <article class="section__sobreMi__article">
-                <h3 class="section__skills--h3">Habilidades técnicas</h3>
-                <p class="section__skills__tecnicas--p skills--p">HTML</p>
-                <p class="section__skills__tecnicas--p skills--p">CSS</p>
-                <p class="section__skills__tecnicas--p skills--p">PHP</p>
-                <p class="section__skills__tecnicas--p skills--p">JAVASCRIPT</p>
-                <p class="section__skills__tecnicas--p skills--p">FIGMA</p>
-                <p class="section__skills__tecnicas--p skills--p">VISUALSTUDIO</p>
-            </article>
+            <%- include('../partials/habilidadesManejadas')%>
         </section>
         <section class="main__PD__section section__review">
             <article class="section__review__proOf">
@@ -50,22 +42,8 @@
                 <h5 class="section__review__ordenC--filtro">Más relevantes</h5>
                 <i class="fa-solid fa-v section__review__ordenC--icon"></i>
             </article>
-            <article class="section__review__article">
-                <%- include('../partials/starts')%>
-                <p class="section__review__article--fecha">05/10/2023</p>
-                <h2 class="section__review__article--tituloTrabajo">Develop full stack</h2>
-                <p class="section__review__article--comentario">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam congue lectus lacus, eu aliquet risus feugiat nec.</p>
-                <p class="section__review__article--nombre">opiin fruta silvestre</p>
-            </article>
-            <article>
-                <%- include('../partials/starts')%>
-                <p class="section__review__article--fecha">05/10/2023</p>
-                <h2 class="section__review__article--tituloTrabajo">Develop full stack</h2>
-                <p class="section__review__article--comentario">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam congue lectus lacus, eu aliquet risus feugiat nec.</p>
-                <p class="section__review__article--nombre">opiin fruta silvestre</p>
-            </article>
+            <%- include('../partials/comentario')%>
+            <%- include('../partials/comentario')%>
         </section>
         <section class="main__PD__section section__contacto">
             <article>
