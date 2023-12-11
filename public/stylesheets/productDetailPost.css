@@ -12,21 +12,14 @@
     border-radius: 20px;
     box-shadow:  2px 2px 4px var(--colorAzulOscuro);
 }
-/*Posible logo Imagen
-.main__logo{
-    width: 100%;
-}
-.main__logo--img{
-    width: 100%;
-}*/
+ 
 /*Section sobreEmpresa*/
 .section__sobreEmpresa{
     display: flex;
-    flex-direction: row;
     margin: 20px auto;
 }
-.section__sobreEmpresa--img{
-    width: 18%;
+.section__sobreEmpresa__a--img{
+    width: 90px;
     margin-right: 50px;
     border-radius: 50%;
 }
