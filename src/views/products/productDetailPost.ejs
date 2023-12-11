@@ -7,8 +7,8 @@
     <main class="main__PDPost">
        <!-- <div class="main__logo">
             <img src="/images/imagen-ejemplo.jpg" alt="imagen de logo" class="main__logo--img">
-        </div>
-       --> <div class="botones__PDPost">
+        </div> --> 
+        <div class="botones__PDPost">
             <a href="/productos/detallePublicacion#section__explicacion" class="boton__terciario">Detalle</a> <!--Descripcion-->
             <a href="/productos/detallePublicacion#section__sobreEmpresa" class="boton__terciario">Empresa</a><!--Compañia-->
             <a href="/productos/detallePublicacion#section__sobreEmpresa" class="boton__terciario">Similares</a>
@@ -38,15 +38,7 @@
                     <li class="section__explicacion__article__habilidades__ul--li">Diseño y programación de interfaz de usuario HMI.</li>
                 </ul>
             </article>
-            <article class="section__explicacion__article__manejo section__explicacion__article">
-                <h3 class="section__explicacion__article__manejo--h3">Manejo de: </h3>
-                <p class="skills--p">HTML</p>
-                <p class="skills--p">CSS</p>
-                <p class="skills--p">PHP</p>
-                <p class="skills--p">JAVASCRIPT</p>
-                <p class="skills--p">FIGMA</p>
-                <p class="skills--p">VISUALSTUDIO</p>
-            </article>
+            <%- include('../partials/habilidadesManejadas')%>
         </section>
         <section class="main__PDPost__section section__sobreEmpresa" id="section__sobreEmpresa">
             <a href="#">
