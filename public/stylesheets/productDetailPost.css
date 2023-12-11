@@ -34,7 +34,7 @@
     margin: 20px auto;
 }
 .section__sobreEmpresa--img{
-    width: 100px;
+    width: 18%;
     margin-right: 50px;
     border-radius: 50%;
 }
@@ -43,14 +43,13 @@
     flex-wrap: wrap;
 }
 .section__sobreEmpresa__contenedor__article--h4{
-    margin-left: 10px;
+    margin-left: 5px;
 }
-
 /*Botones para desplazarme por la paginaa: sobrePublicaion, sobreempresa, sobrealgomas*/
 .botones__PDPost{
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 4%;
+    margin: auto 12px;
     color: #FFF;
 }
 /*Botones flotantes: postularme y guardar*/

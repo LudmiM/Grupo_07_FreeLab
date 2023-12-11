@@ -1,6 +1,5 @@
 .main__PD {
     width: 100%;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
     width: 90%;
     margin: 0 auto;
     position: relative;
@@ -9,35 +8,33 @@
 
 /*Clase que todas las section comparten*/
 .main__PD__section {
-    padding: 1%;
+    padding: 3%;
 }
-
+.main__PD__section:not(:last-child){
+    border-radius: 20px;
+    box-shadow:  2px 2px 4px var(--colorAzulOscuro);
+}
 /*Section mis datos*/
 .section__misDatos {
     background-color: var(--colorCelesteClaro);
 }
-
 .section__misDatos__contImg {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .section__misDatos--img {
     width: 150px;
     border-radius: 15px;
 }
-
 .section__misDatos--h3 {
     font-size: 30px;
     text-align: center;
 }
-
 .section__misDatos__icons {
     display: flex;
     justify-content: space-between;
 }
-
 .section__misDatos__ContLinks {
     display: flex;
     justify-content: space-between;
@@ -50,11 +47,11 @@
 }
 
 /*Section skills*/
-.section__skills__article {
+.section__skills {
     display: flex;
     flex-wrap: wrap;
 }
-.section__skills__article--h3 {
+.section__skills--h3 {
     width: 100%;
 }
 .skills--p {
@@ -82,15 +79,6 @@
     position: sticky;
     bottom: 10px;
     left: 0;
-}
-.section__contacto--iconContac {
-    background-color: var(--colorCelesteClaro);
-    border-radius: 50%;
-    font-size: 20px;
-    padding: 15px;
-    margin-left: 85%;
-    width: 50px;
-    height: 50px;
 }
 .section__contacto--h3 {
     display: none;
