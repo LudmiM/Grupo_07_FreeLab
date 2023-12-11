@@ -1,0 +1,9 @@
+.contenedor__iconoStart {
+    background-color: var(--colorCelesteClaro);
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 15px;
+    margin-left: 85%;
+    width: 50px;
+    height: 50px;
+}

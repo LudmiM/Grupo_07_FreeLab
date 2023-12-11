@@ -1,64 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-    <%- include('../partials/head', {title: 'Home | FreeLab' }) %>
+<html lang="es">
+<%- include('../partials/head', {title: 'Home | FreeLab' }) %>
+
 <body>
     <%- include('../partials/header')%>
     <main class="main__PDPost">
-        <section class="main__PDPost__section section__explicacion">
-            <div class="section__explicacion__contenedor">
-                <h3 class="section__explicacion__contenedor--h3">Diseño y rediseño</h3>
-                <i class="fa-solid fa-heart"></i>
-            </div>
-            <p class="section__explicacion--p publicacion">Publicado: hace 5
-                minutos</p>
-            <p class="section__explicacion--p descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Nullam congue lectus lacus, eu aliquet risus feugiat nec. Nulla facilisi. Etiam in sollicitudin diam.
-                Quisque viverra ante est, a feugiat mauris elementum et. Duis a feugiat sem. Ut in orci eget est
-                fermentum rhoncus in eu sapien. Integer quis commodo ex, et finibus velit. Donec semper sed mauris ut
-                suscipit. Donec sit amet iaculis magna.</p>
-            <p class="section__explicacion--p descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Nullam congue lectus lacus, eu aliquet risus feugiat nec. Nulla facilisi. Etiam in sollicitudin diam.
-                Quisque viverra ante est, a feugiat mauris elementum et. Duis a feugiat sem. Ut in orci eget est
-                fermentum rhoncus in eu sapien. Integer quis commodo ex, et finibus velit. Donec semper sed mauris ut
-                suscipit. Donec sit amet iaculis magna.</p>
+       <!-- <div class="main__logo">
+            <img src="/images/imagen-ejemplo.jpg" alt="imagen de logo" class="main__logo--img">
+        </div> --> 
+        <div class="botones__PDPost">
+            <a href="/productos/detallePublicacion#section__explicacion" class="boton__terciario">Detalle</a> <!--Descripcion-->
+            <a href="/productos/detallePublicacion#section__sobreEmpresa" class="boton__terciario">Empresa</a><!--Compañia-->
+            <a href="/productos/detallePublicacion#section__sobreEmpresa" class="boton__terciario">Similares</a>
+        </div>
+        <section class="main__PDPost__section section__explicacion" id="section__explicacion">
+            <article class="section__explicacion__article__descripcion section__explicacion__article">
+                <h3 class="section__explicacion__article__descripcion--h3">Diseño y rediseño</h3>
+                <p class="section__explicacion__article__descripcion--publicacion publicacion">Publicado: hace 5 minutos</p>
+                <p class="section__explicacion__article__descripcion--descripcion descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue lectus lacus, eu aliquet risus feugiat nec. Nulla facilisi. Etiam in
+                    sollicitudin diam. Quisque viverra ante est, a feugiat mauris elementum et. Duis a feugiat sem. Ut in orci eget est fermentum rhoncus in eu sapien. 
+                    Integer quis commodo ex, et finibus velit. Donec semper sed mauris ut suscipit. Donec sit amet iaculis magna.<br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue lectus lacus, eu aliquet risus feugiat nec. Nulla facilisi. Etiam in
+                    sollicitudin diam. Quisque viverra ante est, a feugiat mauris elementum et. Duis a feugiat sem. Ut in orci eget
+                    est fermentum rhoncus in eu sapien. Integer quis commodo ex, et finibus velit. Donec semper sed
+                    mauris ut suscipit. Donec sit amet iaculis magna.
+                </p>
+            </article>
+            <article class="section__explicacion__article__habilidades section__explicacion__article">
+                <h3 class="section__explicacion__article__habilidades--h3">Habilidades necesarias: </h3>
+                <ul class="section__explicacion__article__habilidades__ul">
+                    <li class="section__explicacion__article__habilidades__ul--li">Programación en C# .NET</li>
+                    <li class="section__explicacion__article__habilidades__ul--li">Visual Studio, Framework.NET</li>
+                    <li class="section__explicacion__article__habilidades__ul--li">Configuración, administración y programación de Base de Datos. SQL (querys, store procedures y triggers). SQL Server y MySql.</li>
+                    <li class="section__explicacion__article__habilidades__ul--li">Scripting.</li>
+                    <li class="section__explicacion__article__habilidades__ul--li">Aplicaciones o procesos sobre plataforma Windows, Linux, (QNX valorado)</li>
+                    <li class="section__explicacion__article__habilidades__ul--li">Conocimientos en sistemas SCADA. (valorado no excluyente)</li>
+                    <li class="section__explicacion__article__habilidades__ul--li">Diseño y programación de interfaz de usuario HMI.</li>
+                </ul>
+            </article>
+            <%- include('../partials/habilidadesManejadas')%>
         </section>
-        <section class="main__PDPost__section section__habilidades">
-            <div class="main__PDPost__section__contenedor">
-                <h3 class="main__PDPost__section__contenedor--h3">Sobre el puesto: </h3>
-                <article class="main__PDPost__section__contenedor__article">
-                    <h3 class="main__PDPost__section__contenedor__article--h3">Idioma</h3>
-                    <p>Ingles: C1</p>
-                    <p>Español: C1</p>
-                </article>
-                <article class="main__PDPost__section__contenedor__article">
-                    <h3 class="main__PDPost__section__contenedor__article--h3">Habilidades tecnicas</h3>
-                </article>
-            </div>
-            <div class="main__PDPost__section__contenedor">
-                <article class="main__PDPost__section__contenedor__article">
-                    <h3 class="main__PDPost__section__article--h3">Sobre el puesto: </h3>
-                </article>
-            </div>
-        </section>
-        <section class="main__PDPost__section section__sobreEmpresa">
-            <img src="/images/perfil.png" class="section__sobreEmpresa--img" alt="imagen de pelfil">
+        <section class="main__PDPost__section section__sobreEmpresa" id="section__sobreEmpresa">
+            <a href="#">
+                <img src="/images/perfil.png" class="section__sobreEmpresa--img" alt="imagen de pelfil">
+            </a>
             <div class="section__sobreEmpresa__contenedor">
-                <h3 class="section__sobreEmpresa__contenedor--h3">Empresa ficticia</h3>
+                <a href="#">
+                    <h3 class="section__sobreEmpresa__contenedor--h3">Empresa ficticia 123</h3>
+                </a>
                 <article class="section__sobreEmpresa__contenedor__article">
-                    <div class="section__sobreEmpresa__contenedor__article--iconStart">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
+                    <%- include('../partials/starts')%>
                     <h4 class="section__sobreEmpresa__contenedor__article--h4">4.5</h4>
                 </article>
             </div>
+        </section>
+        <section class="main__PDPost__section section__acciones">
+            <button class="section__acciones__botonGuardar boton__cuaternario"><i class="fa-regular fa-bookmark"></i></button>
+            <button class="section__acciones__botonPostularme boton__primario">Postularme</button>
         </section>
     </main>
     <%- include('../partials/footer')%>
     <%- include('../partials/scripts') %>
 </body>
-
 </html>
