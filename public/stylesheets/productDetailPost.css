@@ -19,14 +19,6 @@
 .main__logo--img{
     width: 100%;
 }*/
-/*Section explicacion > article mamejo*/
-.section__explicacion__article__manejo{
-    display: flex;
-    flex-wrap: wrap;
-}
-.section__explicacion__article__manejo--h3{
-    width: 100%;
-}
 /*Section sobreEmpresa*/
 .section__sobreEmpresa{
     display: flex;

@@ -1,11 +1,8 @@
 /*Estrellas*/
 .contenedor__iconoStart {
-    background-color: var(--colorCelesteClaro);
     font-size: 20px;
-    padding: 15px;
-    width: 50px;
-    height: 50px;
     display: flex;
+    flex-wrap:wrap;
 }
 
 /*Habilidades Manejadas*/

@@ -15,7 +15,7 @@
     box-shadow:  2px 2px 4px var(--colorAzulOscuro);
 }
 /*Section mis datos*/
-.section__misDatos {
+.section__misDatos{
     background-color: var(--colorCelesteClaro);
 }
 .section__misDatos__contImg {
