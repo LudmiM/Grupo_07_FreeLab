@@ -1,6 +1,6 @@
 /* admin-header.css */
 
-.admin__header {
+/* .admin__header {
   background-color: #193a4f;
   color: #ffffff;
   padding: 10px 0;
@@ -45,12 +45,58 @@
 
 .admin__header__div__select {
   padding: 8px;
-}
+} */
    
+.admin__casa {
+  background-color: #ffffff;
+}
+
+.admin__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--colorAzulOscuro);
+  color: #ffffff;
+  padding: 10px;
+}
+
+.admin__logo h1 {
+  margin: 0;
+}
+
+.admin__formulario-busqueda {
+  display: flex;
+}
+
+.admin__entrada-busqueda {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.admin__boton-busqueda {
+  margin-left: 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.admin__etiqueta-filtro {
+  margin-right: 5px;
+}
+
+.admin__select-filtro {
+  padding: 5px;
+}
+
+
 
 /* Main */
 
-.admin__home {
+/* .admin__home {
     background-color: #ffffff;
 }
 
@@ -104,4 +150,75 @@ th {
 .admin__acciones i {
     color: black;
     padding: 0px 8px;
+} */
+
+.admin__home {
+  background-color: var(--colorCelesteClaro);
 }
+
+.admin__logo--a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.admin__logo--a:hover {
+  color: #ffffff;
+}
+
+.admin__table {
+  width: 75%;
+  margin: auto;
+  margin-top: 20px;
+  background-color: var(--colorGris);
+  border-collapse: collapse;
+}
+
+.admin__table__header {
+  text-align: center;
+  background-color: #35424a;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.admin__table__tbody__tr__td {
+  border: 2px solid #ddd;
+  background-color: #f2f2f2;
+  padding: 15px;
+  text-align: left;
+}
+
+.admin__table__tbody__tr__td--id {
+  text-align: center;
+}
+
+.admin__table__tbody__tr__td--acciones {
+  width: 200px;
+}
+
+.admin__table__tbody__tr__div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.admin__table__tbody__tr__div--link {
+  color: #000;
+  text-decoration: none;
+}
+
+.admin__table__tbody__tr__div--eye:hover {
+  color: #007bff; /* Azul más oscuro */
+}
+
+.admin__table__tbody__tr__div--pencil:hover {
+  color: #28a745; /* Verde */
+}
+
+.admin__table__tbody__tr__div--trash:hover {
+  color: #dc3545; /* Rojo */
+}
+
+.fa-eye, .fa-pencil, .fa-trash {
+  font-size: 1rem;
+}
+
