@@ -14,7 +14,7 @@ module.exports = {
     addPost: (req,res) => {
         const {name, description, skills, portfolio, redes_sociales, category, price} = req.body;
         
-        function Presentacion(name, description, skills, portfolio, redes_sociales, category, price){
+        function product(name, description, skills, portfolio, redes_sociales, category, price){
             this.id = crypto.randomUUID();
             this.name = name;
             this.description = description;
@@ -25,11 +25,11 @@ module.exports = {
             this.price = price;
         };
 
-        const nuevaPresentacion = new Presentacion(name, description, skills, portfolio, redes_sociales, category, price);
-        const presentaciones = data.leerJSON('presentaciones');
+        const newProduct = new product(name, description, skills, portfolio, redes_sociales, category, price);
+        const products = data.leerJSON('products');
         
-        presentaciones.push(nuevaPresentacion);
-        data.escribirJSON(presentaciones,'presentaciones');
+        products.servicios.push(newProduct);
+        data.escribirJSON(products,'products');
         
         return res.redirect('/admin');
     }
