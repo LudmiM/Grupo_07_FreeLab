@@ -12,7 +12,16 @@
     --colorCeleste: #5eb1cd;
     --colorCelesteClaro: #c8f3fa;
     --colorGris: #A9BCC6;
+    --colorNaranja: #E15606;
 }
 body{
     font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li,ul,ol{
+    list-style: none;
+    padding: 0;
 }

@@ -1,49 +1,56 @@
 .main__PDPost{
     width: 100%;
-    /*background-color: blueviolet;*/
-}
-.main__PDPost__section{
-    padding: 3%;
+    position: relative;
 }
 /*Todas las secciones llevan esta clase*/
 .main__PDPost__section{
     width:90%;
     margin: 0 auto;
-    color:#FFF;
-} 
-/**Seccion explicacion de oferta [1]*/
-.section__explicacion{
-    background-color: var(--colorCelesteOscuro);
-    color:#FFF;
-    /*padding: 2%;*/
+    padding: 3%;
 }
-.section__explicacion__contenedor{
-    display:flex;
-    justify-content: space-between;
+.main__PDPost__section:not(:last-child){
+    border-radius: 20px;
+    box-shadow:  2px 2px 4px var(--colorAzulOscuro);
 }
-.publicacion{
-    display: flex;
-    justify-content: end;
-}
-.section__explicacion--p{
-    margin-top: 10px;
-}
-/*Seccion sobre el puesto, info extra del puesto [2]*/
-.section__habilidades{
-    background-color: var(--colorCeleste);
-}
-
-/*Seccion sobre el puesto, info extra del puesto [3]*/
+ 
+/*Section sobreEmpresa*/
 .section__sobreEmpresa{
-    background-color: var(--colorCelesteOscuro);
     display: flex;
+    margin: 20px auto;
 }
-.section__sobreEmpresa--img{
-    width: 18%;
+.section__sobreEmpresa__a--img{
+    width: 90px;
     margin-right: 50px;
     border-radius: 50%;
 }
 .section__sobreEmpresa__contenedor__article{
     display:flex;
+    flex-wrap: wrap;
 }
-
+.section__sobreEmpresa__contenedor__article--h4{
+    margin-left: 5px;
+}
+/*Botones para desplazarme por la paginaa: sobrePublicaion, sobreempresa, sobrealgomas*/
+.botones__PDPost{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 12px;
+    color: #FFF;
+}
+/*Botones flotantes: postularme y guardar*/
+.section__acciones{
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+.section__acciones__botonGuardar{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section__acciones__botonPostularme{
+    height: 50px;
+    margin-left: 34%;
+}
