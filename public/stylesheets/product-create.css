@@ -1,0 +1,30 @@
+.main__section__create{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.formulario__create{
+    padding: 15px;
+    border: 1px solid #141414;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.form__create label{
+    color: black;
+}
+
+.form__create textarea{
+    resize: none;
+}
+
+.form__create button{
+    background-color: var(--colorCelesteOscuro);
+}
+
+
+.caja__botones a{
+    color: #ffffff;
+    text-decoration: none;
+}

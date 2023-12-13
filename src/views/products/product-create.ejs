@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('../partials/head')%>
+  <body>
+
+    <%-include('../partials/header', {title: 'Home | FreeLab' })%>
+    <main class="main__create w-100">
+      <section class="main__section__create col-11 col-md-7 col-lg-5 mx-auto">
+        <div class="formulario__create w-100">
+          <h4>Agregar presentacion</h4>
+          <hr />
+          <form class="form__create" action="/productos/agregar" method="post">
+
+            <div class="mb-3">
+              <label for="name" class="form-label">Habilidad</label>
+              <input
+                required
+                name="name"
+                type="text"
+                class="form-control"
+                id="name"
+              />
+            </div>
+
+            <div class="form__create mb-3">
+              <label for="description">descripcion</label>
+              <textarea
+              name="description"
+              class="form-control"
+              rows="3"
+              placeholder="comentanos sobre vos"
+              id="description"
+              ></textarea>
+            </div>
+            
+            <div class="mb-3">
+              <label for="skills" class="form-label"
+                >habilidades practicas</label
+              >
+              <input
+                required
+                name="skills"
+                type="text"
+                class="form-control"
+                id="skills"
+              />
+            </div>
+
+            <div class="row">
+              <div class="mb-3 col-12 col-md-6">
+                <label for="portfolio" class="form-label"
+                  >link portafolio</label
+                >
+                <input
+                  name="portfolio"
+                  type="text"
+                  class="form-control"
+                  id="portfolio"
+                />
+              </div>
+              <div class="mb-3 col-12 col-md-6">
+                <label for="redes_sociales" class="form-label"
+                  >link a redes sociales</label
+                >
+                <input
+                  
+                  name="redes_sociales"
+                  type="text"
+                  class="form-control"
+                  id="redes_sociales"
+                />
+              </div>
+              
+              <div class="mb-3 col-12 col-md-6 ">
+                <label for="category" class="form-label">categoria</label>
+                <select name="category" class="form-select" id="category">
+                  <option value="" selected hidden></option>
+                  <option value="redaccion">Redaccion</option>
+                  <option value="desarrollo web">Desarrollo web</option>
+                  <option value="desarrollo de software">Desarrollo de software</option>
+                  <option value="marketing digital">Marketing digital</option>
+                </select>
+              </div>
+
+              <div class="mb-3 col-6 col-md-4">
+                <label for="price" class="form-label"
+                  >Precio por hora</label
+                >
+                <input
+                  required
+                  name="price"
+                  type="number"
+                  min="50"
+                  autocomplete="50"
+                  class="form-control"
+                  id="price"
+                />
+              </div>
+            </div>
+
+            <div class="caja__botones row">
+              <div class="col-6 col-md-5 mx-auto">
+                <button type="reset" class="btn btn-primary"><a href="/admin">Cancelar</a></button>
+              </div>
+              <div class="col-6 col-md-5 mx-auto">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <%-include('../partials/footer')%>
+    <%-include('../partials/scripts')%>
+  </body>
+</html>

@@ -1,30 +1,11 @@
-<!-- <header class="admin__header">
-  <div class="admin__header__div">
-    <h1 class="admin__header__div__nombre">FreeLab</h1>
-    <form action="" method="get" class="admin__header__div__form">
-      <input type="text" placeholder="Buscar..." class="admin__header__div__barra-busqueda">
-      <button type="submit" class="admin__header__div__button-buscar">Buscar</button>
-    </form>
-    <div>
-    <label for="filtro-usuarios" class="admin__header__div__lable">Filtrar por:</label>
-    <select name="filter" id="filtro-usuarios" class="admin__header__div__select">
-      <option value="todos" selected>Todos</option>
-      <option value="contratadores">contratadores</option>
-      <option value="contratados">contratados</option>
-    </select>
-  </div>
-  </div>
-</header> -->
-
-
 <header class="admin__header">
     <div class="admin__logo">
         <a class="admin__logo--a" href="/"><h1>FreeLab</h1></a>
     </div>
     <div class="admin__busqueda">
-        <form class="admin__formulario-busqueda">
-            <input type="text" placeholder="Buscar..." class="admin__entrada-busqueda">
-            <button type="submit" class="admin__boton-busqueda">Buscar</button>
+        <form class="admin__formulario-busqueda" action="/resultado" method="GET">
+          <input type="text" name="key" placeholder="Buscar..." class="admin__entrada-busqueda">
+          <button type="submit" class="admin__boton-busqueda">Buscar</button>
         </form>
     </div>
     <div class="admin__filtro">
@@ -35,4 +16,5 @@
             <option value="contratantes">Contratantes</option>
         </select>
     </div>
+    <a href="/productos/formularioProducto" class="boton__primario">Crear nuevo</a>
 </header>

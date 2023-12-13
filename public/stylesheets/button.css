@@ -1,0 +1,35 @@
+/*Boton con relleno narajan y letras color blancas*/
+.boton__primario{
+    background-color: var(--colorAzulOscuro);
+    background-color: var(--colorNaranja);;
+    color:#FFF;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.boton__secundario{}
+/*Boton con etiqueta a*/
+.boton__terciario{
+    background-color: var(--colorCelesteOscuro);
+    border-radius: 15px;
+    padding: 5px 13px;
+    margin: 20px 10px;
+    font-size: 16px;
+    text-align: center;
+    width: 95px;
+}
+.boton__terciario:hover{
+    color: inherit;
+    transition: all 3s;
+    background-color: var(--colorAzulOscuro);
+}
+/*Boton favoritos/guardar fondo blanco con contenido naranja*/
+.boton__cuaternario{
+    background-color: #FFF;
+    color: var(--colorNaranja);
+    font-size: 25px;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: solid 1px var(--colorNaranja);
+}

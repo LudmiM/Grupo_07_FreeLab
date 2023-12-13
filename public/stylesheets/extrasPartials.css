@@ -1,0 +1,22 @@
+/*Estrellas*/
+.contenedor__iconoStart {
+    font-size: 20px;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+/*Habilidades Manejadas*/
+.article__skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+.article__skills--h3 {
+    width: 100%;
+}
+.article__skills--p {
+    background-color: var(--colorCelesteClaro);
+    border-radius: 15px;
+    padding: 1% 2%;
+    margin: 5px;
+    font-weight: bold;
+}
