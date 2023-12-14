@@ -12,10 +12,16 @@
     border-radius: 20px;
     box-shadow:  2px 2px 4px var(--colorAzulOscuro);
 }
+/*Section */
+.section__explicacion{
+    margin-top: 20px;
+}
  
 /*Section sobreEmpresa*/
 .section__sobreEmpresa{
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 20px auto;
 }
 .section__sobreEmpresa__a--img{
@@ -53,4 +59,34 @@
 .section__acciones__botonPostularme{
     height: 50px;
     margin-left: 34%;
+    right: 0;
+}
+
+@media( min-width: 768px){
+    .botones__PDPost{
+        display: none;
+    }
+    .section__acciones{
+        position: static;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        height: 150px;
+        margin-top: 20px;
+        border-radius: 20px;
+        box-shadow:  2px 2px 4px var(--colorAzulOscuro);
+    }
+    .main__PDPost {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section__acciones, .section__sobreEmpresa {
+        width: 42%;
+    }  
+}
+
+@media( min-width: 1024px){
+    .section__acciones{
+        height: 170px;
+    }
 }
