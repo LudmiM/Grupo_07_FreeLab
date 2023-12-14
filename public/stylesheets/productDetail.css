@@ -34,9 +34,19 @@
 }
 .section__misDatos__icons {
     display: flex;
+    align-items: center;
+    justify-content: center;
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.section__misDatos__botonGuardar{
+    padding: 0;
+    background-color: var(--colorCelesteClaro);
+    border: none;
+}
+.section__misDatos__botonGuardar i{
+    font-size: 25px;
 }
 .section__misDatos__ContLinks__ul{
     display: flex;
