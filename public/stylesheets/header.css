@@ -38,6 +38,8 @@
     .header__contIconos .header--iconoUser{
         display: block;
     }
+
+  
 }
 @media (min-width: 1024px) {
     .header__contIconos .header--iconoHam, .header__contIconos .header--iconoUser{
@@ -47,4 +49,11 @@
         display: block;
     }
 
+    .header__nav__ul__li--a{
+        font-size: 25px;
+    }
+
+    .header__a--logo{
+        width: 130px;
+    }
 }
