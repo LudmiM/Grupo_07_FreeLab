@@ -110,7 +110,9 @@
 }
 
 @media (min-width: 500px) {
-
+    .section__contacto{
+        position: static;
+    }
 }
 
 @media (min-width: 1024px) {
