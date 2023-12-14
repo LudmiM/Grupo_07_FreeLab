@@ -17,6 +17,7 @@
 /*Section mis datos*/
 .section__misDatos{
     background-color: var(--colorCelesteClaro);
+    margin-top: 20px;
 }
 .section__misDatos__contImg {
     display: flex;
@@ -34,9 +35,12 @@
 .section__misDatos__icons {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.section__misDatos__ContLinks {
+.section__misDatos__ContLinks__ul{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 }
