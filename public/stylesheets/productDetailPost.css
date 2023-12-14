@@ -46,6 +46,7 @@
 /*Botones flotantes: postularme y guardar*/
 .section__acciones{
     display: flex;
+    justify-content:space-between;
     position: sticky;
     bottom: 0;
     left: 0;
@@ -58,7 +59,6 @@
 }
 .section__acciones__botonPostularme{
     height: 50px;
-    margin-left: 34%;
     right: 0;
 }
 
