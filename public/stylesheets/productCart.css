@@ -1,5 +1,9 @@
-/* estilos del main */
 
+
+
+
+/* estilos del main */
+/*
 .main--carrito{
     display: flex;
     flex-wrap: wrap;
@@ -156,9 +160,6 @@
     display: none;
 }
 
-footer{
-    background-color: var(--colorAzulOscuro);
-}
 
 @media (min-width:768px){
     .main__section--carrito{
@@ -317,4 +318,4 @@ footer{
         font-size: 2vw;
         border-radius: 3px;
     }
-}
+}*/

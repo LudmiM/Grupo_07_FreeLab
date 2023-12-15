@@ -1,6 +1,8 @@
 <article class="main__section__article--carrito"> 
-    <div class="eliminar"><button></button></div>
-    <img src="/images/img-perfil.png" alt="foto-perfil">
+    <!--<div class="eliminar"><button></button></div>-->
+    <div class="carrito__imagen">
+        <img src="/images/img-perfil.png" alt="foto-perfil">
+    </div>
     <div class="carrito__datos">
         <h3 class="carrito__datos__nombre">Nombre y apellido de la persona </h3>
         <%- include('./habilidadesManejadas')%>
@@ -9,9 +11,9 @@
         <p class="carrito__precios--horasPedidas">Horas: 15hs</p>
         <p class="carrito__precios--preciohora">P/H: $2341</p>
         <p class="carrito__precios--total">Precio: $20395</p>
-        <div class="carrito__precios__botones">
-            <button>Comprar</button>
-            <button>Eliminar</button>
-        </div>
+    </div>
+    <div class="carrito__precios__botones">
+        <button>Comprar</button>
+        <button>Eliminar</button>
     </div>
 </article>
