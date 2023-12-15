@@ -42,12 +42,12 @@
 .carrito__precios--contenedor{
     display: flex;
 }
-.carrito__precios--cantidad{
-    width: 60px; 
-    text-align: center;
-    padding: 5px;
-    border: 2px solid var(--colorNaranja); 
-    border-radius: 5px; 
+
+.carrito__precios--cantidad,.carrito__precios__botones--restar,.carrito__precios__botones--sumar{
+    width: 45px;
+    height: 50px; 
+    padding: 1px;
+    font-size: 15px;
 }
 .carrito__habilidades{
     display: none;
