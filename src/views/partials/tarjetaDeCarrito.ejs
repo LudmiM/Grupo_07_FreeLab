@@ -4,23 +4,23 @@
         <div class="carrito__datos">
             <a href="/productos/detalle" class="carrito__imagen">
                 <img src="/images/img-perfil.png" alt="foto-perfil" class="carrito__imagen--img">
-            </a>
-            <a href="/productos/detalle" class="carrito__datos__a">
                 <h3 class="carrito__datos__nombre">Guida Lurdes Rossi Rossi Rossi</h3>
             </a>
         </div>
-        <%- include('./habilidadesManejadas')%>
+        <div class="carrito__habilidades">
+            <%- include('./habilidadesManejadas')%>
+        </div>
     </div>
     <div class="carrito__precios">
         <div class="carrito__precios--contenedor">
             <p class="carrito__precios--horasPedidas">Cantidad Horas: </p>
-            <input type="number" id="myNumberInput" value="1" class="carrito__precios--horasCant">
+            <input type="number" clase="carrito__precios--cantidad" value="1" min="1">
         </div>
         <p class="carrito__precios--preciohora">P/H: $2341</p>
-        <p class="carrito__precios--total">Precio: $20395</p>
+        <p class="carrito__precios--total">Precio total: $20395</p>
     </div>
     <div class="carrito__precios__botones">
-        <button>Comprar</button>
-        <button>Eliminar</button>
+        <button class="carrito__precios__botones--comprar">Comprar</button>
+        <button class="carrito__precios__botones--eliminar">Eliminar<i class="fa-solid fa-trash-can"></i></button>
     </div>
 </article>

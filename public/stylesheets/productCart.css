@@ -8,9 +8,12 @@
 .main__section__article--contenedorTarjeta{
     border: 2px solid var(--colorNaranja);
     background-color: #FFF;
+    border-radius: 10px;
     margin: 20px 10px;
     display: flex;
     flex-direction: column;
+    gap: 2px;
+    padding: 10px;
 }
 .main__section__article--contenedorTarjeta:hover{
     box-shadow: 0 0 5px rgba(255, 165, 0, 1.5);
@@ -19,23 +22,36 @@
     width: 100%;
 }
 
-.carrito__datos{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
 .carrito__imagen{
-    width: 35%;
+    display: flex;
+    
 }
+.carrito__imagen--img{
+    width: 100px;
+}
+
 
 .carrito__precios{
     display: flex;
+    flex-direction: column;
 }
 .carrito__precios--preciohora{
     display: none;
 }
 
+.carrito__precios--contenedor{
+    display: flex;
+}
+.carrito__precios--cantidad{
+    width: 60px; 
+    text-align: center;
+    padding: 5px;
+    border: 2px solid var(--colorNaranja); 
+    border-radius: 5px; 
+}
+.carrito__habilidades{
+    display: none;
+}
 
 
 /* estilos del main */
