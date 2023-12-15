@@ -1,4 +1,40 @@
+/* estilos del main */
+.main--carrito{
+    padding: 1%;
+    background-color: var(--colorCelesteClaro);
+}
 
+/*Estilos partial-article (contenedor)*/
+.main__section__article--contenedorTarjeta{
+    border: 2px solid var(--colorNaranja);
+    background-color: #FFF;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.main__section__article--contenedorTarjeta:hover{
+    box-shadow: 0 0 5px rgba(255, 165, 0, 1.5);
+}
+.contenedorTarjeta--personal{
+    width: 100%;
+}
+
+.carrito__datos{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.carrito__imagen{
+    width: 35%;
+}
+
+.carrito__precios{
+    display: flex;
+}
+.carrito__precios--preciohora{
+    display: none;
+}
 
 
 

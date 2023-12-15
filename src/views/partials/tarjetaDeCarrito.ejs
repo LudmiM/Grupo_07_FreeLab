@@ -1,18 +1,21 @@
-<article class="main__section__article--carrito"> 
+<article class="main__section__article--contenedorTarjeta"> 
     <!--<div class="eliminar"><button></button></div>-->
-    <div class="carrito__imagen">
-        <a href="/productos/detalle">
-            <img src="/images/img-perfil.png" alt="foto-perfil">
-        </a>
-    </div>
-    <div class="carrito__datos">
-        <a href="/productos/detalle">
-            <h3 class="carrito__datos__nombre">Nombre y apellido de la persona </h3>
-        </a>
+    <div class="contenedorTarjeta--personal">
+        <div class="carrito__datos">
+            <a href="/productos/detalle" class="carrito__imagen">
+                <img src="/images/img-perfil.png" alt="foto-perfil" class="carrito__imagen--img">
+            </a>
+            <a href="/productos/detalle" class="carrito__datos__a">
+                <h3 class="carrito__datos__nombre">Guida Lurdes Rossi Rossi Rossi</h3>
+            </a>
+        </div>
         <%- include('./habilidadesManejadas')%>
     </div>
     <div class="carrito__precios">
-        <p class="carrito__precios--horasPedidas">Horas: 15hs</p>
+        <div class="carrito__precios--contenedor">
+            <p class="carrito__precios--horasPedidas">Cantidad Horas: </p>
+            <input type="number" id="myNumberInput" value="1" class="carrito__precios--horasCant">
+        </div>
         <p class="carrito__precios--preciohora">P/H: $2341</p>
         <p class="carrito__precios--total">Precio: $20395</p>
     </div>
