@@ -1,8 +1,21 @@
+.section__review{
+    background-color: var(--colorCeleste);
+    color: #000;
+}
+.section__review__proOf {
+    display: flex;
+}
+.section__review__ordenC {
+    display: flex;
+}
+
 .article__review{
+    border: 2px solid var(--colorCelesteOscuro);
     background-color: #FFF;
     border-radius: 15px;
     padding: 10px;
     margin: 10px auto;
+    color: black;
 }
 .article__review__proFecha{
     display: flex;

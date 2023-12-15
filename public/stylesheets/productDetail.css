@@ -59,16 +59,7 @@
 .section__sobreMi {
     margin: 4% 1%;
 }
-/*Section review*/
-.section__review{
-    background-color: var(--colorGris);
-}
-.section__review__proOf {
-    display: flex;
-}
-.section__review__ordenC {
-    display: flex;
-}
+/*Section review: se movio a comentario.css*/
 
 /*section contacto*/
 .section__contacto{
@@ -113,8 +104,20 @@
     .section__contacto{
         position: static;
     }
+    
+    .section__misDatos{
+        display: flex;
+        flex-direction: row;   
+    }
+    .section__misDatos__contImg{
+        margin-right: 40px;
+        width: 200px;
+    }
+    .section__misDatos__contenedor{
+        width: 100%;
+    }
 }
 
 @media (min-width: 1024px) {
-
+    
 }
