@@ -32,5 +32,13 @@ module.exports = {
         data.escribirJSON(products,'products');
         
         return res.redirect('/admin');
-    }
+    },
+    eliminate : (req, res) => {
+		const sinEliminado = products.filter((p) => p.id !== +req.params.id);
+	
+		//if (sinEliminado.length < products.length) {
+			fs.writeFileSync(productsFilePath, JSON.stringify(sinEliminado), 'utf-8');
+		//}
+		return res.redirect('/');
+	}
 };
