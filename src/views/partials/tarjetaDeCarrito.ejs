@@ -14,15 +14,17 @@
     <div class="carrito__precios">
         <div class="carrito__precios--contenedor">
             <p class="carrito__precios--horasPedidas">Cantidad Horas: </p>
-            <button class="carrito__precios__botones--restar boton__cuaternario">-</button>
-            <input type="number" class="carrito__precios--cantidad boton__cuaternario" value="1" min="1">
-            <button class="carrito__precios__botones--sumar boton__cuaternario">+</button>
+            <div class="carrito__precios--contenedorBotones">
+                <button class="carrito__precios__botones--restar boton__cuaternario">-</button>
+                <input type="number" class="carrito__precios--cantidad boton__cuaternario" value="1" min="1">
+                <button class="carrito__precios__botones--sumar boton__cuaternario">+</button>
+            </div>
         </div>
         <p class="carrito__precios--preciohora">P/H: $2341</p>
         <p class="carrito__precios--total">Precio total: $20395</p>
     </div>
     <div class="carrito__precios__botones">
-        <button class="carrito__precios__botones--comprar">Comprar</button>
-        <button class="carrito__precios__botones--eliminar">Eliminar<i class="fa-solid fa-trash-can"></i></button>
-    </div>
+        <button class="carrito__precios__botones--eliminar boton__cuaternario">Eliminar</button>
+        <button class="carrito__precios__botones--comprar boton__primario">Comprar</button>
+    </div> <!--<i class="fa-solid fa-trash-can"></i>-->
 </article>

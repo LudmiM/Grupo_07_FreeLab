@@ -1,13 +1,13 @@
 /* estilos del main */
 .main--carrito{
     padding: 1%;
-    background-color: var(--colorCelesteClaro);
+    /*background-color: var(--colorCelesteClaro);*/
 }
 
 /*Estilos partial-article (contenedor)*/
 .main__section__article--contenedorTarjeta{
-    border: 2px solid var(--colorNaranja);
-    background-color: #FFF;
+    /*border: 2px solid var(--colorNaranja);
+    background-color: #FFF;*/
     border-radius: 10px;
     margin: 20px 10px;
     display: flex;
@@ -15,9 +15,10 @@
     gap: 2px;
     padding: 10px;
 }
+/*
 .main__section__article--contenedorTarjeta:hover{
     box-shadow: 0 0 5px rgba(255, 165, 0, 1.5);
-}
+}*/
 .contenedorTarjeta--personal{
     width: 100%;
 }
@@ -41,6 +42,8 @@
 
 .carrito__precios--contenedor{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .carrito__precios--cantidad,.carrito__precios__botones--restar,.carrito__precios__botones--sumar{
@@ -48,6 +51,21 @@
     height: 50px; 
     padding: 1px;
     font-size: 15px;
+    /*border:1px solid var(--colorCelesteOscuro);
+    color: var(--colorCelesteOscuro);*/
+}
+.carrito__precios__botones{
+    display: flex;
+    justify-content: space-between;
+}
+.carrito__precios__botones--eliminar{
+    font-size: 20px;
+    padding: 8px;
+   /* border:1px solid red;
+    color:red;*/
+}
+.carrito__precios__botones--comprar{
+   /* background-color: var(--colorCelesteOscuro);*/
 }
 .carrito__habilidades{
     display: none;
