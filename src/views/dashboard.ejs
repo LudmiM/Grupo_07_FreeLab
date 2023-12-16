@@ -25,7 +25,11 @@
             <div class="admin__table__tbody__tr__div">
               <a href="#" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--eye"><i class="fa-solid fa-eye"></i></a>
               <a href="/productos/editar/<%= user.id %>" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--pencill"><i class="fa-solid fa-pencil"></i></a>
-              <a href="#" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--trash"><i class="fa-solid fa-trash"></i></a>
+              <!--<a href="#" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--trash"><i class="fa-solid fa-trash"></i>-->
+                <form action="/productos/delete/<%= user.id %>?_method=DELETE" method="POST">
+                  <button type="submit" >ELIMINAR</button>
+                </form>
+              <!--</a>-->
             </div>
           </td>
         </tr>

@@ -9,6 +9,6 @@ router
   .post('/agregar',addPost)
   .get('/detalle/:id',detail)
   .get('/editar/:id?', edit)
-  .delete('/delete/:id?', eliminate);
+  .delete('/delete/:id', eliminate);
 
 module.exports = router;

@@ -34,11 +34,10 @@ module.exports = {
         return res.redirect('/admin');
     },
     eliminate : (req, res) => {
-		const sinEliminado = products.filter((p) => p.id !== +req.params.id);
-	
-		//if (sinEliminado.length < products.length) {
-			fs.writeFileSync(productsFilePath, JSON.stringify(sinEliminado), 'utf-8');
-		//}
-		return res.redirect('/');
+        const products = data.leerJSON('products');
+		const sinEliminado = products.servicios.filter(p => p.id !== req.params.id);
+        const updatedProducts = { ...products, servicios: sinEliminado };
+        data.escribirJSON(updatedProducts,'products');
+        return res.redirect('/admin');
 	}
 };
