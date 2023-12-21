@@ -19,3 +19,27 @@
 **Ludmila** : Creacion de estructura para CRUD. Sin impedimentos. (Lunes) Crreacion de Eliminar + modal.
 **Rony** : 
 **Mauricio**:
+
+### Lunes 18/12
+
+**Nahuel** : 
+**Marco** :
+**Ludmila** : Descanzo. Sin impedimentos. -.
+**Rony** : 
+**Mauricio**:
+
+### Martes 19/12
+
+**Nahuel** : 
+**Marco** :
+**Ludmila** : -,- Creacion de modal de confirmacion (modal).
+**Rony** : 
+**Mauricio**:
+
+### Miercoles 20/12
+
+**Nahuel** : 
+**Marco** :
+**Ludmila** : Creacion de modal de confirmacion. Problemas con aplicacion de bootstrap. Modificar CRUD eliminar, para que elimine TODAS las imagenes
+**Rony** : 
+**Mauricio**:
