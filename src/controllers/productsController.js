@@ -14,7 +14,6 @@ module.exports = {
     addPost: (req,res) => {
         const {name, description, skills, image, portfolio, redes_sociales, category, price} = req.body;
         const file = req.file;
-        console.log(file);
         function product(name, description, skills, image, portfolio, redes_sociales, category, price){
             this.id = crypto.randomUUID();
             this.name = name;
