@@ -9,7 +9,7 @@
         <div class="formulario__create w-100">
           <h4>Agregar presentacion</h4>
           <hr />
-          <form class="form__create" action="/productos/agregar" method="post">
+          <form class="form__create" action="/productos/agregar" method="post" enctype="multipart/form-data">
 
             <div class="mb-3">
               <label for="name" class="form-label">Habilidad</label>
@@ -43,6 +43,19 @@
                 type="text"
                 class="form-control"
                 id="skills"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="image" class="form-label"
+                >imagen</label
+              >
+              <input
+                required
+                name="image"
+                type="file"
+                class="form-control"
+                id="image"
               />
             </div>
 
