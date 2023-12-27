@@ -12,21 +12,20 @@ module.exports = {
         return res.render('products/product-edit', { product });
     },
     addPost: (req,res) => {
-        const {name, description, skills, image, portfolio, redes_sociales, category, price} = req.body;
-        const file = req.file;
-        function product(name, description, skills, image, portfolio, redes_sociales, category, price){
+        const {name, description, skills, portfolio, redes_sociales, category, price} = req.body;
+        
+        function product(name, description, skills, portfolio, redes_sociales, category, price){
             this.id = crypto.randomUUID();
             this.name = name;
             this.description = description;
             this.skills = skills;
-            this.image = file.filename;
             this.portfolio = portfolio;
             this.redes_sociales = redes_sociales;
             this.category = category;
             this.price = price;
         };
 
-        const newProduct = new product(name, description, skills, file.originalname, portfolio, redes_sociales, category, price);
+        const newProduct = new product(name, description, skills, portfolio, redes_sociales, category, price);
         const products = data.leerJSON('products');
         
         products.servicios.push(newProduct);
