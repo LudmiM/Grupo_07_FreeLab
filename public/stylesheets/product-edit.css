@@ -74,6 +74,14 @@
     margin-left: 10px;
 }
 
+.custom-selectpe{
+    background-color:  #ffffff;
+    border: 1px solid #bdbdbd;
+    padding: 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
 
 /* Estilos para el botón */
 .btn-dark-custom {

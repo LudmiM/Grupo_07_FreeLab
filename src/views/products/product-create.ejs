@@ -47,17 +47,17 @@
             </div>
 
             <div class="mb-3">
-              <label for="image" class="form-label"
-                >imagen</label
-              >
+              <label for="image" class="form-label">Imágenes</label>
               <input
                 required
                 name="image"
                 type="file"
                 class="form-control"
                 id="image"
+                multiple  
               />
             </div>
+            
 
             <div class="row">
               <div class="mb-3 col-12 col-md-6">
@@ -96,19 +96,28 @@
               </div>
 
               <div class="mb-3 col-6 col-md-4">
-                <label for="price" class="form-label"
-                  >Precio por hora</label
-                >
-                <input
-                  required
-                  name="price"
-                  type="number"
-                  min="50"
-                  autocomplete="50"
-                  class="form-control"
-                  id="price"
-                />
-              </div>
+                <label for="price" class="form-label">Precio por hora</label>
+                <div class="input-group">
+                  <select name="currency" id="currency" class="form-select">
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                    <option value="ars">ARS</option>
+                    <!-- Agrega más opciones según tus necesidades -->
+                </select>
+                    <input
+                        required
+                        name="price"
+                        type="number"
+                        min="50"
+                        autocomplete="50"
+                        class="form-control"
+                        id="price"
+                    />
+                    
+                </div>
+            </div>
+            
+            
             </div>
 
             <div class="caja__botones row">
