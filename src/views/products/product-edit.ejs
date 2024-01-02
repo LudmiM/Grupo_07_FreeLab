@@ -34,9 +34,21 @@
                     </div>
 
                     <div class="mb-3">
+                        <label for="image" class="form-editpe">Imágenes existentes:</label>
+                        <% if (product && product.image && Array.isArray(product.image) && product.image.length > 0) { %>
+                            <% product.image.forEach(function(image) { %>
+                                <img src="<%= image %>" alt="Existing Image" class="existing-image">
+                            <% }); %>
+                        <% } else { %>
+                            <p>No hay imágenes existentes.</p>
+                        <% } %>
+                    </div>
+                    
+
+                    <div class="mb-3">
                         <label for="image" class="form-editpe">Selecciona una imagen:</label>
                         <input type="file" name="image" id="image" multiple>
-                    </div>                                                            
+                    </div>                                                         
                     <div class="mb-3">
                         <label for="portfolio" class="form-editpe">Link a Portfolio</label>
                         <input name="portfolio" type="url" class="form-control" id="portfolio"
