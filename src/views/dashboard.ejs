@@ -25,15 +25,19 @@
             <div class="admin__table__tbody__tr__div">
               <a href="#" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--eye"><i class="fa-solid fa-eye"></i></a>
               <a href="/productos/editar/<%= user.id %>" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--pencill"><i class="fa-solid fa-pencil"></i></a>
-              <!--<a href="#" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--trash"><i class="fa-solid fa-trash"></i>-->
-                <form action="/productos/delete/<%= user.id %>?_method=DELETE" method="POST">
-                  <button type="submit" >ELIMINAR</button>
-                </form>
-              <!--</a>-->
+              <!--Modal Eliminar-->
+              
+            <button class="btn-outline-danger border-none"
+            data-bs-toggle="modal"
+            data-bs-target="#warningRemoveModal<%= user.id %>">
+            <i class="fa-solid fa-trash"></i>
+        </button>
+        <%- include('./partials/modal/confirmacionEliminar',{ user }) %>
             </div>
           </td>
         </tr>
       <% }); %>
+  
     </tbody>
   </table>
   
