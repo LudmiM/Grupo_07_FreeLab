@@ -1,6 +1,8 @@
 // productsController.js
 const data = require('../data');
 const crypto = require('crypto');
+const {existsSync,unlinkSync} = require('fs');
+const path = require('path');
 
 const updateProduct = (req, res) => {
   const { id } = req.params;
@@ -79,7 +81,12 @@ module.exports = {
   updateProduct,
   eliminate : (req, res) => {
     const products = data.leerJSON('products');
+    const {image}= products.servicios.find(p => p.id === req.params.id);
+
+    existsSync('./public/images/productos/'+image)&&unlinkSync('./public/images/productos/'+image)
+
     const sinEliminado = products.servicios.filter(p => p.id !== req.params.id);
+
     const updatedProducts = { ...products, servicios: sinEliminado };
     data.escribirJSON(updatedProducts,'products');
     return res.redirect('/admin')
