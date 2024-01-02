@@ -82,7 +82,7 @@ module.exports = {
     const sinEliminado = products.servicios.filter(p => p.id !== req.params.id);
     const updatedProducts = { ...products, servicios: sinEliminado };
     data.escribirJSON(updatedProducts,'products');
-    return res.redirect('/admin');
+    return res.redirect('/admin')
   }
 
 };
