@@ -74,6 +74,14 @@
     margin-left: 10px;
 }
 
+.custom-selectpe{
+    background-color:  #ffffff;
+    border: 1px solid #bdbdbd;
+    padding: 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
 
 /* Estilos para el botón */
 .btn-dark-custom {
@@ -87,7 +95,7 @@
  background-color: var(--colorCeleste);
     
 }
-
+/*estilos carga imaegenes */
 
 
 /* Estilos generales para pantallas pequeñas (celulares) */
