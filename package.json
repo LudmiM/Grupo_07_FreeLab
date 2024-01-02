@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./src/bin/www"
+    "start": "node ./src/bin/www http://localhost:3000/"
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
