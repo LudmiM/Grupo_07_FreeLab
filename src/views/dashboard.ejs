@@ -26,22 +26,19 @@
               <a href="#" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--eye"><i class="fa-solid fa-eye"></i></a>
               <a href="/productos/editar/<%= user.id %>" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--pencill"><i class="fa-solid fa-pencil"></i></a>
               <!--Modal Eliminar-->
-              
-            <button class="btn-outline-danger border-none"
-            data-bs-toggle="modal"
-            data-bs-target="#warningRemoveModal<%= user.id %>">
-            <i class="fa-solid fa-trash"></i>
-        </button>
-        <%- include('./partials/modal/confirmacionEliminar',{ user }) %>
+              <button type="button" class="action-button delete" data-bs-toggle="modal" data-bs-target="#warningRemoveModal<%= user.id %>">
+                <i class="fa-solid fa-trash"></i>
+              </button>
             </div>
+            <%- include('./partials/confirmacionEliminar',{user}) %>
           </td>
         </tr>
       <% }); %>
   
     </tbody>
   </table>
-  
+  <!--Si se borra este scrip, no funciona-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <% include('./partials/scripts') %>
-
 </body>
 </html>
