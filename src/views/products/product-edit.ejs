@@ -32,23 +32,45 @@
                         <input name="skills" type="text" class="form-control" id="habilidades"
                             value="<%= product && product.skills || '' %>" required>
                     </div>
+                    <div id="imageFieldsContainer">
+                        <div class="mb-3 image-field" data-index="1">
+                            <label for="image1" class="form-editimg">Selecciona una imagen:</label>
+                            <input type="file" name="image" id="image1" accept="image/*" class="image-inputimg">
+                            <!-- Sección para previsualizar las imágenes seleccionadas -->
+                            <div class="mt-3 image-preview"></div>
+                        </div>
+                    
+                        <div class="mb-3 image-field" data-index="2" style="display: none;">
+                            <label for="image2" class="form-editimg">Selecciona una imagen:</label>
+                            <input type="file" name="image" id="image2" accept="image/*" class="image-inputimg">
+                            <!-- Sección para previsualizar las imágenes seleccionadas -->
+                            <div class="mt-3 image-preview"></div>
+                        </div>
+                    
+                        <div class="mb-3 image-field" data-index="3" style="display: none;">
+                            <label for="image3" class="form-editimg">Selecciona una imagen:</label>
+                            <input type="file" name="image" id="image3" accept="image/*" class="image-inputimg">
+                            <!-- Sección para previsualizar las imágenes seleccionadas -->
+                            <div class="mt-3 image-preview"></div>
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="image" class="form-editpe">Imágenes existentes:</label>
-                        <% if (product && product.image && Array.isArray(product.image) && product.image.length > 0) { %>
-                            <% product.image.forEach(function(image) { %>
-                                <img src="<%= image %>" alt="Existing Image" class="existing-image">
-                            <% }); %>
-                        <% } else { %>
-                            <p>No hay imágenes existentes.</p>
-                        <% } %>
+                        <div class="mb-3 image-field" data-index="4" style="display: none;">
+                            <label for="image4" class="form-editimg">Selecciona una imagen:</label>
+                            <input type="file" name="image" id="image4" accept="image/*" class="image-inputimg">
+                            <!-- Sección para previsualizar las imágenes seleccionadas -->
+                            <div class="mt-3 image-preview"></div>
+                        </div>
+                        
+                        <div class="mb-3 image-field" data-index="5" style="display: none;">
+                            <label for="image5" class="form-editimg">Selecciona una imagen:</label>
+                            <input type="file" name="image" id="image5" accept="image/*" class="image-inputimg">
+                            <!-- Sección para previsualizar las imágenes seleccionadas -->
+                            <div class="mt-3 image-preview"></div>
+                        </div>
+                        <!-- Repite lo anterior para los campos de imagen restantes -->
                     </div>
                     
-
-                    <div class="mb-3">
-                        <label for="image" class="form-editpe">Selecciona una imagen:</label>
-                        <input type="file" name="image" id="image" multiple>
-                    </div>                                                         
+                    
                     <div class="mb-3">
                         <label for="portfolio" class="form-editpe">Link a Portfolio</label>
                         <input name="portfolio" type="url" class="form-control" id="portfolio"
@@ -77,7 +99,7 @@
                             <label for="precio" class="form-editpe me-2" >Precio:</label>
                             <div class="input-group">
                                 <span class="input-group-text"> $</span>
-                                <input name="" type="number" class="form-editpe" id="precio"
+                                <input name="price" type="number" class="form-editpe" id="precio"
                                     value="<%= product && product.price || '' %>" required>
                                     <select class="custom-selectpe" id="divisa" name="divisa" required>
                                         <option value="ARS" <%= product && product.divisa === 'ARS' ? 'selected' : '' %>>ARS
@@ -108,6 +130,59 @@
     </div>
     <%- include('../partials/footer') %>
 
+    <script>
+        document.getElementById('image1').addEventListener('change', handleFileSelect);
+    
+        function handleFileSelect(event) {
+            const files = event.target.files;
+            const currentIndex = parseInt(event.target.parentNode.getAttribute('data-index'));
+            const nextIndex = currentIndex + 1;
+    
+            for (const file of files) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imageContainer = document.createElement('div');
+                    imageContainer.classList.add('image-preview-item');
+                    imageContainer.innerHTML = `
+                        <img src="${e.target.result}" alt="${file.name}" class="img-thumbnail">
+                        <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, ${currentIndex})">Eliminar</button>
+                    `;
+                    document.querySelector(`.image-field[data-index="${currentIndex}"] .image-preview`).appendChild(imageContainer);
+    
+                    // Ocultar el campo actual y mostrar el siguiente
+                    const nextField = document.querySelector(`.image-field[data-index="${nextIndex}"]`);
+                    if (nextField) {
+                        nextField.style.display = 'block';
+                        document.getElementById(`image${nextIndex}`).addEventListener('change', handleFileSelect);
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    
+        function removeImage(button, index) {
+            const imageContainer = button.parentNode;
+            const imageField = imageContainer.parentNode;
+            const currentImageIndex = parseInt(imageField.getAttribute('data-index'));
+    
+            // Eliminar la imagen visualmente y limpiar el campo de entrada
+            imageContainer.parentNode.removeChild(imageContainer);
+            document.getElementById(`image${currentImageIndex}`).value = '';
+    
+            // Ocultar el campo actual y mostrar el siguiente
+            imageField.style.display = 'none';
+            const nextImageIndex = currentImageIndex + 1;
+            const nextField = document.querySelector(`.image-field[data-index="${nextImageIndex}"]`);
+            if (nextField) {
+                nextField.style.display = 'block';
+                document.getElementById(`image${nextImageIndex}`).addEventListener('change', handleFileSelect);
+            }
+        }
+    </script>
+    
+    
 </body>
 </html>
+
+
 

@@ -1,25 +1,6 @@
+// productsController.js
 const data = require('../data');
 const crypto = require('crypto');
-
-// Función para obtener el último ID presente en el JSON
-function getLastProductId() {
-  const products = data.leerJSON('products');
-  const lastProduct = products.servicios[products.servicios.length - 1];
-  return lastProduct ? lastProduct.id : 0;
-}
-
-// Función para crear un nuevo producto con ID consecutivo
-function product(name, description, skills, portfolio, redes_sociales, category, price) {
-  this.id = getLastProductId() + 1;
-  this.name = name;
-  this.description = description;
-  this.skills = skills;
-  this.portfolio = portfolio;
-  this.redes_sociales = redes_sociales;
-  this.category = category;
-  this.price = price;
-  this.image = [];
-}
 
 const updateProduct = (req, res) => {
   const { id } = req.params;
@@ -59,6 +40,17 @@ const updateProduct = (req, res) => {
 const addPost = (req, res) => {
   const { name, description, skills, portfolio, redes_sociales, category, price } = req.body;
   const files = req.files;
+
+  function product(name, description, skills, portfolio, redes_sociales, category, price) {
+    this.id = crypto.randomUUID();
+    this.name = name;
+    this.description = description;
+    this.skills = skills;
+    this.portfolio = portfolio;
+    this.redes_sociales = redes_sociales;
+    this.category = category;
+    this.price = price;
+  }
 
   const newProduct = new product(name, description, skills, portfolio, redes_sociales, category, price);
 
