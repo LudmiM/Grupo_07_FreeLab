@@ -90,6 +90,7 @@ module.exports = {
     const updatedProducts = { ...products, servicios: sinEliminado };
     data.escribirJSON(updatedProducts,'products');
     return res.redirect('/admin')
-  }
+  },
+  listado: (req, res) => res.render('products/listadoProductos')
 
 };
