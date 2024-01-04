@@ -14,7 +14,7 @@ const updateProduct = (req, res) => {
 
   if (index !== -1) {
     const updatedProduct = {
-      id,
+      id: parseInt(id), // Convertir el id a número
       name,
       description,
       skills,
@@ -31,7 +31,7 @@ const updateProduct = (req, res) => {
 
     products.servicios[index] = updatedProduct;
     data.escribirJSON(products, 'products');
-    
+
     // Cambia la redirección a la página de administrador
     res.redirect('/admin');
   } else {
@@ -43,8 +43,16 @@ const addPost = (req, res) => {
   const { name, description, skills, portfolio, redes_sociales, category, price } = req.body;
   const files = req.files;
 
+  const products = data.leerJSON('products');
+
+  // Obtener el último id en la lista actual
+  const lastId = products.servicios.length > 0 ? parseInt(products.servicios[products.servicios.length - 1].id) : 0;
+
+  // Crear un nuevo id consecutivo
+  const newId = lastId + 1;
+
   function product(name, description, skills, portfolio, redes_sociales, category, price) {
-    this.id = crypto.randomUUID();
+    this.id = newId; // No convertir a cadena para que sea un número
     this.name = name;
     this.description = description;
     this.skills = skills;
@@ -61,7 +69,6 @@ const addPost = (req, res) => {
     newProduct.image = fileNames; // Save array of file names
   }
 
-  const products = data.leerJSON('products');
   products.servicios.push(newProduct);
   data.escribirJSON(products, 'products');
 
@@ -79,17 +86,29 @@ module.exports = {
   },
   addPost,
   updateProduct,
-  eliminate : (req, res) => {
+  eliminate: (req, res) => {
     const products = data.leerJSON('products');
-    const {image}= products.servicios.find(p => p.id === req.params.id);
+    const productId = parseInt(req.params.id); // Convierte el id a número
 
-    existsSync('./public/images/productos/'+image)&&unlinkSync('./public/images/productos/'+image)
+    const productToDelete = products.servicios.find(p => p.id === productId);
 
-    const sinEliminado = products.servicios.filter(p => p.id !== req.params.id);
+    if (!productToDelete) {
+        return res.status(404).send('Producto no encontrado');
+    }
+
+    const { image } = productToDelete || {};
+
+    if (image) {
+        existsSync('./public/images/productos/' + image) && unlinkSync('./public/images/productos/' + image);
+    }
+
+    const sinEliminado = products.servicios.filter(p => p.id !== productId);
 
     const updatedProducts = { ...products, servicios: sinEliminado };
-    data.escribirJSON(updatedProducts,'products');
-    return res.redirect('/admin')
-  }
+    data.escribirJSON(updatedProducts, 'products');
+    
+    return res.redirect('/admin');
+}
+
 
 };
