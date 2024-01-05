@@ -1,0 +1,42 @@
+[
+    {
+        "id": "628a3c8d-8e6f-43aa-9c85-c179815d8d4c",
+        "name": "Programador front end",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, ullam",
+        "skills": "html, css, ux design",
+        "portfolio": "ninguno",
+        "redes_sociales": "ninguno",
+        "category": "desarrollo web",
+        "price": "50"
+    },
+    {
+        "id": "9c077948-3e28-4bd6-b35e-ecfe8957ecac",
+        "name": "Mauricio",
+        "description": "hola",
+        "skills": "dormir",
+        "portfolio": "123",
+        "redes_sociales": "instagram.com",
+        "category": "redaccion",
+        "price": "10578356"
+    },
+    {
+        "id": "2626da7f-883e-46e3-8a9b-b137f02afc5f",
+        "name": "Mauricio",
+        "description": "hola",
+        "skills": "dormir",
+        "portfolio": "123",
+        "redes_sociales": "instagram.com",
+        "category": "redaccion",
+        "price": "5"
+    },
+    {
+        "id": "4c73ff2c-3168-4865-846c-1e9a62fe04f3",
+        "name": "Mauricio",
+        "description": "hola",
+        "skills": "dormir",
+        "portfolio": "123",
+        "redes_sociales": "instagram.com",
+        "category": "redaccion",
+        "price": "500"
+    }
+]

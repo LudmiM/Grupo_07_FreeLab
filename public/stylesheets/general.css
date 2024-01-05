@@ -1,0 +1,27 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+:root{
+    --colorAzulOscuro: #193A4F;
+    --colorCelesteOscuro: #1f8db4;
+    --colorCeleste: #5eb1cd;
+    --colorCelesteClaro: #c8f3fa;
+    --colorGris: #A9BCC6;
+    --colorNaranja: #E15606;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li,ul,ol{
+    list-style: none;
+    padding: 0;
+}
