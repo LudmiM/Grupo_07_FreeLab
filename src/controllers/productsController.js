@@ -127,9 +127,3 @@ module.exports = {
   updateProduct,
   eliminate,
 };
-
-
-
-
-
-
