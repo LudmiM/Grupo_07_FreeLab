@@ -1,10 +1,8 @@
-// productsController.js
 const data = require('../data');
-const fs = require('fs');  // Import the fs module
+const fs = require('fs');  
 const { existsSync, unlinkSync, renameSync } = require('fs');
 const path = require('path');
 
-// Rest of your code...
 
 const updateProduct = (req, res) => {
   const { id } = req.params;
@@ -43,7 +41,6 @@ const updateProduct = (req, res) => {
     products.servicios[index] = updatedProduct;
     data.escribirJSON(products, 'products');
 
-    // Cambia la redirección a la página de administrador
     res.redirect('/admin');
   } else {
     res.status(404).send('Producto no encontrado');
@@ -83,7 +80,7 @@ const addPost = (req, res) => {
   products.servicios.push(newProduct);
   data.escribirJSON(products, 'products');
 
-  return res.redirect('/admin');
+  res.redirect('/admin');
 };
 
 
@@ -113,7 +110,7 @@ const eliminate = (req, res) => {
   const updatedProducts = { ...products, servicios: sinEliminado };
   data.escribirJSON(updatedProducts, 'products');
 
-  return res.redirect('/admin');
+  res.redirect('/admin');
 };
 
 module.exports = {
@@ -130,3 +127,9 @@ module.exports = {
   updateProduct,
   eliminate,
 };
+
+
+
+
+
+
