@@ -33,39 +33,41 @@
                             value="<%= product && product.skills || '' %>" required>
                     </div>
                     <div id="imageFieldsContainer">
-                        <label for="images" class="form-editpe">Selecciona una imagen</label>
-                        
-                            <div class="mb-3 image-field" data-index="1">
-                                <input type="file" name="image" id="image1" accept="image/*" class="image-inputimg">
-                                <!-- Sección para previsualizar las imágenes seleccionadas -->
-                                <div class="mt-3 image-preview"></div>
-                            </div>
-                        
-                            <div class="mb-3 image-field" data-index="2" style="display: none;">
-                                <input type="file" name="image" id="image2" accept="image/*" class="image-inputimg">
-                                <!-- Sección para previsualizar las imágenes seleccionadas -->
-                                <div class="mt-3 image-preview"></div>
-                            </div>
-                        
-                            <div class="mb-3 image-field" data-index="3" style="display: none;">
-                                <input type="file" name="image" id="image3" accept="image/*" class="image-inputimg">
-                                <!-- Sección para previsualizar las imágenes seleccionadas -->
-                                <div class="mt-3 image-preview"></div>
-                            </div>
-                        
-                            <div class="mb-3 image-field" data-index="4" style="display: none;">
-                                <input type="file" name="image" id="image4" accept="image/*" class="image-inputimg">
-                                <!-- Sección para previsualizar las imágenes seleccionadas -->
-                                <div class="mt-3 image-preview"></div>
-                            </div>
-                        
-                            <div class="mb-3 image-field" data-index="5" style="display: none;">
-                                <input type="file" name="image" id="image5" accept="image/*" class="image-inputimg">
-                                <!-- Sección para previsualizar las imágenes seleccionadas -->
-                                <div class="mt-3 image-preview"></div>
-                            </div>
-                            
+                        <div class="mb-3 image-field" data-index="1">
+                            <input type="file" name="image" id="image1" accept="image/*" class="image-inputimg" style="display: none;">
+                            <label for="image1" class="btn btn-primary">Seleccionar imagen</label>
+                            <!-- Sección para previsualizar las imágenes seleccionadas -->
+                            <div class="mt-3 image-preview"></div>
+                            <!-- Botón para eliminar la imagen seleccionada -->
+                            <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, 1)" style="display: none;">Eliminar</button>
                         </div>
+                        <div class="mb-3 image-field" data-index="2" style="display: none;">
+                            <input type="file" name="image" id="image2" accept="image/*" class="image-inputimg" style="display: none;">
+                            <label for="image2" class="btn btn-primary">Seleccionar imagen</label>
+                            <div class="mt-3 image-preview"></div>
+                            <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, 2)" style="display: none;">Eliminar</button>
+                        </div>
+                        
+                        <div class="mb-3 image-field" data-index="3" style="display: none;">
+                            <input type="file" name="image" id="image3" accept="image/*" class="image-inputimg" style="display: none;">
+                            <label for="image3" class="btn btn-primary">Seleccionar imagen</label>
+                            <div class="mt-3 image-preview"></div>
+                            <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, 3)" style="display: none;">Eliminar</button>
+                        </div>
+                        
+                        <div class="mb-3 image-field" data-index="4" style="display: none;">
+                            <input type="file" name="image" id="image4" accept="image/*" class="image-inputimg" style="display: none;">
+                            <label for="image4" class="btn btn-primary">Seleccionar imagen</label>
+                            <div class="mt-3 image-preview"></div>
+                            <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, 4)" style="display: none;">Eliminar</button>
+                        </div>
+                        <div class="mb-3 image-field" data-index="5" style="display: none;">
+                            <input type="file" name="image" id="image5" accept="image/*" class="image-inputimg" style="display: none;">
+                            <label for="image5" class="btn btn-primary">Seleccionar imagen</label>
+                            <div class="mt-3 image-preview"></div>
+                            <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, 5)" style="display: none;">Eliminar</button>
+                        </div>
+                    </div>
                         
                     
                     <div class="mb-3">
@@ -130,12 +132,12 @@
 
                     <div class="row">
                         <div class="col-6 col-md-5 mx-auto">
-                          <button type="button" class="btn btn-primary" onclick="window.history.back();">Cancelar</button>
+                            <button type="button" class="btn btn-primary" onclick="window.history.back();">Cancelar</button>
                         </div>
                         <div class="col-6 col-md-5 mx-auto">
-                          <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                         </div>
-                      </div>
+                    </div>
 
                 </form>
             </div>
@@ -143,71 +145,98 @@
     </div>
     <%- include('../partials/footer') %>
 
-    <script>
-        document.getElementById('image1').addEventListener('change', handleFileSelect);
-    
-        function handleFileSelect(event) {
-            const files = event.target.files;
-            const currentIndex = parseInt(event.target.parentNode.getAttribute('data-index'));
-            const nextIndex = currentIndex + 1;
-    
-            for (const file of files) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const imageContainer = document.createElement('div');
-                    imageContainer.classList.add('image-preview-item');
-                    imageContainer.innerHTML = `
-                        <img src="${e.target.result}" alt="${file.name}" class="img-thumbnail">
-                        <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, ${currentIndex})">Eliminar</button>
-                    `;
-                    document.querySelector(`.image-field[data-index="${currentIndex}"] .image-preview`).appendChild(imageContainer);
-    
-                    // Ocultar el campo actual y mostrar el siguiente
-                    const nextField = document.querySelector(`.image-field[data-index="${nextIndex}"]`);
-                    if (nextField) {
-                        nextField.style.display = 'block';
-                        document.getElementById(`image${nextIndex}`).addEventListener('change', handleFileSelect);
-                    }
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-    
-        function removeImage(button, index) {
-    const imageContainer = button.parentNode;
-    const imageField = imageContainer.parentNode;
-    const currentImageIndex = parseInt(imageField.getAttribute('data-index'));
-
-    // Obtener el nombre de la imagen a eliminar
-    const deletedImageName = document.getElementById(`image${currentImageIndex}`).value;
-
-    // Eliminar la imagen visualmente y limpiar el campo de entrada
-    imageContainer.parentNode.removeChild(imageContainer);
-    document.getElementById(`image${currentImageIndex}`).value = '';
-
-    // Ocultar el campo actual y mostrar el siguiente
-    imageField.style.display = 'none';
-    const nextImageIndex = currentImageIndex + 1;
-    const nextField = document.querySelector(`.image-field[data-index="${nextImageIndex}"]`);
-    if (nextField) {
-        nextField.style.display = 'block';
-        document.getElementById(`image${nextImageIndex}`).addEventListener('change', handleFileSelect);
-    }
-
-    // Enviar la solicitud para eliminar la imagen del JSON
-    fetch(`/productos/eliminar-imagen/${product.id}/${deletedImageName}`, {
-        method: 'DELETE',
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
-}
-
-    </script>
-    
-    
 </body>
 </html>
 
+<script>
+// Añade event listeners para los cambios en los campos de imagen
+for (let i = 1; i <= 5; i++) {
+    document.getElementById(`image${i}`).addEventListener('change', handleFileSelect);
+}
+
+function handleFileSelect(event) {
+    const files = event.target.files;
+    const currentIndex = parseInt(event.target.parentNode.getAttribute('data-index'));
+    const nextIndex = currentIndex + 1;
+
+    const imageField = document.querySelector(`.image-field[data-index="${currentIndex}"]`);
+    const imageContainer = imageField.querySelector('.image-preview');
+    const imageLabel = imageField.querySelector('label');
+
+    // Limpiar la vista previa de la imagen
+    imageContainer.innerHTML = '';
+
+    for (const file of files) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const imageItem = document.createElement('div');
+            imageItem.classList.add('image-preview-item');
+            imageItem.innerHTML = `
+                <img src="${e.target.result}" alt="${file.name}" class="img-thumbnail">
+                <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, ${currentIndex})">Eliminar</button>
+            `;
+            imageContainer.appendChild(imageItem);
+        };
+        reader.readAsDataURL(file);
+    }
+
+    // Ocultar el botón de seleccionar imagen
+    imageLabel.style.display = 'none';
+
+    // Mostrar el siguiente campo de imagen si existe
+    if (nextIndex <= 5) {
+        const nextField = document.querySelector(`.image-field[data-index="${nextIndex}"]`);
+        if (nextField) {
+            nextField.style.display = 'block';
+            document.getElementById(`image${nextIndex}`).addEventListener('change', handleFileSelect);
+        }
+    }
+}
+
+function removeImage(button, index) {
+    const imageField = document.querySelector(`.image-field[data-index="${index}"]`);
+    const imageContainer = imageField.querySelector('.image-preview');
+    const imageLabel = imageField.querySelector('label');
+
+    // Eliminar la imagen seleccionada
+    button.parentNode.remove();
+
+    // Limpiar el campo de entrada
+    const inputFile = imageField.querySelector('input[type="file"]');
+    inputFile.value = '';
+
+    // Si no hay más imágenes seleccionadas, ocultar el campo de imagen y mostrar el botón de seleccionar imagen
+    if (imageContainer.children.length === 0) {
+        imageField.style.display = 'none';
+        imageLabel.style.display = 'block';
+
+        // Ocultar todos los campos de imagen vacíos, excepto el último que está vacío
+        let lastEmptyField = null;
+        for (let i = 1; i <= 5; i++) {
+            const field = document.querySelector(`.image-field[data-index="${i}"]`);
+            const input = field.querySelector('input[type="file"]');
+            if (input.value === '') {
+                if (lastEmptyField) {
+                    lastEmptyField.style.display = 'none';
+                }
+                lastEmptyField = field;
+            }
+        }
+
+        // Mostrar el último campo de imagen vacío
+        if (lastEmptyField) {
+            lastEmptyField.style.display = 'block';
+        }
+    }
+}
 
 
+
+
+
+</script>
+
+
+</body>
+
+</html>
