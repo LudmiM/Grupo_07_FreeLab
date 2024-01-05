@@ -1,0 +1,92 @@
+.main__PDPost{
+    width: 100%;
+    position: relative;
+}
+/*Todas las secciones llevan esta clase*/
+.main__PDPost__section{
+    width:90%;
+    margin: 0 auto;
+    padding: 3%;
+}
+.main__PDPost__section:not(:last-child){
+    border-radius: 20px;
+    box-shadow:  2px 2px 4px var(--colorAzulOscuro);
+}
+/*Section */
+.section__explicacion{
+    margin-top: 20px;
+}
+ 
+/*Section sobreEmpresa*/
+.section__sobreEmpresa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+.section__sobreEmpresa__a--img{
+    width: 90px;
+    margin-right: 50px;
+    border-radius: 50%;
+}
+.section__sobreEmpresa__contenedor__article{
+    display:flex;
+    flex-wrap: wrap;
+}
+.section__sobreEmpresa__contenedor__article--h4{
+    margin-left: 5px;
+}
+/*Botones para desplazarme por la paginaa: sobrePublicaion, sobreempresa, sobrealgomas*/
+.botones__PDPost{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 12px;
+    color: #FFF;
+}
+/*Botones flotantes: postularme y guardar*/
+.section__acciones{
+    display: flex;
+    justify-content:space-between;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+.section__acciones__botonGuardar{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section__acciones__botonPostularme{
+    height: 50px;
+    right: 0;
+}
+
+@media( min-width: 768px){
+    .botones__PDPost{
+        display: none;
+    }
+    .section__acciones{
+        position: static;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        height: 150px;
+        margin-top: 20px;
+        border-radius: 20px;
+        box-shadow:  2px 2px 4px var(--colorAzulOscuro);
+    }
+    .main__PDPost {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section__acciones, .section__sobreEmpresa {
+        width: 42%;
+    }  
+}
+
+@media( min-width: 1024px){
+    .section__acciones{
+        height: 170px;
+    }
+}
