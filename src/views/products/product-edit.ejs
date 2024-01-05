@@ -33,43 +33,40 @@
                             value="<%= product && product.skills || '' %>" required>
                     </div>
                     <div id="imageFieldsContainer">
-                        <div class="mb-3 image-field" data-index="1">
-                            <label for="image1" class="form-editimg">Selecciona una imagen:</label>
-                            <input type="file" name="image" id="image1" accept="image/*" class="image-inputimg">
-                            <!-- Sección para previsualizar las imágenes seleccionadas -->
-                            <div class="mt-3 image-preview"></div>
-                        </div>
-                    
-                        <div class="mb-3 image-field" data-index="2" style="display: none;">
-                            <label for="image2" class="form-editimg">Selecciona una imagen:</label>
-                            <input type="file" name="image" id="image2" accept="image/*" class="image-inputimg">
-                            <!-- Sección para previsualizar las imágenes seleccionadas -->
-                            <div class="mt-3 image-preview"></div>
-                        </div>
-                    
-                        <div class="mb-3 image-field" data-index="3" style="display: none;">
-                            <label for="image3" class="form-editimg">Selecciona una imagen:</label>
-                            <input type="file" name="image" id="image3" accept="image/*" class="image-inputimg">
-                            <!-- Sección para previsualizar las imágenes seleccionadas -->
-                            <div class="mt-3 image-preview"></div>
-                        </div>
-
-                        <div class="mb-3 image-field" data-index="4" style="display: none;">
-                            <label for="image4" class="form-editimg">Selecciona una imagen:</label>
-                            <input type="file" name="image" id="image4" accept="image/*" class="image-inputimg">
-                            <!-- Sección para previsualizar las imágenes seleccionadas -->
-                            <div class="mt-3 image-preview"></div>
+                        <label for="images" class="form-editpe">Selecciona una imagen</label>
+                        
+                            <div class="mb-3 image-field" data-index="1">
+                                <input type="file" name="image" id="image1" accept="image/*" class="image-inputimg">
+                                <!-- Sección para previsualizar las imágenes seleccionadas -->
+                                <div class="mt-3 image-preview"></div>
+                            </div>
+                        
+                            <div class="mb-3 image-field" data-index="2" style="display: none;">
+                                <input type="file" name="image" id="image2" accept="image/*" class="image-inputimg">
+                                <!-- Sección para previsualizar las imágenes seleccionadas -->
+                                <div class="mt-3 image-preview"></div>
+                            </div>
+                        
+                            <div class="mb-3 image-field" data-index="3" style="display: none;">
+                                <input type="file" name="image" id="image3" accept="image/*" class="image-inputimg">
+                                <!-- Sección para previsualizar las imágenes seleccionadas -->
+                                <div class="mt-3 image-preview"></div>
+                            </div>
+                        
+                            <div class="mb-3 image-field" data-index="4" style="display: none;">
+                                <input type="file" name="image" id="image4" accept="image/*" class="image-inputimg">
+                                <!-- Sección para previsualizar las imágenes seleccionadas -->
+                                <div class="mt-3 image-preview"></div>
+                            </div>
+                        
+                            <div class="mb-3 image-field" data-index="5" style="display: none;">
+                                <input type="file" name="image" id="image5" accept="image/*" class="image-inputimg">
+                                <!-- Sección para previsualizar las imágenes seleccionadas -->
+                                <div class="mt-3 image-preview"></div>
+                            </div>
+                            
                         </div>
                         
-                        <div class="mb-3 image-field" data-index="5" style="display: none;">
-                            <label for="image5" class="form-editimg">Selecciona una imagen:</label>
-                            <input type="file" name="image" id="image5" accept="image/*" class="image-inputimg">
-                            <!-- Sección para previsualizar las imágenes seleccionadas -->
-                            <div class="mt-3 image-preview"></div>
-                        </div>
-                        <!-- Repite lo anterior para los campos de imagen restantes -->
-                    </div>
-                    
                     
                     <div class="mb-3">
                         <label for="portfolio" class="form-editpe">Link a Portfolio</label>
@@ -177,23 +174,35 @@
         }
     
         function removeImage(button, index) {
-            const imageContainer = button.parentNode;
-            const imageField = imageContainer.parentNode;
-            const currentImageIndex = parseInt(imageField.getAttribute('data-index'));
-    
-            // Eliminar la imagen visualmente y limpiar el campo de entrada
-            imageContainer.parentNode.removeChild(imageContainer);
-            document.getElementById(`image${currentImageIndex}`).value = '';
-    
-            // Ocultar el campo actual y mostrar el siguiente
-            imageField.style.display = 'none';
-            const nextImageIndex = currentImageIndex + 1;
-            const nextField = document.querySelector(`.image-field[data-index="${nextImageIndex}"]`);
-            if (nextField) {
-                nextField.style.display = 'block';
-                document.getElementById(`image${nextImageIndex}`).addEventListener('change', handleFileSelect);
-            }
-        }
+    const imageContainer = button.parentNode;
+    const imageField = imageContainer.parentNode;
+    const currentImageIndex = parseInt(imageField.getAttribute('data-index'));
+
+    // Obtener el nombre de la imagen a eliminar
+    const deletedImageName = document.getElementById(`image${currentImageIndex}`).value;
+
+    // Eliminar la imagen visualmente y limpiar el campo de entrada
+    imageContainer.parentNode.removeChild(imageContainer);
+    document.getElementById(`image${currentImageIndex}`).value = '';
+
+    // Ocultar el campo actual y mostrar el siguiente
+    imageField.style.display = 'none';
+    const nextImageIndex = currentImageIndex + 1;
+    const nextField = document.querySelector(`.image-field[data-index="${nextImageIndex}"]`);
+    if (nextField) {
+        nextField.style.display = 'block';
+        document.getElementById(`image${nextImageIndex}`).addEventListener('change', handleFileSelect);
+    }
+
+    // Enviar la solicitud para eliminar la imagen del JSON
+    fetch(`/productos/eliminar-imagen/${product.id}/${deletedImageName}`, {
+        method: 'DELETE',
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+}
+
     </script>
     
     
