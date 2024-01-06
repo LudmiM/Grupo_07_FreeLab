@@ -1,1 +1,44 @@
-{"servicios":[{"id":1,"name":"Ciberseguridad Avanzada","description":"Servicio de ciberseguridad con enfoque avanzado","skills":"Experto en técnicas de protección y detección","portfolio":"https://www.portfolio.ciberseguridad_avanzada","redes_sociales":"https://www.redsocial.ciberseguridad_avanzada","category":"ciberseguridad","price":"34234","image":["1704415024712_products_01 Champions League.png.png","1704415024713_products_02 Europa League.png.png","1704415024714_products_03 UEFA Supercup.png.png"]},{"id":2,"name":"Desarrollo de Aplicaciones Web","description":"Servicio de desarrollo de aplicaciones web personalizadas","skills":"Experto en tecnologías web modernas","portfolio":"https://www.portfolio.desarrollo_web","redes_sociales":"https://www.redsocial.desarrollo_web","category":"desarrollo web","price":"25000"},{"id":3,"name":"Desarrollo de Software a Medida","description":"Servicio de desarrollo de software personalizado","skills":"Experiencia en programación y arquitectura de software","portfolio":"https://www.portfolio.desarrollo_software","redes_sociales":"https://www.redsocial.desarrollo_software","category":"","price":"30000","image":["1704415107755_products_LigaBetPlay.png.png","1704415107756_products_30 Bundesliga.png.png","1704415107756_products_27 Schweizer Cup.png.png"]}]}
+{
+  "servicios": [
+    {
+      "id": 1,
+      "name": "Ciberseguridad Avanzada",
+      "description": "Servicio de ciberseguridad con enfoque avanzado",
+      "skills": "Experto en técnicas de protección y detección",
+      "portfolio": "https://www.portfolio.ciberseguridad_avanzada",
+      "redes_sociales": "https://www.redsocial.ciberseguridad_avanzada",
+      "category": "ciberseguridad",
+      "price": "34234",
+      "image": [
+        "1704415024712_products_01 Champions League.png.png",
+        "1704415024713_products_02 Europa League.png.png",
+        "1704415024714_products_03 UEFA Supercup.png.png"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Desarrollo de Aplicaciones Web",
+      "description": "Servicio de desarrollo de aplicaciones web personalizadas",
+      "skills": "Experto en tecnologías web modernas",
+      "portfolio": "https://www.portfolio.desarrollo_web",
+      "redes_sociales": "https://www.redsocial.desarrollo_web",
+      "category": "desarrollo web",
+      "price": "25000"
+    },
+    {
+      "id": 3,
+      "name": "Desarrollo de Software a Medida",
+      "description": "Servicio de desarrollo de software personalizado",
+      "skills": "Experiencia en programación y arquitectura de software",
+      "portfolio": "https://www.portfolio.desarrollo_software",
+      "redes_sociales": "https://www.redsocial.desarrollo_software",
+      "category": "",
+      "price": "30000",
+      "image": [
+        "1704415107755_products_LigaBetPlay.png.png",
+        "1704415107756_products_30 Bundesliga.png.png",
+        "1704415107756_products_27 Schweizer Cup.png.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+"freelancers":[
+{
+    "id": 1,
+    "first_name": "Virgina",
+    "last_name": "Gillfillan",
+    "email": "vgillfillan0@weibo.com",
+    "password": "vI6>__H6/N6E",
+    "number": "491-170-2537"
+},
+{
+    "id": 2,
+    "first_name": "Briano",
+    "last_name": "Dunmore",
+    "email": "bdunmore1@bravesites.com",
+    "password": "gQ0&`RJ0O",
+    "number": "865-636-7106"
+},
+{
+    "id": 3,
+    "first_name": "Shaylynn",
+    "last_name": "Dank",
+    "email": "sdank2@go.com",
+    "password": "kM0%#w&KtaR2RTc",
+    "number": "789-488-2442"
+},
+{
+    "id": 4,
+    "first_name": "Hillard",
+    "last_name": "Leamon",
+    "email": "hleamon3@reverbnation.com",
+    "password": "qT4*=+\"i'>dFxL",
+    "number": "100-193-0960"
+}
+],
+"empresas":[
+{
+    "name":"Starbucks",
+    "email":"info@starbucks.com.ar",
+    "password":"starbucks123",
+    "number":"08001220129",
+    "description":"En nuestras tiendas te esperan nuestros baristas capacitados para ofrecerte una bebida muy especial. El ambiente cálido y los detalles de nuestros productos elaborados artesanalmente hacen que la experiencia sea única e inigualable."
+},
+{
+    "name":"Motorola",
+    "email":"soporte@motorola.com.ar",
+    "password":"MotorolaArg",
+    "number":"08006668676",
+    "description":"Descubre la innovación de Motorola: tecnología vanguardista, conectividad fiable y diseño excepcional. Transformamos tu vida cotidiana con experiencias tecnológicas inigualables."
+},
+{
+    "name":"Mercado Libre",
+    "email":"rrhh@mercadolibre.com",
+    "password":"mercadoliebre",
+    "number":"1554548122",
+    "description":"Mercado Libre: Innovación líder en comercio electrónico, conectando compradores y vendedores. Plataforma confiable, accesible y diversa, facilitando experiencias comerciales únicas para todos."
+},{
+    "name":"Globant",
+    "email":"hi@globant.com",
+    "password":"somosGlobant",
+    "number":"1152345678",
+    "description":"Desde la estrategia hasta la ejecución, ofrecemos servicios integrales en un solo lugar, con un solo equipo. Según el desafío al que te enfrentes, nuestros Studios trabajan juntos para agregar valor a tu negocio."
+}            
+]
+}
