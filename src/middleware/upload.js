@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage,
-  limits: { files: 5 } // Limita a 5 archivos por solicitud
+  limits: { files: 5 },
 });
 
 module.exports = upload;

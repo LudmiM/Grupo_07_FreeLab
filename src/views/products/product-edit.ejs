@@ -23,112 +23,61 @@
 
                     <div class="mb-3">
                         <label for="descripcion" class="form-editpe">Descripción</label>
-                        <textarea name="description" class="form-control" rows="3"
-                            placeholder="comentanos sobre vos" id="descripcion"><%= product && product.description || '' %></textarea>
+                        <textarea name="description" class="form-control" rows="3" placeholder="comentanos sobre vos" id="descripcion"><%= product && product.description || '' %></textarea>
                     </div>
 
                     <div class="mb-3">
                         <label for="habilidades" class="form-editpe">Habilidades Practicas</label>
-                        <input name="skills" type="text" class="form-control" id="habilidades"
-                            value="<%= product && product.skills || '' %>" required>
+                        <input name="skills" type="text" class="form-control" id="habilidades" value="<%= product && product.skills || '' %>" required>
                     </div>
+                    
                     <div id="imageFieldsContainer">
                         <div class="mb-3 image-field" data-index="1">
-                            <input type="file" name="image" id="image1" accept="image/*" class="image-inputimg" style="display: none;">
-                            <label for="image1" class="btn btn-primary">Seleccionar imagen</label>
-                            <!-- Sección para previsualizar las imágenes seleccionadas -->
-                            <div class="mt-3 image-preview"></div>
-                            <!-- Botón para eliminar la imagen seleccionada -->
-                            <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, 1)" style="display: none;">Eliminar</button>
+                            <label for="coverImage" class="form-editpe">Seleccionar Imagen de Portada</label>
+                            <input type="file" name="image" id="coverImage" accept="image/*" class="form-control">
                         </div>
-                        <div class="mb-3 image-field" data-index="2" style="display: none;">
-                            <input type="file" name="image" id="image2" accept="image/*" class="image-inputimg" style="display: none;">
-                            <label for="image2" class="btn btn-primary">Seleccionar imagen</label>
-                            <div class="mt-3 image-preview"></div>
-                            <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, 2)" style="display: none;">Eliminar</button>
-                        </div>
-                        
-                        <div class="mb-3 image-field" data-index="3" style="display: none;">
-                            <input type="file" name="image" id="image3" accept="image/*" class="image-inputimg" style="display: none;">
-                            <label for="image3" class="btn btn-primary">Seleccionar imagen</label>
-                            <div class="mt-3 image-preview"></div>
-                            <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, 3)" style="display: none;">Eliminar</button>
-                        </div>
-                        
-                        <div class="mb-3 image-field" data-index="4" style="display: none;">
-                            <input type="file" name="image" id="image4" accept="image/*" class="image-inputimg" style="display: none;">
-                            <label for="image4" class="btn btn-primary">Seleccionar imagen</label>
-                            <div class="mt-3 image-preview"></div>
-                            <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, 4)" style="display: none;">Eliminar</button>
-                        </div>
-                        <div class="mb-3 image-field" data-index="5" style="display: none;">
-                            <input type="file" name="image" id="image5" accept="image/*" class="image-inputimg" style="display: none;">
-                            <label for="image5" class="btn btn-primary">Seleccionar imagen</label>
-                            <div class="mt-3 image-preview"></div>
-                            <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, 5)" style="display: none;">Eliminar</button>
+                        <div class="mb-3 image-field" data-index="2">
+                            <label for="additionalImages" class="form-editpe">Seleccionar Imágenes Adicionales</label>
+                            <input type="file" name="image" id="additionalImages" accept="image/*" class="form-control" multiple onchange="limitImageSelection(this, 4)">
                         </div>
                     </div>
-                        
                     
+                        
                     <div class="mb-3">
                         <label for="portfolio" class="form-editpe">Link a Portfolio</label>
-                        <input name="portfolio" type="url" class="form-control" id="portfolio"
-                            value="<%= product && product.portfolio || '' %>">
+                        <input name="portfolio" type="url" class="form-control" id="portfolio" value="<%= product && product.portfolio || '' %>">
                     </div>
 
                     <div class="mb-3">
                         <label for="redes_sociales" class="form-editpe">Links a Redes Sociales</label>
-                        <input name="redes_sociales" type="url" class="form-control" id="redes_sociales"
-                            value="<%= product && product.redes_sociales || '' %>">
+                        <input name="redes_sociales" type="url" class="form-control" id="redes_sociales" value="<%= product && product.redes_sociales || '' %>">
                     </div>
 
                     <div class="mb-3">
                         <label for="category" class="form-editpe">Categoría</label>
                         <select name="category" class="form-select" id="categoria">
                             <option value="" selected hidden>Selecciona una categoría</option>
-                            <option value="redaccion" <%= product && product.category === 'redaccion' ? 'selected' : '' %>>Redacción</option>
-                            <option value="desarrollo web" <%= product && product.category === 'desarrollo web' ? 'selected' : '' %>>Desarrollo web</option>
-                            <option value="desarrollo de software" <%= product && product.category === 'desarrollo de software' ? 'selected' : '' %>>Desarrollo de software</option>
-                            <option value="marketing digital" <%= product && product.category === 'marketing digital' ? 'selected' : '' %>>Marketing digital</option>
-                            <option value="programacion web" <%= product && product.category === 'programacion web' ? 'selected' : '' %>>Programación web</option>
-                            <option value="ciencia de datos" <%= product && product.category === 'ciencia de datos' ? 'selected' : '' %>>Ciencia de datos</option>
-                            <option value="seguridad informatica" <%= product && product.category === 'seguridad informatica' ? 'selected' : '' %>>Seguridad informática</option>
-                            <option value="inteligencia artificial" <%= product && product.category === 'inteligencia artificial' ? 'selected' : '' %>>Inteligencia artificial</option>
-                            <option value="testing y QA" <%= product && product.category === 'testing y QA' ? 'selected' : '' %>>Testing y QA</option>
-                            <option value="desarrollo móvil" <%= product && product.category === 'desarrollo móvil' ? 'selected' : '' %>>Desarrollo móvil</option>
-                            <option value="ciberseguridad" <%= product && product.category === 'ciberseguridad' ? 'selected' : '' %>>Ciberseguridad</option>
-                            <option value="machine learning" <%= product && product.category === 'machine learning' ? 'selected' : '' %>>Machine learning</option>
-                            <option value="devOps" <%= product && product.category === 'devOps' ? 'selected' : '' %>>DevOps</option>
-                            <option value="cloud computing" <%= product && product.category === 'cloud computing' ? 'selected' : '' %>>Cloud computing</option>
-                            <option value="blockchain" <%= product && product.category === 'blockchain' ? 'selected' : '' %>>Blockchain</option>
-                            <option value="realidad virtual" <%= product && product.category === 'realidad virtual' ? 'selected' : '' %>>Realidad virtual</option>
-                            <option value="automatización" <%= product && product.category === 'automatización' ? 'selected' : '' %>>Automatización</option>
-                            <option value="web scraping" <%= product && product.category === 'web scraping' ? 'selected' : '' %>>Web scraping</option>
-                            <!-- Agrega más categorías según sea necesario -->
+                            <!-- Agrega más opciones según sea necesario -->
                         </select>
-                        
                     </div>
 
                     <div class="col-12 mb-3">
                         <div class="input-group">
-                            <label for="precio" class="form-editpe me-2" >Precio:</label>
+                            <label for="precio" class="form-editpe me-2">Precio:</label>
                             <div class="input-group">
                                 <span class="input-group-text"> $</span>
-                                <input name="price" type="number" class="form-editpe" id="precio"
-                                    value="<%= product && product.price || '' %>" required>
-                                    <select class="custom-selectpe" id="divisa" name="divisa" required>
-                                        <option value="ARS" <%= product && product.divisa === 'ARS' ? 'selected' : '' %>>ARS
-                                        </option>
-                                        <option value="USD" <%= product && product.divisa === 'USD' ? 'selected' : '' %>>USD
-                                        </option>
-                                        <option value="EUR" <%= product && product.divisa === 'EUR' ? 'selected' : '' %>>EUR
-                                        </option>
-                                    </select>
+                                <input name="price" type="number" class="form-editpe" id="precio" value="<%= product && product.price || '' %>" required>
+                                <select class="custom-selectpe" id="divisa" name="currency" required>
+                                    <option value="ARS" <%= product && product.currency === 'ARS' ? 'selected' : '' %>>ARS</option>
+                                    <option value="USD" <%= product && product.currency === 'USD' ? 'selected' : '' %>>USD</option>
+                                    <option value="EUR" <%= product && product.currency === 'EUR' ? 'selected' : '' %>>EUR</option>
+                                    <option value="JPY" <%= product && product.currency === 'JPY' ? 'selected' : '' %>>JPY</option>
+                                    <option value="GBP" <%= product && product.currency === 'GBP' ? 'selected' : '' %>>GBP</option>
+                                    <option value="AUD" <%= product && product.currency === 'AUD' ? 'selected' : '' %>>AUD</option>
+                                </select>
                             </div>
-                           
                         </div>
                     </div>
-
 
                     <div class="row">
                         <div class="col-6 col-md-5 mx-auto">
@@ -147,96 +96,11 @@
 
 </body>
 </html>
-
 <script>
-// Añade event listeners para los cambios en los campos de imagen
-for (let i = 1; i <= 5; i++) {
-    document.getElementById(`image${i}`).addEventListener('change', handleFileSelect);
-}
-
-function handleFileSelect(event) {
-    const files = event.target.files;
-    const currentIndex = parseInt(event.target.parentNode.getAttribute('data-index'));
-    const nextIndex = currentIndex + 1;
-
-    const imageField = document.querySelector(`.image-field[data-index="${currentIndex}"]`);
-    const imageContainer = imageField.querySelector('.image-preview');
-    const imageLabel = imageField.querySelector('label');
-
-    // Limpiar la vista previa de la imagen
-    imageContainer.innerHTML = '';
-
-    for (const file of files) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            const imageItem = document.createElement('div');
-            imageItem.classList.add('image-preview-item');
-            imageItem.innerHTML = `
-                <img src="${e.target.result}" alt="${file.name}" class="img-thumbnail">
-                <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(this, ${currentIndex})">Eliminar</button>
-            `;
-            imageContainer.appendChild(imageItem);
-        };
-        reader.readAsDataURL(file);
-    }
-
-    // Ocultar el botón de seleccionar imagen
-    imageLabel.style.display = 'none';
-
-    // Mostrar el siguiente campo de imagen si existe
-    if (nextIndex <= 5) {
-        const nextField = document.querySelector(`.image-field[data-index="${nextIndex}"]`);
-        if (nextField) {
-            nextField.style.display = 'block';
-            document.getElementById(`image${nextIndex}`).addEventListener('change', handleFileSelect);
+    function limitImageSelection(input, maxImages) {
+        if (input.files.length > maxImages) {
+            alert('Solo puedes seleccionar hasta ' + maxImages + ' imágenes.');
+            input.value = '';
         }
     }
-}
-
-function removeImage(button, index) {
-    const imageField = document.querySelector(`.image-field[data-index="${index}"]`);
-    const imageContainer = imageField.querySelector('.image-preview');
-    const imageLabel = imageField.querySelector('label');
-
-    // Eliminar la imagen seleccionada
-    button.parentNode.remove();
-
-    // Limpiar el campo de entrada
-    const inputFile = imageField.querySelector('input[type="file"]');
-    inputFile.value = '';
-
-    // Si no hay más imágenes seleccionadas, ocultar el campo de imagen y mostrar el botón de seleccionar imagen
-    if (imageContainer.children.length === 0) {
-        imageField.style.display = 'none';
-        imageLabel.style.display = 'block';
-
-        // Ocultar todos los campos de imagen vacíos, excepto el último que está vacío
-        let lastEmptyField = null;
-        for (let i = 1; i <= 5; i++) {
-            const field = document.querySelector(`.image-field[data-index="${i}"]`);
-            const input = field.querySelector('input[type="file"]');
-            if (input.value === '') {
-                if (lastEmptyField) {
-                    lastEmptyField.style.display = 'none';
-                }
-                lastEmptyField = field;
-            }
-        }
-
-        // Mostrar el último campo de imagen vacío
-        if (lastEmptyField) {
-            lastEmptyField.style.display = 'block';
-        }
-    }
-}
-
-
-
-
-
-</script>
-
-
-</body>
-
-</html>
+    </script>

@@ -6,7 +6,7 @@ const path = require('path');
 
 const updateProduct = (req, res) => {
   const { id } = req.params;
-  const { name, description, skills, portfolio, redes_sociales, category, price } = req.body;
+  const { name, description, skills, portfolio, redes_sociales, category, price, currency } = req.body;
   const files = req.files;
 
   const products = data.leerJSON('products');
@@ -22,6 +22,7 @@ const updateProduct = (req, res) => {
       redes_sociales,
       category,
       price,
+      currency,
     };
 
     if (files && files.length > 0) {
@@ -48,7 +49,7 @@ const updateProduct = (req, res) => {
 };
 
 const addPost = (req, res) => {
-  const { name, description, skills, portfolio, redes_sociales, category, price } = req.body;
+  const { name, description, skills, portfolio, redes_sociales, category, price, currency } = req.body;
   const files = req.files;
 
   const products = data.leerJSON('products');
@@ -59,7 +60,7 @@ const addPost = (req, res) => {
   // Crear un nuevo id consecutivo
   const newId = lastId + 1;
 
-  function product(name, description, skills, portfolio, redes_sociales, category, price) {
+  function product(name, description, skills, portfolio, redes_sociales, category, price, currency) {
     this.id = newId; // No convertir a cadena para que sea un número
     this.name = name;
     this.description = description;
@@ -68,9 +69,10 @@ const addPost = (req, res) => {
     this.redes_sociales = redes_sociales;
     this.category = category;
     this.price = price;
+    this.currency = currency;
   }
 
-  const newProduct = new product(name, description, skills, portfolio, redes_sociales, category, price);
+  const newProduct = new product(name, description, skills, portfolio, redes_sociales, category, price, currency);
 
   if (files && files.length > 0) {
     const fileNames = files.map(file => file.filename); // Usar file.filename
