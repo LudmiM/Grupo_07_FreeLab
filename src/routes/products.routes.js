@@ -7,7 +7,7 @@ router
   .get('/detallePublicacion', detailPost)
   .get('/formularioProducto', formProduct)
   .post('/agregar', upload.array('image', 5), addPost) // Cambiado a upload.array para permitir varios archivos
-  .get('/detalle', detail)
+  .get('/detalle/:id', detail)
   .delete('/delete/:id', eliminate)
 router.delete('/eliminar/:id/:imageName?', eliminate)
   .get('/editar/:id?', edit)
