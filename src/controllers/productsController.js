@@ -134,4 +134,11 @@ module.exports = {
   addPost,
   updateProduct,
   eliminate,
+  listadoProducts: (req,res) => {
+    const product = data.leerJSON('products').servicios;
+    //.servicios.filter((p) => p.id === productId);
+    //const usuarios = data.leerJSON('usuarios').freelancers.filter((p) => p.id === productId);
+    
+    return res.render('products/listadoProductos', {product})
+  }
 };

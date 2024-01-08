@@ -1,5 +1,5 @@
 const express = require('express');
-const { detailPost, detail, addPost, edit, formProduct, updateProduct, eliminate } = require('../controllers/productsController');
+const { detailPost, detail, addPost, edit, formProduct, updateProduct, eliminate, listadoProducts } = require('../controllers/productsController');
 const upload = require('../middleware/upload');
 const router = express.Router();
 
@@ -11,6 +11,6 @@ router
   .delete('/delete/:id', eliminate)
 router.delete('/eliminar/:id/:imageName?', eliminate)
   .get('/editar/:id?', edit)
-  .post('/editar/:id?', upload.array('image', 5), updateProduct); // Cambiado a upload.array para permitir varios archivos
-
+  .post('/editar/:id?', upload.array('image', 5), updateProduct) // Cambiado a upload.array para permitir varios archivos
+  .get('/listado', listadoProducts);
 module.exports = router;
