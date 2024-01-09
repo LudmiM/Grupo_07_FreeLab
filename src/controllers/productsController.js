@@ -138,18 +138,18 @@ module.exports = {
     const product = data.leerJSON('products').servicios;
     //.servicios.filter((p) => p.id === productId);
     //const usuarios = data.leerJSON('usuarios').freelancers.filter((p) => p.id === productId);
-    const {minPrecio,maxPrecio,tipoTrabajo,puntajeEstrellas} = req.query;
-    //console.log(minPrecio,maxPrecio,tipoTrabajo,puntajeEstrellas);
+    const { minPrecio , maxPrecio , categoria , puntajeEstrellas } = req.query;
+    //const { updated, added, deleted } = req.query;
+    //console.log(minPrecio,maxPrecio,categoria,puntajeEstrellas);
     //console.log(req.query.minPrecio)
     const filtrados = product.filter(p => {
-      // Verificar condiciones de filtrado
-      const cumplePrecio = (!minPrecio || p.precio >= minPrecio) && (!maxPrecio || p.precio <= maxPrecio);
-      const cumpleTipoTrabajo = !tipoTrabajo || p.tipoTrabajo === tipoTrabajo;
-      const cumplePuntajeEstrellas = !puntajeEstrellas || p.puntajeEstrellas >= puntajeEstrellas;
 
-      return cumplePrecio && cumpleTipoTrabajo && cumplePuntajeEstrellas;
+      const cumplePrecio = (!+minPrecio || p.price >= +minPrecio) && (!+maxPrecio || p.price <= +maxPrecio);
+      const cumplecategoria = !categoria || p.category === categoria;
+      const cumplePuntajeEstrellas = !puntajeEstrellas || p.cant_stars >= puntajeEstrellas;
+      return cumplePrecio && cumplecategoria && cumplePuntajeEstrellas;
     });
-
+    //console.log("Cumplen todo el "+filtrados);
     return res.render('products/listadoProductos', {filtrados})
   }
 };

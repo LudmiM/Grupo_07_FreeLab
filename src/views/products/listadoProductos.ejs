@@ -15,14 +15,17 @@
                 </div>
                 <div>
                     <label for="tipoTrabajo">Trabajo que quieres encargar:</label>
-                    <select id="tipoTrabajo" name="tipoTrabajo">
-                        <option value="diseno">Diseño</option>
-                        <option value="programacion">Programación</option>
+                    <select id="categoria" name="categoria">
+                        <option value="" selected hidden></option>
+                        <!--Aca el for---->
+                        <option value="desarrollo web">desarrollo web</option>
+                        <option value="ciberseguridad">ciberseguridad</option>
+                        <option value="redaccion">redaccion</option>
                     </select>
                 </div>
                 <!--<div>
                     <label for="idioma">Idioma:</label>
-                    <select id="idioma" name="idioma">
+                    <select id="idioma" name="idioma">                
                         <option value="espanol">Español</option>
                         <option value="ingles">Inglés</option>
                     </select>
@@ -37,9 +40,10 @@
         <section>
             <h2 class="products-title">Resultados de la búsqueda:</h2>
 
-			<% if (product.length) { %>
-				<% product.forEach(f => { %>
-				    <%- include('./../partials/starts',{f}) %>
+			<% if (filtrados.length) { %>
+				<% filtrados.forEach(f => { %>
+                    <%= f.first_name %>
+                    <p><%= f.name %></p>
 				<% }) %>
 			<% } else { %>
 			    <h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>

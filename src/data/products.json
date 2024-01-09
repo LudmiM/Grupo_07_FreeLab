@@ -10,6 +10,7 @@
             "category": "ciberseguridad",
             "price": "34234",
             "currency": "ARS",
+            "cant_stars":"5",
             "image": [
                 "1704415024712_products_01 Champions League.png.png",
                 "1704415024713_products_02 Europa League.png.png",
@@ -26,6 +27,7 @@
             "category": "desarrollo web",
             "price": "25000",
             "currency": "USD",
+            "cant_stars":"3",
             "image": [
                 "1704489929853_products_1704485968777_products_1704415073922_products_04 Libertadores.png.png.png.png",
                 "1704489929854_products_1704487782763_products_1704485834648_products_1704423741596_products_LigaBetPlay.png.png.png.png.png"
@@ -38,9 +40,10 @@
             "skills": "pepe",
             "portfolio": "https://www.portfolio.port",
             "redes_sociales": "https://www.redsocial.red",
-            "category": "",
+            "category": "redaccion",
             "price": "54548",
             "currency": "AUD",
+            "cant_stars":"2",
             "image": [
                 "1704493169530_products_dinosaurio.jpg.jpg",
                 "1704493169531_products_descarga.png.png",
