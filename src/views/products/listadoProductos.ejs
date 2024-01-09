@@ -3,8 +3,11 @@
     <%- include('./../partials/head', {title: 'Home | FreeLab' }) %>
 <body>
     <%- include('./../partials/header')%>
-    <main>
-        <aside>
+    <main class="lp__main">
+        <section>
+            <h3>Ordenar por:</h3>
+        </section>
+        <aside class="lp__main__aside">
             <h2>Filtrar Por:</h2>
             
             <form action="/productos/listado" method="get" id="filtro">
@@ -20,10 +23,6 @@
                         <% categorias.forEach(c => { %>
                             <option value="<%= c %>"><%= c %></option>
                           <% }) %>
-                        <!--Aca el for---
-                        <option value="desarrollo web">desarrollo web</option>
-                        <option value="ciberseguridad">ciberseguridad</option>
-                        <option value="redaccion">redaccion</option>-->
                     </select>
                 </div>
                 <!--<div>
@@ -40,7 +39,7 @@
               <button type="submit">Filtrar</button>
             </form>
         </aside>
-        <section>
+        <section class="lp__main__section">
             <h2 class="products-title">Resultados de la búsqueda:</h2>
 
 			<% if (filtrados.length) { %>
