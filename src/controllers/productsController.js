@@ -136,12 +136,9 @@ module.exports = {
   eliminate,
   listadoProducts: (req,res) => {
     const product = data.leerJSON('products').servicios;
-    //.servicios.filter((p) => p.id === productId);
+    const categorias = data.leerJSON('category');
     //const usuarios = data.leerJSON('usuarios').freelancers.filter((p) => p.id === productId);
     const { minPrecio , maxPrecio , categoria , puntajeEstrellas } = req.query;
-    //const { updated, added, deleted } = req.query;
-    //console.log(minPrecio,maxPrecio,categoria,puntajeEstrellas);
-    //console.log(req.query.minPrecio)
     const filtrados = product.filter(p => {
 
       const cumplePrecio = (!+minPrecio || p.price >= +minPrecio) && (!+maxPrecio || p.price <= +maxPrecio);
@@ -150,6 +147,6 @@ module.exports = {
       return cumplePrecio && cumplecategoria && cumplePuntajeEstrellas;
     });
     //console.log("Cumplen todo el "+filtrados);
-    return res.render('products/listadoProductos', {filtrados})
+    return res.render('products/listadoProductos', {filtrados,categorias})
   }
 };

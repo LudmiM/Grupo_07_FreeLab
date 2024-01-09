@@ -17,10 +17,13 @@
                     <label for="tipoTrabajo">Trabajo que quieres encargar:</label>
                     <select id="categoria" name="categoria">
                         <option value="" selected hidden></option>
-                        <!--Aca el for---->
+                        <% categorias.forEach(c => { %>
+                            <option value="<%= c %>"><%= c %></option>
+                          <% }) %>
+                        <!--Aca el for---
                         <option value="desarrollo web">desarrollo web</option>
                         <option value="ciberseguridad">ciberseguridad</option>
-                        <option value="redaccion">redaccion</option>
+                        <option value="redaccion">redaccion</option>-->
                     </select>
                 </div>
                 <!--<div>
@@ -46,7 +49,7 @@
                     <p><%= f.name %></p>
 				<% }) %>
 			<% } else { %>
-			    <h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+			    <h2>No hay productos que coincidan con esa búsqueda</h2>
 			<% } %>	
         </section>
     </main>
