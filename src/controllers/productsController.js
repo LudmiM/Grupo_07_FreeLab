@@ -138,7 +138,18 @@ module.exports = {
     const product = data.leerJSON('products').servicios;
     //.servicios.filter((p) => p.id === productId);
     //const usuarios = data.leerJSON('usuarios').freelancers.filter((p) => p.id === productId);
-    
-    return res.render('products/listadoProductos', {product})
+    const {minPrecio,maxPrecio,tipoTrabajo,puntajeEstrellas} = req.query;
+    //console.log(minPrecio,maxPrecio,tipoTrabajo,puntajeEstrellas);
+    //console.log(req.query.minPrecio)
+    const filtrados = product.filter(p => {
+      // Verificar condiciones de filtrado
+      const cumplePrecio = (!minPrecio || p.precio >= minPrecio) && (!maxPrecio || p.precio <= maxPrecio);
+      const cumpleTipoTrabajo = !tipoTrabajo || p.tipoTrabajo === tipoTrabajo;
+      const cumplePuntajeEstrellas = !puntajeEstrellas || p.puntajeEstrellas >= puntajeEstrellas;
+
+      return cumplePrecio && cumpleTipoTrabajo && cumplePuntajeEstrellas;
+    });
+
+    return res.render('products/listadoProductos', {filtrados})
   }
 };
