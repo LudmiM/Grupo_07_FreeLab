@@ -6,10 +6,10 @@
 
 ### viernes 12/01
 
-**Nahuel** : 
-**Marco** :
-**Ludmila** : 
-**Rony** : 
+**Nahuel** :  Divicion de tareas del nuevo sprint
+**Marco** : Divicion de tareas del nuevo sprint
+**Ludmila** : Divicion de tareas del nuevo sprint
+**Rony** : Divicion de tareas del nuevo sprint
 
 ### Sabado 13/01
 
