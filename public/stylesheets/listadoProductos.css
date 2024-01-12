@@ -4,7 +4,7 @@
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
 }
-
+/*Bloques general*/
 .lp__generales {
     border: 2px solid rgb(233 171 88);
     border-radius: 5px;
@@ -12,17 +12,49 @@
     padding: 1em;
     color: #d9480f;
 }
-
+/*Bloques indiciduales*/
+/*SEllecc ordenar por*/
 .lp__OrdenarPor {
     grid-column: 1 / 2;
     grid-row: 1;
 }
-
+.lp__OrdenarPor--label{
+    display: none;
+}
+/*Filtrosde app*/
 .lp__filtro {
     grid-column: 2/4;
     grid-row: 1;
 }
+.lp__input{
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s ease-in-out;
+}
+.lp__input:focus {
+    border-color: var(--colorCeleste);
+    outline: none;
+}
 
+.contenedor__categoria__select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease-in-out;
+    width: 80%;
+}
+
+select:focus {
+    border-color: var(--colorCeleste);
+    outline: none;
+}
+.lp__filtro__form{
+    display: none;
+}
+/*section de resultados*/
 .lp__resultados {
     grid-column: 1/4;
     grid-row: 2/4;
@@ -33,10 +65,16 @@
         grid-column: 1 / 4;
         grid-row: 1;
     }
-
+    /*Estilos para filtro*/
+    .lp__filtro__form{
+        display: block;
+    }
     .lp__filtro {
         grid-column: 1;
         grid-row: 2 / 5;
+    }
+    .lp__input{
+        width: 120px;
     }
 
     .lp__resultados {
