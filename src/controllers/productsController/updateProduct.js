@@ -1,4 +1,4 @@
-const data = require('../data');
+const data = require('./../../data');
 const fs = require('fs');
 const path = require('path');
 

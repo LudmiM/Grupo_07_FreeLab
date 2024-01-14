@@ -1,6 +1,6 @@
 const eliminate = require('./eliminate')
 const formProduct = require('./formProduct')
-const updatedProduct = require('./updateProduct')
+const updateProduct = require('./updateProduct')
 const edit = require('./edit')
 const detailPost = require('./detailPost')
 const detail = require('./detail')
@@ -13,7 +13,7 @@ module.exports = {
     detail,
     detailPost,
     edit,
-    updatedProduct,
+    updateProduct,
     formProduct,
     listadoProducts
 }
