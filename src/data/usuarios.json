@@ -35,6 +35,7 @@
 ],
 "empresas":[
 {
+    "id": 1,
     "name":"Starbucks",
     "email":"info@starbucks.com.ar",
     "password":"$2a$04$zV0Q0WOICWfFA4LeT15wI.USSchvTwd3g4n01FyizWA4ZbIzOJcjS",
@@ -42,6 +43,7 @@
     "description":"En nuestras tiendas te esperan nuestros baristas capacitados para ofrecerte una bebida muy especial. El ambiente cálido y los detalles de nuestros productos elaborados artesanalmente hacen que la experiencia sea única e inigualable."
 },
 {
+    "id": 2,
     "name":"Motorola",
     "email":"soporte@motorola.com.ar",
     "password":"$2a$04$mzWm1o1672s3/eRwcDlfgOVEWvkUh0EC2rPWZvGOF40Jx/rvbkIH2",
@@ -49,12 +51,14 @@
     "description":"Descubre la innovación de Motorola: tecnología vanguardista, conectividad fiable y diseño excepcional. Transformamos tu vida cotidiana con experiencias tecnológicas inigualables."
 },
 {
+    "id": 3,
     "name":"Mercado Libre",
     "email":"rrhh@mercadolibre.com",
     "password":"$2a$04$ZZxBqeT7ReSMUX77hw/uvuRzHrlIgvtOzzwM6O4WtPYsdceYzI2WC",
     "number":"1554548122",
     "description":"Mercado Libre: Innovación líder en comercio electrónico, conectando compradores y vendedores. Plataforma confiable, accesible y diversa, facilitando experiencias comerciales únicas para todos."
 },{
+    "id": 4,
     "name":"Globant",
     "email":"hi@globant.com",
     "password":"$2a$04$C6fxS88J6kOD6xUO3BPO2.P0bSDepzwwSYbZMhRdnmtrncj2WnY2C",

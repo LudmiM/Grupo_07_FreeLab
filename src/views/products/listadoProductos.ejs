@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head', {title: 'Home | FreeLab' }) %>
+    <%- include('./../partials/head', {title: 'Home | FreeLab' }) %>
 <body>
-    <%- include('./partials/header')%>
-    <main>
-        
+    <%- include('./../partials/header')%>
+    <main class="lp__main">
+            <section class="lp__OrdenarPor lp__generales">
+                <label class="lp__OrdenarPor--label lp__sacarPorPantalla" for="idioma">Ordenar Por:</label>
+                <select id="idioma" name="idioma" class="lp__OrdenarPor__select">
+                    <option value="" selected hidden>Ordenar por</option>
+                    <option value="menorPrecio">Menor Precio</option>
+                    <option value="mayorPrecio">Mayor Precio</option>
+                </select>
+            </section>
+            <aside class="lp__filtro lp__generales">
+                <h3 class="lp__filtro--h3">Filtros:</h3>
+                
+                <form action="/productos/listado" method="get" id="filtro" class="lp__filtro__form">
+                    <div class="lp__filtro__form__contenedor__precio">
+                        <label for="precio">Precio:</label>
+                        <input class="lp__input lp__input__filtrarMax" type="number" id="minPrecio" name="minPrecio" placeholder="Min">
+                        <input class="lp__input lp__input__filtrarMax" type="number" id="maxPrecio" name="maxPrecio" placeholder="Max">
+                    </div>
+                    <div class="lp__filtro__form__contenedor__categoria">
+                        <label class="contenedor__categoria__label" for="tipoTrabajo">Categoria:</label>
+                        <select id="categoria" name="categoria" class="contenedor__categoria__select">
+                            <option value="" selected hidden></option>
+                            <% categorias.forEach(c => { %>
+                                <option value="<%= c %>"><%= c %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                    <!--<div>
+                        <label for="idioma">Idioma:</label>
+                        <select id="idioma" name="idioma">                
+                            <option value="espanol">Español</option>
+                            <option value="ingles">Inglés</option>
+                        </select>
+                    </div>-->
+                    <div class="lp__filtro__form__contenedor__Star">
+                        <label for="puntajeEstrellas">Puntaje de estrellas:</label>
+                        <input type="number" id="puntajeEstrellas" name="puntajeEstrellas" min="1" max="5">
+                    </div>
+                <button type="submit">Filtrar</button>
+                </form>
+            </aside>
+        <section class="lp__resultados lp__generales">
+            <h2 class="products-title">Resultados de la búsqueda:</h2>
+
+			<% if (filtrados.length) { %>
+				<% filtrados.forEach(f => { %>
+                    <%= f.first_name %>
+                    <p><%= f.name %></p>
+				<% }) %>
+			<% } else { %>
+			    <h2>No hay productos que coincidan con esa búsqueda</h2>
+			<% } %>	
+
+        </section>
     </main>
-    <%- include('./partials/footer')%>
-    <%- include('./partials/scripts') %>
+    <%- include('./../partials/footer')%>
+    <%- include('./../partials/scripts') %>
 </body>
 </html>
