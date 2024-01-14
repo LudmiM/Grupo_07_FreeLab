@@ -7,13 +7,13 @@ const storage = multer.diskStorage({
     cb(null, path.join(__dirname, '../../public/images/productos/'));
   },
   filename: (req, file, cb) => {
-    cb(null, `${Date.now()}_products_${file.originalname}${path.extname(file.originalname)}`);
+    cb(null, `${Date.now()}_products_${file.originalname}${path.extname(file.originalname)}`); 
   }
 });
 
 const upload = multer({
   storage,
-  limits: { files: 5 } // Set the maximum number of files (adjust as needed)
+  limits: { files: 5 },
 });
 
 module.exports = upload;

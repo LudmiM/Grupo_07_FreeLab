@@ -1,12 +1,12 @@
-// productsController.js
 const data = require('../data');
-const crypto = require('crypto');
-const {existsSync,unlinkSync} = require('fs');
+const fs = require('fs');  
+const { existsSync, unlinkSync, renameSync } = require('fs');
 const path = require('path');
+
 
 const updateProduct = (req, res) => {
   const { id } = req.params;
-  const { name, description, skills, portfolio, redes_sociales, category, price } = req.body;
+  const { name, description, skills, portfolio, redes_sociales, category, price, currency } = req.body;
   const files = req.files;
 
   const products = data.leerJSON('products');
@@ -14,7 +14,7 @@ const updateProduct = (req, res) => {
 
   if (index !== -1) {
     const updatedProduct = {
-      id,
+      id: parseInt(id), // Convertir el id a número
       name,
       description,
       skills,
@@ -22,17 +22,26 @@ const updateProduct = (req, res) => {
       redes_sociales,
       category,
       price,
+      currency,
     };
 
     if (files && files.length > 0) {
-      const fileNames = files.map(file => file.originalname);
-      updatedProduct.image = fileNames; // Save array of file names
+      const fileNames = files.map(file => {
+        const fileName = `${Date.now()}_products_${file.originalname}${path.extname(file.originalname)}`;
+
+        // Renombrar el archivo en la carpeta
+        const newPath = path.join(__dirname, '../../public/images/productos/', fileName);
+        fs.renameSync(file.path, newPath);
+
+        return fileName;
+      });
+
+      updatedProduct.image = fileNames; // Guardar array de nombres de archivo modificados
     }
 
     products.servicios[index] = updatedProduct;
     data.escribirJSON(products, 'products');
-    
-    // Cambia la redirección a la página de administrador
+
     res.redirect('/admin');
   } else {
     res.status(404).send('Producto no encontrado');
@@ -40,11 +49,19 @@ const updateProduct = (req, res) => {
 };
 
 const addPost = (req, res) => {
-  const { name, description, skills, portfolio, redes_sociales, category, price } = req.body;
+  const { name, description, skills, portfolio, redes_sociales, category, price, currency } = req.body;
   const files = req.files;
 
-  function product(name, description, skills, portfolio, redes_sociales, category, price) {
-    this.id = crypto.randomUUID();
+  const products = data.leerJSON('products');
+
+  // Obtener el último id en la lista actual
+  const lastId = products.servicios.length > 0 ? parseInt(products.servicios[products.servicios.length - 1].id) : 0;
+
+  // Crear un nuevo id consecutivo
+  const newId = lastId + 1;
+
+  function product(name, description, skills, portfolio, redes_sociales, category, price, currency) {
+    this.id = newId; // No convertir a cadena para que sea un número
     this.name = name;
     this.description = description;
     this.skills = skills;
@@ -52,20 +69,50 @@ const addPost = (req, res) => {
     this.redes_sociales = redes_sociales;
     this.category = category;
     this.price = price;
+    this.currency = currency;
   }
 
-  const newProduct = new product(name, description, skills, portfolio, redes_sociales, category, price);
+  const newProduct = new product(name, description, skills, portfolio, redes_sociales, category, price, currency);
 
   if (files && files.length > 0) {
-    const fileNames = files.map(file => file.originalname);
-    newProduct.image = fileNames; // Save array of file names
+    const fileNames = files.map(file => file.filename); // Usar file.filename
+    newProduct.image = fileNames; // Guardar array de nombres de archivo modificados
   }
 
-  const products = data.leerJSON('products');
   products.servicios.push(newProduct);
   data.escribirJSON(products, 'products');
 
-  return res.redirect('/admin');
+  res.redirect('/admin');
+};
+
+
+const eliminate = (req, res) => {
+  const products = data.leerJSON('products');
+  const productId = parseInt(req.params.id); // Convierte el id a número
+
+  const productToDelete = products.servicios.find(p => p.id === productId);
+
+  if (!productToDelete) {
+    return res.status(404).send('Producto no encontrado');
+  }
+
+  const { image } = productToDelete || {};
+
+  // Eliminar todas las imágenes asociadas al producto
+  if (image && image.length > 0) {
+    image.forEach(img => {
+      const imagePath = path.join(__dirname, '../../public/images/productos/', img);
+      existsSync(imagePath) && unlinkSync(imagePath);
+    });
+  }
+
+  // Resto del código para eliminar el producto
+  const sinEliminado = products.servicios.filter(p => p.id !== productId);
+
+  const updatedProducts = { ...products, servicios: sinEliminado };
+  data.escribirJSON(updatedProducts, 'products');
+
+  res.redirect('/admin');
 };
 
 module.exports = {
@@ -74,23 +121,11 @@ module.exports = {
   formProduct: (req, res) => res.render('products/product-create'),
   edit: (req, res) => {
     const { id } = req.params;
-    const product = data.leerJSON('products').servicios.find((p) => p.id == id);
+    const productId = parseInt(id); // Convierte el id a número
+    const product = data.leerJSON('products').servicios.find((p) => p.id === productId);
     return res.render('products/product-edit', { product });
   },
   addPost,
   updateProduct,
-  eliminate : (req, res) => {
-    const products = data.leerJSON('products');
-    const {image}= products.servicios.find(p => p.id === req.params.id);
-
-    existsSync('./public/images/productos/'+image)&&unlinkSync('./public/images/productos/'+image)
-
-    const sinEliminado = products.servicios.filter(p => p.id !== req.params.id);
-
-    const updatedProducts = { ...products, servicios: sinEliminado };
-    data.escribirJSON(updatedProducts,'products');
-    return res.redirect('/admin')
-  },
-  listado: (req, res) => res.render('products/listadoProductos')
-
+  eliminate,
 };

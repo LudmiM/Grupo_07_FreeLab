@@ -31,3 +31,35 @@ no atrasarnos con los horarios de las reuniones
 
 5. **Que hay que hacer mas** 
 avisar cuando se nos complica tanto por motivos personales o no saber solucionar algo para no atrasar al equipo.
+
+## Sprint 03
+1. **Que hay que hacer mas:**
+Hacer el trabajo a tiempo para no retrasar el sprint y avisar si estamos complicados
+
+2. **Que hay que dejar de hacer:** 
+retrasar el sprint
+
+3. **Que hay que empezar a hacer:** 
+ Avisar si subimos cambios
+
+4. **Que hay que hacer menos:**
+postergar trabajo
+
+5. **Que hay que hacer mas** 
+dialogar más como equipo
+
+# Sprint 04
+1. **Que hay que hacer mas:**
+Estimar mejor el tiempo de trabajo para una mayor organización del sprint
+
+2. **Que hay que dejar de hacer:** 
+no avisar cuando estamos retrasados para no perjudicar el equipo
+
+3. **Que hay que empezar a hacer:** 
+documentar el codigo para mayor comprención para el compañero
+
+4. **Que hay que hacer menos:**
+subestimar los sprint y dejar todo a ultimo momento
+
+5. **Que hay que hacer mas** 
+entregar el sprint a tiempo
