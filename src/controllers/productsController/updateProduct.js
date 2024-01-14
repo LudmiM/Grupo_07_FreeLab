@@ -28,7 +28,7 @@ module.exports = (req,res) => {
           const fileName = `${Date.now()}_products_${file.originalname}${path.extname(file.originalname)}`;
   
           // Renombrar el archivo en la carpeta
-          const newPath = path.join(__dirname, '../../public/images/productos/', fileName);
+          const newPath = path.join(__dirname, './../../../public/images/productos', fileName);
           fs.renameSync(file.path, newPath);
   
           return fileName;

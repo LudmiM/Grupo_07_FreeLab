@@ -19,7 +19,7 @@ module.exports = (req,res) => {
     // Eliminar todas las imágenes asociadas al producto
     if (image && image.length > 0) {
       image.forEach(img => {
-        const imagePath = path.join(__dirname, '../../public/images/productos/', img);
+        const imagePath = path.join(__dirname, '../../../public/images/productos/', img);
         existsSync(imagePath) && unlinkSync(imagePath);
       });
     }
