@@ -9,6 +9,7 @@ Nuestro sitio web ofrece un espacio para la comunidad de trabajadores freelance 
 
 3. **Publicación de Trabajos:** Los empleadores pueden publicar oportunidades de trabajo freelance y conectarse con profesionales calificados de todo el mundo.
 
+
 4. **Calificaciones y Comentarios:** Los usuarios pueden dejar y recibir calificaciones y comentarios para establecer una reputación confiable en la comunidad.
 
 ## **Descripción del Público Objetivo:**
