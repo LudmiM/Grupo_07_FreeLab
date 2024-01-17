@@ -123,6 +123,13 @@
     color: #ffffff;
  }
 
+ .description{
+  background-color: var(--colorCelesteOscuro);
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px black;
+  color: #ffffff;  
+ }
+
  @media( min-width: 768px){
     .Main__section__primerTitulo{
         font-size: 40px;
