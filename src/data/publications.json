@@ -1,1 +1,24 @@
-["redaccion", "desarrollo web", "desarrollo de software", "marketing digital", "programacion web", "ciencia de datos", "seguridad informatica", "inteligencia artificial", "testing y QA", "desarrollo móvil", "ciberseguridad", "machine learning", "devOps", "cloud computing", "blockchain", "realidad virtual", "automatización", "web scraping"]
+{
+    "1": [{
+    "id": 1,
+    "name":"Diseñador UX/UI",
+    "description":"Diseñador ux/ui, 3 años d eexperiencia.",
+    "skills":["figma","ux rewrite","Patrones de diseño"]
+},{
+    "id": 2,
+    "name":"Diseñador UX/UI",
+    "description":"Diseñador ux/ui, 3 años d eexperiencia.",
+    "skills":["figma","ux rewrite","Patrones de diseño"]
+}],
+"2": [{
+    "id": 1,
+    "name":"Diseñador UX/UI",
+    "description":"Diseñador ux/ui, 3 años d eexperiencia.",
+    "skills":["figma","ux rewrite","Patrones de diseño"]
+},{
+    "id": 2,
+    "name":"Diseñador UX/UI",
+    "description":"Diseñador ux/ui, 3 años d eexperiencia.",
+    "skills":["figma","ux rewrite","Patrones de diseño"]
+}]
+}
