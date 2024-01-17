@@ -7,6 +7,7 @@
 
         <!-- Formulario de registro -->
         <form id="registration-form" class="register-form">
+            
                     <!-- Botones de alternancia -->
         <div class="toggle-container">
             <button type="button" id="freelancer-toggle" class="toggle-btn active" data-type="freelancer" aria-label="Alternar Registro Freelancer">Freelancer</button>
@@ -168,31 +169,3 @@
 </body>
 </html>
 
-
-<script >
-    document.addEventListener('DOMContentLoaded', function () {
-        const freelancerToggle = document.getElementById('freelancer-toggle');
-        const employerToggle = document.getElementById('employer-toggle');
-        const registrationForm = document.getElementById('registration-form');
-        const freelancerRegistration = document.getElementById('freelancer-registration');
-        const employerRegistration = document.getElementById('employer-registration');
-
-        freelancerToggle.addEventListener('click', () => {
-            if (!freelancerToggle.classList.contains('active')) {
-                freelancerToggle.classList.add('active');
-                employerToggle.classList.remove('active');
-                freelancerRegistration.style.display = 'block';
-                employerRegistration.style.display = 'none';
-            }
-        });
-
-        employerToggle.addEventListener('click', () => {
-            if (!employerToggle.classList.contains('active')) {
-                employerToggle.classList.add('active');
-                freelancerToggle.classList.remove('active');
-                freelancerRegistration.style.display = 'none';
-                employerRegistration.style.display = 'block';
-            }
-        });
-    });
-</script>
