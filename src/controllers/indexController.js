@@ -18,5 +18,12 @@ module.exports = {
         const { key } = req.query; // Corregido aquí
         res.render('resultado', {
             products: products.servicios.filter(product => product.category.toLowerCase().includes(key.toLowerCase())), key});
+    },
+    //Reversion
+    resultado: (req, res) => {
+        const { key } = req.query; // Corregido aquí
+        //debe retornar solo el producto
+        res.render('resultado', {
+            products: products.servicios.filter(product => product.category.toLowerCase().includes(key.toLowerCase())), key});
     }
 }

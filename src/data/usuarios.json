@@ -40,7 +40,8 @@
     "email":"info@starbucks.com.ar",
     "password":"$2a$04$zV0Q0WOICWfFA4LeT15wI.USSchvTwd3g4n01FyizWA4ZbIzOJcjS",
     "number":"08001220129",
-    "description":"En nuestras tiendas te esperan nuestros baristas capacitados para ofrecerte una bebida muy especial. El ambiente cálido y los detalles de nuestros productos elaborados artesanalmente hacen que la experiencia sea única e inigualable."
+    "description":"En nuestras tiendas te esperan nuestros baristas capacitados para ofrecerte una bebida muy especial. El ambiente cálido y los detalles de nuestros productos elaborados artesanalmente hacen que la experiencia sea única e inigualable.",
+    "logo":""
 },
 {
     "id": 2,
@@ -48,7 +49,8 @@
     "email":"soporte@motorola.com.ar",
     "password":"$2a$04$mzWm1o1672s3/eRwcDlfgOVEWvkUh0EC2rPWZvGOF40Jx/rvbkIH2",
     "number":"08006668676",
-    "description":"Descubre la innovación de Motorola: tecnología vanguardista, conectividad fiable y diseño excepcional. Transformamos tu vida cotidiana con experiencias tecnológicas inigualables."
+    "description":"Descubre la innovación de Motorola: tecnología vanguardista, conectividad fiable y diseño excepcional. Transformamos tu vida cotidiana con experiencias tecnológicas inigualables.",
+    "logo":""
 },
 {
     "id": 3,
@@ -56,14 +58,16 @@
     "email":"rrhh@mercadolibre.com",
     "password":"$2a$04$ZZxBqeT7ReSMUX77hw/uvuRzHrlIgvtOzzwM6O4WtPYsdceYzI2WC",
     "number":"1554548122",
-    "description":"Mercado Libre: Innovación líder en comercio electrónico, conectando compradores y vendedores. Plataforma confiable, accesible y diversa, facilitando experiencias comerciales únicas para todos."
+    "description":"Mercado Libre: Innovación líder en comercio electrónico, conectando compradores y vendedores. Plataforma confiable, accesible y diversa, facilitando experiencias comerciales únicas para todos.",
+    "logo":""
 },{
     "id": 4,
     "name":"Globant",
     "email":"hi@globant.com",
     "password":"$2a$04$C6fxS88J6kOD6xUO3BPO2.P0bSDepzwwSYbZMhRdnmtrncj2WnY2C",
     "number":"1152345678",
-    "description":"Desde la estrategia hasta la ejecución, ofrecemos servicios integrales en un solo lugar, con un solo equipo. Según el desafío al que te enfrentes, nuestros Studios trabajan juntos para agregar valor a tu negocio."
+    "description":"Desde la estrategia hasta la ejecución, ofrecemos servicios integrales en un solo lugar, con un solo equipo. Según el desafío al que te enfrentes, nuestros Studios trabajan juntos para agregar valor a tu negocio.",
+    "logo":""
 }            
 ]
 }
