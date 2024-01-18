@@ -14,7 +14,6 @@ module.exports = (req, res, next) => {
             req.user = user;
         }
     }
-
-    // Continúa con la ejecución normal del middleware
+    
     next();
 };
