@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const { leerJSON } = require('./../data');
+const { leerJSON } = require('../data');
+const indexController = require('../controllers/indexController')
 
-router.get('/', (req, res) => {
-  res.render('index');
-});
+router.get('/', indexController.index);
 
 router.get('/carrito', (req, res) => {
   res.render('productCart');

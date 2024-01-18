@@ -1,9 +1,14 @@
 const { leerJSON } = require("../data");
 const products= leerJSON('products')
 
+
 module.exports = {
     index: (req,res) => {
-        res.render('index'); //return res.render('index');
+        const postReversed = [...products.servicios].reverse();
+        /* agregar json de ofertas laborales a futuro */
+        return res.render('index',{
+            products:postReversed
+        }); //return res.render('index');
     },
     card: (req,res) => {
         res.render('productCart');
@@ -18,12 +23,13 @@ module.exports = {
         const { key } = req.query; // Corregido aquí
         res.render('resultado', {
             products: products.servicios.filter(product => product.category.toLowerCase().includes(key.toLowerCase())), key});
-    },
+    }/*,
     //Reversion
     resultado: (req, res) => {
         const { key } = req.query; // Corregido aquí
         //debe retornar solo el producto
         res.render('resultado', {
             products: products.servicios.filter(product => product.category.toLowerCase().includes(key.toLowerCase())), key});
-    }
+    }*/
 }
+
