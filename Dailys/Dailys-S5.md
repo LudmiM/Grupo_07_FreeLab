@@ -15,35 +15,36 @@
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** : 
+**Ludmila** : Trabaje en la incidencia "Implementar entidad de usuario". No sabia exactamente a que hacia referencia la tarea, pero me guie por el pdf de DH.
 **Rony** : 
 
 ### Lunes 14/01
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** : 
+**Ludmila** : Trabaje en la parte visual de la incidencia incidencia "actualizacion de los datos en perfil de usuario" No termine de la actualizacion porque aun no se realizo el inicio de session del usuario.
+
 **Rony** : 
 
 ### Martes 16/01
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** : 
+**Ludmila** : Hago cambios en la incidencia "Impplemenatr la entidad usuario" hubo problemas por cuestiones de pull, y algunas carpetas se nborraron, las volvi a crear y subir, despues de estar pensando por 2hs que mi codigo no funcionaba :|
 **Rony** : 
 
 ### Miercoles 17/01
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** : 
+**Ludmila** :  
 **Rony** : 
 
 ### Jueves 18/01
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** : 
+**Ludmila** : creo el checkUserLogin + checkLocasSession, y lo pruebo su funcionalidad con el header, mostrando rutas segun el inicio de sesion
 **Rony** : 
 
 ### viernes 19/01
