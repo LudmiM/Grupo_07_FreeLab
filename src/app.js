@@ -9,6 +9,7 @@ const indexRouter = require('./routes/index.routes');
 const usersRouter = require('./routes/users.routes');
 const productsRouter = require('./routes/products.routes');
 
+const checkLocalSession= require('./middleware/checkLocalSession');
 const rememberMeMiddleware = require('./middleware/rememberMe');
 
 const session = require('express-session')
@@ -32,6 +33,8 @@ app
 
   //Configuracion de sesion
   .use(session( {secret:"Nuestro mensaje secreto"}))
+  
+  .use(checkLocalSession)
 
   // Rutas
   .use('/', indexRouter)
