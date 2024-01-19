@@ -11,6 +11,8 @@ const productsRouter = require('./routes/products.routes');
 
 const rememberMeMiddleware = require('./middleware/rememberMe');
 
+const session = require('express-session')
+
 const app = express();
 
 app
@@ -27,6 +29,9 @@ app
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
   .use(express.static(path.join(__dirname, '..', 'public')))
+
+  //Configuracion de sesion
+  .use(session( {secret:"Nuestro mensaje secreto"}))
 
   // Rutas
   .use('/', indexRouter)
