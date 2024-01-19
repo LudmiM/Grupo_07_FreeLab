@@ -7,7 +7,7 @@ module.exports = (req, res) => {
 
     if (errors.isEmpty()) {
         const freelancersData = leerJSON('usuarios').freelancers;
-        const user = freelancersData.find(user => user.email === email);
+        const user = freelancersData.find(user => user.freelancerEmail === email);
 
         if (user) {
             /*
@@ -21,12 +21,12 @@ module.exports = (req, res) => {
                     first_name/
                 };
             */
-            if (user.password === req.body.password) {
-                const { id, first_name } = user;
+            if (user.freelancerPassword === req.body.password) {
+                const { id, freelancerFirstname } = user;
 
                 req.session.userLogin = {
                     id,
-                    first_name
+                    freelancerFirstname
                 };
 
                 /*
