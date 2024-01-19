@@ -5,9 +5,9 @@ const { body, validationResult } = require('express-validator');
 const registerValidationRules = () => {
   return [
     // Agrega reglas de validación aquí usando express-validator
-    body('freelancer-firstname').notEmpty().withMessage('El nombre es obligatorio'),
-    body('freelancer-lastname').notEmpty().withMessage('El apellido es obligatorio'),
-    body('freelancer-email').isEmail().withMessage('Ingrese un correo electrónico válido'),
+    body('freelancerFirstname').notEmpty().withMessage('El nombre es obligatorio'),
+    body('freelancerLastname').notEmpty().withMessage('El apellido es obligatorio'),
+    body('freelancerEmail').isEmail().withMessage('Ingrese un correo electrónico válido'),
     // Agrega más reglas según sea necesario
   ];
 };

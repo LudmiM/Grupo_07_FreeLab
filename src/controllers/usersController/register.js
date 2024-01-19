@@ -3,10 +3,10 @@
 const { registerValidationRules, validate } = require('../../validations/registerValidation');
 const { validationResult } = require('express-validator');
 
-module.exports = [
+  module.exports = [
   registerValidationRules(),
   validate,
-  (req, res) => {
+  (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       // Si hay errores de validación, renderiza la vista del formulario de registro con los errores
@@ -15,6 +15,7 @@ module.exports = [
 
     // Procesar la solicitud de registro si la validación es exitosa
     // Aquí puedes agregar el código actual de manejo del registro
-    return res.render('users/register', { success: true });
+    next();
+  
   },
 ];

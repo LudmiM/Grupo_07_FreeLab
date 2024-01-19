@@ -6,7 +6,7 @@
     <div class="register-container">
 
         <!-- Formulario de registro -->
-        <form id="registration-form" class="register-form" action="" method="post" enctype="multipart/form-data">
+        <div class="register-form">
             
                     <!-- Botones de alternancia -->
         <div class="toggle-container">
@@ -15,38 +15,38 @@
 
         </div>
         
-            <div id="freelancer-registration" class="registration-section freelancer">
+            <form id="freelancer-registration" class="registration-section freelancer" action="/usuarios/registrarFreelancer" method="post">
                 <h1>Registro Freelancer</h1>
-                <label for="freelancer-firstname">Nombre <span class="required">*</span></label>
+                <label for="freelancerFirstname">Nombre <span class="required">*</span></label>
                 <div class="input-line">
-                    <input type="text" id="freelancer-firstname" name="freelancer-firstname" placeholder="Nombre" required pattern="[A-Za-zÁ-ÿ\s']{1,}">
+                    <input type="text" id="freelancerFirstname" name="freelancerFirstname" placeholder="Nombre" required pattern="[A-Za-zÁ-ÿ\s']{1,}">
                 </div>
                 
-                <label for="freelancer-lastname">Apellido <span class="required">*</span></label>
+                <label for="freelancerLastname">Apellido <span class="required">*</span></label>
                 <div class="input-line">
-                    <input type="text" id="freelancer-lastname" name="freelancer-lastname" placeholder="Apellido" required pattern="[A-Za-zÁ-ÿ\s']{1,}">
+                    <input type="text" id="freelancerLastname" name="freelancerLastname" placeholder="Apellido" required pattern="[A-Za-zÁ-ÿ\s']{1,}">
                 </div>
                 
                 
-                <label for="freelancer-email">Correo <span class="required">*</span></label>
+                <label for="freelancerEmail">Correo <span class="required">*</span></label>
                 <div class="input-line">
-                    <input type="text" id="freelancer-email" name="freelancer-email" placeholder="ejemplo@ejemplo.com" required>
+                    <input type="text" id="freelancerEmail" name="freelancerEmail" placeholder="ejemplo@ejemplo.com" required>
                 </div>
                 
-                <label for="freelancer-password">Contraseña <span class="required">*</span></label>
+                <label for="freelancerPassword">Contraseña <span class="required">*</span></label>
                 <div class="input-line">
-                    <input type="password" id="freelancer-password" name="freelancer-password" required>
+                    <input type="password" id="freelancerPassword" name="freelancerPassword" required>
                 </div>
                 
-                <label for="freelancer-confirm-password">Confirmar Contraseña <span class="required">*</span></label>
+                <label for="freelancerConfirmPassword">Confirmar Contraseña <span class="required">*</span></label>
                 <div class="input-line">
-                    <input type="password" id="freelancer-confirm-password" name="freelancer-confirm-password" required>
+                    <input type="password" id="freelancerConfirmPassword" name="freelancerConfirmPassword" required>
                 </div>
                 
-                <label for="freelancer-phone">Teléfono Celular</label>
+                <label for="freelancerPhone">Teléfono Celular</label>
                 <div class="input-line-phone">
                     <div class="phone-input-container">
-                        <select id="freelancer-phone-code" name="freelancer-phone-code" required>
+                        <select id="freelancerPhoneCode" name="freelancerPhoneCode" required>
                         <option value="+54">+54 (Argentina)</option>
                         <option value="+55">+55 (Brasil)</option>
                         <option value="+56">+56 (Chile)</option>
@@ -63,13 +63,13 @@
                   <div class="separator-container">
                     <div class="separator"></div>
                 </div>
-                  <input type="text" id="freelancer-phone" name="freelancer-phone" placeholder="Número de teléfono celular" pattern="[0-9]+" required>
+                  <input type="text" id="freelancerPhone" name="freelancerPhone" placeholder="Número de teléfono celular" pattern="[0-9]+" required>
                 </div>
             </div>
                 
-                <label for="freelancer-skills">Descripción de Habilidades</label>
+                <label for="freelancerkills">Descripción de Habilidades</label>
                 <div class="input-line-habilidades">
-                    <textarea id="freelancer-skills" name="freelancer-skills" placeholder="Descripción de habilidades"></textarea>
+                    <textarea id="freelancerkills" name="freelancerkills" placeholder="Descripción de habilidades"></textarea>
                 </div>
                 
                 
@@ -84,34 +84,34 @@
                 </div>
                 
                 <button type="submit" class="btn">Registrarse como Freelancer</button>
-            </div>
+            </form>
             
-            <div id="employer-registration" class="registration-section employer">
+            <form id="employer-registration" class="registration-section employer" action="/usuarios/registrarEmpresa" method="post">
                 <h1>Registro Empresa</h1>
 
-                <label for="company-name">Nombre de la Empresa <span class="required">*</span></label>
+                <label for="companyName">Nombre de la Empresa <span class="required">*</span></label>
                 <div class="input-line">
-                    <input type="text" id="company-name" name="company-name" placeholder="Nombre de la Empresa" required>
+                    <input type="text" id="companyName" name="companyName" placeholder="Nombre de la Empresa" required>
                 </div>
-                <label for="employer-email">Correo <span class="required">*</span></label>
+                <label for="employerEmail">Correo <span class="required">*</span></label>
                 <div class="input-line">
-                    <input type="text" id="employer-email" name="employer-email" placeholder="ejemplo@empresa.com" required>
-                </div>
-                
-                <label for="employer-password">Contraseña <span class="required">*</span></label>
-                <div class="input-line">
-                    <input type="password" id="employer-password" name="employer-password" required>
+                    <input type="text" id="employerEmail" name="employerEmail" placeholder="ejemplo@empresa.com" required>
                 </div>
                 
-                <label for="employer-confirm-password">Confirmar Contraseña <span class="required">*</span></label>
+                <label for="employerPassword">Contraseña <span class="required">*</span></label>
                 <div class="input-line">
-                    <input type="password" id="employer-confirm-password" name="employer-confirm-password" required>
+                    <input type="password" id="employerPassword" name="employerPassword" required>
                 </div>
                 
-                <label for="employer-phone">Teléfono Celular</label>
+                <label for="employerConfirmPassword">Confirmar Contraseña <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="password" id="employerConfirmPassword" name="employerConfirmPassword" required>
+                </div>
+                
+                <label for="employerPhone">Teléfono Celular</label>
                 <div class="input-line-phone">
                     <div class="phone-input-container">
-                        <select id="employer-phone-code" name="employer-phone-code" required>
+                        <select id="employerPhoneCode" name="employerPhoneCode" required>
                         <option value="+1">+1 (EE. UU.)</option>
                         <option value="+44">+44 (Reino Unido)</option>
                         <option value="+54">+54 (Argentina)</option>
@@ -130,13 +130,13 @@
                     <div class="separator-container">
                         <div class="separator"></div>
                     </div>
-                    <input type="text" id="employer-phone" name="employer-phone" placeholder="Número de teléfono celular" pattern="[0-9]+" required>
+                    <input type="text" id="employerPhone" name="employerPhone" placeholder="Número de teléfono celular" pattern="[0-9]+" required>
                 </div>
             </div>
                 
-                <label for="company-description">Breve Descripción de la Empresa <span class="required">*</span></label>
+                <label for="companyDescription">Breve Descripción de la Empresa <span class="required">*</span></label>
                 <div class="input-line-empresa">
-                    <textarea id="company-description" name="company-description" placeholder="Breve descripción de la empresa" required></textarea>
+                    <textarea id="companyDescription" name="companyDescription" placeholder="Breve descripción de la empresa" required></textarea>
                 </div>
                 
                 <div class="checkbox-line">
@@ -150,8 +150,8 @@
                 </div>
                 
                 <button type="submit" class="btn">Registrarse como Empresa</button>
-            </div>
-        </form>
+            </form>
+        </div>
         
         <!-- Caja de inicio de sesión -->
         <div class="register-box">

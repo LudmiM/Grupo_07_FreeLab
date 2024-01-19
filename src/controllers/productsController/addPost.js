@@ -5,7 +5,7 @@ module.exports = (req, res) => {
     const files = req.files;
   
     const products = data.leerJSON('products');
-  
+   
     // Obtener el último id en la lista actual
     const lastId = products.servicios.length > 0 ? parseInt(products.servicios[products.servicios.length - 1].id) : 0;
   
