@@ -1,3 +1,6 @@
-module.exports = (req,res) => {
-        return res.render('users/login');
-}
+const { leerJSON } = require("../../data");
+
+module.exports = (req, res) => {
+    // Renderizar la vista de login
+    return res.render('users/login');
+};

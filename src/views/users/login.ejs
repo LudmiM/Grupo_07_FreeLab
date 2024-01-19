@@ -17,11 +17,19 @@
         <input type="password" id="password" name="password" placeholder="*************" required />
         <a class="forgot" href="#">¿Olvidó su <span class="underline">contraseña</span>?</a>
       </div>
-      <button type="submit" class="btn">Ingresar</button>
+
+      <!-- Agrega el campo de recordar al usuario -->
+      <label for="remember"><input type="checkbox" id="remember" name="remember"> Recordarme</label>
+    
+    <button type="submit" class="btn"><span>Ingresar</span></button>
+
     </form>
 
-    <!-- Agrega el enlace al final del formulario -->
-    <p>¿No tienes cuenta? <a href="/register">Regístrate aquí</a></p>
+    <div class="registro-section">
+      <p class="registro-paragraph">¿No tienes cuenta? <a href="/register" class="registro-link">Regístrate aquí</a></p>
+    </div>
+    
+    
   </div>
 
   <div class="log-redes">
