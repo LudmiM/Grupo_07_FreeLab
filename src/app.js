@@ -3,11 +3,13 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const methodOverride =  require('method-override');
+const methodOverride = require('method-override');
 
 const indexRouter = require('./routes/index.routes');
 const usersRouter = require('./routes/users.routes');
 const productsRouter = require('./routes/products.routes');
+
+const rememberMeMiddleware = require('./middleware/rememberMe');
 
 const app = express();
 
@@ -19,19 +21,24 @@ app
   .use(logger('dev'))
   .use(cookieParser())
   .use(methodOverride('_method'))
+  .use(rememberMeMiddleware)  // Coloca el middleware antes de las rutas
 
-  //formularios
+  // Middleware para formularios
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
   .use(express.static(path.join(__dirname, '..', 'public')))
+
+  // Rutas
   .use('/', indexRouter)
   .use('/usuarios', usersRouter)
   .use('/productos', productsRouter);
 
+// Manejo de errores 404
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
+// Manejo de errores generales
 app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

@@ -105,7 +105,9 @@
 }
 
 .log-form .btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30%;
   margin: 25px auto 20px; 
   height: 27px; 
@@ -119,9 +121,16 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.log-form .btn span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .log-form .btn:hover {
   background: #23c2cb;
 }
+
+
 
 
 .log-form .forgot {
@@ -194,6 +203,7 @@
   align-items: center;
   justify-content: center; 
   border-radius: 6px;
+  font-size: 14px;
 }
 
 .log-redes .social-buttons-login .btn i {
@@ -203,7 +213,6 @@
 .log-redes .social-buttons-login .btn:hover {
   background-color: #23c2cb;
 }
-
 
 /* telefonos */
 @media (max-width: 426px) {
@@ -223,5 +232,19 @@
 
   .log-form .forgot {
     font-size: 8px;
+  }
+  .log-form .btn span {
+    font-size: 14px; 
+  }
+  .log-form p {
+    font-size: 12px; 
+    margin-top: 10px; 
+  }
+
+  /* Ajustes para los botones en la lista */
+  .social-buttons-login .btn {
+    font-size: 12px; 
+    height: 25px; 
+    line-height: 25px; 
   }
 }
