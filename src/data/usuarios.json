@@ -2,68 +2,68 @@
 "freelancers":[
 {
     "id": 1,
-    "first_name": "Virgina",
-    "last_name": "Gillfillan",
-    "email": "vgillfillan0@weibo.com",
-    "password": "$2a$04$cP6bQrWxlcqaUGgZtPcYxuaC0D46q6s6IgbpvX/piAKwpZTJt0DLS",
-    "number": "491-170-2537"
+    "freelancer-firstname": "Virgina",
+    "freelancer-lastname": "Gillfillan",
+    "freelancer-email": "vgillfillan0@weibo.com",
+    "freelancer-password": "$2a$04$cP6bQrWxlcqaUGgZtPcYxuaC0D46q6s6IgbpvX/piAKwpZTJt0DLS",
+    "freelancer-phone": "491-170-2537"
 },
 {
     "id": 2,
-    "first_name": "Briano",
-    "last_name": "Dunmore",
-    "email": "$2a$04$29JEpclakyG2Jiaekg5vfe.K.M3ZWwrZRRSF81d8ceQgepjqLx3o6",
-    "password": "gQ0&`RJ0O",
-    "number": "865-636-7106"
+    "freelancer-firstname": "Briano",
+    "freelancer-lastname": "Dunmore",
+    "freelancer-email": "$2a$04$29JEpclakyG2Jiaekg5vfe.K.M3ZWwrZRRSF81d8ceQgepjqLx3o6",
+    "freelancer-password": "gQ0&`RJ0O",
+    "freelancer-phone": "865-636-7106"
 },
 {
     "id": 3,
-    "first_name": "Shaylynn",
-    "last_name": "Dank",
-    "email": "sdank2@go.com",
-    "password": "$2a$04$KFedxW6R9g.PfZmynMieMOgjRJuFerPJh.UasBHkciXJeacpFTZS6",
-    "number": "789-488-2442"
+    "freelancer-firstname": "Shaylynn",
+    "freelancer-lastname": "Dank",
+    "freelancer-email": "sdank2@go.com",
+    "freelancer-password": "$2a$04$KFedxW6R9g.PfZmynMieMOgjRJuFerPJh.UasBHkciXJeacpFTZS6",
+    "freelancer-phone": "789-488-2442"
 },
 {
     "id": 4,
-    "first_name": "Hillard",
-    "last_name": "Leamon",
-    "email": "$2a$04$cPJOaR2AeWb716cLK7h8F.ENAxxNTXAXRds7JArkSfyw7tCsFEmTG",
-    "password": "qT4*=+\"i'>dFxL",
-    "number": "100-193-0960"
+    "freelancer-firstname": "Hillard",
+    "freelancer-lastname": "Leamon",
+    "freelancer-email": "$2a$04$cPJOaR2AeWb716cLK7h8F.ENAxxNTXAXRds7JArkSfyw7tCsFEmTG",
+    "freelancer-password": "qT4*=+\"i'>dFxL",
+    "freelancer-phone": "100-193-0960"
 }
 ],
 "empresas":[
 {
     "id": 1,
-    "name":"Starbucks",
-    "email":"info@starbucks.com.ar",
-    "password":"$2a$04$zV0Q0WOICWfFA4LeT15wI.USSchvTwd3g4n01FyizWA4ZbIzOJcjS",
-    "number":"08001220129",
-    "description":"En nuestras tiendas te esperan nuestros baristas capacitados para ofrecerte una bebida muy especial. El ambiente cálido y los detalles de nuestros productos elaborados artesanalmente hacen que la experiencia sea única e inigualable."
+    "company-name":"Starbucks",
+    "employer-email":"info@starbucks.com.ar",
+    "employer-password":"$2a$04$zV0Q0WOICWfFA4LeT15wI.USSchvTwd3g4n01FyizWA4ZbIzOJcjS",
+    "employer-phone":"08001220129",
+    "company-description":"En nuestras tiendas te esperan nuestros baristas capacitados para ofrecerte una bebida muy especial. El ambiente cálido y los detalles de nuestros productos elaborados artesanalmente hacen que la experiencia sea única e inigualable."
 },
 {
     "id": 2,
-    "name":"Motorola",
-    "email":"soporte@motorola.com.ar",
-    "password":"$2a$04$mzWm1o1672s3/eRwcDlfgOVEWvkUh0EC2rPWZvGOF40Jx/rvbkIH2",
-    "number":"08006668676",
-    "description":"Descubre la innovación de Motorola: tecnología vanguardista, conectividad fiable y diseño excepcional. Transformamos tu vida cotidiana con experiencias tecnológicas inigualables."
+    "company-name":"Motorola",
+    "employer-email":"soporte@motorola.com.ar",
+    "employer-password":"$2a$04$mzWm1o1672s3/eRwcDlfgOVEWvkUh0EC2rPWZvGOF40Jx/rvbkIH2",
+    "employer-phone":"08006668676",
+    "company-description":"Descubre la innovación de Motorola: tecnología vanguardista, conectividad fiable y diseño excepcional. Transformamos tu vida cotidiana con experiencias tecnológicas inigualables."
 },
 {
     "id": 3,
-    "name":"Mercado Libre",
-    "email":"rrhh@mercadolibre.com",
-    "password":"$2a$04$ZZxBqeT7ReSMUX77hw/uvuRzHrlIgvtOzzwM6O4WtPYsdceYzI2WC",
-    "number":"1554548122",
-    "description":"Mercado Libre: Innovación líder en comercio electrónico, conectando compradores y vendedores. Plataforma confiable, accesible y diversa, facilitando experiencias comerciales únicas para todos."
+    "company-name":"Mercado Libre",
+    "employer-email":"rrhh@mercadolibre.com",
+    "employer-password":"$2a$04$ZZxBqeT7ReSMUX77hw/uvuRzHrlIgvtOzzwM6O4WtPYsdceYzI2WC",
+    "employer-phone":"1554548122",
+    "company-description":"Mercado Libre: Innovación líder en comercio electrónico, conectando compradores y vendedores. Plataforma confiable, accesible y diversa, facilitando experiencias comerciales únicas para todos."
 },{
     "id": 4,
-    "name":"Globant",
-    "email":"hi@globant.com",
-    "password":"$2a$04$C6fxS88J6kOD6xUO3BPO2.P0bSDepzwwSYbZMhRdnmtrncj2WnY2C",
-    "number":"1152345678",
-    "description":"Desde la estrategia hasta la ejecución, ofrecemos servicios integrales en un solo lugar, con un solo equipo. Según el desafío al que te enfrentes, nuestros Studios trabajan juntos para agregar valor a tu negocio."
+    "company-name":"Globant",
+    "employer-email":"hi@globant.com",
+    "employer-password":"$2a$04$C6fxS88J6kOD6xUO3BPO2.P0bSDepzwwSYbZMhRdnmtrncj2WnY2C",
+    "employer-phone":"1152345678",
+    "company-description":"Desde la estrategia hasta la ejecución, ofrecemos servicios integrales en un solo lugar, con un solo equipo. Según el desafío al que te enfrentes, nuestros Studios trabajan juntos para agregar valor a tu negocio."
 }            
 ]
 }
