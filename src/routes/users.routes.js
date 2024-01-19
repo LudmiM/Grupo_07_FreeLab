@@ -7,6 +7,7 @@ const checkUserLogin = require('./../middleware/checkUserLogin')
 
 router.get('/ingreso',login)
 router.post('/ingreso',process_login)
+
 router.post('/registrarFreelancer',register,freelancerRegister)
 router.post('/registrarEmpresa',empresarRegister)
 router.get('/registro', formRegister)
