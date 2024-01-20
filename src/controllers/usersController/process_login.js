@@ -22,6 +22,7 @@ module.exports = (req, res) => {
                 };
             */
             if (user.freelancerPassword === req.body.password) {
+                console.log('Ingrese')
                 const { id, freelancerFirstname } = user;
 
                 req.session.userLogin = {
@@ -29,16 +30,13 @@ module.exports = (req, res) => {
                     freelancerFirstname
                 };
 
-                /*
-                remember && res.cookie('kitchening4EV3R_user', req.session.userLogin, {
-                    maxAge: 1000 * 60 * 2
-                });
-                */
+                
 
                 return res.redirect('/');
             }
         } else {
             // Usuario no encontrado
+            console.log('NO Ingrese :(')
             return res.render('users/login', {
                 errors: { email: { msg: "Usuario no encontrado" } }
             });
@@ -49,40 +47,3 @@ module.exports = (req, res) => {
         });
     }
 };
-
-
-/*
-const data = require('./../../data');
-const {leerJSON} = require('./../../data')
-const { validationResult } = require("express-validator");
-
-module.exports = (req, res) => {
-    const errors = validationResult(req);
-    const { email, remember } = req.body;
-
-    if (errors.isEmpty()) {
-        //console.log(leerJSON('usuarios').freelancers)
-        console.log(email)
-        const { id, first_name/*, /*role*//* } = leerJSON('usuarios').freelancers.find(user => user.email === email)
-
-req.session.userLogin = {
-    id,
-    first_name/*,
-    role*/
-/* }
- //console.log(id,first_name,role)
- /*
- remember && res.cookie('kitchening4EV3R_user', req.session.userLogin, {
-     maxAge: 1000 * 60 * 2
- })
-
- return res.redirect('/')*//*Este es el general
-return res.redirect('/')
-
-} else {
-return res.render('users/login', {
-    errors: errors.mapped()
-})
-}
-}
-*/
