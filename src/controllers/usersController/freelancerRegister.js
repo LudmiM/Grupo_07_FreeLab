@@ -12,6 +12,8 @@ module.exports = (req, res) => {
 
     const newId = lastId + 1;
 
+    const freelancer = "freelancer";
+
     function usuario(freelancerFirstname, freelancerLastname, freelancerEmail, freelancerPassword,freelancerPhoneCode,freelancerPhone,freelancerImage, freelancerSkills){
       this.id = newId;
       this.freelancerFirstname = freelancerFirstname;
@@ -22,12 +24,13 @@ module.exports = (req, res) => {
       this.freelancerPhone = freelancerPhone;
       this.freelancerImage = freelancerImage;
       this.freelancerSkills = freelancerSkills;
+      this.freelancerRol = freelancer;
     }    
 
-    const newUsuario = new usuario(freelancerFirstname, freelancerLastname, freelancerEmail, freelancerPassword,freelancerPhoneCode,freelancerPhone,file.filename, freelancerSkills);
+    const newUsuario = new usuario(freelancerFirstname, freelancerLastname, freelancerEmail, freelancerPassword,freelancerPhoneCode,freelancerPhone,file.filename, freelancerSkills, freelancer);
 
     users.freelancers.push(newUsuario);
     data.escribirJSON(users, 'usuarios');
-    return res.redirect('/');
+    return res.redirect('/usuarios/ingreso');
 
 }

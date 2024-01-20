@@ -6,7 +6,8 @@
       "freelancerLastname": "Gillfillan",
       "freelancerEmail": "vgillfillan0@weibo.com",
       "freelancerPassword": "$2a$04$cP6bQrWxlcqaUGgZtPcYxuaC0D46q6s6IgbpvX/piAKwpZTJt0DLS",
-      "freelancerPhone": "491-170-2537"
+      "freelancerPhone": "491-170-2537",
+      "freelancerRol": "freelancer"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "freelancerLastname": "Dunmore",
       "freelancerEmail": "$2a$04$29JEpclakyG2Jiaekg5vfe.K.M3ZWwrZRRSF81d8ceQgepjqLx3o6",
       "freelancerPassword": "gQ0&`RJ0O",
-      "freelancerPhone": "865-636-7106"
+      "freelancerPhone": "865-636-7106",
+      "freelancerRol": "freelancer"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "freelancerLastname": "Dank",
       "freelancerEmail": "sdank2@go.com",
       "freelancerPassword": "$2a$04$KFedxW6R9g.PfZmynMieMOgjRJuFerPJh.UasBHkciXJeacpFTZS6",
-      "freelancerPhone": "789-488-2442"
+      "freelancerPhone": "789-488-2442",
+      "freelancerRol": "freelancer"
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "freelancerLastname": "Leamon",
       "freelancerEmail": "$2a$04$cPJOaR2AeWb716cLK7h8F.ENAxxNTXAXRds7JArkSfyw7tCsFEmTG",
       "freelancerPassword": "qT4*=+\"i'>dFxL",
-      "freelancerPhone": "100-193-0960"
+      "freelancerPhone": "100-193-0960",
+      "freelancerRol": "freelancer"
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "freelancerLastname": "LML",
       "freelancerEmail": "lu@gmail.com",
       "freelancerPassword": "lu123",
-      "freelancerPhone": "100-193-0960"
+      "freelancerPhone": "100-193-0960",
+      "freelancerRol": "freelancer"
     }
   ],
   "empresas": [
@@ -48,7 +53,8 @@
       "employer-email": "info@starbucks.com.ar",
       "employer-password": "$2a$04$zV0Q0WOICWfFA4LeT15wI.USSchvTwd3g4n01FyizWA4ZbIzOJcjS",
       "employer-phone": "08001220129",
-      "company-description": "En nuestras tiendas te esperan nuestros baristas capacitados para ofrecerte una bebida muy especial. El ambiente cálido y los detalles de nuestros productos elaborados artesanalmente hacen que la experiencia sea única e inigualable."
+      "company-description": "En nuestras tiendas te esperan nuestros baristas capacitados para ofrecerte una bebida muy especial. El ambiente cálido y los detalles de nuestros productos elaborados artesanalmente hacen que la experiencia sea única e inigualable.",
+      "employerRol": "empresa"
     },
     {
       "id": 2,
@@ -56,7 +62,8 @@
       "employer-email": "soporte@motorola.com.ar",
       "employer-password": "$2a$04$mzWm1o1672s3/eRwcDlfgOVEWvkUh0EC2rPWZvGOF40Jx/rvbkIH2",
       "employer-phone": "08006668676",
-      "company-description": "Descubre la innovación de Motorola: tecnología vanguardista, conectividad fiable y diseño excepcional. Transformamos tu vida cotidiana con experiencias tecnológicas inigualables."
+      "company-description": "Descubre la innovación de Motorola: tecnología vanguardista, conectividad fiable y diseño excepcional. Transformamos tu vida cotidiana con experiencias tecnológicas inigualables.",
+      "employerRol": "empresa"
     },
     {
       "id": 3,
@@ -64,7 +71,8 @@
       "employer-email": "rrhh@mercadolibre.com",
       "employer-password": "$2a$04$ZZxBqeT7ReSMUX77hw/uvuRzHrlIgvtOzzwM6O4WtPYsdceYzI2WC",
       "employer-phone": "1554548122",
-      "company-description": "Mercado Libre: Innovación líder en comercio electrónico, conectando compradores y vendedores. Plataforma confiable, accesible y diversa, facilitando experiencias comerciales únicas para todos."
+      "company-description": "Mercado Libre: Innovación líder en comercio electrónico, conectando compradores y vendedores. Plataforma confiable, accesible y diversa, facilitando experiencias comerciales únicas para todos.",
+      "employerRol": "empresa"
     },
     {
       "id": 4,
@@ -72,7 +80,8 @@
       "employer-email": "hi@globant.com",
       "employer-password": "$2a$04$C6fxS88J6kOD6xUO3BPO2.P0bSDepzwwSYbZMhRdnmtrncj2WnY2C",
       "employer-phone": "1152345678",
-      "company-description": "Desde la estrategia hasta la ejecución, ofrecemos servicios integrales en un solo lugar, con un solo equipo. Según el desafío al que te enfrentes, nuestros Studios trabajan juntos para agregar valor a tu negocio."
+      "company-description": "Desde la estrategia hasta la ejecución, ofrecemos servicios integrales en un solo lugar, con un solo equipo. Según el desafío al que te enfrentes, nuestros Studios trabajan juntos para agregar valor a tu negocio.",
+      "employerRol": "empresa"
     }
   ]
 }
