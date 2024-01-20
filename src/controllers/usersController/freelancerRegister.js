@@ -24,7 +24,7 @@ module.exports = (req, res) => {
       this.freelancerPhone = freelancerPhone;
       this.freelancerImage = freelancerImage;
       this.freelancerSkills = freelancerSkills;
-      this.freelancerRol = freelancer;
+      this.rol = freelancer;
     }    
 
     const newUsuario = new usuario(freelancerFirstname, freelancerLastname, freelancerEmail, freelancerPassword,freelancerPhoneCode,freelancerPhone,file.filename, freelancerSkills, freelancer);

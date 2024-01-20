@@ -23,7 +23,7 @@ module.exports = (req, res) => {
       this.employerPhone = employerPhone;
       this.employerImage = employerImage;
       this.companyDescription = companyDescription;
-      this.employerRol = empresa;
+      this.rol = empresa;
       
     }    
 
