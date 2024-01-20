@@ -63,3 +63,19 @@ subestimar los sprint y dejar todo a ultimo momento
 
 5. **Que hay que hacer mas** 
 entregar el sprint a tiempo
+
+# Sprint 05
+1. **Que hay que hacer mas:**
+comunicarnos mas, avisar cuando se rompe el codigo, avisar cuando hay un pull disponible.
+
+2. **Que hay que dejar de hacer:** 
+iniciar las incidencias a ultimo momento.
+
+3. **Que hay que empezar a hacer:** 
+organizar un calendario de reuniones, asignarnos incidencias que tengan relacion entre si.
+
+4. **Que hay que hacer menos:**
+buscar culpables, tomar decisiones unilaterales.
+
+5. **Que hay que hacer mas** 
+hacer un pull antes y despues de empezar un trabajo, dejar comentarios.
