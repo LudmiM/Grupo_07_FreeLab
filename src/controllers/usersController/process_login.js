@@ -7,7 +7,9 @@ module.exports = (req, res) => {
 
     if (errors.isEmpty()) {
         const freelancersData = leerJSON('usuarios').freelancers;
-        const usuario = freelancersData.find(u => u.freelancerEmail.toLowerCase() === email.trim().toLowerCase());
+        const { id, freelancerFirstname, freelancerLastname, } = freelancersData.find(u => u.freelancerEmail.toLowerCase() === email.trim().toLowerCase());
+        
+        req.session.userLogin = { id,  freelancerFirstname, freelancerLastname, }
 
         return res.redirect('/');
     } else {

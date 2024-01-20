@@ -9,7 +9,7 @@ module.exports = [
         .notEmpty().withMessage("La contraseña es obligatoria").bail()
         .custom((value, {req}) => {
             const usuarios = leerJSON('usuarios').freelancers;
-            //console.log(req.body.email)
+            console.log(req.body.email)
             const usuario = usuarios.find(u => u.freelancerEmail.toLowerCase()  === req.body.email.trim().toLowerCase());
             
             if(!usuario || !compareSync(value.trim(), usuario.freelancerPassword)) {
