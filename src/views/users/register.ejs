@@ -15,7 +15,7 @@
 
         </div>
         
-            <form id="freelancer-registration" class="registration-section freelancer" action="/usuarios/registrarFreelancer" method="post">
+            <form id="freelancer-registration" class="registration-section freelancer" action="/usuarios/registrarFreelancer" method="post" enctype="multipart/form-data">
                 <h1>Registro Freelancer</h1>
                 <label for="freelancerFirstname">Nombre <span class="required">*</span></label>
                 <div class="input-line">
@@ -66,7 +66,10 @@
                   <input type="text" id="freelancerPhone" name="freelancerPhone" placeholder="Número de teléfono celular" pattern="[0-9]+" required>
                 </div>
             </div>
-                
+                <div class="input-line">
+                    <label for="freelancerImage">Agregar imagen de perfil</label>
+                    <input type="file" name="freelancerImage" class="form-control" id="freelancerImage">
+                </div>
                 <label for="freelancerkills">Descripción de Habilidades</label>
                 <div class="input-line-habilidades">
                     <textarea id="freelancerkills" name="freelancerkills" placeholder="Descripción de habilidades"></textarea>
@@ -86,7 +89,7 @@
                 <button type="submit" class="btn">Registrarse como Freelancer</button>
             </form>
             
-            <form id="employer-registration" class="registration-section employer" action="/usuarios/registrarEmpresa" method="post">
+            <form id="employer-registration" class="registration-section employer" action="/usuarios/registrarEmpresa" method="post" enctype="multipart/form-data">
                 <h1>Registro Empresa</h1>
 
                 <label for="companyName">Nombre de la Empresa <span class="required">*</span></label>
@@ -133,6 +136,10 @@
                     <input type="text" id="employerPhone" name="employerPhone" placeholder="Número de teléfono celular" pattern="[0-9]+" required>
                 </div>
             </div>
+                <div class="input-line">
+                    <label for="empresaImage">Agregar imagen de perfil</label>
+                    <input type="file" name="empresaImage" class="form-control" id="empresaImage">
+                </div>
                 
                 <label for="companyDescription">Breve Descripción de la Empresa <span class="required">*</span></label>
                 <div class="input-line-empresa">
