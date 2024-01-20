@@ -10,6 +10,7 @@ const uploadAvatar = require('../middleware/uploadAvatar');
 router.get('/ingreso',login)
 router.post('/ingreso',loginValidation,process_login)
 
+
 router.post('/registrarFreelancer', uploadAvatar.single('freelancerImage'),freelancerRegister)
 router.post('/registrarEmpresa',uploadAvatar.single('empresaImage'),empresarRegister)
 router.get('/registro', formRegister)
