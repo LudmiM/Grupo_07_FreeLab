@@ -39,6 +39,16 @@
       "freelancerEmail": "lu@gmail.com",
       "freelancerPassword": "lu123",
       "freelancerPhone": "100-193-0960"
+    },
+    {
+      "id": 6,
+      "freelancerFirstname": "lu",
+      "freelancerLastname": "lml",
+      "freelancerEmail": "lud@gmail.com",
+      "freelancerPassword": "$2a$10$gd/XAWrhdFkC07bnFb.Y0e3C4hB18O/Lzm8KiX2c4.LHnanuhxjrm",
+      "freelancerPhoneCode": "+54",
+      "freelancerPhone": "2213456788",
+      "freelancerImage": "1705768508345_avatar_jane.jpg.jpg"
     }
   ],
   "empresas": [
