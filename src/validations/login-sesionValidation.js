@@ -18,8 +18,7 @@ module.exports = [
             const empresa = usuarios.empresas.find(e => e.userEmail.toLowerCase() === userEmail);
             
             if (!freelancer && !empresa) {
-                console.log(!freelancer && !empresa)
-                return Promise.reject('Usuario no encontrado');
+                return false
             }
         
             const usuario = freelancer || empresa;
