@@ -10,12 +10,11 @@ module.exports = [
         .custom((value, {req}) => {
             const usuarios = leerJSON('usuarios').freelancers;
             console.log(req.body.email)
-            const user = usuarios.find(user => user.email === req.body.email.trim())
+            const user = usuarios.find(user => user.freelancerEmail === req.body.email.trim())
 
-            //if(!user || !compareSync(value.trim(), user.password) ) {
             //if(!user || !compareSync(value.trim(), user.password)) {
             //if(!user || (value.trim(), user.password) ) {
-            if(!user || (value.trim() !== user.password)){
+            if(!user || (value.trim() !== user.freelancerPassword)){
                 return false
             }
 
