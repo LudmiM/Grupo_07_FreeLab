@@ -7,16 +7,9 @@ module.exports = (req, res) => {
 
     if (errors.isEmpty()) {
         const freelancersData = leerJSON('usuarios').freelancers;
-        const user = freelancersData.find(user => user.freelancerEmail === email);
+        const usuario = freelancersData.find(u => u.freelancerEmail.toLowerCase() === email.trim().toLowerCase());
 
-        if (user) {
-            return res.redirect('/');
-        } else {
-            // Usuario no encontrado
-            return res.render('users/login', {
-                errors: { email: { msg: "Usuario no encontrado" } }
-            });
-        }
+        return res.redirect('/');
     } else {
         // Errores de validación
         return res.render('users/login', {
