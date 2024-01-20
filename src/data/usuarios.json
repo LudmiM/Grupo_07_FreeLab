@@ -38,11 +38,13 @@
     },
     {
       "id": 5,
-      "freelancerFirstname": "Lud",
-      "freelancerLastname": "LML",
+      "freelancerFirstname": "Lu",
+      "freelancerLastname": "lml",
       "userEmail": "lu@gmail.com",
-      "userPassword": "lu123",
-      "freelancerPhone": "100-193-0960",
+      "userPassword": "$2a$10$G6ywSxMN6WZIo0.8u8LQC.YREhhQ6EtRA8dkgk8RsfWfSJbYRmfee",
+      "freelancerPhoneCode": "+54",
+      "freelancerPhone": "11111111",
+      "freelancerImage": "1705790731000_avatar_jane.jpg.jpg",
       "rol": "freelancer"
     }
   ],
@@ -59,7 +61,7 @@
     {
       "id": 2,
       "company-name": "Motorola",
-      "usersEmail": "soporte@motorola.com.ar",
+      "userEmail": "soporte@motorola.com.ar",
       "userPassword": "$2a$04$mzWm1o1672s3/eRwcDlfgOVEWvkUh0EC2rPWZvGOF40Jx/rvbkIH2",
       "employer-phone": "08006668676",
       "company-description": "Descubre la innovación de Motorola: tecnología vanguardista, conectividad fiable y diseño excepcional. Transformamos tu vida cotidiana con experiencias tecnológicas inigualables.",
@@ -76,12 +78,14 @@
     },
     {
       "id": 4,
-      "company-name": "Globant",
-      "userEmail": "hi@globant.com",
-      "userPassword": "$2a$04$C6fxS88J6kOD6xUO3BPO2.P0bSDepzwwSYbZMhRdnmtrncj2WnY2C",
-      "employer-phone": "1152345678",
-      "company-description": "Desde la estrategia hasta la ejecución, ofrecemos servicios integrales en un solo lugar, con un solo equipo. Según el desafío al que te enfrentes, nuestros Studios trabajan juntos para agregar valor a tu negocio.",
-      "employerRol": "empresa"
+      "companyName": "Codify",
+      "userEmail": "codify@gmail.com",
+      "userPassword": "$2a$10$r7T49c6m/nj5FcxPUybnGusx2GFfFUCDEq4C73VTSz1RuhB1CwhMK",
+      "employerPhoneCode": "+1",
+      "employerPhone": "111111",
+      "employerImage": "1705790767608_avatar_futurama.jpg.jpg",
+      "companyDescription": "......",
+      "rol": "empresa"
     }
   ]
 }

@@ -2,7 +2,7 @@ const data = require('../../data');
 const bcryptjs = require('bcryptjs')
 
 module.exports = (req, res) => {
-    const {companyName, employerEmail, employerPassword,employerPhoneCode,employerPhone, companyDescription} = req.body;
+    const {companyName, userEmail, userPassword,employerPhoneCode,employerPhone, companyDescription} = req.body;
 
     const file = req.file; 
 
@@ -14,11 +14,11 @@ module.exports = (req, res) => {
 
     const empresa = "empresa";
 
-    function usuario(companyName, employerEmail, employerPassword,employerPhoneCode,employerPhone,employerImage, companyDescription,){
+    function usuario(companyName, userEmail, userPassword,employerPhoneCode,employerPhone,employerImage, companyDescription,){
       this.id = newId;
       this.companyName = companyName;
-      this.employerEmail = employerEmail;
-      this.employerPassword = bcryptjs.hashSync(employerPassword, 10);;
+      this.userEmail = userEmail;
+      this.userPassword = bcryptjs.hashSync(userPassword, 10);;
       this.employerPhoneCode = employerPhoneCode;
       this.employerPhone = employerPhone;
       this.employerImage = employerImage;
@@ -27,7 +27,7 @@ module.exports = (req, res) => {
       
     }    
 
-    const newUsuario = new usuario(companyName, employerEmail, employerPassword,employerPhoneCode, employerPhone,file.filename, companyDescription, empresa);
+    const newUsuario = new usuario(companyName, userEmail, userPassword,employerPhoneCode, employerPhone,file.filename, companyDescription, empresa);
 
     users.empresas.push(newUsuario);
     data.escribirJSON(users, 'usuarios');

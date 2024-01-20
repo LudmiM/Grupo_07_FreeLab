@@ -6,11 +6,13 @@ module.exports = (req, res) => {
     const { email, remember } = req.body;
 
     if (errors.isEmpty()) {
-        const freelancersData = leerJSON('usuarios').freelancers;
-        const { id, freelancerFirstname, freelancerLastname, rol} = freelancersData.find(u => u.userEmail.toLowerCase() === email.trim().toLowerCase());
+        //const freelancersData = leerJSON('usuarios').freelancers;
+        //const { id, freelancerFirstname, freelancerLastname, rol} = freelancersData.find(u => u.userEmail.toLowerCase() === email.trim().toLowerCase());
         
-        req.session.userLogin = { id,  freelancerFirstname, freelancerLastname, rol }
-
+        //req.session.userLogin = { id,  freelancerFirstname, freelancerLastname, rol }
+        req.session.userLogin = {email}
+        console.log('Is your session')
+        console.log(req.session.userLogin)
         //req.session.userLogin = { id,  freelancerFirstname, freelancerLastname, rol } = freelancersData.find(u => u.userEmail.toLowerCase() === email.trim().toLowerCase());
         
         return res.redirect('/');
