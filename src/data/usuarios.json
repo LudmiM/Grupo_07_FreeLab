@@ -92,6 +92,17 @@
       "employer-phone": "1152345678",
       "company-description": "Desde la estrategia hasta la ejecución, ofrecemos servicios integrales en un solo lugar, con un solo equipo. Según el desafío al que te enfrentes, nuestros Studios trabajan juntos para agregar valor a tu negocio.",
       "employerRol": "empresa"
+    },
+    {
+      "id": 5,
+      "companyName": "Codify",
+      "employerEmail": "codify@gmail.com",
+      "employerPassword": "$2a$10$g80eCEZGetD1OJ7lvsfp2eLJ0/3sMN9g7aff6GGpPs1GSNqOTYmIK",
+      "employerPhoneCode": "+1",
+      "employerPhone": "111111",
+      "employerImage": "1705787025382_avatar_jane.jpg.jpg",
+      "companyDescription": "Trabajen",
+      "employerRol": "empresa"
     }
   ]
 }

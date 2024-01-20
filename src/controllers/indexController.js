@@ -4,6 +4,7 @@ const products= leerJSON('products')
 
 module.exports = {
     index: (req,res) => {
+        console.log(req.session.userLogin)
         const postReversed = [...products.servicios].reverse();
         /* agregar json de ofertas laborales a futuro */
         return res.render('index',{
