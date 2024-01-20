@@ -44,7 +44,7 @@
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** : creo el checkUserLogin + checkLocasSession, y lo pruebo su funcionalidad con el header, mostrando rutas segun el inicio de sesion
+**Ludmila** : creo el checkUserLogin + checkLocasSession, y lo pruebo su funcionalidad con el header, mostrando rutas segun el inicio de sesion. Me olvi de agregarlo al app.js, y casi quedo calva, pero se logro c:
 **Rony** : 
 
 ### viernes 19/01
