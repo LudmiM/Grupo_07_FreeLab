@@ -12,7 +12,9 @@ module.exports = (req, res) => {
 
     const newId = lastId + 1;
 
-    function usuario(companyName, employerEmail, employerPassword,employerPhoneCode,employerPhone,employerImage, companyDescription){
+    const empresa = "empresa";
+
+    function usuario(companyName, employerEmail, employerPassword,employerPhoneCode,employerPhone,employerImage, companyDescription,){
       this.id = newId;
       this.companyName = companyName;
       this.employerEmail = employerEmail;
@@ -21,12 +23,14 @@ module.exports = (req, res) => {
       this.employerPhone = employerPhone;
       this.employerImage = employerImage;
       this.companyDescription = companyDescription;
+      this.employerRol = empresa;
+      
     }    
 
-    const newUsuario = new usuario(companyName, employerEmail, employerPassword,employerPhoneCode, employerPhone,file.filename, companyDescription);
+    const newUsuario = new usuario(companyName, employerEmail, employerPassword,employerPhoneCode, employerPhone,file.filename, companyDescription, empresa);
 
     users.empresas.push(newUsuario);
     data.escribirJSON(users, 'usuarios');
-    return res.redirect('/');
+    return res.redirect('/usuarios/ingreso');
 
 }
