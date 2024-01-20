@@ -10,9 +10,9 @@ module.exports = [
         .custom((value, {req}) => {
             const usuarios = leerJSON('usuarios').freelancers;
             console.log(req.body.email)
-            const usuario = usuarios.find(u => u.freelancerEmail === req.body.email.trim())
-
-            if(!user || !compareSync(value.trim(), usuario.freelancerPassword)) {
+            const usuario = usuarios.find(u => u.freelancerEmail.toLowerCase()  === req.body.email.trim().toLowerCase());
+            
+            if(!usuario || !compareSync(value.trim(), usuario.freelancerPassword)) {
                 return false
             }
 
