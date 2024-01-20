@@ -7,11 +7,11 @@ module.exports = (req, res) => {
 
     if (errors.isEmpty()) {
         const freelancersData = leerJSON('usuarios').freelancers;
-        const { id, freelancerFirstname, freelancerLastname, rol} = freelancersData.find(u => u.freelancerEmail.toLowerCase() === email.trim().toLowerCase());
+        const { id, freelancerFirstname, freelancerLastname, rol} = freelancersData.find(u => u.userEmail.toLowerCase() === email.trim().toLowerCase());
         
         req.session.userLogin = { id,  freelancerFirstname, freelancerLastname, rol }
 
-        //req.session.userLogin = { id,  freelancerFirstname, freelancerLastname, rol } = freelancersData.find(u => u.freelancerEmail.toLowerCase() === email.trim().toLowerCase());
+        //req.session.userLogin = { id,  freelancerFirstname, freelancerLastname, rol } = freelancersData.find(u => u.userEmail.toLowerCase() === email.trim().toLowerCase());
         
         return res.redirect('/');
     } else {

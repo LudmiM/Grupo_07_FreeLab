@@ -7,7 +7,7 @@ const registerValidationRules = () => {
     // Agrega reglas de validación aquí usando express-validator
     body('freelancerFirstname').notEmpty().withMessage('El nombre es obligatorio'),
     body('freelancerLastname').notEmpty().withMessage('El apellido es obligatorio'),
-    body('freelancerEmail').isEmail().withMessage('Ingrese un correo electrónico válido'),
+    body('userEmail').isEmail().withMessage('Ingrese un correo electrónico válido'),
     // Agrega más reglas según sea necesario
   ];
 };

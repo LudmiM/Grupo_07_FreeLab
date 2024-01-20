@@ -2,7 +2,7 @@ const data = require('../../data');
 const bcryptjs = require('bcryptjs');
 
 module.exports = (req, res) => {
-    const {freelancerFirstname, freelancerLastname, freelancerEmail, freelancerPassword,freelancerPhoneCode,freelancerPhone, freelancerSkills} = req.body;
+    const {freelancerFirstname, freelancerLastname, userEmail, userPassword,freelancerPhoneCode,freelancerPhone, freelancerSkills} = req.body;
 
     const users = data.leerJSON('usuarios');
 
@@ -14,20 +14,20 @@ module.exports = (req, res) => {
 
     const freelancer = "freelancer";
 
-    function usuario(freelancerFirstname, freelancerLastname, freelancerEmail, freelancerPassword,freelancerPhoneCode,freelancerPhone,freelancerImage, freelancerSkills){
+    function usuario(freelancerFirstname, freelancerLastname, userEmail, userPassword,freelancerPhoneCode,freelancerPhone,freelancerImage, freelancerSkills){
       this.id = newId;
       this.freelancerFirstname = freelancerFirstname;
       this.freelancerLastname = freelancerLastname;
-      this.freelancerEmail = freelancerEmail;
-      this.freelancerPassword = bcryptjs.hashSync(freelancerPassword, 10);
+      this.userEmail = userEmail;
+      this.userPassword = bcryptjs.hashSync(userPassword, 10);
       this.freelancerPhoneCode = freelancerPhoneCode
       this.freelancerPhone = freelancerPhone;
       this.freelancerImage = freelancerImage;
       this.freelancerSkills = freelancerSkills;
-      this.freelancerRol = freelancer;
+      this.rol = freelancer;
     }    
 
-    const newUsuario = new usuario(freelancerFirstname, freelancerLastname, freelancerEmail, freelancerPassword,freelancerPhoneCode,freelancerPhone,file.filename, freelancerSkills, freelancer);
+    const newUsuario = new usuario(freelancerFirstname, freelancerLastname, userEmail, userPassword,freelancerPhoneCode,freelancerPhone,file.filename, freelancerSkills, freelancer);
 
     users.freelancers.push(newUsuario);
     data.escribirJSON(users, 'usuarios');
