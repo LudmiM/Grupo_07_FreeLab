@@ -22,7 +22,7 @@
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** : Trabaje en la parte visual de la incidencia incidencia "actualizacion de los datos en perfil de usuario" No termine de la actualizacion porque aun no se realizo el inicio de session del usuario.
+**Ludmila** : Trabaje en la parte visual de la incidencia incidencia "actualizacion de los datos en perfil de usuario" No termine de la actualizacion porque aun no se realizo el inicio de session del usuario, y quedan pruebas a realizar.
 
 **Rony** : 
 
@@ -51,5 +51,12 @@
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** : 
+**Ludmila** : Agrego validaciones al formulario de login + processLogin. Comprobe el correcto funcionamiento, pero sin el hash, porque el register tdavia no estaa listo.
+**Rony** : 
+
+### sabado 20/01
+
+**Nahuel** : 
+**Marco** :
+**Ludmila** : Agrego validacion con hash y adapto comparativa con las nuevas claves de json + login de frelancer/empresa
 **Rony** : 

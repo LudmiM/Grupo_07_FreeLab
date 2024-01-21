@@ -87,17 +87,14 @@
 
                 </form>
             </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
+                Editar datos
+            </button>
         </div>
     </div>
+    <%- include('./modal/edit') %>
     <%- include('../partials/footer') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>
-<script>
-    function limitImageSelection(input, maxImages) {
-        if (input.files.length > maxImages) {
-            alert('Solo puedes seleccionar hasta ' + maxImages + ' imágenes.');
-            input.value = '';
-        }
-    }
-    </script>

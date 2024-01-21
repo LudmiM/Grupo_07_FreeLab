@@ -11,8 +11,8 @@ module.exports = (req, res) => {
         
         //req.session.userLogin = { id,  freelancerFirstname, freelancerLastname, rol }
         req.session.userLogin = {email}
-        console.log('Is your session')
-        console.log(req.session.userLogin)
+        //console.log('Is your session')
+        //console.log(req.session.userLogin)
         //req.session.userLogin = { id,  freelancerFirstname, freelancerLastname, rol } = freelancersData.find(u => u.userEmail.toLowerCase() === email.trim().toLowerCase());
         
         return res.redirect('/');
