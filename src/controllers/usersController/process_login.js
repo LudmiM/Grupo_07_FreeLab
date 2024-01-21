@@ -5,15 +5,19 @@ module.exports = (req, res) => {
     const errors = validationResult(req);
     const { email, remember } = req.body;
 
-    if (errors.isEmpty()) {
-        //const freelancersData = leerJSON('usuarios').freelancers;
-        //const { id, freelancerFirstname, freelancerLastname, rol} = freelancersData.find(u => u.userEmail.toLowerCase() === email.trim().toLowerCase());
+    if (errors.isEmpty()) { 
+
+        const freelancer = leerJSON('usuarios').freelancers.find(u => u.userEmail.toLowerCase() === email.trim().toLowerCase());
         
-        //req.session.userLogin = { id,  freelancerFirstname, freelancerLastname, rol }
-        req.session.userLogin = {email}
-        //console.log('Is your session')
-        //console.log(req.session.userLogin)
-        //req.session.userLogin = { id,  freelancerFirstname, freelancerLastname, rol } = freelancersData.find(u => u.userEmail.toLowerCase() === email.trim().toLowerCase());
+        if (!freelancer) {
+          const { id, rol}  = leerJSON('usuarios').empresas.find(e => e.userEmail.toLowerCase() === email.trim().toLowerCase());
+          
+          req.session.userLogin = { email, id, rol };
+        } else {
+            const { id, rol } = freelancer;
+
+            req.session.userLogin = { email, id, rol };
+        }
         
         return res.redirect('/');
     } else {

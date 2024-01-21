@@ -44,7 +44,7 @@
 
 **Nahuel** : 
 **Marco** :
-**Ludmila** : creo el checkUserLogin + checkLocasSession, y pruebo su funcionalidad con el header, mostrando rutas si inicio sesion[solo las muestra, desde la URL se pueden accedes, todavia]. Me olvide de agregarlo al app.js, y casi quedo calva, pero se logro c:
+**Ludmila** : creo el checkUserLogin + checkLocasSession, y pruebo su funcionalidad con el header, mostrando rutas si inicio sesion[solo las muestra, desde la URL se pueden acceder, todavia]. Me olvide de agregarlo al app.js, y casi quedo calva, pero se logro c:
 **Rony** : 
 
 ### viernes 19/01

@@ -6,7 +6,9 @@
       "freelancerLastname": "Gillfillan",
       "userEmail": "vgillfillan0@weibo.com",
       "userPassword": "$2a$04$cP6bQrWxlcqaUGgZtPcYxuaC0D46q6s6IgbpvX/piAKwpZTJt0DLS",
+      "freelancerPhoneCode": "+54",
       "freelancerPhone": "491-170-2537",
+      "freelancerImage": "",
       "rol": "freelancer"
     },
     {
@@ -15,7 +17,9 @@
       "freelancerLastname": "Dunmore",
       "userEmail": "$2a$04$29JEpclakyG2Jiaekg5vfe.K.M3ZWwrZRRSF81d8ceQgepjqLx3o6",
       "userPassword": "gQ0&`RJ0O",
+      "freelancerPhoneCode": "+54",
       "freelancerPhone": "865-636-7106",
+      "freelancerImage": "",
       "rol": "freelancer"
     },
     {
@@ -24,7 +28,9 @@
       "freelancerLastname": "Dank",
       "userEmail": "sdank2@go.com",
       "userPassword": "$2a$04$KFedxW6R9g.PfZmynMieMOgjRJuFerPJh.UasBHkciXJeacpFTZS6",
+      "freelancerPhoneCode": "+54",
       "freelancerPhone": "789-488-2442",
+      "freelancerImage": "",
       "rol": "freelancer"
     },
     {
@@ -33,7 +39,9 @@
       "freelancerLastname": "Leamon",
       "userEmail": "$2a$04$cPJOaR2AeWb716cLK7h8F.ENAxxNTXAXRds7JArkSfyw7tCsFEmTG",
       "userPassword": "qT4*=+\"i'>dFxL",
+      "freelancerPhoneCode": "+54",
       "freelancerPhone": "100-193-0960",
+      "freelancerImage": "",
       "rol": "freelancer"
     },
     {
@@ -54,7 +62,9 @@
       "company-name": "Starbucks",
       "userEmail": "info@starbucks.com.ar",
       "usersPassword": "$2a$04$zV0Q0WOICWfFA4LeT15wI.USSchvTwd3g4n01FyizWA4ZbIzOJcjS",
+      "employerPhoneCode": "+1",
       "employer-phone": "08001220129",
+      "employerImage": "",
       "company-description": "En nuestras tiendas te esperan nuestros baristas capacitados para ofrecerte una bebida muy especial. El ambiente cálido y los detalles de nuestros productos elaborados artesanalmente hacen que la experiencia sea única e inigualable.",
       "rol": "empresa"
     },
@@ -63,7 +73,9 @@
       "company-name": "Motorola",
       "userEmail": "soporte@motorola.com.ar",
       "userPassword": "$2a$04$mzWm1o1672s3/eRwcDlfgOVEWvkUh0EC2rPWZvGOF40Jx/rvbkIH2",
+      "employerPhoneCode": "+1",
       "employer-phone": "08006668676",
+      "employerImage": "",
       "company-description": "Descubre la innovación de Motorola: tecnología vanguardista, conectividad fiable y diseño excepcional. Transformamos tu vida cotidiana con experiencias tecnológicas inigualables.",
       "rol": "empresa"
     },
@@ -72,7 +84,9 @@
       "company-name": "Mercado Libre",
       "userEmail": "rrhh@mercadolibre.com",
       "userPassword": "$2a$04$ZZxBqeT7ReSMUX77hw/uvuRzHrlIgvtOzzwM6O4WtPYsdceYzI2WC",
+      "employerPhoneCode": "+1",
       "employer-phone": "1554548122",
+      "employerImage": "",
       "company-description": "Mercado Libre: Innovación líder en comercio electrónico, conectando compradores y vendedores. Plataforma confiable, accesible y diversa, facilitando experiencias comerciales únicas para todos.",
       "rol": "empresa"
     },
