@@ -4,6 +4,7 @@ const router = express.Router();
 const checkUserLogin = require('./../middleware/checkUserLogin')
 const loginValidation = require('./../validations/login-sesionValidation')
 const uploadAvatar = require('../middleware/uploadAvatar');
+const checkRol = require('../middleware/checkRol');
 
 /* GET  /usuarios */
 
