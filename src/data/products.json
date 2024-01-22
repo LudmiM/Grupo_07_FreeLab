@@ -49,6 +49,23 @@
                 "1704493169531_products_descarga.png.png",
                 "1704493169531_products_descarrrrga.png.png"
             ]
+        },
+        {
+            "id": 5,
+            "name": "pepe",
+            "description": "pepe",
+            "skills": "pepe",
+            "portfolio": "https://www.portfolio.port",
+            "redes_sociales": "https://www.redsocial.red",
+            "category": "redaccion",
+            "price": "54548",
+            "currency": "AUD",
+            "cant_stars": "2",
+            "image": [
+                "1704493169530_products_dinosaurio.jpg.jpg",
+                "1704493169531_products_descarga.png.png",
+                "1704493169531_products_descarrrrga.png.png"
+            ]
         }
     ]
 }

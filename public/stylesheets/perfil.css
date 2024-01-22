@@ -1,0 +1,102 @@
+/* Agrega estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el main del perfil de usuario */
+.perfil__user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Estilos para la sección principal */
+.perfil__user__section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px; /* Ancho máximo para evitar que se extienda demasiado en pantallas grandes */
+}
+
+/* Estilos para los artículos dentro de la sección principal */
+.perfil__user__section__datosPrimarios,
+.perfil__user__section__description {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--colorCelesteClaro);
+    border-radius: 10px;
+    flex: 1;
+}
+
+/* Estilos para la imagen de usuario */
+.datosPrimarios--imagen {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el contenedor de datos primarios */
+.datosPrimarios__contedor {
+    text-align: center;
+}
+
+/* Estilos para los títulos de los datos primarios */
+.datosPrimarios__contedor--h2,
+.datosPrimarios__contedor--h3 {
+    color: var(--colorAzulOscuro);
+}
+
+/* Estilos para la descripción */
+.datosPrimarios__description {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--colorCelesteClaro);
+    border-radius: 10px;
+}
+
+/* Estilos para los contenedores de los trabajos */
+.datosPrimarios__contedor__jobs {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Estilos para las tarjetas en el aside */
+.perfil__user__aside {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--colorCelesteClaro);
+    border-radius: 10px;
+    flex: 1;
+}
+
+/* Estilos para los botones */
+.btn {
+    background-color: var(--colorCelesteOscuro);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .perfil__user__section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfil__user__section__datosPrimarios,
+    .perfil__user__section__description,
+    .perfil__user__aside {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
