@@ -12,7 +12,7 @@
                 <h1 class="mb-0">Editar Servicio/Proyecto</h1>
             </div>
             <div class="card-body-pe">
-                <form action="/productos/editar/<%= product.id %>" method="post" enctype="multipart/form-data" autocomplete="on">
+                <form>
                     <!-- Agregar un input oculto para el ID del producto -->
                     <input type="hidden" name="id" value="<%= product ? product.id : '' %>">
                     <div class="row"></div>
