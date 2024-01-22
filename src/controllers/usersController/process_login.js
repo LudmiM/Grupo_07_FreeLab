@@ -10,13 +10,12 @@ module.exports = (req, res) => {
         const freelancer = leerJSON('usuarios').freelancers.find(u => u.userEmail.toLowerCase() === email.trim().toLowerCase());
         
         if (!freelancer) {
-          const { id, rol, employerImage}  = leerJSON('usuarios').empresas.find(e => e.userEmail.toLowerCase() === email.trim().toLowerCase());
-          
-          req.session.userLogin = { email, id, rol, employerImage };
+          const { id, rol, employerImage, companyName, employerPhoneCode,employerPhone,companyDescription }  = leerJSON('usuarios').empresas.find(e => e.userEmail.toLowerCase() === email.trim().toLowerCase());
+          req.session.userLogin = { email, id, rol, employerImage, companyName, employerPhoneCode,employerPhone,companyDescription };
+        
         } else {
-            const { id, rol } = freelancer;
-
-            req.session.userLogin = { email, id, rol };
+            const { id, rol, freelancerFirstname, freelancerLastname,userEmail, freelancerPhoneCode, freelancerPhone, freelancerImage } = freelancer;
+            req.session.userLogin = { email, id, rol, freelancerFirstname, freelancerLastname,userEmail, freelancerPhoneCode, freelancerPhone, freelancerImage };
         }
         
         return res.redirect('/');

@@ -59,35 +59,35 @@
   "empresas": [
     {
       "id": 1,
-      "company-name": "Starbucks",
+      "companyName": "Starbucks",
       "userEmail": "info@starbucks.com.ar",
       "usersPassword": "$2a$04$zV0Q0WOICWfFA4LeT15wI.USSchvTwd3g4n01FyizWA4ZbIzOJcjS",
       "employerPhoneCode": "+1",
-      "employer-phone": "08001220129",
+      "employerPhone": "08001220129",
       "employerImage": "",
       "company-description": "En nuestras tiendas te esperan nuestros baristas capacitados para ofrecerte una bebida muy especial. El ambiente cálido y los detalles de nuestros productos elaborados artesanalmente hacen que la experiencia sea única e inigualable.",
       "rol": "empresa"
     },
     {
       "id": 2,
-      "company-name": "Motorola",
+      "companyName": "Motorola",
       "userEmail": "soporte@motorola.com.ar",
       "userPassword": "$2a$04$mzWm1o1672s3/eRwcDlfgOVEWvkUh0EC2rPWZvGOF40Jx/rvbkIH2",
       "employerPhoneCode": "+1",
-      "employer-phone": "08006668676",
+      "employerPhone": "08006668676",
       "employerImage": "",
       "company-description": "Descubre la innovación de Motorola: tecnología vanguardista, conectividad fiable y diseño excepcional. Transformamos tu vida cotidiana con experiencias tecnológicas inigualables.",
       "rol": "empresa"
     },
     {
       "id": 3,
-      "company-name": "Mercado Libre",
+      "companyName": "Mercado Libre",
       "userEmail": "rrhh@mercadolibre.com",
       "userPassword": "$2a$04$ZZxBqeT7ReSMUX77hw/uvuRzHrlIgvtOzzwM6O4WtPYsdceYzI2WC",
       "employerPhoneCode": "+1",
-      "employer-phone": "1554548122",
+      "employerPhone": "1554548122",
       "employerImage": "",
-      "company-description": "Mercado Libre: Innovación líder en comercio electrónico, conectando compradores y vendedores. Plataforma confiable, accesible y diversa, facilitando experiencias comerciales únicas para todos.",
+      "companyDescription": "Mercado Libre: Innovación líder en comercio electrónico, conectando compradores y vendedores. Plataforma confiable, accesible y diversa, facilitando experiencias comerciales únicas para todos.",
       "rol": "empresa"
     },
     {
@@ -98,7 +98,7 @@
       "employerPhoneCode": "+1",
       "employerPhone": "111111",
       "employerImage": "1705790767608_avatar_futurama.jpg.jpg",
-      "companyDescription": "......",
+      "companyDescription": "......LLL",
       "rol": "empresa"
     }
   ]

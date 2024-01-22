@@ -1,9 +1,10 @@
 const data = require('./../../data');
 
 module.exports = (req, res) => {
-    const { id } = req.params;
-    const productId = parseInt(id); // Convierte el id a número
-    const product = data.leerJSON('products').servicios.find((p) => p.id === productId);
-    
-    return res.render('users/profile-edit', { product });
+    if (req.session){
+      const d = data.leerJSON('products').servicios.find((p) => p.id === req.session.userLogin.id);
+      return res.render('users/profile-edit', { d });
+    }else{
+      return res.render('/');
+    }
   }

@@ -6,92 +6,66 @@
 <body>
     <%- include('../partials/header') %>
 
-    <div class="container-pe mt-5">
-        <div class="card edit-product-card">
-            <div class="card-header bg-primary text-white">
-                <h1 class="mb-0">Editar Servicio/Proyecto</h1>
-            </div>
-            <div class="card-body-pe">
-                <form>
-                    <!-- Agregar un input oculto para el ID del producto -->
-                    <input type="hidden" name="id" value="<%= product ? product.id : '' %>">
-                    <div class="row"></div>
-                    <div class="col-12 mb-3">
-                        <label for="nombre" class="form-editpe">Habilidad</label>
-                        <input name="name" type="text" class="form-control" id="nombre" value="<%= product && product.name || '' %>" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="descripcion" class="form-editpe">Descripción</label>
-                        <textarea name="description" class="form-control" rows="3" placeholder="comentanos sobre vos" id="descripcion"><%= product && product.description || '' %></textarea>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="habilidades" class="form-editpe">Habilidades Practicas</label>
-                        <input name="skills" type="text" class="form-control" id="habilidades" value="<%= product && product.skills || '' %>" required>
-                    </div>
-                    
-                    <div id="imageFieldsContainer">
-                     
-                        <div class="mb-3 image-field" data-index="2">
-                            <label for="additionalImages" class="form-editpe">Seleccionar Imágenes Adicionales</label>
-                            <input type="file" name="image" id="additionalImages" accept="image/*" class="form-control" multiple onchange="limitImageSelection(this, 4)">
+    <main>
+        <section>
+            <article>
+                <img src="/images/users/<%= userLogin.employerImage || userLogin.freelancerImage %>" alt="User Image">
+                <div>
+                    <h2><%= userLogin.companyName || (userLogin.freelancerFirstname + ' ' + userLogin.freelancerLastname) %></h2>                   
+                    <% if (userLogin.rol === "freelancer") { %>
+                        <h3><%= d.name %></h3>
+                    <% } %>
+                    <div>
+                        <div>
+                            <p>Jobs encargados</p>
+                            <p>0</p>
+                        </div>
+                        <div>
+                            <p>Jobs finalizados</p>
+                            <p>0</p>
                         </div>
                     </div>
-                    
-                        
-                    <div class="mb-3">
-                        <label for="portfolio" class="form-editpe">Link a Portfolio</label>
-                        <input name="portfolio" type="url" class="form-control" id="portfolio" value="<%= product && product.portfolio || '' %>">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="redes_sociales" class="form-editpe">Links a Redes Sociales</label>
-                        <input name="redes_sociales" type="url" class="form-control" id="redes_sociales" value="<%= product && product.redes_sociales || '' %>">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="category" class="form-editpe">Categoría</label>
-                        <select name="category" class="form-select" id="categoria">
-                            <option value="" selected hidden>Selecciona una categoría</option>
-                            <!-- Agrega más opciones según sea necesario -->
-                        </select>
-                    </div>
-
-                    <div class="col-12 mb-3">
-                        <div class="input-group">
-                            <label for="precio" class="form-editpe me-2">Precio:</label>
-                            <div class="input-group">
-                                <span class="input-group-text"> $</span>
-                                <input name="price" type="number" class="form-editpe" id="precio" value="<%= product && product.price || '' %>" required>
-                                <select class="custom-selectpe" id="divisa" name="currency" required>
-                                    <option value="ARS" <%= product && product.currency === 'ARS' ? 'selected' : '' %>>ARS</option>
-                                    <option value="USD" <%= product && product.currency === 'USD' ? 'selected' : '' %>>USD</option>
-                                    <option value="EUR" <%= product && product.currency === 'EUR' ? 'selected' : '' %>>EUR</option>
-                                    <option value="JPY" <%= product && product.currency === 'JPY' ? 'selected' : '' %>>JPY</option>
-                                    <option value="GBP" <%= product && product.currency === 'GBP' ? 'selected' : '' %>>GBP</option>
-                                    <option value="AUD" <%= product && product.currency === 'AUD' ? 'selected' : '' %>>AUD</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-6 col-md-5 mx-auto">
-                            <button type="button" class="btn btn-primary" onclick="window.history.back();">Cancelar</button>
-                        </div>
-                        <div class="col-6 col-md-5 mx-auto">
-                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-                        </div>
-                    </div>
-
-                </form>
-            </div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
-                Editar datos
-            </button>
-        </div>
-    </div>
+                </div>
+            </article>
+            <article>
+                <h3>Descripcion</h3>
+                <% if (userLogin.rol === "freelancer") { %>
+                    <p><%= d.description %></p>
+                <% } else { %>
+                    <p><%= userLogin.companyDescription %></p>
+                <% } %>
+                              
+            </article>
+        </section>
+        <% if (userLogin.rol === "freelancer") { %>
+            <aside>
+                <div>
+                    <h3>Mis proyectos</h3>
+                    <% if (userLogin.rol === "freelancer" && d.image.length) { %>
+                        <% d.image.forEach(i => { %>
+                            <img src="./images/productos/<%= i %>" alt="User Image">
+                        <% }) %>
+                    <% } %>
+                </div>
+                <div>
+                    <h3>Formacion</h3>
+                    <p>F1</p>
+                    <p>F1</p>
+                    <p>F1</p>
+                    <p>F1</p>
+                </div>
+            
+            </aside>
+        <% } else { %>
+            <aside>
+                <p>No hay nada todavia</p>
+            </aside>
+        <% } %>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
+            Editar datos
+        </button>
+        <!--No es perfil entonces que muestre-->
+    </main>
     <%- include('./modal/edit') %>
     <%- include('../partials/footer') %>
 
