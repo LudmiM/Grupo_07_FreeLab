@@ -10,9 +10,9 @@ module.exports = (req, res) => {
         const freelancer = leerJSON('usuarios').freelancers.find(u => u.userEmail.toLowerCase() === email.trim().toLowerCase());
         
         if (!freelancer) {
-          const { id, rol}  = leerJSON('usuarios').empresas.find(e => e.userEmail.toLowerCase() === email.trim().toLowerCase());
+          const { id, rol, employerImage}  = leerJSON('usuarios').empresas.find(e => e.userEmail.toLowerCase() === email.trim().toLowerCase());
           
-          req.session.userLogin = { email, id, rol };
+          req.session.userLogin = { email, id, rol, employerImage };
         } else {
             const { id, rol } = freelancer;
 

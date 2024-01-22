@@ -12,10 +12,11 @@
             <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/carrito"> Carrito</a></li>
             <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/admin">Administrador</a></li>
             <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/productos/listado">Freelancers</a></li>
-
+            <!--If (locals.userLogin.rol === 'empresa') or useerLogin.rol-->
             <% if (locals.userLogin) { %>
                 <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="#"> Notificaciones</a></li>
-                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="#">Perfil</a></li>
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="usuarios/perfil">Perfil</a></li>
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="usuarios/salir">Salir</a></li>
             <% } else { %>
                 <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/ingreso">Login</a></li>
                 <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/registro">Register</a></li>
