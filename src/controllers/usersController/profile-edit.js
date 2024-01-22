@@ -7,4 +7,4 @@ module.exports = (req, res) => {
     }else{
       return res.render('/');
     }
-  }
+}

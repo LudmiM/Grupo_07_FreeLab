@@ -4,6 +4,7 @@ const formRegister = require('./formRegister')
 const freelancerRegister = require('./freelancerRegister')
 const empresarRegister = require('./empresaRegister')
 const logout = require('./logout')
+const actualizarLaboral = require('./actualizar-laboral')
 
 const profile = require('./profile-edit')
 const process_login = require('./process_login')
@@ -16,5 +17,6 @@ module.exports = {
     freelancerRegister,
     empresarRegister,
     profile,
-    logout
+    logout,
+    actualizarLaboral
 }

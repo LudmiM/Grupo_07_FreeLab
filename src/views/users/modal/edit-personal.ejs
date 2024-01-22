@@ -1,0 +1,48 @@
+<!-- Modal Scrollable -->
+<div class="modal fade" id="scrollableModalPersonal" tabindex="-1" aria-labelledby="scrollableModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="scrollableModalLabel">Datos Personales</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="POST">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" value="<%= userLogin.userEmail %>" readonly>
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="name" name="name" value="<%= userLogin.freelancerFirstname %>" >
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Apellido:</label>
+                        <input type="text" class="form-control" id="name" name="name" value="<%= userLogin.freelancerLastname %>" >
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phoneCode" class="form-label">Código de país:</label>
+                        <input type="text" class="form-control" id="phoneCode" name="phoneCode" value="<%= userLogin.freelancerPhoneCode %>" >
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Número de teléfono:</label>
+                        <input type="text" class="form-control" id="phone" name="phone" value="<%= userLogin.freelancerPhone %>" >
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="image" class="form-label">URL de la imagen:</label>
+                        <input type="text" class="form-control" id="image" name="image" value="<%= userLogin.freelancerImage %>" >
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 const express = require('express');
-const { login, register, formRegister, freelancerRegister, empresarRegister , profile, process_login, logout} = require('../controllers/usersController');
+const { login, register, formRegister, freelancerRegister, empresarRegister , profile, process_login, logout, actualizarLaboral} = require('../controllers/usersController');
 const router = express.Router();
 const checkUserLogin = require('./../middleware/checkUserLogin')
 const loginValidation = require('./../validations/login-sesionValidation')
@@ -15,6 +15,8 @@ router.post('/registrarEmpresa',uploadAvatar.single('empresaImage'),empresarRegi
 router.get('/registro', formRegister)
 
 router.get('/perfil',checkUserLogin,profile)
+//router.put('/perfil',checkUserLogin,profile)
+router.put('/edit-laboral', actualizarLaboral)
 
 router.get('/salir',logout)
 
