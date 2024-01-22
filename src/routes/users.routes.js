@@ -1,5 +1,5 @@
 const express = require('express');
-const { login, register, formRegister, freelancerRegister, empresarRegister , profile, process_login, logout, actualizarLaboral} = require('../controllers/usersController');
+const { login, register, formRegister, freelancerRegister, empresarRegister , profile, process_login, logout, actualizarLaboral, actualizarPersonal} = require('../controllers/usersController');
 const router = express.Router();
 const checkUserLogin = require('./../middleware/checkUserLogin')
 const loginValidation = require('./../validations/login-sesionValidation')
@@ -17,6 +17,7 @@ router.get('/registro', formRegister)
 router.get('/perfil',checkUserLogin,profile)
 //router.put('/perfil',checkUserLogin,profile)
 router.put('/edit-laboral', actualizarLaboral)
+router.put('/edit-laboral', actualizarPersonal)
 
 router.get('/salir',logout)
 

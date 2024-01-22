@@ -32,8 +32,12 @@ app
   .use(express.static(path.join(__dirname, '..', 'public')))
 
   //Configuracion de sesion
-  .use(session( {secret:"Nuestro mensaje secreto"}))
-  
+  .use(session({
+    secret: 'FreeLab',
+    resave: false, 
+    saveUninitialized: false 
+  }))
+
   .use(checkLocalSession)
 
   // Rutas
