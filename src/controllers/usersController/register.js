@@ -13,8 +13,6 @@ const { validationResult } = require('express-validator');
       return res.render('users/register', { errors: errors.array() });
     }
 
-    // Procesar la solicitud de registro si la validación es exitosa
-    // Aquí puedes agregar el código actual de manejo del registro
     next();
   
   },

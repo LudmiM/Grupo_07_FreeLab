@@ -357,13 +357,6 @@ label {
         border-radius: 0 0 5px 5px;
     }
 
-    .toggle-container {
-        width: 80%; 
-    }
-
-    .toggle-btn {
-        font-size: 14px; 
-    }
     .input-line-habilidades textarea,
 .input-line-empresa textarea {
     width: 90%;
@@ -446,4 +439,34 @@ label {
         margin-right: 20px; 
     }
 
+    * Estilos para el contenedor del formulario de registro */
+.registration-form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Estilos para los botones de registro */
+.registration-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.registration-button.freelancer {
+    background-color: #3498db;
+}
+
+.registration-button.empresa {
+    background-color: #e74c3c;
+}
 }

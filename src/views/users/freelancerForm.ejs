@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head', {title: 'Home | FreeLab' }) %>
+<body class="body-register">
+    <%- include('../partials/header')%>
+    <div class="register-container">
+
+        <!-- Formulario de registro -->
+        <div class="register-form">
+            
+            <!-- freelancerForm.ejs -->
+<form id="freelancer-registration" class="registration-section freelancer" action="/usuarios/registrarFreelancer" method="post" enctype="multipart/form-data">
+                <h1>Registro Freelancer</h1>
+                <label for="freelancerFirstname">Nombre <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="text" id="freelancerFirstname" name="freelancerFirstname" placeholder="Nombre" required pattern="[A-Za-zÁ-ÿ\s']{1,}">
+                </div>
+                
+                <label for="freelancerLastname">Apellido <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="text" id="freelancerLastname" name="freelancerLastname" placeholder="Apellido" required pattern="[A-Za-zÁ-ÿ\s']{1,}">
+                </div>
+                
+                
+                <label for="userEmail">Correo <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="text" id="userEmail" name="userEmail" placeholder="ejemplo@ejemplo.com" required>
+                </div>
+                
+                <label for="userPassword">Contraseña <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="password" id="userPassword" name="userPassword" required>
+                </div>
+                
+                <label for="freelancerConfirmPassword">Confirmar Contraseña <span class="required">*</span></label>
+                <div class="input-line">
+                    <input type="password" id="freelancerConfirmPassword" name="freelancerConfirmPassword" required>
+                </div>
+                
+                <label for="freelancerPhone">Teléfono Celular</label>
+                <div class="input-line-phone">
+                    <div class="phone-input-container">
+                        <select id="freelancerPhoneCode" name="freelancerPhoneCode" required>
+                        <option value="+54">+54 (Argentina)</option>
+                        <option value="+55">+55 (Brasil)</option>
+                        <option value="+56">+56 (Chile)</option>
+                        <option value="+57">+57 (Colombia)</option>
+                        <option value="+51">+51 (Perú)</option>
+                        <option value="+595">+595 (Paraguay)</option>
+                        <option value="+598">+598 (Uruguay)</option>
+                        <option value="+1">+1 (EE. UU.)</option>
+                        <option value="+44">+44 (Reino Unido)</option>
+                        <option value="+81">+81 (Japón)</option>
+                        <option value="+86">+86 (China)</option>
+                        <option value="+91">+91 (India)</option>
+                  </select>
+                  <div class="separator-container">
+                    <div class="separator"></div>
+                </div>
+                  <input type="text" id="freelancerPhone" name="freelancerPhone" placeholder="Número de teléfono celular" pattern="[0-9]+" required>
+                </div>
+            </div>
+                <div class="input-line">
+                    <label for="freelancerImage">Agregar imagen de perfil</label>
+                    <input type="file" name="freelancerImage" class="form-control" id="freelancerImage">
+                </div>
+                <label for="freelancerkills">Descripción de Habilidades</label>
+                <div class="input-line-habilidades">
+                    <textarea id="freelancerkills" name="freelancerkills" placeholder="Descripción de habilidades"></textarea>
+                </div>
+                
+                
+                <div class="checkbox-line">
+                    <input type="checkbox" id="freelancer-terms" name="freelancer-terms" required>
+                    <label for="freelancer-terms">Acepto los términos, condiciones y aviso de privacidad</label>
+                </div>
+                
+                <div class="checkbox-line">
+                    <input type="checkbox" id="freelancer-notifications" name="freelancer-notifications">
+                    <label for="freelancer-notifications">Acepto recibir notificaciones por correo</label>
+                </div>
+                
+                <button type="submit" class="btn">Registrarse como Freelancer</button>
+            </form>
+
+
+        </div>
+        
+        <!-- Caja de inicio de sesión -->
+        <div class="register-box">
+            <p>Ingrese desde</p>
+            <div class="social-buttons">
+                <button class="btn"><i class="fab fa-linkedin"></i><span class="vertical-line"></span>LinkedIn</button>
+                <button class="btn"><i class="fab fa-facebook"></i><span class="vertical-line"></span>Facebook</button>
+                <button class="btn"><i class="fab fa-google"></i><span class="vertical-line"></span>Google</button>
+            </div>
+        </div>
+        
+    </div>
+    <%- include('../partials/footer')%>
+    <%- include('../partials/scripts') %>
+</body>
+</html>
+
+
+
+
+
+
+
