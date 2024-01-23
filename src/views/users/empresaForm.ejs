@@ -9,33 +9,40 @@
         <div class="register-form">
         
         <!-- empresaForm.ejs -->
-        <form id="employer-registration" class="registration-section employer" action="/usuarios/registrarEmpresa" method="post" enctype="multipart/form-data">
+        <form id="employer-registration" class="registration-section employer" action="/usuarios/registro/empresa" method="post" enctype="multipart/form-data">
+
             <h1>Registro Empresa</h1>
 
-            <label for="companyName">Nombre de la Empresa <span class="required">*</span></label>
+            <!-- Nombre de la Empresa -->
+            <label for="companyName">Nombre de la Empresa </label>
             <div class="input-line">
-                <input type="text" id="companyName" name="companyName" placeholder="Nombre de la Empresa" required>
+                <input type="text" id="companyName" name="companyName" placeholder="Nombre de la Empresa" >
             </div>
-            <label for="userEmail">Correo <span class="required">*</span></label>
+
+            <!-- Correo -->
+            <label for="userEmail">Correo </label>
             <div class="input-line">
-                <input type="text" id="userEmail" name="userEmail" placeholder="ejemplo@empresa.com" required>
-            </div>
-            
-            <label for="userPassword">Contraseña <span class="required">*</span></label>
-            <div class="input-line">
-                <input type="password" id="userPassword" name="userPassword" required>
+                <input type="text" id="userEmail" name="userEmail" placeholder="ejemplo@empresa.com" >
             </div>
             
-            <label for="employerConfirmPassword">Confirmar Contraseña <span class="required">*</span></label>
+            <!-- Contraseña -->
+            <label for="userPassword">Contraseña </label>
             <div class="input-line">
-                <input type="password" id="employerConfirmPassword" name="employerConfirmPassword" required>
+                <input type="password" id="userPassword" name="userPassword" >
             </div>
             
+            <!-- Confirmar Contraseña -->
+        <label for="confirmPassword">Confirmar Contraseña </label>
+        <div class="input-line">
+            <input type="password" id="confirmPassword" name="confirmPassword" >
+        </div>
+            
+            <!-- Teléfono Celular -->
             <label for="employerPhone">Teléfono Celular</label>
             <div class="input-line-phone">
                 <div class="phone-input-container">
-                    <select id="employerPhoneCode" name="employerPhoneCode" required>
-                    <option value="+1">+1 (EE. UU.)</option>
+                    <select id="employerPhoneCode" name="employerPhoneCode" >
+                        <option value="+1">+1 (EE. UU.)</option>
                     <option value="+44">+44 (Reino Unido)</option>
                     <option value="+54">+54 (Argentina)</option>
                     <option value="+55">+55 (Brasil)</option>
@@ -49,28 +56,33 @@
                     <option value="+81">+81 (Japón)</option>
                     <option value="+86">+86 (China)</option>
                     <option value="+91">+91 (India)</option>
-                </select>
-                <div class="separator-container">
-                    <div class="separator"></div>
+                    </select>
+                    <div class="separator-container">
+                        <div class="separator"></div>
+                    </div>
+                    <input type="text" id="employerPhone" name="employerPhone" placeholder="Número de teléfono celular" pattern="[0-9]+" >
                 </div>
-                <input type="text" id="employerPhone" name="employerPhone" placeholder="Número de teléfono celular" pattern="[0-9]+" required>
             </div>
-        </div>
+
+            <!-- Imagen de Perfil -->
             <div class="input-line">
                 <label for="empresaImage">Agregar imagen de perfil</label>
                 <input type="file" name="empresaImage" class="form-control" id="empresaImage">
             </div>
             
-            <label for="companyDescription">Breve Descripción de la Empresa <span class="required">*</span></label>
+            <!-- Breve Descripción de la Empresa -->
+            <label for="companyDescription">Breve Descripción de la Empresa </label>
             <div class="input-line-empresa">
-                <textarea id="companyDescription" name="companyDescription" placeholder="Breve descripción de la empresa" required></textarea>
+                <textarea id="companyDescription" name="companyDescription" placeholder="Breve descripción de la empresa" ></textarea>
             </div>
             
+            <!-- Términos y Condiciones -->
             <div class="checkbox-line">
-                <input type="checkbox" id="employer-terms" name="employer-terms" required>
+                <input type="checkbox" id="employer-terms" name="employer-terms" >
                 <label for="employer-terms">Acepto los términos, condiciones y aviso de privacidad</label>
             </div>
             
+            <!-- Notificaciones por Correo -->
             <div class="checkbox-line">
                 <input type="checkbox" id="employer-notifications" name="employer-notifications">
                 <label for="employer-notifications">Acepto recibir notificaciones por correo</label>
@@ -97,9 +109,3 @@
     <%- include('../partials/scripts') %>
 </body>
 </html>
-
-
-
-
-
-

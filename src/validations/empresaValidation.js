@@ -1,14 +1,11 @@
-// validations/registerValidation.js
-
 const { body, validationResult } = require('express-validator');
 
-const registerValidationRules = () => {
+const empresaValidationRules = () => {
   return [
-    body('freelancerFirstname').notEmpty().withMessage('El nombre es obligatorio'),
-    body('freelancerLastname').notEmpty().withMessage('El apellido es obligatorio'),
+    body('companyName').notEmpty().withMessage('El nombre de la empresa es obligatorio'),
     body('userEmail').isEmail().withMessage('Ingrese un correo electrónico válido'),
     body('userPassword').notEmpty().withMessage('La contraseña es obligatoria'),
-    body('freelancerConfirmPassword')
+    body('confirmPassword')
       .notEmpty().withMessage('La confirmación de la contraseña es obligatoria')
       .custom((value, { req }) => {
         if (value !== req.body.userPassword) {
@@ -16,7 +13,7 @@ const registerValidationRules = () => {
         }
         return true;
       }),
-    body('freelancerPhone').notEmpty().withMessage('El número de teléfono es obligatorio').isNumeric().withMessage('Ingrese un número válido'),
+    body('employerPhone').notEmpty().withMessage('El número de teléfono es obligatorio').isNumeric().withMessage('Ingrese un número válido'),
     // Agrega más reglas según sea necesario
   ];
 };
@@ -34,6 +31,6 @@ const validate = (req, res, next) => {
 };
 
 module.exports = {
-  registerValidationRules,
+  empresaValidationRules,
   validate,
 };

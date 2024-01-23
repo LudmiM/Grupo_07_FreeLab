@@ -194,13 +194,7 @@ label {
     background-color: #23c2cb;
 }
 
-#freelancer-registration {
-    display: block;
-}
 
-#employer-registration {
-    display: none;
-}
 
 .toggle-container {
     display: flex;
