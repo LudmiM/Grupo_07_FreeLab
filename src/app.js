@@ -11,9 +11,9 @@ const productsRouter = require('./routes/products.routes');
 
 const checkLocalSession= require('./middleware/checkLocalSession');
 const rememberMeMiddleware = require('./middleware/rememberMe');
+const checkCookie = require('./middleware/checkCookie');
 
 const session = require('express-session');
-const checkCookie = require('./middleware/checkCookie');
 
 const app = express();
 
