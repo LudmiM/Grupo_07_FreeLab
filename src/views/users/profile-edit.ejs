@@ -62,12 +62,26 @@
                 <!--Aca van tarjetas-->
             </aside>
         <% } %>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonal">
-            Editar personales
-        </button>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
-            Editar Laborales
-        </button>
+        <% if (userLogin.rol === "freelancer") { %>
+            <!--Usuarios.json-->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonal">
+                Editar personales
+            </button>
+            
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
+                Editar Laborales
+            </button>
+            <!--product.json-->
+        
+        <% } else { %>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonal">
+                Editar personales Empresa
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
+                Editar Laborales Empresa
+            </button>
+        <% } %>
+        
         <!--No es perfil entonces que muestre-->
     </main>
     <%- include('./modal/edit-laboral',{d}) %>

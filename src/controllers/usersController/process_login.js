@@ -17,6 +17,9 @@ module.exports = (req, res) => {
             const { id, rol, freelancerFirstname, freelancerLastname,userEmail, freelancerPhoneCode, freelancerPhone, freelancerImage } = freelancer;
             req.session.userLogin = { email, id, rol, freelancerFirstname, freelancerLastname,userEmail, freelancerPhoneCode, freelancerPhone, freelancerImage };
         }
+        remember && res.cookie('FreeLab_user_Login_01',req.session.userLogin,{
+            maxAge : 1000 * 60 * 2
+        })
         
         return res.redirect('/');
     } else {

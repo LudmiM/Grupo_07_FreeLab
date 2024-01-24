@@ -16,9 +16,8 @@ router.post('/registrarEmpresa',uploadAvatar.single('empresaImage'),empresarRegi
 router.get('/registro', formRegister)
 
 router.get('/perfil',checkUserLogin,profile)
-//router.put('/perfil',checkUserLogin,profile)
 router.put('/edit-laboral', actualizarLaboral)
-router.put('/edit-laboral', actualizarPersonal)
+router.put('/edit-personal', actualizarPersonal)
 
 router.get('/salir',logout)
 
