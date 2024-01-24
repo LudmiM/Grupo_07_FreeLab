@@ -23,35 +23,6 @@
     text-align: center;
     justify-content: center;
 }
-
-.main__busqueda {
-  height: 31px; 
-  padding: 14px;
-  font-size: 16px;
-  border: 1px solid #ffffff;
-  border-radius: 18px 0 0 18px;
-  width: 60%;
-}
- .main__lupa {
-    border: 1px solid var(--colorCelesteOscuro);
-    background-color: var(--colorCelesteOscuro);
-    height: 31px;
-    width: 40px;
-    border-radius: 0 18px 18px 0;
-    padding-left: 10px;
-    align-items: center;
-   display: flex;
-   color:#ffffff;
-   font-weight:bold
-}
-
-.main__alineacion {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-} 
-
 .article__1{
     width: 100%;
     display: flex;
