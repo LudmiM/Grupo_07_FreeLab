@@ -27,8 +27,7 @@ module.exports = (req, res) => {
             res.cookie('FreeLab_user_Login_01', req.session.userLogin, {
                 maxAge: 1000 * 60 * 5 
             });
-        }
-        
+        }     
         
         return res.redirect('/');
     } else {
