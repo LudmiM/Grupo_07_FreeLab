@@ -1,10 +1,9 @@
 const { leerJSON } = require("../data");
-const products= leerJSON('products')
-
 
 module.exports = {
     index: (req,res) => {
-        console.log(req.session.userLogin)
+        //console.log(req.session.userLogin)
+        const products= leerJSON('products')
         const postReversed = [...products.servicios].reverse();
         /* agregar json de ofertas laborales a futuro */
         return res.render('index',{
@@ -15,22 +14,16 @@ module.exports = {
         res.render('productCart');
     },
     admin: (req,res) => {
-        
+        const products= leerJSON('products')
        /* return res.send(products);
         res.render('dashboard');*/
         return res.render('dashboard',{products})
     },
     resultado: (req, res) => {
-        const { key } = req.query; // Corregido aquí
+        const { key } = req.query; 
+        const products= leerJSON('products')
         res.render('resultado', {
-            products: products.servicios.filter(product => product.category.toLowerCase().includes(key.toLowerCase())), key});
-    }/*,
-    //Reversion
-    resultado: (req, res) => {
-        const { key } = req.query; // Corregido aquí
-        //debe retornar solo el producto
-        res.render('resultado', {
-            products: products.servicios.filter(product => product.category.toLowerCase().includes(key.toLowerCase())), key});
-    }*/
+            products: products.servicios.filter(p => p.category.toLowerCase().includes(key.toLowerCase())) || p.firshName.toLowerCase().includes(key.toLowerCase()) || p.lastName.toLowerCase().includes(key.toLowerCase()), key});
+    }
 }
 

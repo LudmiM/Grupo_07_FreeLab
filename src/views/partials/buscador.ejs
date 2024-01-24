@@ -1,5 +1,5 @@
 <div class="contenedor__busqueda">
-  <form class="formulario__barra_busqueda" action="<%= locals.userLogin && locals.userLogin.rol === 'administrador' ? '/resultado' : (!locals.userLogin || locals.userLogin.rol !== 'administrador') ? '/productos/listado' : '/' %>" method="GET">
+  <form class="formulario__barra_busqueda" action="<%= locals.userLogin && locals.userLogin.rol === 'administrador' ? '/resultado' : '/productos/listado' %>" method="GET">
     <input type="text" name="key" placeholder="Buscar..." class="input__busqueda">
     <button type="submit" class="boton__busqueda"><i class="fa-solid fa-magnifying-glass"></i></button>
   </form>
