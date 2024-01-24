@@ -23,7 +23,6 @@ module.exports = (req, res) => {
         
         return res.redirect('/');
     } else {
-        // Errores de validación
         return res.render('users/login', {
             errors: errors.mapped()
         });

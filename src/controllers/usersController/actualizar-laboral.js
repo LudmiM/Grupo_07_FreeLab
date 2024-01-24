@@ -1,10 +1,8 @@
 const { leerJSON, escribirJSON } = require('./../../data');
 
 module.exports = (req, res) => {
-    console.log('Yo soy 1 :', req.session.userLogin);
 
     const { name, description, skills, portfolio, redes_sociales, category, price, currency } = req.body;
-    console.log('Yo soy 2 :', req.session.userLogin);
     const data = leerJSON('products');
 
     const editados = (p) => {
@@ -23,10 +21,8 @@ module.exports = (req, res) => {
         return p;
     };
     data.servicios = data.servicios.map(editados)
-    console.log('Yo soy 3 :', req.session.userLogin);
 
     escribirJSON(data, 'products');
-    console.log('Yo soy 4 :', req.session.userLogin);
     return res.redirect('/usuarios/perfil')
 
 }
