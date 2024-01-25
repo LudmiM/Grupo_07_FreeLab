@@ -16,7 +16,7 @@ module.exports = (req, res) => {
         } else {
             const { id, rol, freelancerFirstname, freelancerLastname,userEmail, freelancerPhoneCode, freelancerPhone, freelancerImage } = freelancer;
             req.session.userLogin = { email, id, rol, freelancerFirstname, freelancerLastname,userEmail, freelancerPhoneCode, freelancerPhone, freelancerImage };
-        }
+        }//Dejar solo email, id, rol, e imagen
         /*
         remember && res.cookie('FreeLab_user_Login_01',req.session.userLogin,{
             maxAge : 1000 * 60 * 2

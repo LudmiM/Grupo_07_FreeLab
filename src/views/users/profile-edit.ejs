@@ -15,6 +15,7 @@
                     <% if (userLogin.rol === "freelancer") { %>
                         <h3 class="datosPrimarios__contedor--h3"><%= d.name %></h3>
                     <% } %>
+                    <!--
                     <div class="datosPrimarios__contedor__jobs">
                         <div class="datosPrimarios__contedor__jobs--encargados">
                             <p>Jobs encargados</p>
@@ -24,7 +25,7 @@
                             <p>Jobs finalizados</p>
                             <p>0</p>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </article>
             <article class="datosPrimarios__description">
@@ -33,20 +34,19 @@
                     <p><%= d.description %></p>
                 <% } else { %>
                     <p><%= userLogin.companyDescription %></p>
-                <% } %>
-                              
+                <% } %>                     
             </article>
         </section>
         <% if (userLogin.rol === "freelancer") { %>
-            <aside class="perfil__user__aside">
-                <div class="aside__user__proyectosImagen">
-                    <h3>Mis proyectos</h3>
-                    <% if (userLogin.rol === "freelancer" && d.image.length) { %>
-                        <% d.image.forEach(i => { %>
-                            <img src="./images/productos/<%= i %>" alt="User Image">
-                        <% }) %>
-                    <% } %>
-                </div>
+            <aside class="perfil__user__aside__proyectos">
+                <% if (userLogin.rol === "freelancer" && d.image.length) { %>
+                    <div class="aside__user__proyectosImagen">
+                        <h3>Mis proyectos</h3>
+                            <% d.image.forEach(i => { %>
+                                <img src="./images/productos/<%= i %>" alt="User Image">
+                            <% }) %>              
+                    </div>
+                <% } %>
                 <div class="aside__user__miFormacion">
                     <h3>Formacion</h3>
                     <p>F1</p>
@@ -57,29 +57,33 @@
             
             </aside>
         <% } else { %>
-            <aside class="perfil__user__aside">
+            <aside class="perfil__user__aside__proyectos">
                 <p>No hay nada todavia</p>
                 <!--Aca van tarjetas-->
             </aside>
         <% } %>
         <% if (userLogin.rol === "freelancer") { %>
-            <!--Usuarios.json-->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonal">
-                Editar personales
-            </button>
-            
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
-                Editar Laborales
-            </button>
-            <!--product.json-->
-        
+            <div class="perfil__opciones__edit">
+                <!--Usuarios.json-->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonal">
+                    Editar personales
+                </button>
+                
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
+                    Editar Laborales
+                </button>
+                <!--product.json-->
+            </div>
         <% } else { %>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonal">
-                Editar personales Empresa
-            </button>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
-                Editar Laborales Empresa
-            </button>
+            <div class="perfil__opciones__edit">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonal">
+                    Editar personales Empresa
+                </button>
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
+                    Editar Laborales Empresa
+                </button>
+            </div>
         <% } %>
         
         <!--No es perfil entonces que muestre-->

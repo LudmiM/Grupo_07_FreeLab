@@ -1,102 +1,55 @@
-/* Agrega estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Estilos para el main del perfil de usuario */
+/* Main */
 .perfil__user {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+/*Primer section del main*/
+
+/*Article de datos primarios*/ 
+.perfil__user__section__datosPrimarios{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-/* Estilos para la sección principal */
-.perfil__user__section {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 800px; /* Ancho máximo para evitar que se extienda demasiado en pantallas grandes */
-}
-
-/* Estilos para los artículos dentro de la sección principal */
-.perfil__user__section__datosPrimarios,
-.perfil__user__section__description {
-    box-sizing: border-box;
-    padding: 20px;
-    margin: 10px;
-    background-color: var(--colorCelesteClaro);
-    border-radius: 10px;
-    flex: 1;
-}
-
-/* Estilos para la imagen de usuario */
-.datosPrimarios--imagen {
-    width: 100%;
-    max-width: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-/* Estilos para el contenedor de datos primarios */
-.datosPrimarios__contedor {
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    flex-direction: column;
 }
-
-/* Estilos para los títulos de los datos primarios */
-.datosPrimarios__contedor--h2,
-.datosPrimarios__contedor--h3 {
-    color: var(--colorAzulOscuro);
+.datosPrimarios--imagen{
+    width: 200px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    border: 10px solid blue;
 }
-
-/* Estilos para la descripción */
-.datosPrimarios__description {
-    box-sizing: border-box;
-    padding: 20px;
-    margin: 10px;
-    background-color: var(--colorCelesteClaro);
-    border-radius: 10px;
+.datosPrimarios__description{
+    
 }
-
-/* Estilos para los contenedores de los trabajos */
-.datosPrimarios__contedor__jobs {
+/*
+.datosPrimarios__contedor__jobs{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+} */
+
+/*Article de proyectos*/
+
+/*Div botones editar*/
+.perfil__opciones__edit{
+    position: sticky;
+    bottom: 0px;
+    left: 0;
 }
 
-/* Estilos para las tarjetas en el aside */
-.perfil__user__aside {
-    box-sizing: border-box;
-    padding: 20px;
-    margin: 10px;
-    background-color: var(--colorCelesteClaro);
-    border-radius: 10px;
-    flex: 1;
-}
-
-/* Estilos para los botones */
-.btn {
-    background-color: var(--colorCelesteOscuro);
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Estilos responsivos */
-@media (max-width: 600px) {
-    .perfil__user__section {
-        flex-direction: column;
-        align-items: center;
+@media (min-width: 500px) {
+    /*Article de datos primarios*/ 
+    .datosPrimarios--imagen{
+        margin-right: 20px;
     }
-
-    .perfil__user__section__datosPrimarios,
-    .perfil__user__section__description,
-    .perfil__user__aside {
-        width: 100%;
-        margin: 10px 0;
+    .perfil__user__section__datosPrimarios{
+        flex-direction:row;
+        justify-content: space-around;
+        margin: 25px auto;
     }
+}
+@media (min-width: 1024px) {
+    
 }
