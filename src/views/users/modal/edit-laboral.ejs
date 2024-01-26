@@ -10,6 +10,11 @@
                 <form action="/usuarios/edit-laboral?_method=PUT" method="POST">
                     
                     <div class="mb-3">
+                        <label for="name" class="form-label">Puesto:</label>
+                        <input type="text" class="form-control" id="name" name="name" value="<%= name %>" >
+                    </div>
+
+                    <div class="mb-3">
                         <label for="description" class="form-label">Descripción:</label>
                         <input type="text" class="form-control" id="description" name="description" value="<%= description %>" >
                     </div>
