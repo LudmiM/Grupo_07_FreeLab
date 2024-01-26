@@ -9,11 +9,11 @@
     <main class="perfil__user">
         <section class="perfil__user__section">
             <article class="perfil__user__section__datosPrimarios">
-                <img class="datosPrimarios--imagen" src="/images/users/<%= userLogin.employerImage || userLogin.freelancerImage %>" alt="User Image">
+                <img class="datosPrimarios--imagen" src="/images/users/<%= userLogin.mainImage || userLogin.mainImage %>" alt="User Image">
                 <div class="datosPrimarios__contedor">
-                    <h2 class="datosPrimarios__contedor--h2"><%= userLogin.companyName || (userLogin.freelancerFirstname + ' ' + userLogin.freelancerLastname) %></h2>                   
+                    <h2 class="datosPrimarios__contedor--h2"><%= userLogin.rol==="freelancer" ? (freelancerFirstname + ' ' + freelancerLastname) : companyName %></h2>                   
                     <% if (userLogin.rol === "freelancer") { %>
-                        <h3 class="datosPrimarios__contedor--h3"><%= d.name %></h3>
+                        <h3 class="datosPrimarios__contedor--h3"><%= name %></h3>
                     <% } %>
                     <!--
                     <div class="datosPrimarios__contedor__jobs">
@@ -31,18 +31,18 @@
             <article class="datosPrimarios__description">
                 <h3>Descripcion</h3>
                 <% if (userLogin.rol === "freelancer") { %>
-                    <p><%= d.description %></p>
+                    <p><%= description %></p>
                 <% } else { %>
-                    <p><%= userLogin.companyDescription %></p>
+                    <p><%= companyDescription %></p>
                 <% } %>                     
             </article>
         </section>
         <% if (userLogin.rol === "freelancer") { %>
             <aside class="perfil__user__aside__proyectos">
-                <% if (userLogin.rol === "freelancer" && d.image.length) { %>
+                <% if (userLogin.rol === "freelancer" && image.length) { %>
                     <div class="aside__user__proyectosImagen">
                         <h3>Mis proyectos</h3>
-                            <% d.image.forEach(i => { %>
+                            <% image.forEach(i => { %>
                                 <img src="./images/productos/<%= i %>" alt="User Image">
                             <% }) %>              
                     </div>
@@ -88,7 +88,7 @@
         
         <!--No es perfil entonces que muestre-->
     </main>
-    <%- include('./modal/edit-laboral',{d}) %>
+    <%- include('./modal/edit-laboral') %>
     <%- include('./modal/edit-personal') %>
     <%- include('../partials/footer') %>
 

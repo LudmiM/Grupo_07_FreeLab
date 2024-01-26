@@ -8,7 +8,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="" method="POST">
+                <form action="/usuarios/edit-personal?_method=PUT" method="POST">
                     <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>
                         <input type="email" class="form-control" id="email" name="email"
@@ -39,9 +39,9 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="freelancerImage" class="form-label">Image:</label>
-                        <input type="text" class="form-control" id="freelancerImage" name="freelancerImage"
-                            value="<%= userLogin.freelancerImage %>">
+                        <label for="mainImage" class="form-label">Image:</label>
+                        <input type="text" class="form-control" id="mainImage" name="mainImage"
+                            value="<%= userLogin.mainImage %>">
                     </div>
 
                     <div class="modal-footer">

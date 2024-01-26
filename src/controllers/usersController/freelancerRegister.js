@@ -14,7 +14,7 @@ module.exports = (req, res) => {
 
     const freelancer = "freelancer";
 
-    function usuario(freelancerFirstname, freelancerLastname, userEmail, userPassword,freelancerPhoneCode,freelancerPhone,freelancerImage, freelancerSkills){
+    function usuario(freelancerFirstname, freelancerLastname, userEmail, userPassword,freelancerPhoneCode,freelancerPhone,mainImage, freelancerSkills){
       this.id = newId;
       this.freelancerFirstname = freelancerFirstname;
       this.freelancerLastname = freelancerLastname;
@@ -22,7 +22,7 @@ module.exports = (req, res) => {
       this.userPassword = bcryptjs.hashSync(userPassword, 10);
       this.freelancerPhoneCode = freelancerPhoneCode
       this.freelancerPhone = freelancerPhone;
-      this.freelancerImage = freelancerImage;
+      this.mainImage = mainImage;
       this.freelancerSkills = freelancerSkills;
       this.rol = freelancer;
     }    

@@ -11,7 +11,7 @@ const checkRol = require('../middleware/checkRol');
 router.get('/ingreso',login)
 router.post('/ingreso',loginValidation,process_login)
 
-router.post('/registrarFreelancer', uploadAvatar.single('freelancerImage'),freelancerRegister)
+router.post('/registrarFreelancer', uploadAvatar.single('mainImage'),freelancerRegister)
 router.post('/registrarEmpresa',uploadAvatar.single('empresaImage'),empresarRegister)
 router.get('/registro', formRegister)
 

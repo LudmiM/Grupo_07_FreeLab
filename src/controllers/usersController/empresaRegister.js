@@ -14,14 +14,14 @@ module.exports = (req, res) => {
 
     const empresa = "empresa";
 
-    function usuario(companyName, userEmail, userPassword,employerPhoneCode,employerPhone,employerImage, companyDescription,){
+    function usuario(companyName, userEmail, userPassword,employerPhoneCode,employerPhone,mainImage, companyDescription,){
       this.id = newId;
       this.companyName = companyName;
       this.userEmail = userEmail;
       this.userPassword = bcryptjs.hashSync(userPassword, 10);;
       this.employerPhoneCode = employerPhoneCode;
       this.employerPhone = employerPhone;
-      this.employerImage = employerImage;
+      this.mainImage = mainImage;
       this.companyDescription = companyDescription;
       this.rol = empresa;
       

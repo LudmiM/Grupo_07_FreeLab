@@ -1,5 +1,3 @@
-const { leerJSON } = require("../data");
-
 module.exports = (req, res, next) => {
     // Verifica si la cookie 'remember' está presente
     const rememberCookie = req.cookies.remember;
