@@ -11,44 +11,45 @@
                 <form action="/usuarios/edit-personal?_method=PUT" method="POST">
                     <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email"
-                            value="<%= userLogin.Email %>" readonly>
+                        <input type="email" class="form-control" id="email" name="email" value="<%= userLogin.email %>" readonly>
                     </div>
+                
                     <div class="mb-3">
                         <label for="freelancerFirstname" class="form-label">First Name:</label>
-                        <input type="text" class="form-control" id="freelancerFirstname" name="freelancerFirstname"
-                            value="<%= freelancerFirstname %>">
+                        <input type="text" class="form-control" id="freelancerFirstname" name="freelancerFirstname" value="<%= freelancerFirstname %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.freelancerFirstname ? errors.freelancerFirstname.msg : null %></small>
                     </div>
-
+                
                     <div class="mb-3">
                         <label for="freelancerLastname" class="form-label">Last Name:</label>
-                        <input type="text" class="form-control" id="freelancerLastname" name="freelancerLastname"
-                            value="<%= freelancerLastname %>">
+                        <input type="text" class="form-control" id="freelancerLastname" name="freelancerLastname" value="<%= freelancerLastname %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.freelancerLastname ? errors.freelancerLastname.msg : null %></small>
                     </div>
-
+                
                     <div class="mb-3">
                         <label for="freelancerPhoneCode" class="form-label">Phone Code:</label>
-                        <input type="text" class="form-control" id="freelancerPhoneCode" name="freelancerPhoneCode"
-                            value="<%= freelancerPhoneCode%>">
+                        <input type="text" class="form-control" id="freelancerPhoneCode" name="freelancerPhoneCode" value="<%= freelancerPhoneCode%>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.freelancerPhoneCode ? errors.freelancerPhoneCode.msg : null %></small>
                     </div>
-
+                
                     <div class="mb-3">
                         <label for="freelancerPhone" class="form-label">Phone:</label>
-                        <input type="text" class="form-control" id="freelancerPhone" name="freelancerPhone"
-                            value="<%= freelancerPhone %>">
+                        <input type="text" class="form-control" id="freelancerPhone" name="freelancerPhone" value="<%= freelancerPhone %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.freelancerPhone ? errors.freelancerPhone.msg : null %></small>
                     </div>
-
+                
                     <div class="mb-3">
                         <label for="mainImage" class="form-label">Image:</label>
-                        <input type="text" class="form-control" id="mainImage" name="mainImage"
-                            value="<%= userLogin.mainImage %>">
+                        <input type="text" class="form-control" id="mainImage" name="mainImage" value="<%= userLogin.mainImage %>">
+                        <!---->
                     </div>
-
+                
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <button type="submit" class="btn btn-primary">Guardar cambios</button>
                     </div>
                 </form>
+                
             </div>
         </div>
     </div>

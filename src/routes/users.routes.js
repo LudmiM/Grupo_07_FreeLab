@@ -1,8 +1,12 @@
 const express = require('express');
 const { login, register, formRegister, freelancerRegister, empresarRegister , profile, process_login, logout, actualizarLaboral, actualizarPersonal} = require('../controllers/usersController');
 const router = express.Router();
-const checkUserLogin = require('./../middleware/checkUserLogin')
+
 const loginValidation = require('./../validations/login-sesionValidation')
+const editPersonal = require('./../validations/perfil-edit-personal');
+const editLaboral = require('./../validations/perfil-edit-laboral');
+
+const checkUserLogin = require('./../middleware/checkUserLogin')
 const uploadAvatar = require('../middleware/uploadAvatar');
 const checkRol = require('../middleware/checkRol');
 
@@ -16,8 +20,8 @@ router.post('/registrarEmpresa',uploadAvatar.single('empresaImage'),empresarRegi
 router.get('/registro', formRegister)
 
 router.get('/perfil',checkUserLogin,profile)
-router.put('/edit-laboral', actualizarLaboral)
-router.put('/edit-personal', actualizarPersonal)
+router.put('/edit-laboral',editLaboral, actualizarLaboral)
+router.put('/edit-personal',editPersonal, actualizarPersonal)
 
 router.get('/salir',logout)
 
