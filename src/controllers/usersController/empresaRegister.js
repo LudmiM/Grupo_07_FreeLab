@@ -1,4 +1,3 @@
-// controllers/usersControllers/empresaRegister.js
 const data = require('../../data');
 const bcryptjs = require('bcryptjs');
 const { empresaValidationRules, validate } = require('../../validations/empresaValidation');

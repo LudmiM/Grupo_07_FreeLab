@@ -49,13 +49,10 @@ module.exports = [
       freelancerSkills
     );
 
-    // Agregar el nuevo usuario freelancer a la lista de freelancers
     users.freelancers.push(newFreelancerUser);
 
-    // Guardar la información en el archivo JSON
     data.escribirJSON(users, 'usuarios');
 
-    // Redirigir a la página de ingreso (o a donde desees)
     return res.redirect('/usuarios/ingreso');
   }
 ];

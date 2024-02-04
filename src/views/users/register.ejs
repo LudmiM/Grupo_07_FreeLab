@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
     <%- include('../partials/head', {title: 'Home | FreeLab' }) %>
-<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-N5ZiqGwFsb44sM8NciSdRWJuZfWAoOH+R1P4nBy6NYSb7/SU/00q91a7t+KPoT4qAphln/GSEUq39nqutQ+sCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="body-emp-fre">
     <%- include('../partials/header')%>
 
-    <form method="post" action="/usuarios/registro" class="registration-form-container">
-        <button type="submit" name="userType" value="freelancer" class="registration-button freelancer">Registrarse como Freelancer</button>
-        <button type="submit" name="userType" value="empresa" class="registration-button empresa">Registrarse como Empresa</button>
-    </form>
-    
+    <div class="button-container">
+        <div class="registration-container">
+            <form method="post" action="/usuarios/registro" class="registration-form-container">
+                <button type="submit" name="userType" value="freelancer" class="registration-button freelancer">
+                    <i class="fas fa-user"></i> Registrarse como Freelancer
+                </button>
+                <button type="submit" name="userType" value="empresa" class="registration-button empresa">
+                    <i class="fas fa-building"></i> Registrarse como Empresa
+                </button>
+            </form>
+        </div>
     </div>
+
     <%- include('../partials/footer')%>
     <%- include('../partials/scripts') %>
 </body>
