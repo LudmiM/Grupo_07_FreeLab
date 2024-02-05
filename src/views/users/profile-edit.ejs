@@ -6,28 +6,28 @@
 <body>
     <%- include('../partials/header') %>
 
-    <main>
-        <section>
-            <article>
-                <img src="/images/users/<%= userLogin.employerImage || userLogin.freelancerImage %>" alt="User Image">
-                <div>
-                    <h2><%= userLogin.companyName || (userLogin.freelancerFirstname + ' ' + userLogin.freelancerLastname) %></h2>                   
+    <main class="perfil__user">
+        <section class="perfil__user__section">
+            <article class="perfil__user__section__datosPrimarios">
+                <img class="datosPrimarios--imagen" src="/images/users/<%= userLogin.employerImage || userLogin.freelancerImage %>" alt="User Image">
+                <div class="datosPrimarios__contedor">
+                    <h2 class="datosPrimarios__contedor--h2"><%= userLogin.companyName || (userLogin.freelancerFirstname + ' ' + userLogin.freelancerLastname) %></h2>                   
                     <% if (userLogin.rol === "freelancer") { %>
-                        <h3><%= d.name %></h3>
+                        <h3 class="datosPrimarios__contedor--h3"><%= d.name %></h3>
                     <% } %>
-                    <div>
-                        <div>
+                    <div class="datosPrimarios__contedor__jobs">
+                        <div class="datosPrimarios__contedor__jobs--encargados">
                             <p>Jobs encargados</p>
                             <p>0</p>
                         </div>
-                        <div>
+                        <div class="datosPrimarios__contedor__jobs--finalizados">
                             <p>Jobs finalizados</p>
                             <p>0</p>
                         </div>
                     </div>
                 </div>
             </article>
-            <article>
+            <article class="datosPrimarios__description">
                 <h3>Descripcion</h3>
                 <% if (userLogin.rol === "freelancer") { %>
                     <p><%= d.description %></p>
@@ -38,8 +38,8 @@
             </article>
         </section>
         <% if (userLogin.rol === "freelancer") { %>
-            <aside>
-                <div>
+            <aside class="perfil__user__aside">
+                <div class="aside__user__proyectosImagen">
                     <h3>Mis proyectos</h3>
                     <% if (userLogin.rol === "freelancer" && d.image.length) { %>
                         <% d.image.forEach(i => { %>
@@ -47,7 +47,7 @@
                         <% }) %>
                     <% } %>
                 </div>
-                <div>
+                <div class="aside__user__miFormacion">
                     <h3>Formacion</h3>
                     <p>F1</p>
                     <p>F1</p>
@@ -57,16 +57,35 @@
             
             </aside>
         <% } else { %>
-            <aside>
+            <aside class="perfil__user__aside">
                 <p>No hay nada todavia</p>
+                <!--Aca van tarjetas-->
             </aside>
         <% } %>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
-            Editar datos
-        </button>
+        <% if (userLogin.rol === "freelancer") { %>
+            <!--Usuarios.json-->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonal">
+                Editar personales
+            </button>
+            
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
+                Editar Laborales
+            </button>
+            <!--product.json-->
+        
+        <% } else { %>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonal">
+                Editar personales Empresa
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
+                Editar Laborales Empresa
+            </button>
+        <% } %>
+        
         <!--No es perfil entonces que muestre-->
     </main>
-    <%- include('./modal/edit') %>
+    <%- include('./modal/edit-laboral',{d}) %>
+    <%- include('./modal/edit-personal') %>
     <%- include('../partials/footer') %>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

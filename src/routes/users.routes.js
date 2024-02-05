@@ -1,13 +1,5 @@
 const express = require('express');
-const {
-  login,
-  formRegister,
-  freelancerRegister,
-  empresaRegister,
-  profile,
-  process_login,
-  logout
-} = require('../controllers/usersController');
+const { login, register, formRegister, freelancerRegister, empresarRegister , profile, process_login, logout, actualizarLaboral, actualizarPersonal} = require('../controllers/usersController');
 const router = express.Router();
 const checkUserLogin = require('./../middleware/checkUserLogin');
 const loginValidation = require('./../validations/login-sesionValidation');
@@ -31,7 +23,9 @@ router.get('/registro/empresa', (req, res) => {
 });
 router.post('/registro/empresa', uploadAvatar.single('empresaImage'), empresaValidationRules, empresaRegister);
 
-router.get('/perfil', checkUserLogin, profile);
+router.get('/perfil',checkUserLogin,profile)
+router.put('/edit-laboral', actualizarLaboral)
+router.put('/edit-personal', actualizarPersonal)
 
 router.get('/salir', logout);
 

@@ -1,6 +1,6 @@
-<div class="admin__busqueda">
-    <form class="admin__formulario-busqueda" action="/resultado" method="GET">
-      <input type="text" name="key" placeholder="Buscar..." class="admin__entrada-busqueda">
-      <button type="submit" class="admin__boton-busqueda">Buscar</button>
-    </form>
+<div class="contenedor__busqueda">
+  <form class="formulario__barra_busqueda" action="<%= locals.userLogin && locals.userLogin.rol === 'administrador' ? '/resultado' : '/productos/listado' %>" method="GET">
+    <input type="text" name="key" placeholder="Buscar..." class="input__busqueda">
+    <button type="submit" class="boton__busqueda"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </form>
 </div>

@@ -6,6 +6,8 @@ const freelancerRegister = require('./freelancerRegister')
 
 const empresaRegister = require('./empresaRegister')
 const logout = require('./logout')
+const actualizarLaboral = require('./actualizar-laboral')
+const actualizarPersonal = require('./actualizar-personal')
 
 const profile = require('./profile-edit')
 const process_login = require('./process_login')
@@ -18,5 +20,7 @@ module.exports = {
     freelancerRegister,
     empresaRegister,
     profile,
-    logout
+    logout,
+    actualizarLaboral,
+    actualizarPersonal
 }

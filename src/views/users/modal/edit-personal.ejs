@@ -1,0 +1,58 @@
+<!-- Modal Scrollable -->
+<div class="modal fade" id="scrollableModalPersonal" tabindex="-1" aria-labelledby="scrollableModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="scrollableModalLabel">Datos Personales</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="POST">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" value="<%= userLogin.userEmail %>" readonly>
+                    </div>
+                
+                    <form action="" method="POST">
+                        <div class="mb-3">
+                            <label for="freelancerFirstname" class="form-label">First Name:</label>
+                            <input type="text" class="form-control" id="freelancerFirstname" name="freelancerFirstname" value="<%= userLogin.freelancerFirstname %>">
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="freelancerLastname" class="form-label">Last Name:</label>
+                            <input type="text" class="form-control" id="freelancerLastname" name="freelancerLastname" value="<%= userLogin.freelancerLastname %>">
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="freelancerPhoneCode" class="form-label">Phone Code:</label>
+                            <input type="text" class="form-control" id="freelancerPhoneCode" name="freelancerPhoneCode" value="<%= userLogin.freelancerPhoneCode%>">
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="freelancerPhone" class="form-label">Phone:</label>
+                            <input type="text" class="form-control" id="freelancerPhone" name="freelancerPhone" value="<%= userLogin.freelancerPhone %>">
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="freelancerImage" class="form-label">Image:</label>
+                            <input type="text" class="form-control" id="freelancerImage" name="freelancerImage" value="<%= userLogin.freelancerImage %>">
+                        </div>
+                    
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                        </div>
+                    </form>
+                    
+
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

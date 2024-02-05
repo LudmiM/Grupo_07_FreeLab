@@ -12,7 +12,8 @@ const productsRouter = require('./routes/products.routes');
 const checkLocalSession = require('./middleware/checkLocalSession');
 const rememberMeMiddleware = require('./middleware/rememberMe');
 
-const session = require('express-session')
+const session = require('express-session');
+const checkCookie = require('./middleware/checkCookie');
 
 const app = express();
 
@@ -31,13 +32,14 @@ app
   .use(express.urlencoded({ extended: false }))
   .use(express.static(path.join(__dirname, '..', 'public')))
 
-  // Configuracion de sesion
+  //Configuracion de sesion
   .use(session({
-    secret: "Nuestro mensaje secreto",
-    resave: false,  // Add this line
-    saveUninitialized: true  // Add this line
+    secret: 'FreeLab',
+    resave: true, 
+    saveUninitialized: true
   }))
 
+  .use(checkCookie)
   .use(checkLocalSession)
 
   // Rutas
