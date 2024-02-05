@@ -1,11 +1,9 @@
 const data = require('../../data');
 const bcryptjs = require('bcryptjs');
-const { empresaValidationRules, validate } = require('../../validations/empresaValidation');
+const { validationResult } = require("express-validator");
 
-module.exports = [
-  empresaValidationRules(),
-  validate,
-  (req, res) => {
+module.exports =  (req, res) => {
+  const errors = validationResult(req);
     const { companyName, userEmail, userPassword, employerPhoneCode, employerPhone, companyDescription, confirmPassword } = req.body;
 
     const users = data.leerJSON('usuarios');
@@ -26,11 +24,16 @@ module.exports = [
       this.companyDescription = companyDescription;
       this.rol = empresa;
     }
+    if(errors.isEmpty()){
+      const newUsuario = new usuario(companyName, userEmail, userPassword, employerPhoneCode, employerPhone, file.filename, companyDescription);
 
-    const newUsuario = new usuario(companyName, userEmail, userPassword, employerPhoneCode, employerPhone, file.filename, companyDescription);
-
-    users.empresas.push(newUsuario);
-    data.escribirJSON(users, 'usuarios');
-    return res.redirect('/usuarios/ingreso');
-  }
-];
+      users.empresas.push(newUsuario);
+      data.escribirJSON(users, 'usuarios');
+      return res.redirect('/usuarios/ingreso');
+    }else{
+      return res.render('users/empresaForm',{
+          old : req.body,
+          errors : errors.mapped()
+      })
+}
+};

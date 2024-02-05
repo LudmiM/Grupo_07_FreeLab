@@ -1,12 +1,9 @@
 const data = require('../../data');
 const bcryptjs = require('bcryptjs');
-const { validationResult } = require('express-validator');
-const { registerValidationRules, validate } = require('../../validations/registerValidation');
+const { validationResult } = require("express-validator");
 
-module.exports = [
-  registerValidationRules(),
-  validate,
-  (req, res) => {
+module.exports =  (req, res) => {
+  const errors = validationResult(req);
     const {
       freelancerFirstname,
       freelancerLastname,
@@ -37,22 +34,27 @@ module.exports = [
       this.freelancerSkills = freelancerSkills;
       this.rol = freelancerRole;
     }
+    if(errors.isEmpty()){
+      const newFreelancerUser = new FreelancerUser(
+        freelancerFirstname,
+        freelancerLastname,
+        userEmail,
+        userPassword,
+        freelancerPhoneCode,
+        freelancerPhone,
+        file.filename,
+        freelancerSkills
+      );
+    
+      users.freelancers.push(newFreelancerUser);
 
-    const newFreelancerUser = new FreelancerUser(
-      freelancerFirstname,
-      freelancerLastname,
-      userEmail,
-      userPassword,
-      freelancerPhoneCode,
-      freelancerPhone,
-      file.filename,
-      freelancerSkills
-    );
+      data.escribirJSON(users, 'usuarios');
 
-    users.freelancers.push(newFreelancerUser);
-
-    data.escribirJSON(users, 'usuarios');
-
-    return res.redirect('/usuarios/ingreso');
+      return res.redirect('/usuarios/ingreso');
+    }else{
+      return res.render('users/freelancerForm',{
+          old : req.body,
+          errors : errors.mapped()
+      })
   }
-];
+};

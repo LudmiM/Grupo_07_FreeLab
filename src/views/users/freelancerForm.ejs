@@ -6,52 +6,42 @@
     <div class="register-container">
       <!-- Formulario de registro -->
       <div class="register-form">
-        <form id="freelancer-registration" class="registration-section freelancer" action="/usuarios/registro/Freelancer" method="post" enctype="multipart/form-data">
+        <form id="freelancer-registration" class="registration-section freelancer" action="" method="POST" enctype="multipart/form-data">
           <h1>Registro Freelancer</h1>
 
           <!-- Nombre -->
-          <label for="freelancerFirstname">Nombre </label>
           <div class="input-line">
+            <label for="freelancerFirstname">Nombre </label>
             <input type="text" id="freelancerFirstname" name="freelancerFirstname" placeholder="Nombre" pattern="[A-Za-zÁ-ÿ\s']{1,}">
-            <% if (errors && errors.some(error => error.param === 'freelancerFirstname')) { %>
-              <p style="color: red;"><%= errors.find(error => error.param === 'freelancerFirstname').msg %></p>
-            <% } %>
+            <small class="text-danger ms-2"><%= locals.errors && errors.freelancerFirstname ? errors.freelancerFirstname.msg : null %></small>
           </div>
 
           <!-- Apellido -->
           <label for="freelancerLastname">Apellido </label>
           <div class="input-line">
             <input type="text" id="freelancerLastname" name="freelancerLastname" placeholder="Apellido" pattern="[A-Za-zÁ-ÿ\s']{1,}">
-            <% if (errors && errors.some(error => error.param === 'freelancerLastname')) { %>
-              <p style="color: red;"><%= errors.find(error => error.param === 'freelancerLastname').msg %></p>
-            <% } %>
+            <small class="text-danger ms-2"><%= locals.errors && errors.freelancerLastname ? errors.freelancerLastname.msg : null %></small>
           </div>
 
           <!-- Correo -->
           <label for="userEmail">Correo </label>
           <div class="input-line">
             <input type="text" id="userEmail" name="userEmail" placeholder="ejemplo@ejemplo.com">
-            <% if (errors && errors.some(error => error.param === 'userEmail')) { %>
-              <p style="color: red;"><%= errors.find(error => error.param === 'userEmail').msg %></p>
-            <% } %>
+            <small class="text-danger ms-2"><%= locals.errors && errors.userEmail ? errors.userEmail.msg : null %></small>
           </div>
 
           <!-- Contraseña -->
           <label for="userPassword">Contraseña </label>
           <div class="input-line">
             <input type="password" id="userPassword" name="userPassword">
-            <% if (errors && errors.some(error => error.param === 'userPassword')) { %>
-              <p style="color: red;"><%= errors.find(error => error.param === 'userPassword').msg %></p>
-            <% } %>
+            <small class="text-danger ms-2"><%= locals.errors && errors.userPassword ? errors.userPassword.msg : null %></small>
           </div>
 
           <!-- Confirmar Contraseña -->
           <label for="freelancerConfirmPassword">Confirmar Contraseña </label>
           <div class="input-line">
             <input type="password" id="freelancerConfirmPassword" name="freelancerConfirmPassword">
-            <% if (errors && errors.some(error => error.param === 'freelancerConfirmPassword')) { %>
-              <p style="color: red;"><%= errors.find(error => error.param === 'freelancerConfirmPassword').msg %></p>
-            <% } %>
+            <small class="text-danger ms-2"><%= locals.errors && errors.freelancerConfirmPassword ? errors.freelancerConfirmPassword.msg : null %></small>
           </div>
 
           <!-- Teléfono Celular -->
@@ -78,9 +68,7 @@
                 <div class="separator"></div>
               </div>
               <input type="text" id="freelancerPhone" name="freelancerPhone" placeholder="Número de teléfono celular" pattern="[0-9]+">
-              <% if (errors && errors.some(error => error.param === 'freelancerPhone')) { %>
-                <p style="color: red;"><%= errors.find(error => error.param === 'freelancerPhone').msg %></p>
-              <% } %>
+              <small class="text-danger ms-2"><%= locals.errors && errors.freelancerPhone ? errors.freelancerPhone.msg : null %></small>
             </div>
           </div>
 
@@ -88,36 +76,28 @@
           <div class="input-line">
             <label for="freelancerImage">Agregar imagen de perfil</label>
             <input type="file" name="freelancerImage" class="form-control" id="freelancerImage">
-            <% if (errors && errors.some(error => error.param === 'freelancerImage')) { %>
-              <p style="color: red;"><%= errors.find(error => error.param === 'freelancerImage').msg %></p>
-            <% } %>
+            <small class="text-danger ms-2"><%= locals.errors && errors.freelancerImage ? errors.freelancerImage.msg : null %></small>
           </div>
 
           <!-- Descripción de Habilidades -->
           <label for="freelancerkills">Descripción de Habilidades</label>
           <div class="input-line-habilidades">
             <textarea id="freelancerkills" name="freelancerkills" placeholder="Descripción de habilidades"></textarea>
-            <% if (errors && errors.some(error => error.param === 'freelancerkills')) { %>
-              <p style="color: red;"><%= errors.find(error => error.param === 'freelancerkills').msg %></p>
-            <% } %>
+            <small class="text-danger ms-2"><%= locals.errors && errors.freelancerkills ? errors.freelancerkills.msg : null %></small>
           </div>
 
           <!-- Términos y Condiciones -->
           <div class="checkbox-line">
             <input type="checkbox" id="freelancer-terms" name="freelancer-terms">
             <label for="freelancer-terms">Acepto los términos, condiciones y aviso de privacidad</label>
-            <% if (errors && errors.some(error => error.param === 'freelancer-terms')) { %>
-              <p style="color: red;"><%= errors.find(error => error.param === 'freelancer-terms').msg %></p>
-            <% } %>
+            
           </div>
 
           <!-- Notificaciones por Correo -->
           <div class="checkbox-line">
             <input type="checkbox" id="freelancer-notifications" name="freelancer-notifications">
             <label for="freelancer-notifications">Acepto recibir notificaciones por correo</label>
-            <% if (errors && errors.some(error => error.param === 'freelancer-notifications')) { %>
-              <p style="color: red;"><%= errors.find(error => error.param === 'freelancer-notifications').msg %></p>
-            <% } %>
+            
           </div>
 
           <button type="submit" class="btn">Registrarse como Freelancer</button>

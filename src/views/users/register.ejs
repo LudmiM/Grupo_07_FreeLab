@@ -10,14 +10,21 @@
 
     <div class="button-container">
         <div class="registration-container">
-            <form method="post" action="/usuarios/registro" class="registration-form-container">
-                <button type="submit" name="userType" value="freelancer" class="registration-button freelancer">
-                    <i class="fas fa-user"></i> Registrarse como Freelancer
-                </button>
-                <button type="submit" name="userType" value="empresa" class="registration-button empresa">
-                    <i class="fas fa-building"></i> Registrarse como Empresa
-                </button>
-            </form>
+            <!--<form method="POST" action="/usuarios/registro" class="registration-form-container">
+                -->
+            <div class="registration-form-container">
+                <a href="/usuarios/registro/freelancer">
+                    <button type="submit" name="userType" value="freelancer" class="registration-button freelancer">
+                        <i class="fas fa-user"></i> Registrarse como Freelancer
+                    </button>
+                </a>
+                <a href="/usuarios/registro/empresa">
+                    <button type="submit" name="userType" value="empresa" class="registration-button empresa">
+                        <i class="fas fa-building"></i> Registrarse como Empresa
+                    </button> 
+                </a>
+            </div>
+            <!--</form>-->
         </div>
     </div>
 

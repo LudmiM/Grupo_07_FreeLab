@@ -9,7 +9,7 @@
         <div class="register-form">
         
         <!-- empresaForm.ejs -->
-        <form id="employer-registration" class="registration-section employer" action="/usuarios/registro/empresa" method="post" enctype="multipart/form-data">
+        <form id="employer-registration" class="registration-section employer" action="" method="POST" enctype="multipart/form-data">
 
             <h1>Registro Empresa</h1>
 
@@ -17,24 +17,28 @@
             <label for="companyName">Nombre de la Empresa </label>
             <div class="input-line">
                 <input type="text" id="companyName" name="companyName" placeholder="Nombre de la Empresa" >
+                <small class="text-danger ms-2"><%= locals.errors && errors.companyName ? errors.companyName.msg : null %></small>
             </div>
 
             <!-- Correo -->
             <label for="userEmail">Correo </label>
             <div class="input-line">
                 <input type="text" id="userEmail" name="userEmail" placeholder="ejemplo@empresa.com" >
+                <small class="text-danger ms-2"><%= locals.errors && errors.userEmail ? errors.userEmail.msg : null %></small>
             </div>
             
             <!-- Contraseña -->
             <label for="userPassword">Contraseña </label>
             <div class="input-line">
                 <input type="password" id="userPassword" name="userPassword" >
+                <small class="text-danger ms-2"><%= locals.errors && errors.userPassword ? errors.userPassword.msg : null %></small>
             </div>
             
             <!-- Confirmar Contraseña -->
         <label for="confirmPassword">Confirmar Contraseña </label>
         <div class="input-line">
             <input type="password" id="confirmPassword" name="confirmPassword" >
+            <small class="text-danger ms-2"><%= locals.errors && errors.confirmPassword ? errors.confirmPassword.msg : null %></small>
         </div>
             
             <!-- Teléfono Celular -->
@@ -61,6 +65,7 @@
                         <div class="separator"></div>
                     </div>
                     <input type="text" id="employerPhone" name="employerPhone" placeholder="Número de teléfono celular" pattern="[0-9]+" >
+                    <small class="text-danger ms-2"><%= locals.errors && errors.employerPhone ? errors.employerPhone.msg : null %></small>
                 </div>
             </div>
 
@@ -74,6 +79,7 @@
             <label for="companyDescription">Breve Descripción de la Empresa </label>
             <div class="input-line-empresa">
                 <textarea id="companyDescription" name="companyDescription" placeholder="Breve descripción de la empresa" ></textarea>
+                <small class="text-danger ms-2"><%= locals.errors && errors.companyDescription ? errors.companyDescription.msg : null %></small>
             </div>
             
             <!-- Términos y Condiciones -->
