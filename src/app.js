@@ -9,7 +9,7 @@ const indexRouter = require('./routes/index.routes');
 const usersRouter = require('./routes/users.routes');
 const productsRouter = require('./routes/products.routes');
 
-const checkLocalSession= require('./middleware/checkLocalSession');
+const checkLocalSession = require('./middleware/checkLocalSession');
 const rememberMeMiddleware = require('./middleware/rememberMe');
 const checkCookie = require('./middleware/checkCookie');
 

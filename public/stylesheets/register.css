@@ -194,48 +194,6 @@ label {
     background-color: #23c2cb;
 }
 
-#freelancer-registration {
-    display: block;
-}
-
-#employer-registration {
-    display: none;
-}
-
-.toggle-container {
-    display: flex;
-    margin-bottom: 20px;
-    height: 30%;
-    width: 50%;
-    overflow: hidden;
-    border-radius: 15px;
-    background-color: var(--colorCelesteOscuro);
-}
-
-.toggle-btn {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    transition: background-color 0.3s;
-}
-
-.toggle-btn.freelancer {
-    background-color: var(--colorAzulOscuro);
-}
-
-.toggle-btn.employer {
-    background-color: var(--colorCelesteOscuro);
-}
-
-.toggle-btn.active {
-    background-color: var(--colorCelesteClaro);
-    color: var(--colorAzulOscuro);
-}
-
 .register-container {
     position: relative;
 }
@@ -271,6 +229,78 @@ label {
 
 .social-buttons .btn {
     margin-bottom: 10px;
+}
+ /* Estilos para el contenedor de botones */
+ .button-container {
+    text-align: center;
+    margin: 20px;
+
+}
+
+/* Estilos para la caja de los botones */
+.registration-container {
+    background-color: var(--colorAzulOscuro); /* Color de fondo azul */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Estilos para los botones de registro */
+.registration-button {
+    display: block;
+    width: 100%;
+    padding: 15px 25px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #fcfcfc, #000000);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 3, 0, 0.4); /* Sombra */
+}
+
+.registration-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(175, 124, 76, 0.6); /* Sombra al pasar el cursor */
+}
+
+.registration-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.88); /* Color del efecto 3D */
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.registration-button:hover::before {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+}
+
+.registration-button span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos para los botones Freelancer y Empresa */
+.registration-button.freelancer {
+    background-image: linear-gradient(to right, var(--colorNaranja), var( --colorCelesteOscuro));
+}
+
+.registration-button.empresa {
+    background-image: linear-gradient(to right, var( --colorCelesteOscuro), var(--colorNaranja));
 }
 /* telefonos */
 @media (max-width: 429px) {
@@ -357,13 +387,6 @@ label {
         border-radius: 0 0 5px 5px;
     }
 
-    .toggle-container {
-        width: 80%; 
-    }
-
-    .toggle-btn {
-        font-size: 14px; 
-    }
     .input-line-habilidades textarea,
 .input-line-empresa textarea {
     width: 90%;
@@ -445,5 +468,15 @@ label {
         font-size: 24px; 
         margin-right: 20px; 
     }
+
+    * Estilos para el contenedor del formulario de registro */
+.registration-form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
 
 }

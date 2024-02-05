@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head', {title: 'Home | FreeLab' }) %>
+  <body class="body-register">
+    <%- include('../partials/header')%>
+    <div class="register-container">
+      <!-- Formulario de registro -->
+      <div class="register-form">
+        <form id="freelancer-registration" class="registration-section freelancer" action="" method="POST" enctype="multipart/form-data">
+          <h1>Registro Freelancer</h1>
+
+          <!-- Nombre -->
+          <div class="input-line">
+            <label for="freelancerFirstname">Nombre </label>
+            <input type="text" id="freelancerFirstname" name="freelancerFirstname" placeholder="Nombre" pattern="[A-Za-zÁ-ÿ\s']{1,}">
+            <small class="text-danger ms-2"><%= locals.errors && errors.freelancerFirstname ? errors.freelancerFirstname.msg : null %></small>
+          </div>
+
+          <!-- Apellido -->
+          <label for="freelancerLastname">Apellido </label>
+          <div class="input-line">
+            <input type="text" id="freelancerLastname" name="freelancerLastname" placeholder="Apellido" pattern="[A-Za-zÁ-ÿ\s']{1,}">
+            <small class="text-danger ms-2"><%= locals.errors && errors.freelancerLastname ? errors.freelancerLastname.msg : null %></small>
+          </div>
+
+          <!-- Correo -->
+          <label for="userEmail">Correo </label>
+          <div class="input-line">
+            <input type="text" id="userEmail" name="userEmail" placeholder="ejemplo@ejemplo.com">
+            <small class="text-danger ms-2"><%= locals.errors && errors.userEmail ? errors.userEmail.msg : null %></small>
+          </div>
+
+          <!-- Contraseña -->
+          <label for="userPassword">Contraseña </label>
+          <div class="input-line">
+            <input type="password" id="userPassword" name="userPassword">
+            <small class="text-danger ms-2"><%= locals.errors && errors.userPassword ? errors.userPassword.msg : null %></small>
+          </div>
+
+          <!-- Confirmar Contraseña -->
+          <label for="freelancerConfirmPassword">Confirmar Contraseña </label>
+          <div class="input-line">
+            <input type="password" id="freelancerConfirmPassword" name="freelancerConfirmPassword">
+            <small class="text-danger ms-2"><%= locals.errors && errors.freelancerConfirmPassword ? errors.freelancerConfirmPassword.msg : null %></small>
+          </div>
+
+          <!-- Teléfono Celular -->
+          <label for="freelancerPhone">Teléfono Celular</label>
+          <div class="input-line-phone">
+            <div class="phone-input-container">
+              <select id="freelancerPhoneCode" name="freelancerPhoneCode">
+                <option value="+1">+1 (EE. UU.)</option>
+                    <option value="+44">+44 (Reino Unido)</option>
+                    <option value="+54">+54 (Argentina)</option>
+                    <option value="+55">+55 (Brasil)</option>
+                    <option value="+56">+56 (Chile)</option>
+                    <option value="+57">+57 (Colombia)</option>
+                    <option value="+51">+51 (Perú)</option>
+                    <option value="+595">+595 (Paraguay)</option>
+                    <option value="+598">+598 (Uruguay)</option>
+                    <option value="+1">+1 (EE. UU.)</option>
+                    <option value="+44">+44 (Reino Unido)</option>
+                    <option value="+81">+81 (Japón)</option>
+                    <option value="+86">+86 (China)</option>
+                    <option value="+91">+91 (India)</option>
+              </select>
+              <div class="separator-container">
+                <div class="separator"></div>
+              </div>
+              <input type="text" id="freelancerPhone" name="freelancerPhone" placeholder="Número de teléfono celular" pattern="[0-9]+">
+              <small class="text-danger ms-2"><%= locals.errors && errors.freelancerPhone ? errors.freelancerPhone.msg : null %></small>
+            </div>
+          </div>
+
+          <!-- Imagen de Perfil -->
+          <div class="input-line">
+            <label for="freelancerImage">Agregar imagen de perfil</label>
+            <input type="file" name="freelancerImage" class="form-control" id="freelancerImage">
+            <small class="text-danger ms-2"><%= locals.errors && errors.freelancerImage ? errors.freelancerImage.msg : null %></small>
+          </div>
+
+          <!-- Descripción de Habilidades -->
+          <label for="freelancerkills">Descripción de Habilidades</label>
+          <div class="input-line-habilidades">
+            <textarea id="freelancerkills" name="freelancerkills" placeholder="Descripción de habilidades"></textarea>
+            <small class="text-danger ms-2"><%= locals.errors && errors.freelancerkills ? errors.freelancerkills.msg : null %></small>
+          </div>
+
+          <!-- Términos y Condiciones -->
+          <div class="checkbox-line">
+            <input type="checkbox" id="freelancer-terms" name="freelancer-terms">
+            <label for="freelancer-terms">Acepto los términos, condiciones y aviso de privacidad</label>
+            
+          </div>
+
+          <!-- Notificaciones por Correo -->
+          <div class="checkbox-line">
+            <input type="checkbox" id="freelancer-notifications" name="freelancer-notifications">
+            <label for="freelancer-notifications">Acepto recibir notificaciones por correo</label>
+            
+          </div>
+
+          <button type="submit" class="btn">Registrarse como Freelancer</button>
+        </form>
+      </div>
+
+      <!-- Caja de inicio de sesión -->
+      <div class="register-box">
+        <p>Ingrese desde</p>
+        <div class="social-buttons">
+          <button class="btn"><i class="fab fa-linkedin"></i><span class="vertical-line"></span>LinkedIn</button>
+          <button class="btn"><i class="fab fa-facebook"></i><span class="vertical-line"></span>Facebook</button>
+          <button class="btn"><i class="fab fa-google"></i><span class="vertical-line"></span>Google</button>
+        </div>
+      </div>
+    </div>
+    <%- include('../partials/footer')%>
+    <%- include('../partials/scripts') %>
+  </body>
+</html>

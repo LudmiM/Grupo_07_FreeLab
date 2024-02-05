@@ -5,10 +5,10 @@ module.exports = {
         //console.log(req.session.userLogin)
         const products= leerJSON('products')
         const postReversed = [...products.servicios].reverse();
-        /* agregar json de ofertas laborales a futuro */
+
         return res.render('index',{
             products:postReversed
-        }); //return res.render('index');
+        }); 
     },
     card: (req,res) => {
         res.render('productCart');
