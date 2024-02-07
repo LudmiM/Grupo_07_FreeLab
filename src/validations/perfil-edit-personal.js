@@ -1,16 +1,14 @@
-const { check } = require("express-validator");
+const { body } = require("express-validator");
 
-const editPersonalValidator = [
-    check('freelancerFirstname')
+module.exports = [
+    body('freelancerFirstname')
         .notEmpty().withMessage('El nombre no debe estar vacio'),
-    check('freelancerLastname')
+    body('freelancerLastname')
         .notEmpty().withMessage('El apellido no debe estar vacio'),
-    check('freelancerPhoneCode')
+    body('freelancerPhoneCode')
         .notEmpty().withMessage('El código de país es obligatorio'),
-    check('freelancerPhone')
+    body('freelancerPhone')
         .notEmpty().withMessage('El número de teléfono es obligatorio')/*,
-    check('mainImage')
+    body('mainImage')
         .notEmpty().withMessage('La imagen es obligatoria')*/
 ];
-
-module.exports = editPersonalValidator;

@@ -1,14 +1,11 @@
 const { leerJSON, escribirJSON } = require('./../../data');
-const fs = require('fs');
-const path = require('path');
 const {validationResult} =require('express-validator')
 
 module.exports = (req, res) => {
     const errors = validationResult(req);
+    const datos = leerJSON('usuarios');
 
     if (errors.isEmpty()) { 
-    
-        const datos = leerJSON('usuarios');
 
         if ("freelancer" === req.session.userLogin.rol) {
             const { freelancerFirstname,freelancerLastname,freelancerPhoneCode,freelancerPhone } = req.body;
@@ -17,7 +14,7 @@ module.exports = (req, res) => {
                 if (p.id === req.session.userLogin.id) {
                     p.freelancerFirstname = freelancerFirstname ? freelancerFirstname.trim() : p.freelancerFirstname;
                     p.freelancerLastname = freelancerLastname ? freelancerLastname.trim() : p.freelancerLastname;
-                    p.freelancerPhoneCode = freelancerPhoneCode ? freelancerPhoneCode.trim() : p.freelancerPhoneCode;
+                    p.freelancerPhoneCode = freelancerPhoneCode ? freelancerPhoneCode : p.freelancerPhoneCode;
                     p.freelancerPhone = freelancerPhone ? freelancerPhone.trim() : p.freelancerPhone;
                     //p.mainImage  = mainImage  ? mainImage : p.mainImage ;
                 }
@@ -43,6 +40,7 @@ module.exports = (req, res) => {
         console.log('voy a redireccionar a /usuarios/perfil')
         return res.redirect('/usuarios/perfil')
     } else {
+        return res.redirect('/usuarios/perfil')//Si uso el render, entonces le tengo que enviar los datos filtrados del json
         return res.render('users/profile-edit'/*, {
             errors: errors.mapped(),
             old: req.body

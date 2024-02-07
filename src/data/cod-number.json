@@ -1,0 +1,14 @@
+[
+    { "code": "+1", "country": "EE. UU." },
+    { "code": "+44", "country": "Reino Unido" },
+    { "code": "+54", "country": "Argentina" },
+    { "code": "+55", "country": "Brasil" },
+    { "code": "+56", "country": "Chile" },
+    { "code": "+57", "country": "Colombia" },
+    { "code": "+51", "country": "Perú" },
+    { "code": "+595", "country": "Paraguay" },
+    { "code": "+598", "country": "Uruguay" },
+    { "code": "+81", "country": "Japón" },
+    { "code": "+86", "country": "China" },
+    { "code": "+91", "country": "India" }
+]

@@ -27,10 +27,13 @@
                     </div>
                 
                     <div class="mb-3">
-                        <label for="freelancerPhoneCode" class="form-label">Phone Code:</label>
-                        <input type="text" class="form-control" id="freelancerPhoneCode" name="freelancerPhoneCode" value="<%= freelancerPhoneCode%>">
-                        <small class="text-danger ms-3"><%= locals.errors && errors.freelancerPhoneCode ? errors.freelancerPhoneCode.msg : null %></small>
+                        <select name="freelancerPhoneCode" class="form-select" id="freelancerPhoneCode" aria-label="Floating label select example">
+                            <% codN.forEach(country => { %>
+                                <option value="<%= country.code %>" <%= freelancerPhoneCode === country.code ? 'selected' : '' %>><%= country.country %> (<%= country.code %>)</option>
+                            <% }) %>
+                        </select>
                     </div>
+                    
                 
                     <div class="mb-3">
                         <label for="freelancerPhone" class="form-label">Phone:</label>
