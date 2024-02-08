@@ -11,13 +11,15 @@ module.exports = (req, res) => {
         console.log(req.session.userLogin.userEmail);
         return res.render('users/profile-edit', { ...adicionales, freelancerFirstname,freelancerLastname,freelancerPhoneCode,freelancerPhone,codN });  
       }else{
+        const {companyName,employerPhoneCode,employerPhone,companyDescription} = leerJSON('usuarios').empresas.find((e) => e.id === req.session.userLogin.id);
         //const adicionales = leerJSON('products').publicaciones.find((p) => p.id === req.session.userLogin.id);  
         /*
         const {companyName,employerPhoneCode,employerPhone,companyDescription} = leerJSON('usuarios').empresas.find((p) => p.id === req.session.userLogin.id);
         return res.render('users/profile-edit', { /*...adicionales,*/// companyName,employerPhoneCode,employerPhone,companyDescription });
         //*/
-        console.log('HIII')
+        res.render('users/profile-edit',{companyName,employerPhoneCode,employerPhone,companyDescription,codN})
       }
+
     }else{
       return res.render('/');
     }
