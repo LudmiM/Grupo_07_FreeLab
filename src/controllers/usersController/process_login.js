@@ -12,6 +12,8 @@ module.exports = (req, res) => {
         
         req.session.userLogin = datosParaSession(usuarios,email)
 
+        console.log('Muestrameee')
+        console.log(req.session.userLogin)
         if (remember) {
             res.cookie('FreeLab_user_Login_01', req.session.userLogin);
         } else {

@@ -5,7 +5,6 @@ module.exports = {
         //console.log(req.session.userLogin)
         const products= leerJSON('products')
         const postReversed = [...products.servicios].reverse();
-
         return res.render('index',{
             products:postReversed
         }); 

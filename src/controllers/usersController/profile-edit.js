@@ -8,7 +8,7 @@ module.exports = (req, res) => {
       if(req.session.userLogin.rol === "freelancer"){
         const adicionales = leerJSON('products').servicios.find((p) => p.id === req.session.userLogin.id);  
         const {freelancerFirstname,freelancerLastname,freelancerPhoneCode,freelancerPhone} = leerJSON('usuarios').freelancers.find((p) => p.id === req.session.userLogin.id);
-        
+        console.log(req.session.userLogin.userEmail);
         return res.render('users/profile-edit', { ...adicionales, freelancerFirstname,freelancerLastname,freelancerPhoneCode,freelancerPhone,codN });  
       }else{
         //const adicionales = leerJSON('products').publicaciones.find((p) => p.id === req.session.userLogin.id);  
