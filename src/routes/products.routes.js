@@ -6,7 +6,7 @@ const router = express.Router();
 
 router
   .get('/detallePublicacion',checkRol.logged, detailPost)
-  .get('/formularioProducto',checkRol.freelancer, formProduct)
+  .get('/formularioProducto',checkRol.freelancerOrCompany, formProduct)
   .post('/agregar', upload.array('image', 5), addPost) // Cambiado a upload.array para permitir varios archivos
   .get('/detalle/:id',checkRol.logged, detail)
   .delete('/delete/:id', eliminate)
