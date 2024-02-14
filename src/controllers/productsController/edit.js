@@ -1,3 +1,4 @@
+//EDITA UN POST/PUBLICACION
 const data = require('./../../data');
 
 module.exports = (req, res) => {

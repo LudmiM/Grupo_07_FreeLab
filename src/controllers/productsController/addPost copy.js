@@ -1,4 +1,3 @@
-//aGREGGA DATOS SECUNDARISO DE USSUARIOS
 const data = require('./../../data');
 
 module.exports = (req, res) => {
