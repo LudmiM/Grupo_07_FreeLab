@@ -15,8 +15,6 @@ module.exports = (req, res) => {
         console.log('Muestrameee')
         console.log(req.session.userLogin)
         if (remember) {
-            res.cookie('FreeLab_user_Login_01', req.session.userLogin);
-        } else {
             res.cookie('FreeLab_user_Login_01', req.session.userLogin, {
                 maxAge: 1000 * 60 * 5 
             });
