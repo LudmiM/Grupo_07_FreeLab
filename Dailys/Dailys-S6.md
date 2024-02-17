@@ -1,14 +1,14 @@
 ### viernes 09/02
 
 **Marco** :
-**Ludmila** : 
+**Ludmila** : Inicie con el diagrama DER
 **Rony** : 
 **Milagros** : 
 
 ### sabado 10/02
 
 **Marco** :
-**Ludmila** : 
+**Ludmila** : Continuo con el DER, me encontr un problema con los usuarios, que se crea al tener ambos separados.
 **Rony** : 
 **Milagros** : 
 
@@ -29,7 +29,7 @@
 ### miercoles 14/02
 
 **Marco** :
-**Ludmila** :
+**Ludmila** : Envie el der, y se hizo la correccion con Eric, quedo divino.
 **Rony** : 
 **Milagros** : 
 
