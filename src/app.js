@@ -11,7 +11,6 @@ const usersRouter = require('./routes/users.routes');
 const productsRouter = require('./routes/products.routes');
 
 const checkLocalSession = require('./middleware/checkLocalSession');
-const rememberMeMiddleware = require('./middleware/rememberMe');
 const checkCookie = require('./middleware/checkCookie');
 
 const session = require('express-session');
@@ -26,7 +25,6 @@ app
   .use(logger('dev'))
   .use(cookieParser())
   .use(methodOverride('_method'))
-  .use(rememberMeMiddleware)  // Coloca el middleware antes de las rutas
 
   // Middleware para formularios
   .use(express.json())
