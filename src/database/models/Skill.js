@@ -1,23 +1,24 @@
+'use strict';
+const {
+  Model
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-    const alias = "Skill";
-    const cols ={
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
-        },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        image: {
-            type: DataTypes.TEXT
-        }
+  class Skill extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
     }
-    const config= {
-        tableName: 'skilles'
-    }
-    const Skill = sequelize.define(alias, cols, config)
-    return Skill;
+  }
+  Skill.init({
+    name: DataTypes.STRING,
+    shape: DataTypes.TEXT
+  }, {
+    sequelize,
+    modelName: 'Skill',
+  });
+  return Skill;
 };

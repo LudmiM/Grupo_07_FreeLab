@@ -1,25 +1,24 @@
+'use strict';
+const {
+  Model
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-    const alias = "ProjectSkill";
-    const cols ={
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
-        },
-        project_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        skill_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        }
-        
+  class ProjectSkill extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
     }
-    const config= {
-        tableName: 'projects'
-    }
-    const Project = sequelize.define(alias, cols, config)
-    return Project;
+  }
+  ProjectSkill.init({
+    idProject: DataTypes.INTEGER,
+    idSkill: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'ProjectSkill',
+  });
+  return ProjectSkill;
 };
