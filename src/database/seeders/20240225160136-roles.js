@@ -1,21 +1,13 @@
 'use strict';
 
-const rolJSON = require('./../../data/rol.json')
+const {leerJSON} = require('./../../data/')
+const rolJSON = leerJSON('rol')
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Roles', [
-      {
-        name: 'freelancer'
-      },
-      {
-        name: 'companie'
-      },
-      {
-        name: 'administrador'
-      }
-    ], {});
+    const roles = rolJSON.map(r => ({ name: r }))
+    await queryInterface.bulkInsert('Roles',roles, {});
   },
 
   async down (queryInterface, Sequelize) {
