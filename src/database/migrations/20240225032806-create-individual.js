@@ -19,7 +19,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       idProject: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       chosen: {
         type: Sequelize.BOOLEAN

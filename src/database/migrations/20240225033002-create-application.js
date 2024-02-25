@@ -10,7 +10,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       idFreelancer: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       idIndividual: {
         type: Sequelize.INTEGER

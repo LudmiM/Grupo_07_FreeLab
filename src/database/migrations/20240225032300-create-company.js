@@ -10,7 +10,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       companyName: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       description: {
         type: Sequelize.TEXT
@@ -25,7 +26,8 @@ module.exports = {
         type: Sequelize.TEXT
       },
       idUser: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
