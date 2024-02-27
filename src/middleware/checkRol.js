@@ -32,8 +32,8 @@ module.exports = {
             return res.redirect('/usuarios/ingreso');
         }
     },
-    freelancerOrCompany: (req, res, next) => {
-        if (req.session.userLogin && (req.session.userLogin.rol === 'freelancer' || req.session.userLogin.rol === 'empresa')) {
+    loggedAdmin: (req, res, next) => {
+        if (req.session.userLogin && (req.session.userLogin.rol === 'freelancer')) {
             return next();
         } else {
             return res.redirect('/usuarios/ingreso');
