@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Skill.belongsToMany(models.Freelancer, { through: 'freelancerskill' });
+      Skill.belongsToMany(models.Project, { through: 'projectskill' });
     }
   }
   Rol.init({
