@@ -1,51 +1,25 @@
-const { leerJSON, escribirJSON } = require('./../../data');
-const {validationResult} =require('express-validator')
+const { validationResult } = require('express-validator');
+const { User } = require('../../database/models');
 
-module.exports = (req, res) => {
-    const errors = validationResult(req);
-    const datos = leerJSON('usuarios');
+module.exports = async (req, res) => {
+    try {
+        const errors = validationResult(req);
 
-    if (errors.isEmpty()) { 
-
-        if ("freelancer" === req.session.userLogin.rol) {
-            const { freelancerFirstname,freelancerLastname,freelancerPhoneCode,freelancerPhone } = req.body;
-            
-            const freelancer =(p) => {
-                if (p.id === req.session.userLogin.id) {
-                    p.freelancerFirstname = freelancerFirstname ? freelancerFirstname.trim() : p.freelancerFirstname;
-                    p.freelancerLastname = freelancerLastname ? freelancerLastname.trim() : p.freelancerLastname;
-                    p.freelancerPhoneCode = freelancerPhoneCode ? freelancerPhoneCode : p.freelancerPhoneCode;
-                    p.freelancerPhone = freelancerPhone ? freelancerPhone.trim() : p.freelancerPhone;
-                    //p.mainImage  = mainImage  ? mainImage : p.mainImage ;
-                }
-                return p;
-            };
-            datos.freelancers = datos.freelancers.map(freelancer);
-        }else{
-            const {companyName,employerPhoneCode,employerPhone,companyDescription} = req.body;
-            
-            const empresa = (e)=>{
-                if (e.id === req.session.userLogin.id) {
-                    //e.id = e.id;
-                    e.companyName = companyName ? companyName.trim() : e.companyName;
-                    e.employerPhoneCode = employerPhoneCode ? employerPhoneCode.trim() : e.employerPhoneCode;
-                    e.employerPhone = employerPhone ? employerPhone.trim() : e.employerPhone;
-                    e.companyDescription = companyDescription ? companyDescription.trim() : e.companyDescription;
-                }
-                return e;
-            }
-            datos.empresas = datos.empresas.map(empresa);
+        if (!errors.isEmpty()) {
+            return res.render('users/profile-edit', {
+                errors: errors.array(),
+                data: req.body
+            });
         }
-        escribirJSON(datos, 'usuarios');
-        console.log('voy a redireccionar a /usuarios/perfil')
-        return res.redirect('/usuarios/perfil')
-    } else {
-        return res.redirect('/usuarios/perfil')//Si uso el render, entonces le tengo que enviar los datos filtrados del json
-        return res.render('users/profile-edit'/*, {
-            errors: errors.mapped(),
-            old: req.body
-        }*/);
-            
-    }
 
-}
+        const { id } = req.session.userLogin;
+        const userData = req.body;
+
+        await User.update(userData, { where: { id } });
+
+        return res.redirect('/usuarios/perfil');
+    } catch (error) {
+        console.error('Error al actualizar datos personales:', error);
+        return res.status(500).send('Error en el servidor');
+    }
+};

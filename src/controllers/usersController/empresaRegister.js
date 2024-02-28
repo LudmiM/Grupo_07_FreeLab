@@ -1,39 +1,44 @@
-const data = require('../../data');
-const bcryptjs = require('bcryptjs');
 const { validationResult } = require("express-validator");
+const { Company, User } = require('../../database/models');
+const bcryptjs = require('bcryptjs');
 
-module.exports =  (req, res) => {
-  const errors = validationResult(req);
-    const { companyName, userEmail, userPassword, employerPhoneCode, employerPhone, companyDescription, confirmPassword } = req.body;
+module.exports = async (req, res) => {
+  try {
+    const errors = validationResult(req);
+    const { companyName, userEmail, userPassword, description, location, website } = req.body;
 
-    const users = data.leerJSON('usuarios');
-    const file = req.file;
+    if (errors.isEmpty()) {
+      // Cifra la contraseña utilizando bcryptjs
+      const hashedPassword = await bcryptjs.hash(userPassword, 10);
 
-    const lastId = users.empresas.length > 0 ? parseInt(users.empresas[users.empresas.length - 1].id) : 0;
-    const newId = lastId + 1;
-    const empresa = "empresa";
+      // Crea un nuevo usuario en la base de datos
+      const newUser = await User.create({
+        email: userEmail,
+        password: hashedPassword,
+        role: 'company' // Asigna el rol como 'company'
+      });
 
-    function usuario(companyName, userEmail, userPassword,employerPhoneCode,employerPhone,mainImage, companyDescription,){
-      this.id = newId;
-      this.companyName = companyName;
-      this.userEmail = userEmail;
-      this.userPassword = bcryptjs.hashSync(userPassword, 10);
-      this.employerPhoneCode = employerPhoneCode;
-      this.employerPhone = employerPhone;
-      this.mainImage = mainImage;
-      this.companyDescription = companyDescription;
-      this.rol = empresa;
-    }
-    if(errors.isEmpty()){
-      const newUsuario = new usuario(companyName, userEmail, userPassword, employerPhoneCode, employerPhone, file.filename, companyDescription);
+      // Crea una nueva empresa en la base de datos
+      const newCompany = await Company.create({
+        companyName,
+        description,
+        location,
+        website,
+        userId: newUser.id
+      });
 
-      users.empresas.push(newUsuario);
-      data.escribirJSON(users, 'usuarios');
+      // Redirige al usuario a la página de inicio de sesión después del registro exitoso
       return res.redirect('/usuarios/ingreso');
-    }else{
-      return res.render('users/empresaForm',{
-          old : req.body,
-          errors : errors.mapped()
-      })
-}
+    } else {
+      // Si hay errores de validación, renderiza el formulario de registro de empresa con los errores
+      return res.render('users/empresaForm', {
+        old: req.body,
+        errors: errors.array()
+      });
+    }
+  } catch (error) {
+    // Captura cualquier error y envía un mensaje de error al cliente
+    console.error('Error en el registro de la empresa:', error);
+    return res.status(500).send('Error en el servidor');
+  }
 };
