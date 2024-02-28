@@ -12,6 +12,6 @@ module.exports = [
         }
         return true;
       }),
-    body('employerPhone').notEmpty().withMessage('El número de teléfono es obligatorio').isAlphanumeric().withMessage('Ingrese un número válido'), // Permitir letras y números
+    body('employerPhone').notEmpty().withMessage('El número de teléfono es obligatorio').isNumeric().withMessage('Ingrese un número válido'), // Corregido a isNumeric()
     // Agrega más reglas según sea necesario
 ];

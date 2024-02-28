@@ -1,4 +1,4 @@
-// controllers/users/register.js
+// controllers/users/register.js:
 
 
 module.exports = (req, res) => {
