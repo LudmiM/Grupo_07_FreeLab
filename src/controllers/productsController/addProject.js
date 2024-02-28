@@ -1,36 +1,28 @@
-const data = require('../../data');
+const data = require('./../../data/index');
 
 module.exports = (req, res) => {
-    const { title, description} = req.body;
+    const { title,description,price,category, idUser } = req.body;
   
     const publications = data.leerJSON('publications');
-   
-    // Obtener el último id en la lista actual
-    const lastId = publications.servicios.length > 0 ? parseInt(publications.servicios[publications.servicios.length - 1].id) : 0;
-  
+    
+    const lastId = publications.length > 0 ? parseInt(publications[publications.length - 1].id) : 0;
+
     // Crear un nuevo id consecutivo
     const newId = lastId + 1;
   
-    function projects(name, description, skills, portfolio, redes_sociales, category, price, currency) {
+    function project(title, description,category, price) {
       this.id = newId; // No convertir a cadena para que sea un número
-      this.name = name;
+      this.title = title;
       this.description = description;
-      this.skills = skills;
-      this.portfolio = portfolio;
-      this.redes_sociales = redes_sociales;
       this.category = category;
       this.price = price;
+      this.idUser = idUser;
     }
   
-    const newProject = new product(name, description, skills, portfolio, redes_sociales, category, price, currency);
-  
-    if (files && files.length > 0) {
-      const fileNames = files.map(file => file.filename); // Usar file.filename
-      newProduct.image = fileNames; // Guardar array de nombres de archivo modificados
-    }
-  
-    publications.servicios.push(newProduct);
+    const newproject = new project(title, description, category, price,idUser);
+
+    publications.push(newproject);
     data.escribirJSON(publications, 'publications');
   
-    res.redirect('/admin');
+    res.redirect('/usuarios/perfil');
   }

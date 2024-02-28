@@ -62,6 +62,45 @@
             "currency": "AUD",
             "cant_stars": "2",
             "image": []
+        },
+        {
+            "id": 6,
+            "description": "lsdlsa,d",
+            "category": "1",
+            "price": "349000"
+        },
+        {
+            "id": 7,
+            "description": "jjn",
+            "category": "1",
+            "price": "235"
+        },
+        {
+            "id": 8
+        },
+        {
+            "id": 9,
+            "description": "cndsmckdsmc",
+            "category": "1",
+            "price": "333"
+        },
+        {
+            "id": 10,
+            "description": "ghj",
+            "category": "1",
+            "price": "235"
+        },
+        {
+            "id": 11,
+            "description": "dcvf",
+            "category": "1",
+            "price": "235"
+        },
+        {
+            "id": 12,
+            "description": "vgg",
+            "category": "1",
+            "price": "349000"
         }
     ],
     "publicaciones": []
