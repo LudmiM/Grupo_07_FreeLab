@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head')%>
+
+  <body>
+
+    <%-include('../partials/header', {title: 'Home | FreeLab' })%>
+
+      <main class="main__create w-100">
+        <h4>creacion de proyecto</h4>
+
+        <form class="form__create" action="/productos/agregarProyecto" method="POST">
+
+          <div class="mb-3">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required>
+          </div>
+
+          <div class="form__create mb-3">
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
+
+          </div>
+
+          <div class="mb-3">
+            <label for="price">Price:</label><br>
+            <input type="number" id="price" name="price"><br>
+          </div>
+          <div class="mb-3">
+            <label for="category">category:</label><br>
+            <input type="number" id="category" name="category"><br>
+          </div>
+
+          <input id="idUser" name="idUser" type="text" value="<%= userLogin.id %>">
+
+          <div class="caja__botones row">
+            <div class="col-6 col-md-5 mx-auto">
+              <button type="button" class="btn btn-primary"><a href="/usuarios/perfil">Cancelar</a></button>
+            </div>
+            <div class="col-6 col-md-5 mx-auto">
+              <button type="submit" class="btn btn-primary">Agregar</button>
+            </div>
+          </div>
+        </form>
+      </main>
+      <%-include('../partials/footer')%>
+        <%-include('../partials/scripts')%>
+  </body>
+
+</html>

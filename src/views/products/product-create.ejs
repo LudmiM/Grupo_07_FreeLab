@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%-include('../partials/head')%>
+<%-include('../partials/head')%>
+
   <body>
 
     <%-include('../partials/header', {title: 'Home | FreeLab' })%>
@@ -9,7 +10,7 @@
         <div class="formulario__create w-100">
           <h4>Agregar presentacion</h4>
           <hr />
-          <form class="form__create" action="/productos/agregar" method="post" enctype="multipart/form-data">
+          <form class="form__create" action="/productos/agregarProyecto" method="post" enctype="multipart/form-data">
 
             <div class="mb-3">
               <label for="name" class="form-label">Habilidad</label>
@@ -150,7 +151,8 @@
         </div>
       </section>
     </main>
-    <%-include('../partials/footer')%>
-    <%-include('../partials/scripts')%>
+      <%-include('../partials/footer')%>
+        <%-include('../partials/scripts')%>
   </body>
+
 </html>
