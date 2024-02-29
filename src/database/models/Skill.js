@@ -10,7 +10,20 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Skill.belongsToMany(models.Project, {
+        through: 'ProjectSkill',
+        foreignKey: 'idSkill',
+        as: 'projects'
+      });
+      Skill.belongsToMany(models.Freelancer, {
+        through: 'FreelancerSkill',
+        foreignKey: 'idSkill',
+        as: 'freelancers'
+      });
+      Skill.belongsToMany(models.Individual, {
+        through: models.IndividualSkill,
+        foreignKey: 'idSkill'
+      });
     }
   }
   Skill.init({

@@ -4,7 +4,18 @@ const { Model, DataTypes } = require('sequelize');
 module.exports = (sequelize) => {
   class Freelancer extends Model {
     static associate(models) {
-      // Define las asociaciones aquí si las necesitas
+      Freelancer.belongsTo(models.Category, { foreignKey: 'idCategory' });
+      Freelancer.belongsTo(models.User, { foreignKey: 'idUser' });
+      Freelancer.hasMany(models.Favorite, { foreignKey: 'idFreelancer' })
+      Freelancer.belongsToMany(models.Skill, {
+        through: 'FreelancerSkill',
+        foreignKey: 'idFreelancer',
+        as: 'skills'
+      });
+      Freelancer.belongsToMany(models.Individual, {
+        through: models.Application,
+        foreignKey: 'idFreelancer'
+      });
     }
   }
   Freelancer.init({
