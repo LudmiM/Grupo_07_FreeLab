@@ -1,35 +1,46 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Applications', {
+    await queryInterface.createTable('skilles', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      idFreelancer: {
+      name: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      shape: {
+        type: Sequelize.TEXT
+      },
+      projectId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
         references: {
-          model: 'Freelancers', // Nombre de la tabla Freelancers
-          key: 'id' // Columna de referencia en la tabla Freelancers
+          model: 'Projects',
+          key: 'id'
         },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
       },
-      idIndividual: {
+      freelancerId: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Individuals', // Nombre de la tabla Individuals
-          key: 'id' // Columna de referencia en la tabla Individuals
+          model: 'Freelancers',
+          key: 'id'
         },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
       },
-      selected: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false // Valor predeterminado para la columna 'selected'
+      individualId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Individuals',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
       createdAt: {
         allowNull: false,
@@ -42,6 +53,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Applications');
+    await queryInterface.dropTable('skilles');
   }
 };

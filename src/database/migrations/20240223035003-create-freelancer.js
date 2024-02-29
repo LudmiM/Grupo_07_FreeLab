@@ -1,5 +1,4 @@
 'use strict';
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Freelancers', {
@@ -34,10 +33,22 @@ module.exports = {
       },
       idUser: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: 'Users', // Nombre de la tabla Users
+          key: 'id' // Nombre de la columna de usuario referenciada
+        },
+        onUpdate: 'CASCADE', // Actualizar en cascada si el usuario se actualiza
+        onDelete: 'CASCADE' // Eliminar en cascada si el usuario se elimina
       },
       idCategory: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Categories', // Nombre de la tabla Categories
+          key: 'id' // Nombre de la columna de categoría referenciada
+        },
+        onUpdate: 'CASCADE', // Actualizar en cascada si la categoría se actualiza
+        onDelete: 'SET NULL' // Establecer en nulo si la categoría se elimina
       },
       createdAt: {
         allowNull: false,

@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Applications', {
+    await queryInterface.createTable('Favorites', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -18,18 +18,15 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
       },
-      idIndividual: {
+      idProject: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         references: {
-          model: 'Individuals', // Nombre de la tabla Individuals
-          key: 'id' // Columna de referencia en la tabla Individuals
+          model: 'Projects', // Nombre de la tabla Projects
+          key: 'id' // Columna de referencia en la tabla Projects
         },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
-      },
-      selected: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false // Valor predeterminado para la columna 'selected'
       },
       createdAt: {
         allowNull: false,
@@ -42,6 +39,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Applications');
+    await queryInterface.dropTable('Favorites');
   }
 };

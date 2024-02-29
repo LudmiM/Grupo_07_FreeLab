@@ -1,5 +1,4 @@
 'use strict';
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Reviews', {
@@ -11,11 +10,23 @@ module.exports = {
       },
       idSender: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: 'Users', // Nombre de la tabla Users
+          key: 'id' // Columna de referencia en la tabla Users
+        },
+        onUpdate: 'CASCADE', // Actualizar en cascada si el usuario remitente se actualiza
+        onDelete: 'CASCADE' // Eliminar en cascada si el usuario remitente se elimina
       },
       idReceiver: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: 'Users', // Nombre de la tabla Users
+          key: 'id' // Columna de referencia en la tabla Users
+        },
+        onUpdate: 'CASCADE', // Actualizar en cascada si el usuario receptor se actualiza
+        onDelete: 'CASCADE' // Eliminar en cascada si el usuario receptor se elimina
       },
       score: {
         type: Sequelize.INTEGER,

@@ -1,5 +1,4 @@
 'use strict';
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Users', {
@@ -23,9 +22,15 @@ module.exports = {
       checked: {
         type: Sequelize.BOOLEAN
       },
-      idRole: {
+      roleId: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: 'Rols', // Ajusta este nombre según el modelo Rol
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
       createdAt: {
         allowNull: false,
@@ -35,6 +40,18 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
+    });
+    // Agregar restricción de clave foránea para roleId
+    await queryInterface.addConstraint('Users', {
+      fields: ['roleId'],
+      type: 'foreign key',
+      name: 'FK_Users_Roles',
+      references: {
+        table: 'Rols', // Ajusta este nombre según el modelo Rol
+        field: 'id'
+      },
+      onDelete: 'CASCADE',
+      onUpdate: 'CASCADE'
     });
   },
   async down(queryInterface, Sequelize) {
