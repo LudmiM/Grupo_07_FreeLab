@@ -5,10 +5,10 @@ const data = require('./../../data');
 const fs = require('fs');
 const { existsSync, unlinkSync, renameSync } = require('fs');
 const path = require('path');
-
+const db = require('../../database/models')
 
 module.exports = (req,res) => {
-    const products = data.leerJSON('products');
+    
     const productId = parseInt(req.params.id); // Convierte el id a número
   
     const productToDelete = products.servicios.find(p => p.id === productId);
