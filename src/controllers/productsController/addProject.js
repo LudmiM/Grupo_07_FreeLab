@@ -12,8 +12,8 @@ module.exports = (req, res) => {
     idCompany,
     price,
     category,
-    createAt : new Date,
-    updateAt : new Date
+    createdAt : new Date(),
+    updatedAt : new Date()
   })
   .then(project => {
     console.log(project);
