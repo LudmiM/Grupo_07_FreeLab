@@ -6,8 +6,8 @@ module.exports = {
 
     await queryInterface.bulkInsert('Companies', [
       {
-        companyName: "",
-        description: "",
+        companyName: "company",
+        description: "Busco personal responsable",
         idUser: 2
       }
     ], {});

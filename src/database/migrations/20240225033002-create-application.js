@@ -11,10 +11,20 @@ module.exports = {
       },
       idFreelancer: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "Freelancers",
+          }
+        }
       },
       idIndividual: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "Individuals",
+          }
+        }
       },
       selected: {
         type: Sequelize.BOOLEAN
