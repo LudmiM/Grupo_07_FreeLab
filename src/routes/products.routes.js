@@ -10,8 +10,8 @@ router
   .post('/agregarProyecto', addProject)
   .post('/agregar', upload.array('image', 5), addPost) // Cambiado a upload.array para permitir varios archivos
   .get('/detalle/:id',checkRol.logged, detail)
-  .delete('/delete/:id', eliminate)
-  .delete('/eliminar/:id/:imageName?', eliminate)
+  .delete('/eliminar/:id', eliminate) //ruta que elimina el proyecto creado
+  //.delete('/eliminar/:id/:imageName?', eliminate)
   .get('/editar/:id?',checkRol.logged, edit)
   .post('/editar/:id?', upload.array('image', 5), updateProduct) // Cambiado a upload.array para permitir varios archivos
   .get('/listado', listadoProducts);
