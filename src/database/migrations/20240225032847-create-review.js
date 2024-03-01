@@ -11,11 +11,21 @@ module.exports = {
       },
       idSender: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "Users",
+          }
+        }
       },
       idReceiver: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "Users",
+          }
+        }
       },
       score: {
         type: Sequelize.INTEGER,

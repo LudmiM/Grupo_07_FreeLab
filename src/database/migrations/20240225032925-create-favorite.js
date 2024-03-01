@@ -11,11 +11,21 @@ module.exports = {
       },
       idFreelancer: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "Freelancers",
+          }
+        }
       },
       idProject: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "Projects",
+          }
+        }
       }
     });
   },

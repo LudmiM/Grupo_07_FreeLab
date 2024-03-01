@@ -25,7 +25,12 @@ module.exports = {
       },
       idRole: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "Roles",
+          }
+        }
       },
       createdAt: {
         allowNull: false,

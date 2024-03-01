@@ -34,18 +34,20 @@ module.exports = {
       },
       idUser: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "Users",
+          }
+        }
       },
       idCategory: {
-        type: Sequelize.INTEGER
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "Categories",
+          }
+        }
       }
     });
   },

@@ -20,18 +20,15 @@ module.exports = {
       },
       idProject: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "Projects",
+          }
+        }
       },
       chosen: {
         type: Sequelize.BOOLEAN
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
       }
     });
   },

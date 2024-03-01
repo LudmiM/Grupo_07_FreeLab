@@ -10,10 +10,20 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       idIndividual: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "Individuals",
+          }
+        }
       },
       idSkill: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "Skilles",
+          }
+        }
       }
     });
   },

@@ -17,10 +17,20 @@ module.exports = {
         type: Sequelize.TEXT
       },
       idStatus: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "States",
+          }
+        }
       },
       idCompany: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "Companies",
+          }
+        }
       },
       price: {
         type: Sequelize.INTEGER
