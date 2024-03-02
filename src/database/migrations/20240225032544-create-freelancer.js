@@ -20,6 +20,9 @@ module.exports = {
       country: {
         type: Sequelize.STRING
       },
+      mainImage: {
+        type: Sequelize.STRING
+      },
       phoneCode: {
         type: Sequelize.INTEGER
       },

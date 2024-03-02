@@ -13,10 +13,10 @@ module.exports = {
         res.render('productCart');
     },
     admin: (req,res) => {
-        const products= leerJSON('products')
+        //const products= leerJSON('products')
        /* return res.send(products);
         res.render('dashboard');*/
-        return res.render('dashboard',{products})
+        return res.render('dashboard')//,{products})
     },
     resultado: (req, res) => {
         const { key } = req.query; 
