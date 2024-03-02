@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'ProjectCategory',
+    timestamps: false, 
   });
   return ProjectCategory;
 };

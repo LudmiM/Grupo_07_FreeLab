@@ -9,10 +9,10 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {/*
+    static associate(models) {
       Freelancer.belongsTo(models.Category, { foreignKey: 'idCategory' });
       Freelancer.belongsTo(models.User, { foreignKey: 'idUser' });
-      Freelancer.hasMany(models.Favorite, { foreignKey: 'idFreelancer' })
+      /*Freelancer.hasMany(models.Favorite, { foreignKey: 'idFreelancer' })
       Freelancer.belongsToMany(models.Skill, {
         through: 'FreelancerSkill',
         foreignKey: 'idFreelancer',
@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Freelancer',
+    timestamps: false, 
   });
   return Freelancer;
 };
