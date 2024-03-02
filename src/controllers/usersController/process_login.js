@@ -24,7 +24,7 @@ module.exports = (req, res) => {
                     });
                 }
 
-                return idRole = 3 ? res.redirect('/admin') : res.redirect('/')
+                return idRole != 3 ? res.redirect('/') : res.redirect('/admin')
         }).catch(error => console.log(error),
         )
     } else {
