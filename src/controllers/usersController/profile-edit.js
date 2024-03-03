@@ -12,7 +12,6 @@ module.exports = async (req, res) => {
           }
         });
         console.log('this is freelancer '+freelancer.firstName,freelancer.lastName);
-        //return res.send(freelancer.dataValues)
         return res.render('users/profile-edit', {...freelancer.dataValues});
       } else {
         const company = await db.Company.findOne({
@@ -21,7 +20,7 @@ module.exports = async (req, res) => {
           }
         });
         console.log('this id company '+company.dataValues)
-        //res.render('users/profile-edit', { company, codN });
+        return res.render('users/profile-edit', {...company.dataValues});
       }
     } else {
       return res.render('/');
