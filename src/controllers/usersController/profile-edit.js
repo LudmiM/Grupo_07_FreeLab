@@ -1,5 +1,5 @@
 const db = require('./../../database/models')
-const {leerJSON} = require('./../../data');
+const { leerJSON } = require('./../../data');
 
 module.exports = async (req, res) => {
 
@@ -11,16 +11,27 @@ module.exports = async (req, res) => {
             idUser: req.session.userLogin.id
           }
         });
-        console.log('this is freelancer '+freelancer.firstName,freelancer.lastName);
-        return res.render('users/profile-edit', {...freelancer.dataValues});
+        //console.log('this is freelancer ' + freelancer.firstName, freelancer.lastName);
+        return res.render('users/profile-edit',{
+          ...freelancer.dataValues 
+        });
       } else {
         const company = await db.Company.findOne({
           where: {
             idUser: req.session.userLogin.id
           }
         });
-        console.log('this id company '+company.dataValues)
-        return res.render('users/profile-edit', {...company.dataValues});
+        const projects = await db.Project.findAll({
+          where: {
+            idCompany: company.id
+          }
+        })
+        console.log('Estos son los projects de company: ')
+        console.log(projects);
+        return res.render('users/profile-edit',{
+          ...company.dataValues,
+          projects
+        });
       }
     } else {
       return res.render('/');
