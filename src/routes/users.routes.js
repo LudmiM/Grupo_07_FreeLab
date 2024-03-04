@@ -12,6 +12,8 @@ const checkRol = require('../middleware/checkRol');
 const empresaValidationRules = require('../validations/empresaValidation');
 const  registerValidationRules = require('../validations/freelancerValidation');
 
+// /usuarios
+
 router.get('/ingreso', login);
 router.post('/ingreso', loginValidation, process_login);
 
@@ -27,7 +29,7 @@ router.get('/registro/empresa', (req, res) => {
 });
 router.post('/registro/empresa', uploadAvatar.single('empresaImage'), empresaValidationRules, empresaRegister);
 
-router.get('/perfil',checkUserLogin,profile)
+router.get('/perfil',checkRol.loggedNotAdmin,profile)
 router.put('/edit-laboral',editLaboral, actualizarLaboral)
 router.put('/edit-personal',editPersonal, actualizarPersonal)
 

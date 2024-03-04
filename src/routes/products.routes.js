@@ -4,6 +4,8 @@ const upload = require('../middleware/upload');
 const checkRol = require('../middleware/checkRol');
 const router = express.Router();
 
+// /productos
+
 router
   .get('/detallePublicacion',checkRol.logged, detailPost)
   .get('/agregarProyecto',checkRol.logged, formProject)
