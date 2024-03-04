@@ -21,18 +21,23 @@
             <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
 
           </div>
-
+          <!--
           <div class="mb-3">
             <label for="price">Price:</label><br>
             <input type="number" id="price" name="price"><br>
-          </div>
+          </div>-->
           <div class="mb-3">
             <label for="category">category:</label><br>
             <input type="number" id="category" name="category"><br>
           </div>
+          <input id="idStatus" name="idStatus" type="number" value="1">
 
-          <input id="idUser" name="idUser" type="text" value="<%= userLogin.id %>">
-
+          <!-- <div class="mb-3">
+            <label for="idStatus">status:</label><br>
+            <input type="number" id="idStatus" name="idStatus"><br>
+          </div>
+        -->
+     
           <div class="caja__botones row">
             <div class="col-6 col-md-5 mx-auto">
               <button type="button" class="btn btn-primary"><a href="/usuarios/perfil">Cancelar</a></button>
