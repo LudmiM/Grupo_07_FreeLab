@@ -1,10 +1,10 @@
 //CAMBIAR ESTO, ACTUALMENTE ELIMINA LOS DATOS SECUNDARIOS DEL USUARIO;
 //MODIFICARLO PARA QUE ELIMINE U N POST/PUBLICACION  DE EMPLEO
-
+/*
 const data = require('./../../data');
 const fs = require('fs');
 const { existsSync, unlinkSync, renameSync } = require('fs');
-const path = require('path');
+const path = require('path');*/
 const db = require('../../database/models')
 
 module.exports = (req,res) => {
