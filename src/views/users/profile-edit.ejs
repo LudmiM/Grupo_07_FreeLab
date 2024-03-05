@@ -66,6 +66,13 @@
                         <h3>Mis proyectos</h3>
                             <% projects.forEach(p => { %>
                                 <p><%= p.title %></p>
+                                <p><%= p.id %></p>
+                                <form action="/productos/eliminar/<%= p.id %>?_method=DELETE"  method="POST">
+                                    
+                                        <button type="submit" class="btn btn-sm btn-outline-danger">
+                                            Sí, eliminalo
+                                        </button>
+                                </form>
                             <% }) %>              
                     </div>               
                 <% } else { %>

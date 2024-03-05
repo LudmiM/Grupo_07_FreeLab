@@ -1,4 +1,3 @@
-const db = require('./../../database/models')
 const eliminate = require('./eliminate')
 const formProject = require('./formProject')
 const updateProduct = require('./updateProduct')

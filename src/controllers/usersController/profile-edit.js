@@ -27,8 +27,8 @@ module.exports = async (req, res) => {
           }
         })
         req.session.idCompany = company.id;
-        console.log('Estos son los projects de company: ')
-        console.log(projects);
+        //console.log('Estos son los projects de company: ')
+        //console.log(projects);
         return res.render('users/profile-edit',{
           ...company.dataValues,
           projects
