@@ -28,11 +28,11 @@
                 <img src="/images/RedFreeLab.jpg" alt="equipo freelancers" id="image3">
             </article>
         </section>
-        <section class="Home__products">
-            <h2>Nuevo en FreeLab!</h2>
+        <section class="Home__projects">
+            <h2>Ultimos agregados en FreeLab!</h2>
             <article>
                 <h3>Postulaciones</h3>
-                <% products.forEach(product=> { %>
+                <% projects.forEach(p=> { %>
                     <div class="card mb-3 description" style="max-width: 600px;">
                         <div class="row g-0">
                             <div class="col-md-4">
@@ -40,51 +40,20 @@
                             </div>
                             <div class="col-md-8 ">
                                 <div class="card-body">
-                                    <h5 class="card-title"><a href="/usuarios/perfil/<%= product.id %>">
-                                            <%= product.name %>
+                                    <h5 class="card-title"><a href="/usuarios/perfil/<%= p.id %>">
+                                            <%= p.name %>
                                         </a></h5>
                                     <p class="card-text"><small class="text-body-secondary">
-                                            <%= product.category %>
+                                            <%= p.category %>
                                         </small></p>
                                     <p class="card-text ">
-                                        <%= product.description %>
+                                        <%= p.description %>
                                     </p>
                                     <div class="d-flex justify-content-end">
-                                        <p class="card-text">$<%= product.price %>
-                                                <%= product.currency %>
+                                        <p class="card-text">$<%= p.price %>
+                                                <%= p.currency %>
                                         </p>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <% }) %>
-            </article>
-            <article>
-                <h3>Ofertas</h3> <!-- remplazar con ofertas laborales -->
-                <% products.forEach(product=> { %>
-                    <div class="card mb-3 description" style="max-width: 600px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="..." class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="/usuarios/perfil/<%= product.id %>">
-                                            <%= product.name %>
-                                        </a></h5>
-                                    <p class="card-text"><small class="text-body-secondary">
-                                            <%= product.category %>
-                                        </small></p>
-                                    <p class="card-text ">
-                                        <%= product.description %>
-                                    </p>
-                                    <div class="d-flex justify-content-end">
-                                        <p class="card-text">$<%= product.price %>
-                                                <%= product.currency %>
-                                        </p>
-                                    </div>
-    
                                 </div>
                             </div>
                         </div>
