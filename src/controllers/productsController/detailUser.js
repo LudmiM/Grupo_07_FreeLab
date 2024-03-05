@@ -1,9 +1,13 @@
-const data = require('../../data');
+const db = require('./../../database/models');
 
-module.exports = (req,res) => {
-    const { id } = req.params;
-    const productId = parseInt(id);
-    const product = data.leerJSON('products').servicios.find((p) => p.id === productId);
-    const usuarios = data.leerJSON('usuarios').freelancers.find((p) => p.id === productId);
-    return res.render('products/productDetail', { ...product, ...usuarios });
+module.exports = async (req,res) => {
+  try {
+    const id = +req.params.id;
+    const p = await db.Project.findByPk(id);
+    
+    return res.render('products/productDetail', { usuario });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send('Error interno del servidor');
   }
+}
