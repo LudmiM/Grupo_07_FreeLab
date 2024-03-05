@@ -2,7 +2,7 @@ const db = require("../../database/models");
 
 module.exports = (req, res) => {
    // if(error.isEmpty()) { 
-  const { title,description,idStatus,category} = req.body;
+  const { title,description,idStatus,category,skilles} = req.body;
   const idCompany = req.session.idCompany;
 
   db.Project.create({
