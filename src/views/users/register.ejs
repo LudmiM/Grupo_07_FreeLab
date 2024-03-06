@@ -17,10 +17,10 @@
             <form method="POST" action="/usuarios/registro" class="registration-form-container"> 
 
                 <!-- Correo -->
-                <label for="userEmail">Correo </label>
+                <label for="email">Correo </label>
                 <div class="input-line">
-                    <input type="text" id="userEmail" name="userEmail" placeholder="ejemplo@ejemplo.com">
-                    <small class="text-danger ms-2"></small>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com">
+                    <small class="text-danger ms-2"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
                 </div>
 
                 <!-- Contraseña -->
@@ -28,21 +28,22 @@
                 <div class="input-line">
                     <input type="password" id="userPassword" name="userPassword">
                     <small class="text-danger ms-2"></small>
+                    <small class="text-danger ms-2"><%= locals.errors && errors.userPassword ? errors.userPassword.msg : null %></small>
                 </div>
 
                 
                 <label for="confirmPassword">Confirmar Contraseña </label>
                 <div class="input-line">
                     <input type="password" id="confirmPassword" name="confirmPassword">
-                    <small class="text-danger ms-2"></small>
+                    <small class="text-danger ms-2"><%= locals.errors && errors.confirmPassword ? errors.confirmPassword.msg : null %></small>
                 </div>
 
                 <div class="select-free-emp">
                     <label for="userType">Seleccione su tipo de registro:</label>
                     <select id="userType" name="userType" class="registration-option">
-                        <option value="" disabled selected hidden>Seleccione una opción</option>
-                        <option value="freelancer">Registrarse como Freelancer</option>
-                        <option value="empresa">Registrarse como Empresa</option>
+                        <!--<option value="" disabled selected hidden>Seleccione una opción</option>-->
+                        <option value="2">Registrarse como Freelancer</option>
+                        <option value="1">Registrarse como Empresa</option>
                     </select>
                 </div>
 
