@@ -1,28 +1,19 @@
-const { leerJSON, escribirJSON } = require('./../../data');
+// actualizar-laboral.js
 
-module.exports = (req, res) => {
+const { Freelancer } = require('../../database/models');
 
-    const { name, description, skills, portfolio, redes_sociales, category, price, currency } = req.body;
-    const data = leerJSON('products');
+module.exports = async (req, res) => {
+    const userId = req.session.userLogin.idUser;
+    const { about, hourValue, country, phoneCode, phone, idCategory } = req.body;
 
-    const editados = (p) => {
-        if (p.id === req.session.userLogin.id) {
-            //p.id = p.id;
-            p.name = name ? name.trim() : p.name;
-            p.description = description ? description.trim() : p.description;
-            p.skills = skills ? skills.trim() : p.skills;
-            p.portfolio = portfolio ? portfolio.trim() : p.portfolio;
-            p.redes_sociales = redes_sociales ? redes_sociales.trim() : p.redes_sociales;
-            p.category = category ? category.trim() : p.category;
-            p.price = price ? price.trim() : p.price;
-            p.currency = currency ? currency.trim() : p.currency;
-
-        }
-        return p;
-    };
-    data.servicios = data.servicios.map(editados)
-
-    escribirJSON(data, 'products');
-    return res.redirect('/usuarios/perfil')
-
-}
+    try {
+        await Freelancer.update(
+            { about, hourValue, country, phoneCode, phone, idCategory },
+            { where: { idUser: userId } }
+        );
+        return res.redirect('/profile');
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send('Error al actualizar la información laboral.');
+    }
+};

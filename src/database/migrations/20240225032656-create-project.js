@@ -13,6 +13,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+<<<<<<< HEAD:src/database/migrations/20240225032656-create-project.js
       description: {
         type: Sequelize.TEXT
       },
@@ -31,6 +32,10 @@ module.exports = {
             tableName: "Companies",
           }
         }
+=======
+      image: {
+        type: Sequelize.STRING
+>>>>>>> af85b5d75ef7401a4f62e4d98bd955096c069bea:src/database/migrations/20240221235004-create-skills.js
       },
       createdAt: {
         allowNull: false,
