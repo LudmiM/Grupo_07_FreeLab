@@ -29,7 +29,7 @@
               <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
             </div>       
 
-            <div>
+            <div class="form__create mb-3">
               <select name="skilles" class="mul-select" id="skilles" multiple>
                 <% skills.forEach(s => { %>
                   <option value="<%= s.id %>"><%= s.name %></option>
