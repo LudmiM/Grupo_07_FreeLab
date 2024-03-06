@@ -1,4 +1,4 @@
-// validations/registerValidation.js
+// validations/registerValidation.js:
 
 const { body } = require('express-validator');
 
