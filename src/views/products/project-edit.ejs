@@ -14,24 +14,39 @@
             <div class="card-body-pe">
                 <form action="/productos/editar/<%= product.id %>" method="post" enctype="multipart/form-data" autocomplete="on">
                     <!-- Agregar un input oculto para el ID del producto -->
+                    <h3>Editando </h3>
                     <input type="hidden" name="id" value="<%= product ? product.id : '' %>">
-                    <div class="row"></div>
-                    <div class="col-12 mb-3">
-                        <label for="nombre" class="form-editpe">Habilidad</label>
-                        <input name="name" type="text" class="form-control" id="nombre" value="<%= product && product.name || '' %>" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="descripcion" class="form-editpe">Descripción</label>
-                        <textarea name="description" class="form-control" rows="3" placeholder="comentanos sobre vos" id="descripcion"><%= product && product.description || '' %></textarea>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="habilidades" class="form-editpe">Habilidades Practicas</label>
-                        <input name="skills" type="text" class="form-control" id="habilidades" value="<%= product && product.skills || '' %>" required>
-                    </div>
                     
-                    <div id="imageFieldsContainer">
+                    <div class="col-12 mb-3">
+                        <label for="name" class="form-editpe">Nombre</label>
+                        <input name="name" type="text" class="form-control"  value="<%= product && product.name || '' %>" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <select name="category" class="form-select" id="category" aria-label="Floating label select example">
+                          <option value="" selected hidden></option>
+                          <% categories.forEach(c => { %>
+                            <option value="<%= c.id %>"><%= c.name %></option>
+                          <% }) %>
+                        </select>
+                      </div>
+
+                      <div class="form__create mb-3">
+                        <label for="description">Description:</label><br>
+                        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
+                      </div>       
+          
+                      <div>
+                        <select name="skilles" class="mul-select" id="skilles" multiple>
+                          <% skills.forEach(s => { %>
+                            <option value="<%= s.id %>"><%= s.name %></option>
+                          <% }) %>
+                        </select>
+                      </div>
+          
+                      <input id="idStatus" name="idStatus" type="number" value="1" hidden>
+          
+                <!-- <div id="imageFieldsContainer">
                      
                         <div class="mb-3 image-field" data-index="2">
                             <label for="additionalImages" class="form-editpe">Seleccionar Imágenes Adicionales</label>
@@ -48,15 +63,8 @@
                     <div class="mb-3">
                         <label for="redes_sociales" class="form-editpe">Links a Redes Sociales</label>
                         <input name="redes_sociales" type="url" class="form-control" id="redes_sociales" value="<%= product && product.redes_sociales || '' %>">
-                    </div>
+                    </div> 
 
-                    <div class="mb-3">
-                        <label for="category" class="form-editpe">Categoría</label>
-                        <select name="category" class="form-select" id="categoria">
-                            <option value="" selected hidden>Selecciona una categoría</option>
-                            <!-- Agrega más opciones según sea necesario -->
-                        </select>
-                    </div>
 
                     <div class="col-12 mb-3">
                         <div class="input-group">
@@ -74,7 +82,7 @@
                                 </select>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="row">
                         <div class="col-6 col-md-5 mx-auto">
