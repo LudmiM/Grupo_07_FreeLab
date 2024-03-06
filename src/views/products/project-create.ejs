@@ -30,8 +30,7 @@
             </div>       
 
             <div>
-              <select name="skilles" class="form-select" id="skilles" multiple>
-                <option value="" selected hidden></option>
+              <select name="skilles" class="mul-select" id="skilles" multiple>
                 <% skills.forEach(s => { %>
                   <option value="<%= s.id %>"><%= s.name %></option>
                 <% }) %>
