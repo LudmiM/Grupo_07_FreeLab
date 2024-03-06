@@ -19,13 +19,6 @@
                 <input type="text" id="companyName" name="companyName" placeholder="Nombre de la Empresa" >
                 <small class="text-danger ms-2"><%= locals.errors && errors.companyName ? errors.companyName.msg : null %></small>
             </div>
-
-            <!-- Confirmar Contraseña -->
-        <label for="confirmPassword">Confirmar Contraseña </label>
-        <div class="input-line">
-            <input type="password" id="confirmPassword" name="confirmPassword" >
-            <small class="text-danger ms-2"><%= locals.errors && errors.confirmPassword ? errors.confirmPassword.msg : null %></small>
-        </div>
             
             <!-- Teléfono Celular -->
             <label for="employerPhone">Teléfono Celular</label>
