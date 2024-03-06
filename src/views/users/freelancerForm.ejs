@@ -23,27 +23,6 @@
             <small class="text-danger ms-2"><%= locals.errors && errors.freelancerLastname ? errors.freelancerLastname.msg : null %></small>
           </div>
 
-          <!-- Correo -->
-          <label for="userEmail">Correo </label>
-          <div class="input-line">
-            <input type="text" id="userEmail" name="userEmail" placeholder="ejemplo@ejemplo.com">
-            <small class="text-danger ms-2"><%= locals.errors && errors.userEmail ? errors.userEmail.msg : null %></small>
-          </div>
-
-          <!-- Contraseña -->
-          <label for="userPassword">Contraseña </label>
-          <div class="input-line">
-            <input type="password" id="userPassword" name="userPassword">
-            <small class="text-danger ms-2"><%= locals.errors && errors.userPassword ? errors.userPassword.msg : null %></small>
-          </div>
-
-          <!-- Confirmar Contraseña -->
-          <label for="freelancerConfirmPassword">Confirmar Contraseña </label>
-          <div class="input-line">
-            <input type="password" id="freelancerConfirmPassword" name="freelancerConfirmPassword">
-            <small class="text-danger ms-2"><%= locals.errors && errors.freelancerConfirmPassword ? errors.freelancerConfirmPassword.msg : null %></small>
-          </div>
-
           <!-- Teléfono Celular -->
           <label for="freelancerPhone">Teléfono Celular</label>
           <div class="input-line-phone">
@@ -86,33 +65,11 @@
             <small class="text-danger ms-2"><%= locals.errors && errors.freelancerkills ? errors.freelancerkills.msg : null %></small>
           </div>
 
-          <!-- Términos y Condiciones -->
-          <div class="checkbox-line">
-            <input type="checkbox" id="freelancer-terms" name="freelancer-terms">
-            <label for="freelancer-terms">Acepto los términos, condiciones y aviso de privacidad</label>
-            
-          </div>
-
-          <!-- Notificaciones por Correo -->
-          <div class="checkbox-line">
-            <input type="checkbox" id="freelancer-notifications" name="freelancer-notifications">
-            <label for="freelancer-notifications">Acepto recibir notificaciones por correo</label>
-            
-          </div>
-
-          <button type="submit" class="btn">Registrarse como Freelancer</button>
+          <button type="submit" class="registration-button freelancer">Registrarse como Freelancer</button>
         </form>
       </div>
 
-      <!-- Caja de inicio de sesión -->
-      <div class="register-box">
-        <p>Ingrese desde</p>
-        <div class="social-buttons">
-          <button class="btn"><i class="fab fa-linkedin"></i><span class="vertical-line"></span>LinkedIn</button>
-          <button class="btn"><i class="fab fa-facebook"></i><span class="vertical-line"></span>Facebook</button>
-          <button class="btn"><i class="fab fa-google"></i><span class="vertical-line"></span>Google</button>
-        </div>
-      </div>
+      
     </div>
     <%- include('../partials/footer')%>
     <%- include('../partials/scripts') %>
