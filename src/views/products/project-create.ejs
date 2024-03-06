@@ -30,7 +30,7 @@
             </div>       
 
             <div>
-              <select name="skilles" class="form-select" id="skilles" aria-label="Floating label select example">
+              <select name="skilles" class="form-select" id="skilles" multiple>
                 <option value="" selected hidden></option>
                 <% skills.forEach(s => { %>
                   <option value="<%= s.id %>"><%= s.name %></option>
@@ -41,6 +41,7 @@
             <input id="idStatus" name="idStatus" type="number" value="1" hidden>
 
             <!--Aca va todo lo de perfil personal-->
+            <!--
           <section class="individuals__container">
             <article class="individuals__container__data" id="individuals__container__data">
               <div class="mb-3">
@@ -72,7 +73,7 @@
               </div>
             </article>
           </section>
-          <button id="add__individuals" type="button">Agregar usuario</button>
+          <button id="add__individuals" type="button">Agregar usuario</button>-->
             <div class="caja__botones row">
               <div class="col-6 col-md-5 mx-auto">
                 <button type="button" class="btn btn-primary"><a href="/usuarios/perfil">Cancelar</a></button>

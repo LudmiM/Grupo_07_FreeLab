@@ -4,7 +4,6 @@ module.exports = async (req,res) => {
     try {
         const id = +req.params.id;
         const p = await db.Project.findByPk(id);
-        console.log(req.url)
         return res.render('products/project-detail',{p})
     } catch (error) {
         console.error(error);
