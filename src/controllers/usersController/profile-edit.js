@@ -10,8 +10,6 @@ module.exports = async (req, res) => {
             idUser: req.session.userLogin.id
           }
         });
-        //req.session.idFreelancer = freelancer.id;
-        //console.log('this is freelancer ' + freelancer.firstName, freelancer.lastName);
         return res.render('users/profile-edit',{
           ...freelancer.dataValues 
         });
@@ -27,8 +25,6 @@ module.exports = async (req, res) => {
           }
         })
         req.session.idCompany = company.id;
-        //console.log('Estos son los projects de company: ')
-        //console.log(projects);
         return res.render('users/profile-edit',{
           ...company.dataValues,
           projects
