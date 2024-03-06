@@ -21,7 +21,7 @@ module.exports = {
         references: {
           model: {
             tableName: "States",
-          }
+          } 
         }
       },
       idCompany: {
