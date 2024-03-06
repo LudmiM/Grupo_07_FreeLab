@@ -1,42 +1,38 @@
 module.exports = {
     admin: (req, res, next) => {
-        if (req.session.userLogin && req.session.userLogin.rol === 'admin') {
+        if (req.session.userLogin && req.session.userLogin.idRole === 3) {
             return next();
-        } else if (req.session.userLogin && (req.session.userLogin.rol === 'freelancer' || req.session.userLogin.rol === 'empresa')) {
+        } else if (req.session.userLogin && (req.session.userLogin.idRole === 3 || req.session.userLogin.idRole === 2)) {
             return res.redirect('/');
         } else {
             return res.redirect('/usuarios/ingreso');
         }
     },
     logged: (req, res, next) => {
-        if (req.session.userLogin && (req.session.userLogin.rol === 'freelancer' || req.session.userLogin.rol === 'empresa' || req.session.userLogin.rol === 'admin')) {
+        if (req.session.userLogin && (req.session.userLogin.idRole === 3 || req.session.userLogin.idRole === 2 || req.session.userLogin.idRole === 1)) {
             return next();
         }
         return res.redirect('/usuarios/ingreso');
     },
     freelancer: (req, res, next) => {
-        if (req.session.userLogin && (req.session.userLogin.rol === 'admin' || req.session.userLogin.rol === 'freelancer')) {
+        if (req.session.userLogin && (req.session.userLogin.idRole === 2)) {
             return next();
-        } else if (req.session.userLogin && req.session.userLogin.rol === 'empresa') {
-            return res.redirect('/');
         } else {
-            return res.redirect('/usuarios/ingreso');
+            return res.redirect('/');
         }
     },
-    empresa: (req, res, next) => {
-        if (req.session.userLogin && (req.session.userLogin.rol === 'admin' || req.session.userLogin.rol === 'empresa')) {
+    companie: (req, res, next) => {
+        if (req.session.userLogin && (req.session.userLogin.idRole === 1)) {
             return next();
-        } else if (req.session.userLogin && req.session.userLogin.rol === 'freelancer') {
-            return res.redirect('/');
         } else {
-            return res.redirect('/usuarios/ingreso');
+            return res.redirect('/');
         }
     },
-    loggedAdmin: (req, res, next) => {
-        if (req.session.userLogin && (req.session.userLogin.rol === 'freelancer')) {
+    loggedNotAdmin: (req, res, next) => {
+        if (req.session.userLogin && (req.session.userLogin.idRole === 1 || req.session.userLogin.idRole === 2)) {
             return next();
         } else {
-            return res.redirect('/usuarios/ingreso');
+            return res.redirect('/');
         }
     }
 }

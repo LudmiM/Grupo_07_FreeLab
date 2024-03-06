@@ -1,25 +1,31 @@
-const { validationResult } = require('express-validator');
-const { User } = require('../../database/models');
+const db = require('./../../database/models')
 
-module.exports = async (req, res) => {
-    try {
-        const errors = validationResult(req);
+module.exports = (req, res) => {
 
-        if (!errors.isEmpty()) {
-            return res.render('users/profile-edit', {
-                errors: errors.array(),
-                data: req.body
-            });
-        }
+    if (req.session.userLogin.idRole === 2) {
+        const { firstName, lastName, about } = req.body;
 
-        const { id } = req.session.userLogin;
-        const userData = req.body;
+        db.Freelancer.findOne({ where: { idUser: req.session.userLogin.id } })
+            .then(f => {
+                console.log(f)
+                f.update({
+                    firstName: firstName ? firstName.trim() : f.firstName,
+                    lastName: lastName ? lastName.trim() : f.lastName,
+                    about: about ? about : f.about
+                })
+            })
+    } else {
+        const { companyName, description } = req.body;
 
-        await User.update(userData, { where: { id } });
-
-        return res.redirect('/usuarios/perfil');
-    } catch (error) {
-        console.error('Error al actualizar datos personales:', error);
-        return res.status(500).send('Error en el servidor');
+        db.Company.findOne({ where: { idUser: req.session.userLogin.id } })
+            .then(c => {
+                if (c) {
+                    c.update({
+                        companyName: companyName ? companyName.trim() : c.companyName,
+                        description: description ? description.trim() : c.description
+                    })
+                }
+            })
     }
-};
+    return res.redirect('/usuarios/perfil')
+} 

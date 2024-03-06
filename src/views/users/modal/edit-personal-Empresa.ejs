@@ -11,39 +11,19 @@
                 <form action="/usuarios/edit-personal?_method=PUT" method="POST">
                     <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" value="<%= userLogin.userEmail %>" readonly>
+                        <input type="email" class="form-control" id="email" name="email" value="<%= userLogin.email %>" readonly>
                     </div>
                 
                     <div class="mb-3">
-                        <label for="companyName" class="form-label">First Name:</label>
+                        <label for="companyName" class="form-label">Name:</label>
                         <input type="text" class="form-control" id="companyName" name="companyName" value="<%= companyName %>">
                         <small class="text-danger ms-3"><%= locals.errors && errors.companyName ? errors.companyName.msg : null %></small>
                     </div>
                 
                     <div class="mb-3">
-                        <label for="companyDescription" class="form-label">Last Name:</label>
-                        <input type="text" class="form-control" id="companyDescription" name="companyDescription" value="<%= companyDescription %>">
-                        <small class="text-danger ms-3"><%= locals.errors && errors.companyDescription ? errors.companyDescription.msg : null %></small>
-                    </div>
-                
-                    <div class="mb-3">
-                        <select name="employerPhoneCode" class="form-select" id="employerPhoneCode" aria-label="Floating label select example">
-                            <% codN.forEach(country => { %>
-                                <option value="<%= country.code %>" <%= employerPhoneCode === country.code ? 'selected' : '' %>><%= country.country %> (<%= country.code %>)</option>
-                            <% }) %>
-                        </select>
-                    </div>              
-                
-                    <div class="mb-3">
-                        <label for="employerPhone" class="form-label">Phone:</label>
-                        <input type="text" class="form-control" id="employerPhone" name="employerPhone" value="<%= employerPhone %>">
-                        <small class="text-danger ms-3"><%= locals.errors && errors.employerPhone ? errors.employerPhone.msg : null %></small>
-                    </div>
-                
-                    <div class="mb-3">
-                        <label for="mainImage" class="form-label">Image:</label>
-                        <input type="text" class="form-control" id="mainImage" name="mainImage" value="<%= userLogin.mainImage %>">
-                        <!---->
+                        <label for="description" class="form-label">Descripcion:</label>
+                        <input type="text" class="form-control" id="description" name="description" value="<%= description %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.description ? errors.description.msg : null %></small>
                     </div>
                 
                     <div class="modal-footer">

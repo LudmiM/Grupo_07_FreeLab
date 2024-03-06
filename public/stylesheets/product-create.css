@@ -10,7 +10,9 @@
     border-radius: 5px;
     background-color: #ffffff;
 }
-
+.formulario__projectCreate{
+    background-color: aquamarine;
+}
 .form__create label{
     color: black;
 }

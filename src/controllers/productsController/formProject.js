@@ -1,5 +1,7 @@
-const data = require('../../data');
+const db = require("../../database/models");
 
-module.exports = (req, res) => {
-    res.render('products/project-create')
+module.exports = async (req, res) => {
+    const skills = await db.Skill.findAll({});
+    const categories = await db.Category.findAll({});
+    res.render('products/project-create', {skills, categories})
 }

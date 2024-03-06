@@ -11,39 +11,25 @@
                 <form action="/usuarios/edit-personal?_method=PUT" method="POST">
                     <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" value="<%= userLogin.userEmail %>" readonly>
+                        <input type="email" class="form-control" id="email" name="email" value="<%= userLogin.email %>" readonly>
                     </div>
                 
                     <div class="mb-3">
-                        <label for="freelancerFirstname" class="form-label">First Name:</label>
-                        <input type="text" class="form-control" id="freelancerFirstname" name="freelancerFirstname" value="<%= freelancerFirstname %>">
-                        <small class="text-danger ms-3"><%= locals.errors && errors.freelancerFirstname ? errors.freelancerFirstname.msg : null %></small>
+                        <label for="firstName" class="form-label">First Name:</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" value="<%= firstName %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.firstName ? errors.firstName.msg : null %></small>
                     </div>
                 
                     <div class="mb-3">
-                        <label for="freelancerLastname" class="form-label">Last Name:</label>
-                        <input type="text" class="form-control" id="freelancerLastname" name="freelancerLastname" value="<%= freelancerLastname %>">
-                        <small class="text-danger ms-3"><%= locals.errors && errors.freelancerLastname ? errors.freelancerLastname.msg : null %></small>
+                        <label for="lastName" class="form-label">Last Name:</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" value="<%= lastName %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></small>
                     </div>
-                
+
                     <div class="mb-3">
-                        <select name="freelancerPhoneCode" class="form-select" id="freelancerPhoneCode" aria-label="Floating label select example">
-                            <% codN.forEach(country => { %>
-                                <option value="<%= country.code %>" <%= freelancerPhoneCode === country.code ? 'selected' : '' %>><%= country.country %> (<%= country.code %>)</option>
-                            <% }) %>
-                        </select>
-                    </div>              
-                
-                    <div class="mb-3">
-                        <label for="freelancerPhone" class="form-label">Phone:</label>
-                        <input type="text" class="form-control" id="freelancerPhone" name="freelancerPhone" value="<%= freelancerPhone %>">
-                        <small class="text-danger ms-3"><%= locals.errors && errors.freelancerPhone ? errors.freelancerPhone.msg : null %></small>
-                    </div>
-                
-                    <div class="mb-3">
-                        <label for="mainImage" class="form-label">Image:</label>
-                        <input type="text" class="form-control" id="mainImage" name="mainImage" value="<%= userLogin.mainImage %>">
-                        <!---->
+                        <label for="about" class="form-label">About:</label>
+                        <input type="text" class="form-control" id="about" name="about" value="<%= about %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.about ? errors.about.msg : null %></small>
                     </div>
                 
                     <div class="modal-footer">
