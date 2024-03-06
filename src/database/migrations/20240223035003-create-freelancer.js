@@ -19,6 +19,9 @@ module.exports = {
       country: {
         type: Sequelize.STRING
       },
+      mainImage: {
+        type: Sequelize.STRING
+      },
       phoneCode: {
         type: Sequelize.INTEGER
       },
@@ -35,28 +38,18 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'Users', // Nombre de la tabla Users
-          key: 'id' // Nombre de la columna de usuario referenciada
-        },
-        onUpdate: 'CASCADE', // Actualizar en cascada si el usuario se actualiza
-        onDelete: 'CASCADE' // Eliminar en cascada si el usuario se elimina
+          model: {
+            tableName: "Users",
+          }
+        }
       },
       idCategory: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Categories', // Nombre de la tabla Categories
-          key: 'id' // Nombre de la columna de categoría referenciada
-        },
-        onUpdate: 'CASCADE', // Actualizar en cascada si la categoría se actualiza
-        onDelete: 'SET NULL' // Establecer en nulo si la categoría se elimina
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+          model: {
+            tableName: "Categories",
+          }
+        }
       }
     });
   },

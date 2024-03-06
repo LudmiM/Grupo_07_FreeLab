@@ -10,31 +10,19 @@ module.exports = {
       },
       idProject: {
         type: Sequelize.INTEGER,
-        allowNull: false,
         references: {
-          model: 'Projects', // Nombre de la tabla Projects
-          key: 'id' // Columna de referencia en la tabla Projects
-        },
-        onUpdate: 'CASCADE', // Actualizar en cascada si el proyecto se actualiza
-        onDelete: 'CASCADE' // Eliminar en cascada si el proyecto se elimina
+          model: {
+            tableName: "Projects",
+          }
+        }
       },
       idSkill: {
         type: Sequelize.INTEGER,
-        allowNull: false,
         references: {
-          model: 'Skills', // Nombre de la tabla Skills
-          key: 'id' // Columna de referencia en la tabla Skills
-        },
-        onUpdate: 'CASCADE', // Actualizar en cascada si la habilidad se actualiza
-        onDelete: 'CASCADE' // Eliminar en cascada si la habilidad se elimina
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+          model: {
+            tableName: "Skilles",
+          }
+        }
       }
     });
   },

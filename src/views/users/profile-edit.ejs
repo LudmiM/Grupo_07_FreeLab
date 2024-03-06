@@ -5,15 +5,19 @@
 
 <body>
     <%- include('../partials/header') %>
-
     <main class="perfil__user">
         <section class="perfil__user__section">
             <article class="perfil__user__section__datosPrimarios">
-                <img class="datosPrimarios--imagen" src="/images/users/<%= userLogin.mainImage || userLogin.mainImage %>" alt="User Image">
+                <img class="datosPrimarios--imagen"src="/images/users/<%= mainImage ? mainImage : 'default.png' %>" alt="User Image">
                 <div class="datosPrimarios__contedor">
-                    <h2 class="datosPrimarios__contedor--h2"><%= userLogin.rol==="freelancer" ? (freelancerFirstname + ' ' + freelancerLastname) : companyName %></h2>                   
-                    <% if (userLogin.rol === "freelancer") { %>
-                        <h3 class="datosPrimarios__contedor--h3"><%= name %></h3>
+                    <h2 class="datosPrimarios__contedor--h2">
+                        <%= userLogin.idRole===2 ? (firstName + ' ' + lastName) : companyName %>
+                    </h2>
+                    <% if (userLogin.idRole===22) { %>
+                        <!--Cambiar-->
+                        <h3 class="datosPrimarios__contedor--h3">
+                            <%= name %>
+                        </h3>
                     <% } %>
                     <!--
                     <div class="datosPrimarios__contedor__jobs">
@@ -30,21 +34,24 @@
             </article>
             <article class="datosPrimarios__description">
                 <h3>Descripcion</h3>
-                <% if (userLogin.rol === "freelancer") { %>
-                    <p><%= description %></p>
+                <% if (userLogin.idRole===2) { %>
+                    <p>
+                        <%= about %>
+                    </p>
                 <% } else { %>
-                    <p><%= companyDescription %></p>
-                <% } %>                     
+                    <p> <%= description %></p>
+                <% } %>
             </article>
         </section>
-        <% if (userLogin.rol === "freelancer") { %>
+        <% if (userLogin.idRole===2) { %>
             <aside class="perfil__user__aside__proyectos">
-                <% if (userLogin.rol === "freelancer" && image.length) { %>
+                <!--Readaptar-->
+                <% if (userLogin.idRole===22 && image.length) { %>
                     <div class="aside__user__proyectosImagen">
                         <h3>Mis proyectos</h3>
-                            <% image.forEach(i => { %>
-                                <img src="./images/productos/<%= i %>" alt="User Image">
-                            <% }) %>              
+                        <% image.forEach(i=> { %>
+                            <img src="./images/productos/<%= i %>" alt="User Image">
+                        <% }) %>
                     </div>
                 <% } %>
                 <div class="aside__user__miFormacion">
@@ -54,43 +61,50 @@
                     <p>F1</p>
                     <p>F1</p>
                 </div>
-            
             </aside>
         <% } else { %>
             <aside class="perfil__user__aside__proyectos">
                 <div><a href="/productos/agregarProyecto">Crear proyecto</a></div>
-                <p>Aun no has agregado proyectos...</p>
-                
+                <% if (projects.length) { %>
+                    <div class="aside__user__proyectosProyectos">
+                        <h3>Mis proyectos</h3>
+                        <% projects.forEach(p=> { %>
+                            <p><%= p.title %></p>
+                            <p><%= p.id %></p>
+                            <button type="button" class="action-button delete" data-bs-toggle="modal" data-bs-target="#warningRemoveModal<%= p.id %>">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                            <%- include('../partials/modal/confirmacionEliminar',{p}) %>
+                        <% }) %>
+                    </div>
+                <% } else { %>
+                    <p>Aun no has agregado proyectos...</p>
+                <% } %>
             </aside>
         <% } %>
-
-        <% if (userLogin.rol === "freelancer") { %>
+        <% if (userLogin.idRole===2) { %>
             <div class="perfil__opciones__edit">
                 <!--Usuarios.json-->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonal">
                     Editar personales
                 </button>
-                
+
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
                     Editar Laborales
                 </button>
                 <!--product.json-->
             </div>
-            <%- include('./modal/edit-laboral') %>
-            <%- include('./modal/edit-personal') %>
         <% } else { %>
             <div class="perfil__opciones__edit">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonalEmpresa">
                     Editar datos de la Empresa
                 </button>
             </div>
-            <%- include('./modal/edit-personal-Empresa') %>
         <% } %>
-        
         <!--No es perfil entonces que muestre-->
     </main>
     <%- include('../partials/footer') %>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
+
 </html>

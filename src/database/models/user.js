@@ -7,9 +7,9 @@ module.exports = (sequelize, DataTypes) => {
       User.belongsTo(models.Rol, { foreignKey: 'idRole' });
       User.hasOne(models.Freelancer, { foreignKey: 'idUser' });
       User.hasOne(models.Company, { foreignKey: 'idUser' });
-      User.hasMany(models.Review, { foreignKey: 'idSender', as: 'sentReviews' });
+     /* User.hasMany(models.Review, { foreignKey: 'idSender', as: 'sentReviews' });
       User.hasMany(models.Review, { foreignKey: 'idReceiver', as: 'receivedReviews' });
-    }
+    */}
   }
   
   User.init({
@@ -17,11 +17,11 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     token: DataTypes.STRING,
     checked: DataTypes.BOOLEAN,
-    roleId: DataTypes.INTEGER
+    idRole: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'User',
-    timestamps: true // Agregar timestamps
+    tableName: 'Users'
   });
   
   return User;

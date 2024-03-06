@@ -102,3 +102,17 @@
 **Ludmila** : 
 **Rony** : 
 **Milagros** : 
+
+### martes 27/02
+
+**Marco** :
+**Ludmila** : 
+**Rony** : 
+**Milagros** : 
+
+### miercoles 28/02
+
+**Marco** :
+**Ludmila** : Termine las relaciones entre tablas, creo que completas
+**Rony** : 
+**Milagros** : 

@@ -6,7 +6,7 @@ module.exports = (sequelize) => {
     static associate(models) {
       Freelancer.belongsTo(models.Category, { foreignKey: 'idCategory' });
       Freelancer.belongsTo(models.User, { foreignKey: 'idUser' });
-      Freelancer.hasMany(models.Favorite, { foreignKey: 'idFreelancer' })
+      /*Freelancer.hasMany(models.Favorite, { foreignKey: 'idFreelancer' })
       Freelancer.belongsToMany(models.Skill, {
         through: 'FreelancerSkill',
         foreignKey: 'idFreelancer',
@@ -15,15 +15,17 @@ module.exports = (sequelize) => {
       Freelancer.belongsToMany(models.Individual, {
         through: models.Application,
         foreignKey: 'idFreelancer'
-      });
+      });*/
     }
   }
   Freelancer.init({
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
-    country: DataTypes.STRING, // Agrega este campo si es necesario
-    phoneCode: DataTypes.STRING, // Cambia el tipo de datos a STRING
-    phone: DataTypes.STRING, // Cambia el tipo de datos a STRING
+    country: DataTypes.STRING,
+    country: DataTypes.STRING,
+    mainImage: DataTypes.STRING,
+    phoneCode: DataTypes.INTEGER,
+    phone: DataTypes.INTEGER,
     about: DataTypes.TEXT,
     hourValue: DataTypes.INTEGER,
     idUser: DataTypes.INTEGER,
@@ -31,8 +33,7 @@ module.exports = (sequelize) => {
   }, {
     sequelize,
     modelName: 'Freelancer',
-    tableName: 'freelancers', // Agrega el nombre de la tabla si es diferente
-    timestamps: false, // Si no utilizas campos de timestamps
+    timestamps: false, 
   });
   return Freelancer;
 };

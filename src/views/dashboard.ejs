@@ -16,25 +16,7 @@
       </tr>
     </thead>
     <tbody>
-      <% products.servicios.forEach(user => { %>
-        <tr>
-          <td class="admin__table__tbody__tr__td admin__table__tbody__tr__td--id"><%= user.id %></td>
-          <td class="admin__table__tbody__tr__td admin__table__tbody__tr__td--nombre"><%= user.name %></td>
-          <td class="admin__table__tbody__tr__td admin__table__tbody__tr__td--email"><%= user.skills %></td>
-          <td class="admin__table__tbody__tr__td admin__table__tbody__tr__td--acciones">
-            <div class="admin__table__tbody__tr__div">
-              <a href="#" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--eye"><i class="fa-solid fa-eye"></i></a>
-              <a href="/productos/editar/<%= user.id %>" class="admin__table__tbody__tr__div--link admin__table__tbody__tr__div--pencill"><i class="fa-solid fa-pencil"></i></a>
-              <!--Modal Eliminar-->
-              <button type="button" class="action-button delete" data-bs-toggle="modal" data-bs-target="#warningRemoveModal<%= user.id %>">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-            <%- include('./partials/modal/confirmacionEliminar',{user}) %>
-          </td>
-        </tr>
-      <% }); %>
-  
+      <p>No hay nada aun</p>
     </tbody>
   </table>
   <!--Si se borra este scrip, no funciona-->

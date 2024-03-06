@@ -260,7 +260,7 @@ label {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    background-image: linear-gradient(to right, #fcfcfc, #000000);
+    background-image: linear-gradient(to right, var( --colorCelesteOscuro), var(--colorNaranja));
     color: #fff;
     box-shadow: 0 5px 15px rgba(0, 3, 0, 0.4); /* Sombra */
 }
@@ -296,11 +296,11 @@ label {
 
 /* Estilos para los botones Freelancer y Empresa */
 .registration-button.freelancer {
-    background-image: linear-gradient(to right, var(--colorNaranja), var( --colorCelesteOscuro));
+    background-image: linear-gradient(to right, var(--colorNaranja), var( --colorAzulOscuro));
 }
 
 .registration-button.empresa {
-    background-image: linear-gradient(to right, var( --colorCelesteOscuro), var(--colorNaranja));
+    background-image: linear-gradient(to right, var( --colorAzulOscuro), var(--colorNaranja));
 }
 /* telefonos */
 @media (max-width: 429px) {
@@ -438,44 +438,34 @@ label {
     }
 
     .register-box {
-
-            width: 40%; /* Puedes ajustar este valor según tus necesidades */
-            max-width: none; /* Elimina el ancho máximo si es necesario */
-            left: 80%; /* Ajusta la posición izquierda según tus necesidades */
-        background: none; 
-        box-shadow: none; 
-        border: none; 
+        position: absolute;
+        top: 60%;
+        left: 72%;
+        height: 35%;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+        justify-content: center;
     }
-    .register-box p {
-        display: none; 
+    
+    .social-buttons {
+        margin-top: 20%; 
+        text-align: center; 
     }
-
+    
     .social-buttons .btn {
-        width: 325px; 
-        height: 60px;
-        margin-left: 85px;
-        background: var(--colorAzulOscuro); 
-        border-radius: 35px 0 0 35px; 
-        display: flex; 
-        align-items: center; 
-    }
-    
-    
-    .social-buttons .btn i {
-        background: #87CEEB; 
-        border-radius: 50%;
-        padding: 10px; 
-        font-size: 24px; 
-        margin-right: 20px; 
+        width: 140%; 
+        height: 80%; 
+        border-radius: 20px;
+        margin: 10%; 
     }
 
-    * Estilos para el contenedor del formulario de registro */
-.registration-form-container {
+
+/* Estilos para el contenedor del formulario de registro */
+.select-free-emp {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
+
     border-radius: 8px;
 }
 

@@ -25,11 +25,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'roles',
-          key: 'id'
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE'
+          model: {
+            tableName: "Roles",
+          }
+        }
       },
       createdAt: {
         allowNull: false,

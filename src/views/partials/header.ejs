@@ -6,7 +6,7 @@
     <nav class="header__nav">
         <ul class="header__nav__ul">
             <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/carrito"> Carrito</a></li>
-            <% if (locals.userLogin && userLogin.rol === 'administrador') { %>
+            <% if (locals.userLogin && userLogin.rol === 3) { %>
                 <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/admin">Administrador</a></li>
             <% } %>
             <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/productos/listado">Freelancers</a></li>

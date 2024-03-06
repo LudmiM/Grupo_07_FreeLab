@@ -1,7 +1,8 @@
 'use strict';
+/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Applications', {
+    await queryInterface.createTable('FreelancerSkills', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -10,27 +11,23 @@ module.exports = {
       },
       idFreelancer: {
         type: Sequelize.INTEGER,
-        allowNull: false,
         references: {
           model: {
             tableName: "Freelancers",
           }
         }
       },
-      idIndividual: {
+      idSkill: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: "Individuals",
+            tableName: "Skilles",
           }
         }
-      },
-      selected: {
-        type: Sequelize.BOOLEAN
       }
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Applications');
+    await queryInterface.dropTable('FreelancerSkills');
   }
 };
