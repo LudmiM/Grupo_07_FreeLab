@@ -16,6 +16,16 @@ module.exports = (req, res) => {
   })
   .then(project => {
     console.log(project);
+    const newSkills=skilles.map(s => {
+      return {
+        idProject: project.id,
+        idSkill: parseInt(s)
+      };
+    })
+    db.ProjectSkill.bulkCreate(newSkills)
+    .then(projectSkill => {
+      console.log("Asociación creada:", projectSkill);
+    })
     return res.redirect('/usuarios/perfil');
   })
   .catch(error => console.log(error))
