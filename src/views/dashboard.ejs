@@ -4,7 +4,7 @@
 
 <body class="admin__home">
 
-  <%- include('./partials/headerAdmin') %>
+  <%- include('./partials/header') %>
 
   <table class="admin__table">
     <thead>
@@ -17,25 +17,41 @@
     </thead>
     <tbody>
       <% if (projects.length) { %>
-            <% projects.forEach(p => { %>
-                <tr>
-                    <td><%= p.id %></td>
-                    <td><%= p.title %></td>
-                    <td><!-- Aquí debes agregar la columna para habilidades --></td>
-                    <td>
-                        <button type="button" class="action-button delete" data-bs-toggle="modal" data-bs-target="#warningRemoveModal<%= p.id %>">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                        <!-- Incluir otros botones de acciones si es necesario -->
-                    </td>
-                </tr>
-            <% }) %>
-        <% } else { %>
-            <tr>
-                <td colspan="4">Aun no has agregado proyectos...</td>
-            </tr>
-        <% } %>
+        <% projects.forEach(p => { %>
+          <tr>
+            <td><%= p.id %></td>
+            <td><%= p.title %></td>
+            <!-- Aquí debes agregar la columna para habilidades -->
+            <td><!-- p.skills u otra propiedad de los proyectos --></td>
+            <td>
+              <button type="button" class="action-button delete" data-bs-toggle="modal" data-bs-target="#warningRemoveModal<%= p.id %>">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+              <!-- Incluir otros botones de acciones si es necesario -->
+            </td>
+          </tr>
+        <% }) %>
+      <% } else if (empresas.length) { %>
+        <!-- Aquí puedes manejar la tabla para empresas -->
+        <% empresas.forEach(empresa => { %>
+          <tr>
+            <!-- Agregar las columnas correspondientes para empresas -->
+          </tr>
+        <% }) %>
+      <% } else if (freelancers.length) { %>
+        <!-- Aquí puedes manejar la tabla para freelancers -->
+        <% freelancers.forEach(freelancer => { %>
+          <tr>
+            <!-- Agregar las columnas correspondientes para freelancers -->
+          </tr>
+        <% }) %>
+      <% } else { %>
+        <tr>
+          <td colspan="4">Aun no has agregado proyectos...</td>
+        </tr>
+      <% } %>
     </tbody>
+    
     
   </table>
   <!--Si se borra este scrip, no funciona-->
