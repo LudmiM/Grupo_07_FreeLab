@@ -25,13 +25,30 @@
                         <input type="text" class="form-control" id="description" name="description" value="<%= description %>">
                         <small class="text-danger ms-3"><%= locals.errors && errors.description ? errors.description.msg : null %></small>
                     </div>
+
+                    <div class="mb-3">
+                        <label for="website" class="form-label">Sitio web:</label>
+                        <input type="text" class="form-control" id="website" name="website" value="<%= website %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.website ? errors.website.msg : null %></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Ubicacion:</label>
+                        <input type="text" class="form-control" id="location" name="location" value="<%= location %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.location ? errors.location.msg : null %></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mainImage" class="form-label">Imagen:</label>
+                        <input type="text" class="form-control" id="mainImage" name="mainImage" value="<%= mainImage %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.mainImage ? errors.mainImage.msg : null %></small>
+                    </div>
                 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <button type="submit" class="btn btn-primary">Guardar cambios</button>
                     </div>
-                </form>
-                
+                </form>     
             </div>
         </div>
     </div>

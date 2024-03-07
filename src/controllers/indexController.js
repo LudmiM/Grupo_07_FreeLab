@@ -1,5 +1,5 @@
 const db = require('./../database/models');
-const { hashSync } = require('bcryptjs');
+
 module.exports = {
     index: async (req, res) => {
         try {
