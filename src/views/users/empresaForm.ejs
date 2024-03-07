@@ -20,32 +20,11 @@
                 <small class="text-danger ms-2"><%= locals.errors && errors.companyName ? errors.companyName.msg : null %></small>
             </div>
             
-            <!-- Teléfono Celular -->
-            <label for="employerPhone">Teléfono Celular</label>
-            <div class="input-line-phone">
-                <div class="phone-input-container">
-                    <select id="employerPhoneCode" name="employerPhoneCode" >
-                        <option value="+1">+1 (EE. UU.)</option>
-                    <option value="+44">+44 (Reino Unido)</option>
-                    <option value="+54">+54 (Argentina)</option>
-                    <option value="+55">+55 (Brasil)</option>
-                    <option value="+56">+56 (Chile)</option>
-                    <option value="+57">+57 (Colombia)</option>
-                    <option value="+51">+51 (Perú)</option>
-                    <option value="+595">+595 (Paraguay)</option>
-                    <option value="+598">+598 (Uruguay)</option>
-                    <option value="+1">+1 (EE. UU.)</option>
-                    <option value="+44">+44 (Reino Unido)</option>
-                    <option value="+81">+81 (Japón)</option>
-                    <option value="+86">+86 (China)</option>
-                    <option value="+91">+91 (India)</option>
-                    </select>
-                    <div class="separator-container">
-                        <div class="separator"></div>
-                    </div>
-                    <input type="text" id="employerPhone" name="employerPhone" placeholder="Número de teléfono celular" pattern="[0-9]+" >
-                    <small class="text-danger ms-2"><%= locals.errors && errors.employerPhone ? errors.employerPhone.msg : null %></small>
-                </div>
+            <!-- Ubicación de la Empresa -->
+            <label for="location">Ubicación de la Empresa </label>
+            <div class="input-line">
+                <input type="text" id="location" name="location" placeholder="Ubicación de la Empresa" >
+                <small class="text-danger ms-2"><%= locals.errors && errors.location ? errors.location.msg : null %></small>
             </div>
 
             <!-- Imagen de Perfil -->
@@ -53,6 +32,13 @@
                 <label for="empresaImage">Agregar imagen de perfil</label>
                 <input type="file" name="empresaImage" class="form-control" id="empresaImage">
             </div>
+
+             <!-- Sitio Web de la Empresa -->
+             <label for="website">Sitio Web de la Empresa </label>
+             <div class="input-line">
+                 <input type="text" id="website" name="website" placeholder="Sitio Web de la Empresa" >
+                 <small class="text-danger ms-2"><%= locals.errors && errors.website ? errors.website.msg : null %></small>
+             </div>
             
             <!-- Breve Descripción de la Empresa -->
             <label for="companyDescription">Breve Descripción de la Empresa </label>
