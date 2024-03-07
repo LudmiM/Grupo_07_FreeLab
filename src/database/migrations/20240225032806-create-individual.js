@@ -27,6 +27,15 @@ module.exports = {
           }
         }
       },
+      idCategory: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "Categories",
+          }
+        }
+      },
       chosen: {
         type: Sequelize.BOOLEAN
       }
