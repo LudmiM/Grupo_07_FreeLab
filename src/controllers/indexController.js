@@ -3,10 +3,7 @@ const { hashSync } = require('bcryptjs');
 module.exports = {
     index: async (req, res) => {
         try {
-            const c = 'freelab123'
-
-            console.log(hashSync(c, 10));
-            console.log(hashSync('freelab123', 10))
+  
             const projects = await db.Project.findAll({
                 order: [['createdAt', 'DESC']], 
                 limit: 5 
