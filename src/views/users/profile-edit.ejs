@@ -94,12 +94,14 @@
                 </button>
                 <!--product.json-->
             </div>
+            <%- include('./modal/edit-personal') %>
         <% } else { %>
             <div class="perfil__opciones__edit">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonalEmpresa">
                     Editar datos de la Empresa
                 </button>
             </div>
+            <%- include('./modal/edit-personal-Empresa') %>
         <% } %>
         <!--No es perfil entonces que muestre-->
     </main>

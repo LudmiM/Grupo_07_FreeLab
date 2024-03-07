@@ -1,3 +1,3 @@
-module.exports = (req, res) => {
-  res.render('users/register');
-};
+module.exports =(req, res)=> {
+    return res.render('users/register')
+}

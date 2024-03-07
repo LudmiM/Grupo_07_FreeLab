@@ -1,23 +1,25 @@
 const express = require('express');
-const { login, register, formRegister, freelancerRegister, empresaRegister , profile, process_login, logout, actualizarLaboral, actualizarPersonal} = require('../controllers/usersController');
+const { login, register, process_register, freelancerRegister, empresaRegister , profile, process_login, logout, actualizarLaboral, actualizarPersonal} = require('../controllers/usersController');
 const router = express.Router();
 
-const loginValidation = require('./../validations/login-sesionValidation')
-const editPersonal = require('./../validations/perfil-edit-personal');
-const editLaboral = require('./../validations/perfil-edit-laboral');
+const loginValidation = require('./../validations/loginSesionValidation')
+const registerValidation = require('./../validations/registerValidation')
+const editPersonal = require('./../validations/perfilEditPersonal');
+const editLaboral = require('./../validations/perfilEditLaboral');
+const empresaValidationRules = require('../validations/empresaValidation');
+const registerValidationRules = require('../validations/freelancerValidation');
 
 const checkUserLogin = require('./../middleware/checkUserLogin')
 const uploadAvatar = require('../middleware/uploadAvatar');
 const checkRol = require('../middleware/checkRol');
-const empresaValidationRules = require('../validations/empresaValidation');
-const  registerValidationRules = require('../validations/freelancerValidation');
 
 // /usuarios
 
 router.get('/ingreso', login);
 router.post('/ingreso', loginValidation, process_login);
 
-router.get('/registro', formRegister);
+router.get('/registro', register);
+router.post('/registro',registerValidation,process_register);
 
 router.get('/registro/freelancer', (req, res) => {
   return res.render('users/freelancerForm', { errors: [] });
