@@ -26,4 +26,6 @@ router.get('/resultado', (req, res) => {
   res.render('resultado', { products: filteredProducts, key });
 });
 
+router.post('/newsletter', indexController.newsletter);
+
 module.exports = router;

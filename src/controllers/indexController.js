@@ -18,6 +18,12 @@ module.exports = {
     card: (req,res) => {
         res.render('productCart');
     },
+    newsletter: (req,res) => {
+        const emailNewsletter = req.body.emailNewsletter;
+        console.log('El email ingresado es '+emailNewsletter)
+        const volver = req.url;
+        res.redirect(`${volver}`);
+    },
     admin: (req,res) => {
         //const products= leerJSON('products')
        /* return res.send(products);
