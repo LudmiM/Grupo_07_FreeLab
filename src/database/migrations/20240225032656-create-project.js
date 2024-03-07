@@ -13,8 +13,24 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      image: {
-        type: Sequelize.STRING
+      description: {
+        type: Sequelize.TEXT
+      },
+      idStatus: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "States",
+          } 
+        }
+      },
+      idCompany: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "Companies",
+          }
+        }
       },
       createdAt: {
         allowNull: false,
