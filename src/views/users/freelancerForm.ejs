@@ -14,8 +14,7 @@
             <!-- Nombre -->
             <div class="input-line">
               <label for="firstName">Nombre </label>
-              <input type="text" id="firstName" name="firstName" placeholder="Nombre"
-                pattern="[A-Za-zÁ-ÿ\s']{1,}">
+              <input type="text" id="firstName" name="firstName" placeholder="Nombre" pattern="[A-Za-zÁ-ÿ\s']{1,}">
               <small class="text-danger ms-2">
                 <%= locals.errors && errors.firstName ? errors.firstName.msg : null %>
               </small>
@@ -24,10 +23,11 @@
             <!-- Apellido -->
             <label for="lastName">Apellido </label>
             <div class="input-line">
-              <input type="text" id="lastName" name="lastName" placeholder="Apellido"
-                pattern="[A-Za-zÁ-ÿ\s']{1,}">
+              <input type="text" id="lastName" name="lastName" placeholder="Apellido" pattern="[A-Za-zÁ-ÿ\s']{1,}">
               <small class="text-danger ms-2">
-                <small class="text-danger ms-2"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></small>
+                <small class="text-danger ms-2">
+                  <%= locals.errors && errors.lastName ? errors.lastName.msg : null %>
+                </small>
               </small>
             </div>
 
@@ -80,7 +80,7 @@
                 <%= locals.errors && errors.hourValue ? errors.hourValue.msg : null %>
               </small>
             </div>
-            
+
 
             <button type="submit" class="registration-button freelancer">Registrarse como Freelancer</button>
           </form>
@@ -93,31 +93,3 @@
   </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-<select id="freelancerPhoneCode" name="freelancerPhoneCode">
-  <option value="+1">+1 (EE. UU.)</option>
-  <option value="+44">+44 (Reino Unido)</option>
-  <option value="+54">+54 (Argentina)</option>
-  <option value="+55">+55 (Brasil)</option>
-  <option value="+56">+56 (Chile)</option>
-  <option value="+57">+57 (Colombia)</option>
-  <option value="+51">+51 (Perú)</option>
-  <option value="+595">+595 (Paraguay)</option>
-  <option value="+598">+598 (Uruguay)</option>
-  <option value="+1">+1 (EE. UU.)</option>
-  <option value="+44">+44 (Reino Unido)</option>
-  <option value="+81">+81 (Japón)</option>
-  <option value="+86">+86 (China)</option>
-  <option value="+91">+91 (India)</option>
-</select>
