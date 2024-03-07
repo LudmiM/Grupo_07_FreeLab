@@ -5,8 +5,6 @@ const edit = require('./edit')
 const detailProject = require('./detailProject')
 const detailUser = require('./detailUser')
 const addProject = require('./addProject')
-const listadoProducts = require('./listadoProducts')
-
 
 module.exports = {
     eliminate,
@@ -15,6 +13,5 @@ module.exports = {
     edit,
     updateProduct,
     formProject,
-    listadoProducts,
     addProject
 }

@@ -2,7 +2,7 @@ module.exports = {
     admin: (req, res, next) => {
         if (req.session.userLogin && req.session.userLogin.idRole === 3) {
             return next();
-        } else if (req.session.userLogin && (req.session.userLogin.idRole === 3 || req.session.userLogin.idRole === 2)) {
+        } else if (req.session.userLogin && (req.session.userLogin.idRole === 1 || req.session.userLogin.idRole === 2)) {
             return res.redirect('/');
         } else {
             return res.redirect('/usuarios/ingreso');

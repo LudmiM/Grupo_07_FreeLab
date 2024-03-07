@@ -3,7 +3,6 @@ const db = require('./../database/models');
 module.exports = {
     index: async (req, res) => {
         try {
-  
             const projects = await db.Project.findAll({
                 order: [['createdAt', 'DESC']], 
                 limit: 5 
@@ -25,11 +24,18 @@ module.exports = {
         const volver = req.url;
         res.redirect(`${volver}`);
     },
-    admin: (req,res) => {
-        //const products= leerJSON('products')
-       /* return res.send(products);
-        res.render('dashboard');*/
-        return res.render('dashboard')//,{products})
+    admin: async (req,res) => {
+        try {
+            const projects = await db.Project.findAll({
+                order: [['idCompany', 'ASC'], ['createdAt', 'DESC']]
+            });
+            return res.render('dashboard', {
+                projects
+            });
+        } catch (error) {
+            console.error("Error al obtener los proyectos:", error);
+            return res.status(500).send("Error al obtener los proyectos");
+        }
     },
     resultado: (req, res) => {
         /*
@@ -53,7 +59,7 @@ module.exports = {
           return res.render("listadoProductos",{projects,keyword})
         })
     },
-    listadoProducts:{
-        
+    listProducts:{
+
     }
 }
