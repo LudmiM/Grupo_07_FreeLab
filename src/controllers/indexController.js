@@ -38,28 +38,22 @@ module.exports = {
         res.render('resultado', {
             products: products.servicios.filter(p => p.category.toLowerCase().includes(key.toLowerCase())) || p.firshName.toLowerCase().includes(key.toLowerCase()) || p.lastName.toLowerCase().includes(key.toLowerCase()), key});
     */
+    },
+    search :(req, res) => {
+        const { keyword } = req.query
+    
+        db.Project.findAll({
+          where:{
+            name:{[Op.substring] : keyword
+            }
+          },
+          include:["categories"]
+        })
+        .then(projects=>{
+          return res.render("listadoProductos",{projects,keyword})
+        })
+    },
+    listadoProducts:{
+        
     }
 }
-
-//console.log(req.url)
-/*Buscador de leandro 
-
-search :(req, res) => {
-    const { keyword } = req.query
-
-    db.Product.findAll({
-      where:{
-        name:{[Op.substring] : keyword
-
-        }
-
-      },
-      include:["categories"]
-    })
-    .then(products=>{
-      return res.render("index",{products,keyword,user:req.session.userLogin})
-    })
-
-
-  }
-*/

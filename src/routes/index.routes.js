@@ -3,6 +3,7 @@ const router = express.Router();
 const { leerJSON } = require('../data');
 const indexController = require('../controllers/indexController');
 const checkRol = require('../middleware/checkRol');
+const db = require('./../database/models');
 router.get('/', indexController.index);
 
 router.get('/carrito',checkRol.logged, (req, res) => {
@@ -25,6 +26,8 @@ router.get('/resultado', (req, res) => {
   const filteredProducts = products.servicios.filter(product => product.category.toLowerCase().includes(key.toLowerCase()));
   res.render('resultado', { products: filteredProducts, key });
 });
+
+router.get('/listado', listadoProducts);
 
 router.post('/newsletter', indexController.newsletter);
 
