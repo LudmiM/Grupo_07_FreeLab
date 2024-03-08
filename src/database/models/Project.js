@@ -17,13 +17,14 @@ module.exports = (sequelize, DataTypes) => {
         as: 'categories'
       });
       Project.belongsTo(models.Status, { foreignKey: 'idStatus' });  
-      /*
-      Project.hasMany(models.Favorite, { foreignKey: 'idProject' })
       Project.belongsToMany(models.Skill, {
-        through: 'projectSkill',
+        through: 'ProjectSkill',
         foreignKey: 'idProject',
         as: 'skills'
       });
+      /*
+      Project.hasMany(models.Favorite, { foreignKey: 'idProject' })
+      
         
       Project.hasMany(models.Individual, { foreignKey: 'idProject' });*/
     }
