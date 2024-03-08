@@ -78,9 +78,18 @@ module.exports = {
         //Falta funcionalidad
     },
     newsletter: (req,res) => {
-        const emailNewsletter = req.body.emailNewsletter;
-        console.log('El email ingresado es '+emailNewsletter)
-        //Llamar y crear la tabla para newsletter
-        res.redirect('/');
+        try {
+            const emailNewsletter = req.body.emailNewsletter;
+            if(emailNewsletter){
+                db.Newsletter.create({
+                    name: emailNewsletter,                    
+                    createdAt : new Date(),
+                    updatedAt : new Date()
+                })
+            }
+            res.redirect('/');
+        } catch (error) {
+            console.log(error)
+        }
     }
 }
