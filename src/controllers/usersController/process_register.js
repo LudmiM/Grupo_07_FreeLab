@@ -1,8 +1,8 @@
 const { validationResult } = require("express-validator");
-const db = require('./../../database/models')
+const db = require('./../../database/models');
 
-module.exports = (req, res) => {
-    try{
+module.exports = async (req, res) => {
+    try {
         const errors = validationResult(req);
 
         if (!errors.isEmpty()) {
@@ -10,20 +10,42 @@ module.exports = (req, res) => {
                 errors: errors.mapped()
             });
         }
+
         const email = req.body.email.trim().toLowerCase();
-        const user = db.User.findOne({
-            where : {
-                email : email
+        const existingUser = await db.User.findOne({
+            where: {
+                email: email
             }
-        })
-        if (user.idRole === 1) {
-            //Escribir la url del formulario company
-            return res.redirect('/usuarios/registro/empresa')
-            return res.render('/')
+        });
+
+        if (existingUser) {
+            // Usuario existente
+            console.log("Usuario existente. ID de rol:", existingUser.idRole);
+
+            // Redirigir según el rol del usuario
+            if (existingUser.idRole === 1) {
+                console.log("Redirigiendo a formulario de empresa");
+                return res.redirect('/usuarios/registro/empresa');
+            } else if (existingUser.idRole === 2) {
+                console.log("Redirigiendo a formulario de freelancer");
+                return res.redirect('/usuarios/registro/freelancer');
+            } else {
+                console.log("ID de rol desconocido:", existingUser.idRole);
+                return res.redirect('/');
+            }
         } else {
-            //Escribir la url del formulario freelancer
-            return res.redirect('/usuarios/registro/freelancer') 
-            return res.render('/')
+            
+            const userType = req.body.userType;
+            if (userType === '1') {
+                //console.log("Redirigiendo a formulario de empresa");
+                return res.redirect('/usuarios/registro/empresa');
+            } else if (userType === '2') {
+                //console.log("Redirigiendo a formulario de freelancer");
+                return res.redirect('/usuarios/registro/freelancer');
+            } else {
+                //console.log("Tipo de usuario desconocido:", userType);
+                return res.redirect('/');
+            }
         }
     } catch (error) {
         console.error(error);
