@@ -20,15 +20,11 @@
                 <p class="section__explicacion__article__descripcion--descripcion descripcion"><%= p.description %></p>
             </article>
             <article class="section__explicacion__article__habilidades section__explicacion__article">
-                <h3 class="section__explicacion__article__habilidades--h3">Habilidades necesarias: </h3>
+                <h3 class="section__explicacion__article__habilidades--h3">Habilidades interpersonales: </h3>
                 <ul class="section__explicacion__article__habilidades__ul">
-                    <li class="section__explicacion__article__habilidades__ul--li">Programación en C# .NET</li>
-                    <li class="section__explicacion__article__habilidades__ul--li">Visual Studio, Framework.NET</li>
-                    <li class="section__explicacion__article__habilidades__ul--li">Configuración, administración y programación de Base de Datos. SQL (querys, store procedures y triggers). SQL Server y MySql.</li>
-                    <li class="section__explicacion__article__habilidades__ul--li">Scripting.</li>
-                    <li class="section__explicacion__article__habilidades__ul--li">Aplicaciones o procesos sobre plataforma Windows, Linux, (QNX valorado)</li>
-                    <li class="section__explicacion__article__habilidades__ul--li">Conocimientos en sistemas SCADA. (valorado no excluyente)</li>
-                    <li class="section__explicacion__article__habilidades__ul--li">Diseño y programación de interfaz de usuario HMI.</li>
+                        <% skills.forEach(s => { %>
+                            <li class="section__explicacion__article__habilidades__ul--li"><%= s %></li>
+                        <% }) %>
                 </ul>
             </article>
             <%- include('../partials/habilidadesManejadas')%>
