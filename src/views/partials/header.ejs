@@ -5,21 +5,24 @@
     <%- include('./buscador')%>
     <nav class="header__nav">
         <ul class="header__nav__ul">
-            <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/carrito"> Carrito</a></li>
-            <% if (locals.userLogin && userLogin.rol === 3) { %>
-                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/admin">Administrador</a></li>
-            <% } %>
-            <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/productos/listado">Freelancers</a></li>
-            <% if (locals.userLogin) { %>
-                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="#"> Notificaciones</a></li>
-                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/perfil">Perfil</a></li>
-                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/salir">Salir</a></li>
-            <% } else { %>
+            <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/listado">Freelancers</a></li>
+            
+            <% if (!locals.userLogin) { %>
                 <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/ingreso">Login</a></li>
-                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/registro">Register</a></li>
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/registro">Register</a></li>   
+            <% } else { %>
+                <% if (locals.userLogin.idRole === 3) { %>
+                    <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/admin">Administrador</a></li>
+                    <%- include('./filtroAdmin') %>
+                <% } else { %>
+                    <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/carrito">Carrito</a></li>
+                    <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="#">Notificaciones</a></li>
+                    <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/perfil">Perfil</a></li>
+                <% } %>
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/salir">Salir</a></li>
             <% } %>
         </ul>
-    </nav>
+    </nav>        
     <div class="header__contIconos">
         <i class="fa-solid fa-user header--iconoUser"></i>
         <i class="fa-solid fa-bars-staggered header--iconoHam"></i>

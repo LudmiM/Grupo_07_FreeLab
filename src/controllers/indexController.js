@@ -1,9 +1,9 @@
 const db = require('./../database/models');
+const { Op } = require('sequelize');
 
 module.exports = {
     index: async (req, res) => {
         try {
-  
             const projects = await db.Project.findAll({
                 order: [['createdAt', 'DESC']], 
                 limit: 5 
@@ -19,47 +19,77 @@ module.exports = {
     card: (req,res) => {
         res.render('productCart');
     },
-    newsletter: (req,res) => {
-        const emailNewsletter = req.body.emailNewsletter;
-        console.log('El email ingresado es '+emailNewsletter)
-        const volver = req.url;
-        res.redirect(`${volver}`);
-    },
-    admin: (req,res) => {
-        //const products= leerJSON('products')
-       /* return res.send(products);
-        res.render('dashboard');*/
-        return res.render('dashboard')//,{products})
-    },
-    resultado: (req, res) => {
-        /*
-        const { key } = req.query; 
-        const products= leerJSON('products')
-        res.render('resultado', {
-            products: products.servicios.filter(p => p.category.toLowerCase().includes(key.toLowerCase())) || p.firshName.toLowerCase().includes(key.toLowerCase()) || p.lastName.toLowerCase().includes(key.toLowerCase()), key});
-    */
-    }
-}
-
-//console.log(req.url)
-/*Buscador de leandro 
-
-search :(req, res) => {
-    const { keyword } = req.query
-
-    db.Product.findAll({
-      where:{
-        name:{[Op.substring] : keyword
-
+    admin: async (req,res) => {
+        try {
+            const optionType = req.params.optionType;
+            console.log(optionType)
+            if (optionType){
+                console.log('wiii wntreee')
+            if(optionType == 'Proyectos'){
+                const projects = await db.Project.findAll({
+                    order: [['idCompany', 'ASC'], ['createdAt', 'DESC']]
+                });
+                return res.render('dashboard', {
+                    projects
+                });
+            } else if(optionType == 'Freelancers'){
+                const freelancers = await db.Freelancer.findAll({
+                });
+                return res.render('dashboard', {
+                    freelancers
+                });
+            } else{
+                const empresas = await db.Company.findAll({
+                });
+                return res.render('dashboard', {
+                    empresas
+                });
+           }
+        }else{
+            console.log('nohay nada ahi')
+            const projects = await db.Project.findAll({
+                order: [['idCompany', 'ASC'], ['createdAt', 'DESC']]
+            });
+            return res.render('dashboard', {
+                projects
+            });
         }
 
-      },
-      include:["categories"]
-    })
-    .then(products=>{
-      return res.render("index",{products,keyword,user:req.session.userLogin})
-    })
+        } catch (error) {
+            console.error("Error al obtener los proyectos:", error);
+            return res.status(500).send("Error al obtener los datos");
+        }
+    },
+    search :(req, res) => {
+        const { key } = req.query
 
-
-  }
-*/
+        db.Project.findAll({
+          where:{
+            title:{[Op.substring] : key
+            }
+          },
+          //include:["categories"]
+        })
+        .then(projects=>{
+          return res.render("listado",{projects,key})
+        })
+    },
+    listProjects:{
+        //Falta funcionalidad
+    },
+    newsletter: (req,res) => {
+        try {
+            const emailNewsletter = req.body.emailNewsletter;
+            if(emailNewsletter){
+                db.Newsletter.create({
+                    name: emailNewsletter,                    
+                    createdAt : new Date(),
+                    updatedAt : new Date()
+                })
+            }
+            res.redirect('/');
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
