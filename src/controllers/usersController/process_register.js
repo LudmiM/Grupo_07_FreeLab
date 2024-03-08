@@ -37,13 +37,13 @@ module.exports = async (req, res) => {
             
             const userType = req.body.userType;
             if (userType === '1') {
-                //console.log("Redirigiendo a formulario de empresa");
+                console.log("Redirigiendo a formulario de empresa");
                 return res.redirect('/usuarios/registro/empresa');
             } else if (userType === '2') {
-                //console.log("Redirigiendo a formulario de freelancer");
+                console.log("Redirigiendo a formulario de freelancer");
                 return res.redirect('/usuarios/registro/freelancer');
             } else {
-                //console.log("Tipo de usuario desconocido:", userType);
+                console.log("Tipo de usuario desconocido...", userType);
                 return res.redirect('/');
             }
         }
