@@ -13,36 +13,13 @@ module.exports = async (req, res) => {
       });
 
     }
-
-    const { firstName, lastName, country, phoneCode, phone, about, hourValue } = req.body;
-    const file = req.file;
-
-    const users = data.leerJSON('usuarios');
-
-    const lastId = users.freelancers.length > 0 ? parseInt(users.freelancers[users.freelancers.length - 1].id) : 0;
-    const newId = lastId + 1;
-    const freelancerRole = 2;
-
-    function Freelancer(firstName, lastName, country, phoneCode, phone, mainImage, freelancerSkills) {
-      this.id = newId;
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.country = country;
-      this.phoneCode = phoneCode;
-      this.phone = phone;
-      this.mainImage = mainImage;
-      this.freelancerSkills = freelancerSkills;
-      this.idRole = freelancerRole;
-    }
-
-    const newFreelancer = new Freelancer(firstName, lastName, country, phoneCode, phone, file.filename, about, hourValue);
-
-    users.freelancers.push(newFreelancer);
-    data.escribirJSON(users, 'usuarios');
+    const email = req.body.email.trim().toLowerCase();
+    console.log('muestro le amil')
+    console.log(email)
+    //Aca busca el user y cargalo ala bbdd
 
     return res.redirect('/usuarios/ingreso');
   } catch (error) {
-
     console.error(error);
     return res.status(500).send("Error interno del servidor");
   }

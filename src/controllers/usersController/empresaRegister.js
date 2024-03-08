@@ -12,29 +12,8 @@ module.exports = async (req, res) => {
         errors: errors.mapped()
       });
     }
+    //aca igual agrega la consulta y agrega
 
-    const { companyName, location, companyDescription } = req.body;
-    const file = req.file;
-
-    const users = data.leerJSON('usuarios');
-
-    const lastId = users.empresas.length > 0 ? parseInt(users.empresas[users.empresas.length - 1].id) : 0;
-    const newId = lastId + 1;
-    const empresaRole = 1;
-
-    function Empresa(companyName, location, mainImage, companyDescription) {
-      this.id = newId;
-      this.companyName = companyName;
-      this.location = location;
-      this.mainImage = mainImage;
-      this.companyDescription = companyDescription;
-      this.idRole = empresaRole;
-    }
-
-    const newEmpresa = new Empresa(companyName, location, file.filename, companyDescription);
-
-    users.empresas.push(newEmpresa);
-    data.escribirJSON(users, 'usuarios');
     return res.redirect('/usuarios/ingreso');
   } catch (error) {
 
