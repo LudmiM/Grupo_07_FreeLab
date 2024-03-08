@@ -25,9 +25,7 @@
                         <label class="contenedor__categoria__label" for="tipoTrabajo">Categoria:</label>
                         <select id="categoria" name="categoria" class="contenedor__categoria__select">
                             <option value="" selected hidden></option>
-                            <% categorias.forEach(c => { %>
-                                <option value="<%= c %>"><%= c %></option>
-                            <% }) %>
+                            
                         </select>
                     </div>
                     <!--<div>
@@ -48,10 +46,9 @@
         <section class="lp__resultados lp__generales">
             <h3 class="products-title">Resultados de la búsqueda:</h3>
 
-			<% if (filtrados.length) { %>
-				<% filtrados.forEach(f => { %>
-                    <%= f.first_name %>
-                    <p><%= f.name %></p>
+			<% if (projects.length) { %>
+				<% projects.forEach(p => { %>
+                    <p><%= p.title %></p>
 				<% }) %>
 			<% } else { %>
 			    <h2>No hay productos que coincidan con esa búsqueda</h2>

@@ -6,28 +6,19 @@ const checkRol = require('./../middleware/checkRol');
 
 router
   .get('/', indexController.index)
-  .get('/admin',checkRol.admin, indexController.admin);
+  .get('/admin',checkRol.admin, indexController.admin)
+  .get('/buscar', indexController.search);
 
-router.get('/carrito',checkRol.logged, (req, res) => {
-  res.render('productCart');
-});
-
-/*
-router.get('/admin',checkRol.admin, (req, res) => {
-  //const { updated, added, deleted } = req.query;
-  const products = leerJSON('products');
-  res.render('dashboard', { products, updated, added, deleted });
-});*/
-/*
-router.get('/resultado', (req, res) => {
+router.get('/listado', (req, res) => {
   const { key } = req.query; 
   const products = leerJSON('products');
   const filteredProducts = products.servicios.filter(product => product.category.toLowerCase().includes(key.toLowerCase()));
-  res.render('resultado', { products: filteredProducts, key });
-});*/
-
+  res.render('listado', { products: filteredProducts, key });
+});
 //router.get('/listado', indexController.listProducts);
-
+router.get('/carrito',checkRol.logged, (req, res) => {
+  res.render('productCart');
+});
 router.post('/newsletter', indexController.newsletter);
 
 module.exports = router;

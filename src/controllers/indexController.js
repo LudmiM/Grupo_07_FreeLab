@@ -1,4 +1,5 @@
 const db = require('./../database/models');
+const { Op } = require('sequelize');
 
 module.exports = {
     index: async (req, res) => {
@@ -66,20 +67,20 @@ module.exports = {
         }
     },
     search :(req, res) => {
-        const { keyword } = req.query
-    
+        const { key } = req.query
+
         db.Project.findAll({
           where:{
-            name:{[Op.substring] : keyword
+            title:{[Op.substring] : key
             }
           },
-          include:["categories"]
+          //include:["categories"]
         })
         .then(projects=>{
-          return res.render("listadoProductos",{projects,keyword})
+          return res.render("listado",{projects,key})
         })
     },
-    listProducts:{
+    listProjects:{
 
     }
 }
