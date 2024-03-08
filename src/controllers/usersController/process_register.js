@@ -22,7 +22,7 @@ module.exports = async (req, res) => {
             // Usuario existente
             console.log("Usuario existente. ID de rol:", existingUser.idRole);
 
-            // Redirigir según el rol del usuario
+            // redirije segun el usuario, los console es para ver si se rompe algo
             if (existingUser.idRole === 1) {
                 console.log("Redirigiendo a formulario de empresa");
                 return res.redirect('/usuarios/registro/empresa');
@@ -34,7 +34,7 @@ module.exports = async (req, res) => {
                 return res.redirect('/');
             }
         } else {
-            
+
             const userType = req.body.userType;
             if (userType === '1') {
                 console.log("Redirigiendo a formulario de empresa");

@@ -20,7 +20,7 @@ module.exports = async (req, res) => {
 
     const lastId = users.empresas.length > 0 ? parseInt(users.empresas[users.empresas.length - 1].id) : 0;
     const newId = lastId + 1;
-    const empresaRole = 1; // ID del rol de empresa
+    const empresaRole = 1;
 
     function Empresa(companyName, location, mainImage, companyDescription) {
       this.id = newId;
@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
       this.location = location;
       this.mainImage = mainImage;
       this.companyDescription = companyDescription;
-      this.idRole = empresaRole; // Asignar el ID del rol de empresa
+      this.idRole = empresaRole;
     }
 
     const newEmpresa = new Empresa(companyName, location, file.filename, companyDescription);
@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
     data.escribirJSON(users, 'usuarios');
     return res.redirect('/usuarios/ingreso');
   } catch (error) {
-    // Maneja los errores aquí
+
     console.error(error);
     return res.status(500).send("Error interno del servidor");
   }

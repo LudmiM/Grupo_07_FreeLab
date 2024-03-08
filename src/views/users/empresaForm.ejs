@@ -1,62 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('../partials/head', {title: 'Home | FreeLab' }) %>
-<body class="body-register">
-    <%- include('../partials/header')%>
-    <div class="register-container">
+<%- include('../partials/head', {title: 'Home | FreeLab' }) %>
 
-        <!-- Formulario de registro -->
-        <div class="register-form">
-        
-        <!-- empresaForm.ejs -->
-        <form id="employer-registration" class="registration-section employer" action="" method="POST" enctype="multipart/form-data">
+    <body class="body-register">
+        <%- include('../partials/header')%>
+            <div class="register-container">
 
-            <h1>Registro Empresa</h1>
+                <div class="register-form">
 
-            <!-- Nombre de la Empresa -->
-            <label for="companyName">Nombre de la Empresa </label>
-            <div class="input-line">
-                <input type="text" id="companyName" name="companyName" placeholder="Nombre de la Empresa" >
-                <small class="text-danger ms-2"><%= locals.errors && errors.companyName ? errors.companyName.msg : null %></small>
+                    <form id="employer-registration" class="registration-section employer" action="" method="POST"
+                        enctype="multipart/form-data">
+
+                        <h1>Registro Empresa</h1>
+
+                        <!-- Nombre de la Empresa -->
+                        <label for="companyName">Nombre de la Empresa </label>
+                        <div class="input-line">
+                            <input type="text" id="companyName" name="companyName" placeholder="Nombre de la Empresa">
+                            <small class="text-danger ms-2">
+                                <%= locals.errors && errors.companyName ? errors.companyName.msg : null %>
+                            </small>
+                        </div>
+
+                        <!-- Ubicación de la Empresa -->
+                        <label for="location">Ubicación de la Empresa </label>
+                        <div class="input-line">
+                            <input type="text" id="location" name="location" placeholder="Ubicación de la Empresa">
+                            <small class="text-danger ms-2">
+                                <%= locals.errors && errors.location ? errors.location.msg : null %>
+                            </small>
+                        </div>
+
+                        <!-- Imagen de Perfil -->
+                        <div class="input-line">
+                            <label for="empresaImage">Agregar imagen de perfil</label>
+                            <input type="file" name="empresaImage" class="form-control" id="empresaImage">
+                        </div>
+
+                        <!-- Sitio Web de la Empresa -->
+                        <label for="website">Sitio Web de la Empresa </label>
+                        <div class="input-line">
+                            <input type="text" id="website" name="website" placeholder="Sitio Web de la Empresa">
+                            <small class="text-danger ms-2">
+                                <%= locals.errors && errors.website ? errors.website.msg : null %>
+                            </small>
+                        </div>
+
+                        <!-- Breve Descripción de la Empresa -->
+                        <label for="companyDescription">Breve Descripción de la Empresa </label>
+                        <div class="input-line-empresa">
+                            <textarea id="companyDescription" name="companyDescription"
+                                placeholder="Breve descripción de la empresa"></textarea>
+                            <small class="text-danger ms-2">
+                                <%= locals.errors && errors.companyDescription ? errors.companyDescription.msg : null %>
+                            </small>
+                        </div>
+
+
+                        <button type="submit" class="registration-button empresa">Registrarse como Empresa</button>
+                    </form>
+
+
+                </div>
+
+
             </div>
-            
-            <!-- Ubicación de la Empresa -->
-            <label for="location">Ubicación de la Empresa </label>
-            <div class="input-line">
-                <input type="text" id="location" name="location" placeholder="Ubicación de la Empresa" >
-                <small class="text-danger ms-2"><%= locals.errors && errors.location ? errors.location.msg : null %></small>
-            </div>
+            <%- include('../partials/footer')%>
+                <%- include('../partials/scripts') %>
+    </body>
 
-            <!-- Imagen de Perfil -->
-            <div class="input-line">
-                <label for="empresaImage">Agregar imagen de perfil</label>
-                <input type="file" name="empresaImage" class="form-control" id="empresaImage">
-            </div>
-
-             <!-- Sitio Web de la Empresa -->
-             <label for="website">Sitio Web de la Empresa </label>
-             <div class="input-line">
-                 <input type="text" id="website" name="website" placeholder="Sitio Web de la Empresa" >
-                 <small class="text-danger ms-2"><%= locals.errors && errors.website ? errors.website.msg : null %></small>
-             </div>
-            
-            <!-- Breve Descripción de la Empresa -->
-            <label for="companyDescription">Breve Descripción de la Empresa </label>
-            <div class="input-line-empresa">
-                <textarea id="companyDescription" name="companyDescription" placeholder="Breve descripción de la empresa" ></textarea>
-                <small class="text-danger ms-2"><%= locals.errors && errors.companyDescription ? errors.companyDescription.msg : null %></small>
-            </div>
-        
-            
-            <button type="submit" class="registration-button empresa">Registrarse como Empresa</button>
-        </form>
-
-
-        </div>
-
-        
-    </div>
-    <%- include('../partials/footer')%>
-    <%- include('../partials/scripts') %>
-</body>
 </html>

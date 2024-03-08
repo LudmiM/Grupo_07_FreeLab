@@ -22,9 +22,9 @@ module.exports = [
             }
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
-                return false; 
+                return false;
             }
-            
+
             try {
                 const email = req.body.email.trim().toLowerCase();
                 const password = hashSync(req.body.userPassword, 10);
