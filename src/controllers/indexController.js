@@ -19,12 +19,6 @@ module.exports = {
     card: (req,res) => {
         res.render('productCart');
     },
-    newsletter: (req,res) => {
-        const emailNewsletter = req.body.emailNewsletter;
-        console.log('El email ingresado es '+emailNewsletter)
-        const volver = req.url;
-        res.redirect(`${volver}`);
-    },
     admin: async (req,res) => {
         try {
             const optionType = req.params.optionType;
@@ -81,6 +75,12 @@ module.exports = {
         })
     },
     listProjects:{
-
+        //Falta funcionalidad
+    },
+    newsletter: (req,res) => {
+        const emailNewsletter = req.body.emailNewsletter;
+        console.log('El email ingresado es '+emailNewsletter)
+        const volver = req.url;
+        res.redirect(`${volver}`);
     }
 }
