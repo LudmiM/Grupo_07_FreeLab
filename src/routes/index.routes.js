@@ -7,8 +7,8 @@ const checkRol = require('./../middleware/checkRol');
 router
   .get('/', indexController.index)
   .get('/admin',checkRol.admin, indexController.admin)
-  .get('/buscar', indexController.search)
-  .get('/listar', indexController.listProjects);
+  .get('/buscar', indexController.search);
+  //.get('/listar', indexController.listProjects);
 
 router.get('/listado', (req, res) => {
   const { key } = req.query; 
