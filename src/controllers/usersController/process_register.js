@@ -19,11 +19,9 @@ module.exports = (req, res) => {
         if (user.idRole === 1) {
             //Escribir la url del formulario company
             return res.redirect('/usuarios/registro/empresa')
-            return res.render('/')
         } else {
             //Escribir la url del formulario freelancer
             return res.redirect('/usuarios/registro/freelancer')
-            return res.render('/')
         }
     } catch (error) {
         console.error(error);
