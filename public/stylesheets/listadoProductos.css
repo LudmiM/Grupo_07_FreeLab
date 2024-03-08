@@ -57,8 +57,6 @@ body {
     border: 1px solid #ccc; /* Agregar un borde de color gris */
     border-radius: 5px;
     outline: none;
-    appearance: none; /* Eliminar el estilo predeterminado del select en algunos navegadores */
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>'); /* Agregar una flecha personalizada */
     background-repeat: no-repeat;
     background-position: right 8px center;
     background-size: 24px 24px;
