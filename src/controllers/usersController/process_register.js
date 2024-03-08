@@ -1,4 +1,41 @@
 const { validationResult } = require("express-validator");
+const db = require('./../../database/models')
+
+module.exports = (req, res) => {
+    try{
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.render('users/register', {
+                errors: errors.mapped()
+            });
+        }
+        const email = req.body.email.trim().toLowerCase();
+        const user = db.User.findOne({
+            where : {
+                email : email
+            }
+        })
+        if (user.idRole === 1) {
+            //Escribir la url del formulario company
+            return res.redirect('/usuarios/registro/empresa')
+            return res.render('/')
+        } else {
+            //Escribir la url del formulario freelancer
+            return res.redirect('/usuarios/registro/freelancer')
+            return res.render('/')
+        }
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send('Error interno del servidor');
+    }
+};
+
+
+/* problema no enceuntra e lrol, intentar con este!
+
+
+const { validationResult } = require("express-validator");
 const db = require('./../../database/models');
 
 module.exports = async (req, res) => {
@@ -33,7 +70,8 @@ module.exports = async (req, res) => {
                 console.log("ID de rol desconocido:", existingUser.idRole);
                 return res.redirect('/');
             }
-        } else {
+        }// esto es porque no encuentra el rol
+         else {
 
             const userType = req.body.userType;
             if (userType === '1') {
@@ -51,4 +89,4 @@ module.exports = async (req, res) => {
         console.error(error);
         return res.status(500).send('Error interno del servidor');
     }
-};
+};*/
