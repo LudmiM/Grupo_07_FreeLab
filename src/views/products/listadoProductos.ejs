@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./../partials/head', {title: 'Home | FreeLab' }) %>
-<body>
-    <%- include('./../partials/header')%>
-    <main class="lp__main">
-            <section class="lp__OrdenarPor lp__generales">
-                <label class="lp__OrdenarPor--label lp__sacarPorPantalla" for="idioma">Ordenar Por:</label>
-                <select id="idioma" name="idioma" class="lp__OrdenarPor__select">
-                    <option value="" selected hidden>Ordenar por</option>
-                    <option value="menorPrecio">Menor Precio</option>
-                    <option value="mayorPrecio">Mayor Precio</option>
-                </select>
-            </section>
-            <aside class="lp__filtro lp__generales">
-                <h3 class="lp__filtro--h3">Filtros:</h3>
-                
-                <form action="/productos/listado" method="get" id="filtro" class="lp__filtro__form">
+<%- include('./../partials/head', {title: 'Home | FreeLab' }) %>
+
+    <body>
+        <%- include('./../partials/header')%>
+            <main class="lp__main">
+
+                <section action="/productos/listado" method="get" id="filtro" class="lp__filtro__section">
+                    <h3 class="lp__filtro--h3">Filtros:</h3>
                     <div class="lp__filtro__form__contenedor lp__filtro__form__contenedor__precio">
-                        <label for="precio">Precio:</label>
-                        <input class="lp__input lp__input__filtrarMax" type="number" id="minPrecio" name="minPrecio" placeholder="Min">
-                        <input class="lp__input lp__input__filtrarMax" type="number" id="maxPrecio" name="maxPrecio" placeholder="Max">
+                        <label for="precio" class="precio-product">Precio:</label>
+                        <input class="lp__input lp__input__filtrarMax" type="number" id="minPrecio" name="minPrecio"
+                            placeholder="Min" min="0">
+                        <input class="lp__input lp__input__filtrarMax" type="number" id="maxPrecio" name="maxPrecio"
+                            placeholder="Max" min="0" oninput="validarMaxPrecio()">
                     </div>
+
                     <div class="lp__filtro__form__contenedor lp__filtro__form__contenedor__categoria">
                         <label class="contenedor__categoria__label" for="tipoTrabajo">Categoria:</label>
                         <select id="categoria" name="categoria" class="contenedor__categoria__select">
-                            <option value="" selected hidden></option>
-                            <% categorias.forEach(c => { %>
-                                <option value="<%= c %>"><%= c %></option>
-                            <% }) %>
+                            <option value="" selected hidden>Selecciona una categoria</option>
+                            <% categorias.forEach(c=> { %>
+                                <option value="<%= c %>">
+                                    <%= c %>
+                                </option>
+                                <% }) %>
                         </select>
                     </div>
                     <!--<div>
@@ -38,28 +35,64 @@
                         </select>
                     </div>-->
                     <div class="lp__filtro__form__contenedor lp__filtro__form__contenedor__Star">
-                        <label for="puntajeEstrellas">Puntaje de estrellas:</label>
-                        <input type="number" id="puntajeEstrellas" name="puntajeEstrellas" min="1" max="5">
+                        <label for="puntajeEstrellas" class="puntajeEstrellas">Puntaje de estrellas:</label>
+                        <p class="clasificacion">
+                            <input id="radio1" type="radio" name="estrellas" value="1">
+                            <label for="radio1">★</label>
+                            <input id="radio2" type="radio" name="estrellas" value="2">
+                            <label for="radio2">★</label>
+                            <input id="radio3" type="radio" name="estrellas" value="3">
+                            <label for="radio3">★</label>
+                            <input id="radio4" type="radio" name="estrellas" value="4">
+                            <label for="radio4">★</label>
+                            <input id="radio5" type="radio" name="estrellas" value="5">
+                            <label for="radio5">★</label>
+                        </p>
+
                     </div>
-                    <button type="submit">Filtrar</button>
-                </form>
-            </aside>
+                    <button type="submit" class="submit-filter-product">Filtrar</button>
 
-        <section class="lp__resultados lp__generales">
-            <h3 class="products-title">Resultados de la búsqueda:</h3>
+                </section>
 
-			<% if (filtrados.length) { %>
-				<% filtrados.forEach(f => { %>
-                    <%= f.first_name %>
-                    <p><%= f.name %></p>
-				<% }) %>
-			<% } else { %>
-			    <h2>No hay productos que coincidan con esa búsqueda</h2>
-			<% } %>	
+                <section class="lp__resultados lp__generales">
+                    <div class="lp__resultados__header">
+                        <h3 class="products-title">Resultados de la búsqueda:</h3>
+                        <select id="idioma" name="idioma" class="lp__OrdenarPor__select">
+                            <option value="" selected hidden>Ordenar por</option>
+                            <option value="menorPrecio">Menor Precio</option>
+                            <option value="mayorPrecio">Mayor Precio</option>
+                        </select>
+                    </div>
 
-        </section>
-    </main>
-    <%- include('./../partials/footer')%>
-    <%- include('./../partials/scripts') %>
-</body>
+                    <div class="result_busqued-product">
+                        <% if (filtrados.length) { %>
+                            <% filtrados.forEach(f=> { %>
+                                <%= f.first_name %>
+                                    <p>
+                                        <%= f.name %>
+                                    </p>
+                                    <% }) %>
+                                        <% } else { %>
+                                            <h2>No hay productos que coincidan con esa búsqueda</h2>
+                                            <% } %>
+                    </div>
+                </section>
+
+
+            </main>
+            <%- include('./../partials/footer')%>
+                <%- include('./../partials/scripts') %>
+    </body>
+    <script>
+        function validarMaxPrecio() {
+            var minPrecio = document.getElementById('minPrecio').value;
+            var maxPrecioInput = document.getElementById('maxPrecio');
+            var maxPrecio = parseFloat(maxPrecioInput.value);
+
+            if (maxPrecio < minPrecio) {
+                maxPrecioInput.value = minPrecio;
+            }
+        }
+    </script>
+
 </html>
