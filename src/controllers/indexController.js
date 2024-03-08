@@ -80,7 +80,7 @@ module.exports = {
     newsletter: (req,res) => {
         const emailNewsletter = req.body.emailNewsletter;
         console.log('El email ingresado es '+emailNewsletter)
-        const volver = req.url;
-        res.redirect(`${volver}`);
+        //Llamar y crear la tabla para newsletter
+        res.redirect('/');
     }
 }
