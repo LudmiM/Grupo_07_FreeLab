@@ -79,3 +79,19 @@ buscar culpables, tomar decisiones unilaterales.
 
 5. **Que hay que hacer mas** 
 hacer un pull antes y despues de empezar un trabajo, dejar comentarios.
+
+# Sprint 06
+1. **Que hay que hacer mas:**
+Avisar si llegamos a desaparecer, ponerse al pendiente de las novedades, avisar si no se va a poder hacer una tarea,  
+
+2. **Que hay que dejar de hacer:** 
+Posponer las actividades
+
+3. **Que hay que empezar a hacer:** 
+PEDIR AYUDA SI NO SALE UNA INCIDENCIA
+
+4. **Que hay que hacer menos:**
+Reunirnos mas seguido
+
+5. **Que hay que seguir haciendo** 
+Seguir motivandonos
