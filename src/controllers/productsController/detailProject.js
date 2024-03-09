@@ -18,7 +18,14 @@ module.exports = async (req, res) => {
             return res.status(404).send('Proyecto no encontrado');
         }
         const skills = p.skills.map(skill => skill.name);
-        return res.render('products/project-detail', { p, skills });
+
+        const ind = await db.Individual.findAll({
+            where: {
+                idProject: p.id
+            }
+        });
+        
+        return res.render('products/project-detail', { p, skills, ind });
     } catch (error) {
         console.error(error);
         return res.status(500).send('Error interno del servidor');
