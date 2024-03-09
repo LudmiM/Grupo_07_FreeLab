@@ -7,9 +7,10 @@
         <ul class="header__nav__ul">
             <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/listado">Freelancers</a></li>
             <ul>
+                <!--Arreglar para que quede bonito-->
                 <% if (categories && categories.length > 0) { %>
-                    <% categories.forEach(category => { %>
-                        <li><a href="/buscar/<%= category.id %>"><%= category.name %></a></li>
+                    <% categories.forEach(c => { %>
+                        <li><a href="/buscar/<%= c.id %>"><%= c.name %></a></li>
                     <% }); %>
                 <% } %>
             </ul>
