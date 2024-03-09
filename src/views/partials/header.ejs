@@ -6,7 +6,13 @@
     <nav class="header__nav">
         <ul class="header__nav__ul">
             <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/listado">Freelancers</a></li>
-            
+            <ul>
+                <% if (categories && categories.length > 0) { %>
+                    <% categories.forEach(category => { %>
+                        <li><a href="/buscar/<%= category.id %>"><%= category.name %></a></li>
+                    <% }); %>
+                <% } %>
+            </ul>
             <% if (!locals.userLogin) { %>
                 <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/ingreso">Login</a></li>
                 <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/registro">Register</a></li>   
