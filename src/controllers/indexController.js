@@ -77,15 +77,19 @@ module.exports = {
     listProjects:{
         //Falta funcionalidad
     },
-    newsletter: (req,res) => {
+    newsletter: async (req,res) => {
         try {
             const emailNewsletter = req.body.emailNewsletter;
+            console.log(emailNewsletter)
             if(emailNewsletter){
-                db.Newsletter.create({
-                    name: emailNewsletter,                    
+                console.log('Estoy ene el newsletter precarga')
+                await db.Newsletter.create({
+                    email: emailNewsletter,                    
                     createdAt : new Date(),
                     updatedAt : new Date()
                 })
+            } else{
+                console.log('No entree')
             }
             res.redirect('/');
         } catch (error) {
