@@ -15,17 +15,16 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'idSkill',
         as: 'projects'
       });
-      /*
-      
+      Skill.belongsToMany(models.Individual, {
+        through: 'IndividualSkill',
+        foreignKey: 'idSkill',
+        as: 'individuals'
+      });
       Skill.belongsToMany(models.Freelancer, {
         through: 'FreelancerSkill',
         foreignKey: 'idSkill',
         as: 'freelancers'
       });
-      Skill.belongsToMany(models.Individual, {
-        through: models.IndividualSkill,
-        foreignKey: 'idSkill'
-      });*/
     }
   }
   Skill.init({

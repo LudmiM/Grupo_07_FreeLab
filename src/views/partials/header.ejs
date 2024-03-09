@@ -6,7 +6,18 @@
     <nav class="header__nav">
         <ul class="header__nav__ul">
             <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/listado">Freelancers</a></li>
-            
+            <li class="nav-item dropdown header__nav__ul__li ul__categories">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categorias
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <% if (categories && categories.length > 0) { %>
+                        <% categories.forEach(c => { %>
+                            <a class="dropdown-item" href="/buscar/<%= c.id %>"><%= c.name %></a>
+                        <% }); %>
+                    <% } %>
+                </div>
+            </li>
             <% if (!locals.userLogin) { %>
                 <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/ingreso">Login</a></li>
                 <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/registro">Register</a></li>   
@@ -28,5 +39,3 @@
         <i class="fa-solid fa-bars-staggered header--iconoHam"></i>
     </div>
 </header>
-
-

@@ -77,12 +77,12 @@ module.exports = {
     listProjects:{
         //Falta funcionalidad
     },
-    newsletter: (req,res) => {
+    newsletter: async (req,res) => {
         try {
             const emailNewsletter = req.body.emailNewsletter;
             if(emailNewsletter){
-                db.Newsletter.create({
-                    name: emailNewsletter,                    
+                await db.Newsletter.create({
+                    email: emailNewsletter,                    
                     createdAt : new Date(),
                     updatedAt : new Date()
                 })

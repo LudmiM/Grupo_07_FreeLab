@@ -21,12 +21,9 @@ module.exports = (sequelize, DataTypes) => {
         through: 'ProjectSkill',
         foreignKey: 'idProject',
         as: 'skills'
-      });
-      /*
-      Project.hasMany(models.Favorite, { foreignKey: 'idProject' })
-      
-        
-      Project.hasMany(models.Individual, { foreignKey: 'idProject' });*/
+      });      
+      Project.hasMany(models.Individual, { foreignKey: 'idProject' });
+      Project.hasMany(models.Favorite, { foreignKey: 'idProject' });
     }
   }
   Project.init(
