@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'IndividualSkill',
+    tableName: 'IndividualSkills',
     timestamps: false, 
   });
   return IndividualSkill;

@@ -16,8 +16,9 @@ module.exports = (sequelize, DataTypes) => {
         as: 'projects'
       });
       Skill.belongsToMany(models.Individual, {
-        through: models.IndividualSkill,
-        foreignKey: 'idSkill'
+        through: 'IndividualSkill',
+        foreignKey: 'idSkill',
+        as: 'individuals'
       });
       Skill.belongsToMany(models.Freelancer, {
         through: 'FreelancerSkill',

@@ -22,9 +22,22 @@ module.exports = async (req, res) => {
         const ind = await db.Individual.findAll({
             where: {
                 idProject: p.id
-            }
+            },
+            include: [{
+                model: db.Skill,
+                as: 'skills',
+                through: {
+                    attributes: [] 
+                },
+                attributes: ['name']
+            }]
         });
-        
+        console.log(ind)
+        console.log('Son '+ind.skill)
+       /* const skillsInd = ind.map(individual => {
+            return individual.Skills.map(skill => skill.name);
+        });*/
+               
         return res.render('products/project-detail', { p, skills, ind });
     } catch (error) {
         console.error(error);
