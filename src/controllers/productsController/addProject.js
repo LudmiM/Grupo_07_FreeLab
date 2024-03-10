@@ -5,6 +5,7 @@ module.exports = (req, res) => {
   const { title,description,idStatus,category,skilles} = req.body;
   const idCompany = req.session.idCompany;
 
+  if(Array.isArray(skilles)) { 
   db.Project.create({
     title,
     description,
@@ -29,4 +30,4 @@ module.exports = (req, res) => {
     return res.redirect('/usuarios/perfil');
   })
   .catch(error => console.log(error))
-}
+} }

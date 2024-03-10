@@ -5,9 +5,9 @@
   <body>
 
     <%-include('../partials/header', {title: 'Home | FreeLab' })%>
-
+<div class="card-body">
       <main class="main__create w-100">
-        <h4>creacion de proyecto</h4>
+        <h4>Crear nuevo proyecto</h4>
 
         <form class="form__create formulario__projectCreate" action="/productos/agregarProyecto" method="POST">
             <div class="mb-3">
@@ -16,8 +16,9 @@
             </div>
 
             <div class="mb-3">
+              
               <select name="category" class="form-select" id="category" aria-label="Floating label select example">
-                <option value="" selected hidden></option>
+                <option value="" selected hidden>Category...</option>
                 <% categories.forEach(c => { %>
                   <option value="<%= c.id %>"><%= c.name %></option>
                 <% }) %>
@@ -30,6 +31,7 @@
             </div>       
 
             <div>
+              <label for="skilles">Skill:</label><br>
               <select name="skilles" class="mul-select" id="skilles" multiple>
                 <% skills.forEach(s => { %>
                   <option value="<%= s.id %>"><%= s.name %></option>
@@ -83,6 +85,7 @@
             </div>
         </form>
     </main>
+    </div>
     <%-include('../partials/footer')%>
     <%-include('../partials/scripts')%>    
 </body>
