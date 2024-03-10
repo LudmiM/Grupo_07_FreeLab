@@ -1,9 +1,8 @@
 const { validationResult } = require("express-validator");
-const data = require('../../data');
-const { Freelancer, User } = require('../../database/models');
-const bcryptjs = require('bcryptjs');
 
-module.exports = async (req, res) => {
+const  db  = require('../../database/models');
+
+module.exports = async (req, res, userId) => {
   try {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -11,16 +10,29 @@ module.exports = async (req, res) => {
         old: req.body,
         errors: errors.mapped()
       });
-
     }
-    const email = req.body.email.trim().toLowerCase();
-    console.log('muestro le amil')
-    console.log(email)
-    //Aca busca el user y cargalo ala bbdd
+    const user = await db.User.findOne({
+      where: {
+        email: req.body.email
+      }
+    })
+
+    const freelancer = await db.Freelancer.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      country: req.body.country,
+      mainImage: req.body.mainImage,
+      phoneCode: req.body.phoneCode,
+      phone: req.body.phone,
+      about: req.body.about,
+      hourValue: req.body.hourValue,
+      idUser: user.id,
+    });
 
     return res.redirect('/usuarios/ingreso');
   } catch (error) {
-    console.error(error);
+    console.error("Error en freelancerRegister:", error);
     return res.status(500).send("Error interno del servidor");
   }
 };
+

@@ -24,12 +24,12 @@ router.post('/registro',registerValidation,process_register);
 router.get('/registro/freelancer', (req, res) => {
   return res.render('users/freelancerForm', { errors: [] });
 });
-router.post('/registro/freelancer', uploadAvatar.single('freelancerImage'),registerValidationRules, freelancerRegister);
+router.post('/registro/freelancer', uploadAvatar.single('freelancerImage'), freelancerRegister);
 
 router.get('/registro/empresa', (req, res) => {
   return res.render('users/empresaForm');
 });
-router.post('/registro/empresa', uploadAvatar.single('empresaImage'), empresaValidationRules, empresaRegister);
+router.post('/registro/empresa', uploadAvatar.single('empresaImage'), empresaRegister);
 
 router.get('/perfil',checkRol.loggedNotAdmin,profile)
 router.put('/edit-laboral',editLaboral, actualizarLaboral)
