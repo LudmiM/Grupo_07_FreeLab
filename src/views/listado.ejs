@@ -48,7 +48,7 @@
 
 			<% if (projects.length) { %>
 				<% projects.forEach(p => { %>
-                    <p><%= p.title %></p>
+                    <%- include('./partials/tarjetaProyecto',{p})%>
 				<% }) %>
 			<% } else { %>
 			    <h2>No hay productos que coincidan con esa búsqueda</h2>
