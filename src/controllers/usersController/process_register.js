@@ -12,7 +12,6 @@ module.exports = (req, res) => {
         const idRole = +req.body.userType;
         const email = req.body.email;
         if (idRole === 1) {
-            
             return res.redirect(`/usuarios/registro/empresa?email=${email}`)
         } else {
             return res.redirect(`/usuarios/registro/freelancer?email=${email}`)
