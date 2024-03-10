@@ -66,14 +66,27 @@
             <aside class="perfil__user__aside__proyectos">
                 <div><a href="/productos/agregarProyecto">Crear proyecto</a></div>
                 <% if (projects.length) { %>
-                    <div class="aside__user__proyectosProyectos">
+                    <div class="card-body profile-edit">
                         <h3>Mis proyectos</h3>
                         <% projects.forEach(p=> { %>
                             <p><%= p.title %></p>
                             <p><%= p.id %></p>
-                            <button type="button" class="action-button delete" data-bs-toggle="modal" data-bs-target="#warningRemoveModal<%= p.id %>">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
+
+                            
+                                <div class="d-flex">
+                                  
+                                    <a class="btn btn-sm btn-success" href="/productos/editar/<%= id %>">Editar
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+
+                                    <a class="btn btn-sm btn-danger action-button delete" data-bs-toggle="modal" data-bs-target="#warningRemoveModal<%= p.id %>">Eliminar
+                                        <i class="fa-solid fa-trash"></i>
+                                    </a>
+                                </div>
+
+                            
+                            
+                                
                             <%- include('../partials/modal/confirmacionEliminar',{p}) %>
                         <% }) %>
                     </div>

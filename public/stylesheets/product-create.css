@@ -11,7 +11,8 @@
     background-color: #ffffff;
 }
 .formulario__projectCreate{
-    background-color: aquamarine;
+    background-color: var(--colorGris);
+    padding: 5px;
 }
 .form__create label{
     color: black;

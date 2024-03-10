@@ -95,6 +95,11 @@
  background-color: var(--colorCeleste);
     
 }
+
+.card-body.profile-edit {
+    border-color: var(--colorCeleste);
+    border: groove;
+}
 /*estilos carga imaegenes */
 
 

@@ -33,3 +33,13 @@
     border-radius: 10px;
     border: solid 1px var(--colorNaranja);
 }
+
+a.btn-success {
+    margin-right: 10px;
+    width: 20%;
+    height: 10%;
+}
+a.btn.btn-sm.btn-danger.action-button.delete {
+    width: 20%;
+    height: 10%;
+}
