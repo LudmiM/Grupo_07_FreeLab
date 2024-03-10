@@ -1,3 +1,4 @@
+// freelancerValidation.js
 const { body } = require('express-validator');
 
 module.exports = [
@@ -7,5 +8,11 @@ module.exports = [
     body('phoneCode').notEmpty().withMessage('El código de país es obligatorio').matches(/^[0-9+]+$/).withMessage('Ingrese un código de país válido'),
     body('phone').notEmpty().withMessage('El número de teléfono es obligatorio').matches(/[0-9]+/).withMessage('Ingrese un número de teléfono válido'),
     body('hourValue').notEmpty().withMessage('El valor por hora es obligatorio').isNumeric().withMessage('El valor por hora debe ser un número'),
-
+    // Agrega la siguiente línea para coincidir con el nombre del campo en el formulario
+    body('hourValue').custom((value, { req }) => {
+        if (!req.body.hourValue) {
+            throw new Error('El valor por hora es obligatorio');
+        }
+        return true;
+    }),
 ];
