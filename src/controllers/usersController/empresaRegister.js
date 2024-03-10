@@ -11,23 +11,20 @@ module.exports = async (req, res, userId) => {
       });
     
     }
- const userEmail = req.body.email
-console.log("userEmail", userEmail);
+ const userEmail = req.query.email
 
-    console.log("aca hay algo " + req.body.email)
     const user = await db.User.findOne({
       where: {
-        email: req.body.email
+        email: userEmail
       }
     })
-    console.log("mostrar" + user)
+
     const company = await db.Company.create({
       companyName: req.body.companyName,
       description: req.body.companyDescription,
       location: req.body.location,
       mainImage: req.body.empresaImage,
       website: req.body.website,
-
       idUser: user.id
 
     });

@@ -11,12 +11,13 @@ module.exports = async (req, res, userId) => {
         errors: errors.mapped()
       });
     }
+    const userEmail = req.query.email
+
     const user = await db.User.findOne({
       where: {
-        email: req.body.email
+        email: userEmail
       }
     })
-
     const freelancer = await db.Freelancer.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
