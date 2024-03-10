@@ -12,14 +12,14 @@
                 <h1 class="mb-0">Editar Servicio/Proyecto</h1>
             </div>
             <div class="card-body-pe">
-                <form action="/productos/editar/<%= product.id %>" method="post" enctype="multipart/form-data" autocomplete="on">
+                <form action="/productos/editar/<%= project.id %>" method="post" enctype="multipart/form-data" autocomplete="on">
                     <!-- Agregar un input oculto para el ID del producto -->
                     <h3>Editando </h3>
-                    <input type="hidden" name="id" value="<%= product ? product.id : '' %>">
+                    <input type="hidden" name="id" value="<%= project ? project.id : '' %>">
                     
                     <div class="col-12 mb-3">
                         <label for="name" class="form-editpe">Nombre</label>
-                        <input name="name" type="text" class="form-control"  value="<%= product && product.name || '' %>" required>
+                        <input name="name" type="text" class="form-control"  value="<%= project && project.name || '' %>" required>
                     </div>
 
                     <div class="mb-3">
