@@ -57,12 +57,12 @@
                         
                     <div class="mb-3">
                         <label for="portfolio" class="form-editpe">Link a Portfolio</label>
-                        <input name="portfolio" type="url" class="form-control" id="portfolio" value="<%= product && product.portfolio || '' %>">
+                        <input name="portfolio" type="url" class="form-control" id="portfolio" value="<%= project && project.portfolio || '' %>">
                     </div>
 
                     <div class="mb-3">
                         <label for="redes_sociales" class="form-editpe">Links a Redes Sociales</label>
-                        <input name="redes_sociales" type="url" class="form-control" id="redes_sociales" value="<%= product && product.redes_sociales || '' %>">
+                        <input name="redes_sociales" type="url" class="form-control" id="redes_sociales" value="<%= project && project.redes_sociales || '' %>">
                     </div> 
 
 
@@ -71,14 +71,14 @@
                             <label for="precio" class="form-editpe me-2">Precio:</label>
                             <div class="input-group">
                                 <span class="input-group-text"> $</span>
-                                <input name="price" type="number" class="form-editpe" id="precio" value="<%= product && product.price || '' %>" required>
+                                <input name="price" type="number" class="form-editpe" id="precio" value="<%= project && project.price || '' %>" required>
                                 <select class="custom-selectpe" id="divisa" name="currency" required>
-                                    <option value="ARS" <%= product && product.currency === 'ARS' ? 'selected' : '' %>>ARS</option>
-                                    <option value="USD" <%= product && product.currency === 'USD' ? 'selected' : '' %>>USD</option>
-                                    <option value="EUR" <%= product && product.currency === 'EUR' ? 'selected' : '' %>>EUR</option>
-                                    <option value="JPY" <%= product && product.currency === 'JPY' ? 'selected' : '' %>>JPY</option>
-                                    <option value="GBP" <%= product && product.currency === 'GBP' ? 'selected' : '' %>>GBP</option>
-                                    <option value="AUD" <%= product && product.currency === 'AUD' ? 'selected' : '' %>>AUD</option>
+                                    <option value="ARS" <%= project && project.currency === 'ARS' ? 'selected' : '' %>>ARS</option>
+                                    <option value="USD" <%= project && project.currency === 'USD' ? 'selected' : '' %>>USD</option>
+                                    <option value="EUR" <%= project && project.currency === 'EUR' ? 'selected' : '' %>>EUR</option>
+                                    <option value="JPY" <%= project && project.currency === 'JPY' ? 'selected' : '' %>>JPY</option>
+                                    <option value="GBP" <%= project && project.currency === 'GBP' ? 'selected' : '' %>>GBP</option>
+                                    <option value="AUD" <%= project && project.currency === 'AUD' ? 'selected' : '' %>>AUD</option>
                                 </select>
                             </div>
                         </div>
