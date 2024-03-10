@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'idFreelancer',
         as: 'skills'
       });
-      Freelancer.belongsToMany(models.Individual, {
+      //Freelancer.belongsToMany(models.Individual, {
         through: models.Application,
         foreignKey: 'idFreelancer'
       });*/

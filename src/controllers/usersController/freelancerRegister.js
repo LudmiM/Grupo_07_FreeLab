@@ -1,6 +1,6 @@
-const data = require('../../data');
-const bcryptjs = require('bcryptjs');
 const { validationResult } = require("express-validator");
+const { Freelancer, User } = require('../../database/models');
+const bcryptjs = require('bcryptjs');
 
 module.exports = (req, res) => {
   const errors = validationResult(req);

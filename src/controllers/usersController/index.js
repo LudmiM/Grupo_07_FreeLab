@@ -1,10 +1,10 @@
 const login = require('./login')
 
 const register = require('./register')
-const formRegister = require('./formRegister')
+const process_register = require('./process_register')
 const freelancerRegister = require('./freelancerRegister')
-
 const empresaRegister = require('./empresaRegister')
+
 const logout = require('./logout')
 const actualizarLaboral = require('./actualizar-laboral')
 const actualizarPersonal = require('./actualizar-personal')
@@ -14,9 +14,9 @@ const process_login = require('./process_login')
 
 module.exports = {
     register,
+    process_register,
     process_login,
     login,
-    formRegister,
     freelancerRegister,
     empresaRegister,
     profile,

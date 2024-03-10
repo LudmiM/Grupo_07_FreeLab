@@ -1,3 +1,5 @@
+// logout.js
+
 module.exports = (req,res) => {
         
     req.session.destroy();

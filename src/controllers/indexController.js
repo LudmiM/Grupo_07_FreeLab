@@ -35,3 +35,24 @@ module.exports = {
 }
 
 //console.log(req.url)
+/*Buscador de leandro 
+
+search :(req, res) => {
+    const { keyword } = req.query
+
+    db.Product.findAll({
+      where:{
+        name:{[Op.substring] : keyword
+
+        }
+
+      },
+      include:["categories"]
+    })
+    .then(products=>{
+      return res.render("index",{products,keyword,user:req.session.userLogin})
+    })
+
+
+  }
+*/
