@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
       const categories = await db.Category.findAll({});
 
    
-      res.render('products/product-edit', { 
+      res.render('products/project-edit', { 
        project,
         skills,
         categories
