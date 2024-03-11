@@ -16,26 +16,21 @@
       </tr>
     </thead>
     <tbody>
-      <% switch (optionType) { 
-        case 'Empresas': %>
-          <% empresas.forEach(e => { %>
-            <tr>
-              <td><%= e.id %></td>
-              <td><%= e.companyName %></td>
-            </tr>
-          <% }) %>
-          <% break;
-        
-        case 'Freelancers': %>
+      <% switch (optionType) { case 'Empresas': %>
+        <% empresas.forEach(e => { %>
+          <tr>
+            <td><%= e.id %></td>
+            <td><%= e.companyName %></td>
+          </tr>
+        <% }) %>
+        <% break; case 'Freelancers': %>
           <% freelancers.forEach(f => { %>
             <tr>
               <td><%= f.id %></td>
               <td><%= `${f.firstName} ${f.lastName}` %></td>
             </tr>
           <% }) %>
-          <% break; 
-        
-        default: %>
+        <% break; default: %>
           <% projects.forEach(p => { %>
             <tr>
               <td><%= p.id %></td>
