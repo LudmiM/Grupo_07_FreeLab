@@ -12,26 +12,41 @@
                 <h1 class="mb-0">Editar Servicio/Proyecto</h1>
             </div>
             <div class="card-body-pe">
-                <form action="/productos/editar/<%= product.id %>" method="post" enctype="multipart/form-data" autocomplete="on">
+                <form action="/productos/editar/<%= project.id %>" method="post" enctype="multipart/form-data" autocomplete="on">
                     <!-- Agregar un input oculto para el ID del producto -->
-                    <input type="hidden" name="id" value="<%= product ? product.id : '' %>">
-                    <div class="row"></div>
-                    <div class="col-12 mb-3">
-                        <label for="nombre" class="form-editpe">Habilidad</label>
-                        <input name="name" type="text" class="form-control" id="nombre" value="<%= product && product.name || '' %>" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="descripcion" class="form-editpe">Descripción</label>
-                        <textarea name="description" class="form-control" rows="3" placeholder="comentanos sobre vos" id="descripcion"><%= product && product.description || '' %></textarea>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="habilidades" class="form-editpe">Habilidades Practicas</label>
-                        <input name="skills" type="text" class="form-control" id="habilidades" value="<%= product && product.skills || '' %>" required>
-                    </div>
+                    <h3>Editando </h3>
+                    <input type="hidden" name="id" value="<%= project ? project.id : '' %>">
                     
-                    <div id="imageFieldsContainer">
+                    <div class="col-12 mb-3">
+                        <label for="name" class="form-editpe">Nombre</label>
+                        <input name="name" type="text" class="form-control"  value="<%= project && project.name || '' %>" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <select name="category" class="form-select" id="category" aria-label="Floating label select example">
+                          <option value="" selected hidden></option>
+                          <% categories.forEach(c => { %>
+                            <option value="<%= c.id %>"><%= c.name %></option>
+                          <% }) %>
+                        </select>
+                      </div>
+
+                      <div class="form__create mb-3">
+                        <label for="description">Description:</label><br>
+                        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
+                      </div>       
+          
+                      <div>
+                        <select name="skilles" class="mul-select" id="skilles" multiple>
+                          <% skills.forEach(s => { %>
+                            <option value="<%= s.id %>"><%= s.name %></option>
+                          <% }) %>
+                        </select>
+                      </div>
+          
+                      <input id="idStatus" name="idStatus" type="number" value="1" hidden>
+          
+                <!-- <div id="imageFieldsContainer">
                      
                         <div class="mb-3 image-field" data-index="2">
                             <label for="additionalImages" class="form-editpe">Seleccionar Imágenes Adicionales</label>
@@ -42,39 +57,32 @@
                         
                     <div class="mb-3">
                         <label for="portfolio" class="form-editpe">Link a Portfolio</label>
-                        <input name="portfolio" type="url" class="form-control" id="portfolio" value="<%= product && product.portfolio || '' %>">
+                        <input name="portfolio" type="url" class="form-control" id="portfolio" value="<%= project && project.portfolio || '' %>">
                     </div>
 
                     <div class="mb-3">
                         <label for="redes_sociales" class="form-editpe">Links a Redes Sociales</label>
-                        <input name="redes_sociales" type="url" class="form-control" id="redes_sociales" value="<%= product && product.redes_sociales || '' %>">
-                    </div>
+                        <input name="redes_sociales" type="url" class="form-control" id="redes_sociales" value="<%= project && project.redes_sociales || '' %>">
+                    </div> 
 
-                    <div class="mb-3">
-                        <label for="category" class="form-editpe">Categoría</label>
-                        <select name="category" class="form-select" id="categoria">
-                            <option value="" selected hidden>Selecciona una categoría</option>
-                            <!-- Agrega más opciones según sea necesario -->
-                        </select>
-                    </div>
 
                     <div class="col-12 mb-3">
                         <div class="input-group">
                             <label for="precio" class="form-editpe me-2">Precio:</label>
                             <div class="input-group">
                                 <span class="input-group-text"> $</span>
-                                <input name="price" type="number" class="form-editpe" id="precio" value="<%= product && product.price || '' %>" required>
+                                <input name="price" type="number" class="form-editpe" id="precio" value="<%= project && project.price || '' %>" required>
                                 <select class="custom-selectpe" id="divisa" name="currency" required>
-                                    <option value="ARS" <%= product && product.currency === 'ARS' ? 'selected' : '' %>>ARS</option>
-                                    <option value="USD" <%= product && product.currency === 'USD' ? 'selected' : '' %>>USD</option>
-                                    <option value="EUR" <%= product && product.currency === 'EUR' ? 'selected' : '' %>>EUR</option>
-                                    <option value="JPY" <%= product && product.currency === 'JPY' ? 'selected' : '' %>>JPY</option>
-                                    <option value="GBP" <%= product && product.currency === 'GBP' ? 'selected' : '' %>>GBP</option>
-                                    <option value="AUD" <%= product && product.currency === 'AUD' ? 'selected' : '' %>>AUD</option>
+                                    <option value="ARS" <%= project && project.currency === 'ARS' ? 'selected' : '' %>>ARS</option>
+                                    <option value="USD" <%= project && project.currency === 'USD' ? 'selected' : '' %>>USD</option>
+                                    <option value="EUR" <%= project && project.currency === 'EUR' ? 'selected' : '' %>>EUR</option>
+                                    <option value="JPY" <%= project && project.currency === 'JPY' ? 'selected' : '' %>>JPY</option>
+                                    <option value="GBP" <%= project && project.currency === 'GBP' ? 'selected' : '' %>>GBP</option>
+                                    <option value="AUD" <%= project && project.currency === 'AUD' ? 'selected' : '' %>>AUD</option>
                                 </select>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="row">
                         <div class="col-6 col-md-5 mx-auto">

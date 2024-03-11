@@ -8,8 +8,8 @@
                 <label class="lp__OrdenarPor--label lp__sacarPorPantalla" for="idioma">Ordenar Por:</label>
                 <select id="idioma" name="idioma" class="lp__OrdenarPor__select">
                     <option value="" selected hidden>Ordenar por</option>
-                    <option value="menorPrecio">Menor Precio</option>
-                    <option value="mayorPrecio">Mayor Precio</option>
+                    <option value="masRecientes">Mas reciente</option>
+                    <option value="Recomendados">Recomendados</option>
                 </select>
             </section>
             <aside class="lp__filtro lp__generales">
@@ -24,8 +24,7 @@
                     <div class="lp__filtro__form__contenedor lp__filtro__form__contenedor__categoria">
                         <label class="contenedor__categoria__label" for="tipoTrabajo">Categoria:</label>
                         <select id="categoria" name="categoria" class="contenedor__categoria__select">
-                            <option value="" selected hidden></option>
-                            
+                            <option value="" selected hidden></option>  
                         </select>
                     </div>
                     <!--<div>
@@ -48,12 +47,11 @@
 
 			<% if (projects.length) { %>
 				<% projects.forEach(p => { %>
-                    <p><%= p.title %></p>
+                    <%- include('./partials/tarjetaProyecto',{p})%>
 				<% }) %>
 			<% } else { %>
 			    <h2>No hay productos que coincidan con esa búsqueda</h2>
 			<% } %>	
-
         </section>
     </main>
     <%- include('./partials/footer')%>

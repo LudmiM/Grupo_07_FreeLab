@@ -1,9 +1,23 @@
-//EDITA UN POST/PUBLICACION
-const data = require('./../../data');
+const db = require("../../database/models");
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
     const { id } = req.params;
-    const productId = parseInt(id); // Convierte el id a número
-    const product = data.leerJSON('products').servicios.find((p) => p.id === productId);
-    return res.render('products/product-edit', { product });
-  }
+
+      try {
+        const project = await db.Project.findByPk(id);
+
+      
+    //habilidades y categorias
+      const skills = await db.Skill.findAll({});
+      const categories = await db.Category.findAll({});
+
+   
+      res.render('products/project-edit', { 
+       project,
+        skills,
+        categories
+      })
+
+    } catch (error) {console.log(error)
+   }  
+}
