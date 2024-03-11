@@ -21,40 +21,29 @@ module.exports = {
     },
     admin: async (req,res) => {
         try {
-            const optionType = req.params.optionType;
-            console.log(optionType)
-            if (optionType){
-                console.log('wiii wntreee')
-            if(optionType == 'Proyectos'){
-                const projects = await db.Project.findAll({
-                    order: [['idCompany', 'ASC'], ['createdAt', 'DESC']]
-                });
-                return res.render('dashboard', {
-                    projects
-                });
-            } else if(optionType == 'Freelancers'){
-                const freelancers = await db.Freelancer.findAll({
-                });
-                return res.render('dashboard', {
-                    freelancers
-                });
-            } else{
-                const empresas = await db.Company.findAll({
-                });
-                return res.render('dashboard', {
-                    empresas
-                });
-           }
-        }else{
-            console.log('nohay nada ahi')
-            const projects = await db.Project.findAll({
-                order: [['idCompany', 'ASC'], ['createdAt', 'DESC']]
-            });
-            return res.render('dashboard', {
-                projects
-            });
-        }
-
+            const {optionType} = req.query;
+            console.log('this is option'+optionType)
+            switch (optionType) {
+                case 'Empresas':
+                    const empresas = await db.Company.findAll({
+                    });
+                    return res.render('dashboard', {
+                        empresas, optionType
+                    });
+                case 'Freelancers':
+                    const freelancers = await db.Freelancer.findAll({
+                    });
+                    return res.render('dashboard', {
+                        freelancers, optionType
+                    });
+                default:
+                    const projects = await db.Project.findAll({
+                        order: [['idCompany', 'ASC'], ['createdAt', 'DESC']]
+                    });
+                    return res.render('dashboard', {
+                        projects, optionType
+                    });
+            }
         } catch (error) {
             console.error("Error al obtener los proyectos:", error);
             return res.status(500).send("Error al obtener los datos");
