@@ -8,9 +8,6 @@ module.exports = async (req,res) => {
         idUser: id
       }
     });
-    
-    console.log(req.url)
-    console.log(u)
     return res.render('products/user-detail', { u });
   } catch (error) {
     console.error(error);
