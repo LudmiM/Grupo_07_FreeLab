@@ -1,11 +1,11 @@
 const express = require('express');
-const { login, register, process_register, freelancerRegister, empresaRegister, profile, process_login, logout, actualizarLaboral, actualizarPersonal } = require('../controllers/usersController');
+const { login, register, process_register, freelancerRegister, empresaRegister, profile, process_login, logout, actualizarExtras, actualizarPersonal } = require('../controllers/usersController');
 const router = express.Router();
 
 const loginValidation = require('./../validations/loginSesionValidation')
 const registerValidation = require('./../validations/registerValidation')
 const editPersonal = require('./../validations/perfilEditPersonal');
-const editLaboral = require('./../validations/perfilEditLaboral');
+const editExtras = require('../validations/perfilEditExtras');
 const empresaValidationRules = require('../validations/empresaValidation');
 const registerValidationRules = require('../validations/freelancerValidation');
 
@@ -32,7 +32,7 @@ router.get('/registro/empresa/:email?', (req, res) => {
 router.post('/registro/empresa', uploadAvatar.single('empresaImage'), empresaValidationRules, empresaRegister);
 
 router.get('/perfil', checkRol.loggedNotAdmin, profile)
-router.put('/edit-laboral', editLaboral, actualizarLaboral)
+router.put('/edit-laboral', editExtras, actualizarExtras)
 router.put('/edit-personal', editPersonal, actualizarPersonal)
 
 router.get('/salir', logout);
