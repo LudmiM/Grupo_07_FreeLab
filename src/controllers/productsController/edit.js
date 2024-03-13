@@ -1,23 +1,26 @@
 const db = require("../../database/models");
 
 module.exports = async (req, res) => {
-    const { id } = req.params;
+    const id  = +req.params.id;
 
-      try {
-        const project = await db.Project.findByPk(id);
+      try { 
+        const project = await db.Project.findByPk(id, {
+          include : ['categories', 'skills']
+        });
+
 
       
-    //habilidades y categorias
-      const skills = await db.Skill.findAll({});
+      
+    //habilidades y categorias const categories = await db.Category.findAll({});
       const categories = await db.Category.findAll({});
 
+        res.render('products/project-edit', { 
+            project,
+            categories
+        })
+      } catch (error) {
+        console.log(error);
+     }
+    
    
-      res.render('products/project-edit', { 
-       project,
-        skills,
-        categories
-      })
-
-    } catch (error) {console.log(error)
-   }  
-}
+   };
