@@ -1,5 +1,3 @@
-// actualizar-laboral.js
-
 const { Freelancer } = require('../../database/models');
 
 module.exports = async (req, res) => {
