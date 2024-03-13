@@ -6,11 +6,11 @@
     <main class="main__PD">
         <section class="main__PD__section section__misDatos">
             <div class="section__misDatos__contImg">
-                <img src="/images/imagen-ejemplo.jpg" alt="imagen de perfil" class="section__misDatos--img">
+                <img src="/images/users/<%= u.mainImage ? u.mainImage : 'default.png' %>" alt="imagen de perfil" class="section__misDatos--img">
             </div>
             <div class="section__misDatos__contenedor">
-                <h3 class="section__misDatos--h3"><%= first_name+' '+  last_name %></h3>
-                <h4><%= name %></h4>
+                <h3 class="section__misDatos--h3"><%= u.firstName+' '+  u.lastName %></h3>
+                <h4><%= u.name %></h4>
                 <div class="section__misDatos__icons">
                     <%- include('../partials/starts')%>
                     <button class="boton__cuaternario section__misDatos__botonGuardar"><i class="fa-regular fa-bookmark"></i></button>
@@ -27,14 +27,9 @@
         <section class="main__PD__section section__sobreMi">
             <article class="section__sobreMi__article">
                 <h3 class="section__sobreMi__article--h3">Sobre mi</h3>
-                <!--<p class="section__sobreMi__article--p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue lectus
-                    lacus, eu aliquet risus feugiat nec. Nulla facilisi. Etiam in sollicitudin diam. Quisque viverra ante est, a
-                    feugiat mauris elementum et. Duis a feugiat sem. Ut in orci eget est fermentum rhoncus in eu sapien. Integer
-                    quis commodo ex, et finibus velit. Donec semper sed mauris ut suscipit. Donec sit amet iaculis magna.
-                </p>-->
-                <p><%= description %></p>
+                <p class="section__sobreMi__article--p"><%= u.about %></p>
             </article>
-            <%- include('../partials/habilidadesManejadas')%>
+            <!--include('../partials/habilidadesManejadas')-->
         </section>
         <section class="main__PD__section section__review">
             <article class="section__review__proOf">
@@ -51,7 +46,7 @@
         </section>
         <section class="main__PD__section section__contacto">
             <article class="section__contacto__article PD__article__precio boton__cuaternario">
-                <h4 class="PD__article__precio--h4">$98.000</h4>
+                <h4 class="PD__article__precio--h4">$ <%= u.hourValue %></h4>
                 <p class="PD__article__precio--p">Por Hora</p>
             </article>
             <article class="section__contacto__article PD__article__contactame">

@@ -1,5 +1,5 @@
 <div class="contenedor__busqueda">
-  <form class="formulario__barra_busqueda" action="<%= locals.userLogin && locals.userLogin.rol === 'administrador' ? '/resultado' : '/productos/listado' %>" method="GET">
+  <form class="formulario__barra_busqueda" action="<%= locals.userLogin && locals.userLogin.idRole === 3 ? '/admin' : '/buscar' %>" method="GET">
     <input type="text" name="key" placeholder="Buscar..." class="input__busqueda">
     <!--Agregar un cartel con option para hacer un filtro mas especifico-->
     <button type="submit" class="boton__busqueda"><i class="fa-solid fa-magnifying-glass"></i></button>

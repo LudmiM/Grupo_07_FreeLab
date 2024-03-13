@@ -12,6 +12,7 @@ const productsRouter = require('./routes/products.routes');
 
 const checkLocalSession = require('./middleware/checkLocalSession');
 const checkCookie = require('./middleware/checkCookie');
+const categories = require('./middleware/allCategories')
 
 const session = require('express-session');
 
@@ -38,6 +39,7 @@ app
     saveUninitialized: true
   }))
 
+  .use(categories)
   .use(checkCookie)
   .use(checkLocalSession)
 

@@ -1,29 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const { leerJSON } = require('../data');
 const indexController = require('../controllers/indexController');
-const checkRol = require('../middleware/checkRol');
-router.get('/', indexController.index);
+const checkRol = require('./../middleware/checkRol');
 
+router
+  .get('/', indexController.index)
+  .get('/admin',checkRol.admin, indexController.admin)
+  .get('/buscar', indexController.search)
+  .post('/newsletter', indexController.newsletter)
+  .post('/guardar/:id')
+  .delete('/guardar/:id');
+  //Los freelancers pueden guardarproyectos, recibo el id del proyecto, pensar bien donde van en PRYECTRO o index router
+  //.get('/listar', indexController.listProjects);
+
+//router.get('/listado', indexController.listProducts);
 router.get('/carrito',checkRol.logged, (req, res) => {
   res.render('productCart');
-});
-
-router.get('/admin', (req, res) => {
-  res.render('dashboard')
-});
-/*
-router.get('/admin',checkRol.admin, (req, res) => {
-  //const { updated, added, deleted } = req.query;
-  const products = leerJSON('products');
-  res.render('dashboard', { products, updated, added, deleted });
-});*/
-
-router.get('/resultado', (req, res) => {
-  const { key } = req.query; 
-  const products = leerJSON('products');
-  const filteredProducts = products.servicios.filter(product => product.category.toLowerCase().includes(key.toLowerCase()));
-  res.render('resultado', { products: filteredProducts, key });
 });
 
 module.exports = router;

@@ -1,5 +1,4 @@
 const { validationResult } = require("express-validator");
-const db = require('./../../database/models')
 
 module.exports = (req, res) => {
     try{
@@ -10,20 +9,12 @@ module.exports = (req, res) => {
                 errors: errors.mapped()
             });
         }
-        const email = req.body.email.trim().toLowerCase();
-        const user = db.User.findOne({
-            where : {
-                email : email
-            }
-        })
-        if (user.idRole === 1) {
-            //Escribir la url del formulario company
-            return res.redirect('/')
-            return res.render('/')
+        const idRole = +req.body.userType;
+        const email = req.body.email;
+        if (idRole === 1) {
+            return res.redirect(`/usuarios/registro/empresa?email=${email}`)
         } else {
-            //Escribir la url del formulario freelancer
-            return res.redirect('/')
-            return res.render('/')
+            return res.redirect(`/usuarios/registro/freelancer?email=${email}`)
         }
     } catch (error) {
         console.error(error);

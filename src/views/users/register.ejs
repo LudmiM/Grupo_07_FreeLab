@@ -3,82 +3,105 @@
 
 <head>
     <%- include('../partials/head', {title: 'Home | FreeLab' }) %>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-N5ZiqGwFsb44sM8NciSdRWJuZfWAoOH+R1P4nBy6NYSb7/SU/00q91a7t+KPoT4qAphln/GSEUq39nqutQ+sCg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-N5ZiqGwFsb44sM8NciSdRWJuZfWAoOH+R1P4nBy6NYSb7/SU/00q91a7t+KPoT4qAphln/GSEUq39nqutQ+sCg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="body-emp-fre">
     <%- include('../partials/header')%>
 
-    <div class="button-container">
-        <div class="registration-container">
+        <div class="button-container">
+            <div class="registration-container">
 
-            <form method="POST" action="/usuarios/registro" class="registration-form-container"> 
+                <form method="POST" action="/usuarios/registro" class="registration-form-container">
 
-                <!-- Correo -->
-                <label for="email">Correo </label>
-                <div class="input-line">
-                    <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com">
-                    <small class="text-danger ms-2"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
-                </div>
+                    <label for="email">Correo </label>
+                    <div class="input-line-register">
+                        <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com">
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && errors.email ? errors.email.msg : null %>
+                        </small>
+                    </div>
 
-                <!-- Contraseña -->
-                <label for="userPassword">Contraseña </label>
-                <div class="input-line">
-                    <input type="password" id="userPassword" name="userPassword">
-                    <small class="text-danger ms-2"></small>
-                    <small class="text-danger ms-2"><%= locals.errors && errors.userPassword ? errors.userPassword.msg : null %></small>
-                </div>
-
+                    <label for="userPassword">Contraseña</label>
+                    <div class="input-line-register">
+                        <input type="password" id="userPassword" name="userPassword" class="password-input">
+                        <i id="eyeIcon1" class="toggle-password fas fa-eye" onclick="togglePassword('userPassword', 'eyeIcon1')"></i>
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && errors.userPassword ? errors.userPassword.msg : null %>
+                        </small>
+                    </div>
                 
-                <label for="confirmPassword">Confirmar Contraseña </label>
-                <div class="input-line">
-                    <input type="password" id="confirmPassword" name="confirmPassword">
-                    <small class="text-danger ms-2"><%= locals.errors && errors.confirmPassword ? errors.confirmPassword.msg : null %></small>
-                </div>
+                    <label for="confirmPassword">Confirmar Contraseña</label>
+                    <div class="input-line-register">
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="password-input">
+                        <i id="eyeIcon2" class="toggle-password fas fa-eye" onclick="togglePassword('confirmPassword', 'eyeIcon2')"></i>
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && errors.confirmPassword ? errors.confirmPassword.msg : null %>
+                        </small>
+                    </div>
 
-                <div class="select-free-emp">
-                    <label for="userType">Seleccione su tipo de registro:</label>
-                    <select id="userType" name="userType" class="registration-option">
-                        <!--<option value="" disabled selected hidden>Seleccione una opción</option>-->
-                        <option value="2">Registrarse como Freelancer</option>
-                        <option value="1">Registrarse como Empresa</option>
-                    </select>
-                </div>
+                    <div class="select-free-emp">
+                        <label for="userType">Seleccione su tipo de registro:</label>
+                        <select id="userType" name="userType" class="registration-option">
+                            <option value="" disabled selected hidden>Seleccione una opción</option>
+                            <option value="2">Registrarse como Freelancer</option>
+                            <option value="1">Registrarse como Empresa</option>
+                        </select>
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && errors.userType ? errors.userType.msg : null %>
+                        </small>
+                    </div>
+                    
 
-                <!-- Términos y Condiciones -->
-                <div class="checkbox-line">
-                    <input type="checkbox" id="terms" name="terms">
-                    <label for="terms">Acepto los términos, condiciones y aviso de privacidad</label>
-                </div>
 
-                <!-- Notificaciones por Correo -->
-                <div class="checkbox-line">
-                    <input type="checkbox" id="notifications" name="notifications">
-                    <label for="notifications">Acepto recibir notificaciones por correo</label>
-                </div>
+                    <div class="checkbox-line">
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">Acepto los términos y condiciones</label>
+                    </div>
 
-                <button type="submit" class="registration-button">
-                    Siguiente <i class="fa-solid fa-angles-right"></i>
-                </button>
-            </form>
+                    <div class="checkbox-line">
+                        <input type="checkbox" id="notifications" name="notifications">
+                        <label for="notifications">Acepto recibir notificaciones por correo</label>
+                    </div>
+
+                    <button type="submit" class="registration-button">
+                        Registrarme <i class="fa-solid fa-angles-right"></i>
+                    </button>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <!-- Caja de inicio de sesión -->
-    <div class="register-box">
-        <p>Ingrese desde</p>
+        <div class="register-box">
+            <p>Ingrese desde</p>
 
-        <div class="social-buttons">
-            <button class="btn"><i class="fab fa-linkedin"></i><span class="vertical-line"></span>LinkedIn</button>
-            <button class="btn"><i class="fab fa-facebook"></i><span class="vertical-line"></span>Facebook</button>
-            <button class="btn"><i class="fab fa-google"></i><span class="vertical-line"></span>Google</button>
+            <div class="social-buttons">
+                <button class="btn"><i class="fab fa-linkedin"></i><span class="vertical-line"></span>LinkedIn</button>
+                <button class="btn"><i class="fab fa-facebook"></i><span class="vertical-line"></span>Facebook</button>
+                <button class="btn"><i class="fab fa-google"></i><span class="vertical-line"></span>Google</button>
+            </div>
         </div>
-    </div>
 
-    <%- include('../partials/footer')%>
-    <%- include('../partials/scripts') %>
+        <%- include('../partials/footer')%>
+            <%- include('../partials/scripts') %>
 </body>
+
+<script>
+   function togglePassword(inputId, iconId) {
+            var input = document.getElementById(inputId);
+            var icon = document.getElementById(iconId);
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = "password";
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+</script>
+
 
 </html>

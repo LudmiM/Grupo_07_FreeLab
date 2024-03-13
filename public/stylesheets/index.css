@@ -1,8 +1,13 @@
 .body__index {
-    background-color: var(--colorAzulOscuro);
+    background-color: var(--colorCelesteClaro);
 }
 
-.main__section{
+.main {
+    box-shadow: 100px 100px 100px 100px rgba(68, 106, 163, 0.5);
+    padding: 10px;
+}
+
+.main__section {
     margin: auto;
     padding: 10px;
     display: flex;
@@ -10,12 +15,29 @@
     gap: 16px;
 }
 
-.main{
-    box-shadow: 100px 100px 100px 100px rgba(68, 106, 163, 0.5);
- padding: 10px;
+.article {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
-.Main__section__primerTitulo{
+.article p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    color: #000000;
+}
+
+.article__image {
+    width: 40vw; /* Ancho relativo al 50% del ancho de la ventana */
+    height: auto; /* Altura ajustada automáticamente para mantener la proporción */
+}
+
+
+.Main__section__primerTitulo {
     color: #ffffff;
     width: 100%;
     font-size: 7vw;
@@ -23,162 +45,96 @@
     text-align: center;
     justify-content: center;
 }
-.article__1{
-    width: 100%;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
 
-#image1{
-    width: 45%;
-}
-
-.article__1__p{
-    color:#ffffff;
-    font-weight: 500;
-}
-
-.article__2{
-    width: 100%;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    position: relative;
-    display: flex;
-}
-
-#image2{
-    width: 70%;
-    border-radius: 30%;
-}
-
-.article__2__leyenda{
-    background-color: #ffffff;
-    border-radius: 40px;
-    width: 50%;
-    position: absolute;
-    height: 40px;
-    bottom: 10px;
-}
-
-.article__2__leyenda p {
-   text-align: center;
-   font-weight: 700;
-   font-size: 14px;
-   vertical-align: middle;
-}
-
-.article__3{
-    width: 100%;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-#image3{
-    width: 45%;
-    border-radius: 50%;
-    
-}
-
-.article__3 p {
-    text-align: center;
-    font-weight: 500;
-    font-size: 16px;
+.description {
+    background-color: var(--colorCelesteOscuro);
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px black;
     color: #ffffff;
- }
+}
 
- .description{
-  background-color: var(--colorCelesteOscuro);
-  border-radius: 3px;
-  box-shadow: 1px 1px 1px black;
-  color: #ffffff;  
- }
-
- @media( min-width: 768px){
-    .Main__section__primerTitulo{
+@media (min-width: 768px) {
+    .Main__section__primerTitulo {
         font-size: 40px;
     }
 
-    .main__busqueda {
-        height: 45px; 
-      }
-
+    .main__busqueda,
     .main__lupa {
-        height: 45px; 
+        height: 50px;
+        font-size: 25px;
     }
 
-    .article__1__p{
-        font-size: 30px;
-    }
-
-    #image2{
+    .main__busqueda {
         width: 50%;
     }
 
-    .article__2__leyenda{
-        height: 42px;
-        width: 35%;
-    }
-    .article__2__leyenda p {
-        font-size: 18px;
-     }
-
-     .article__3 p {
-        font-size: 35px;
-        
-     }
- }
-
-
- @media( min-width: 1024px){
-
-    .main{
-        padding: 50px;
-    }
-
-    .main__section{
-        gap: 30px;
-    }
-
-    .Main__section__primerTitulo{
-        font-size: 40px;
-    }
-
-    .main__busqueda {
-        height: 50px;
-        font-size: 25px;
-        width: 50%; 
-      }
-
-      .main__lupa {
-        height: 50px;
-        font-size: 25px; 
+    .main__lupa {
         justify-content: flex-start;
         width: 50px;
     }
 
-    .article__1{
+    .article p {
+        font-size: 35px;
+    }
+    .article__image {
+        width: 30vw; /* Ancho relativo al 50% del ancho de la ventana */
+        height: auto; /* Altura ajustada automáticamente para mantener la proporción */
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    .main {
+        padding: 50px;
+    }
+
+    .main__section {
+        gap: 30px;
+    }
+
+
+    .Main__section__primerTitulo {
+        font-size: 40px;
+    }
+
+    .main__busqueda,
+    .main__lupa {
+        height: 50px;
+        font-size: 25px;
+    }
+
+    .main__busqueda {
+        width: 50%;
+    }
+
+    .main__lupa {
+        justify-content: flex-start;
+        width: 50px;
+    }
+
+    .article__image {
+        width: 40%;
+    }
+
+    .article__1 {
         gap: 81px;
     }
-    #image1{
-        width: 40%; 
+
+    .article__1 p {
+        font-size: 20px;
     }
 
-    .article__1__p{
-        font-size: 40px;
-   }
-
-    .article__2__leyenda{
+    .article__2__leyenda {
         height: 60px;
     }
+
     .article__2__leyenda p {
-        font-size: 25px;
-     }
- }
+        font-size: 20px;
+    }
+
+    .article__image {
+        width: 25vw; /* Ancho relativo al 50% del ancho de la ventana */
+        height: auto; /* Altura ajustada automáticamente para mantener la proporción */
+    }
+    
+}

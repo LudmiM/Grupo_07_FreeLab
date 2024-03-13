@@ -11,7 +11,7 @@
             <div class="card-header">
                 <h1 class="mb-0">Editar proyecto</h1>
             </div>
-           
+            <p><%= project.title %></p>
             <div class="card-body-pe">
                 <form action="/productos/editar/<%= project.id %>?_method=PUT" method="POST" enctype="multipart/form-data" autocomplete="on">
                     <!-- Agregar un input oculto para el ID del producto -->
