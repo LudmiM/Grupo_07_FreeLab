@@ -13,7 +13,9 @@ module.exports = [
             }
         }),
     body("userPassword")
-        .notEmpty().withMessage("La contraseña es obligatoria"),
+        .notEmpty().withMessage("La contraseña es obligatoria")
+        .isLength({ min: 4, max: 12 }).withMessage('La contraseña debe tener entre 4 y 12 caracteres'),
+        
     body("confirmPassword")
         .notEmpty().withMessage("La confirmación de contraseña es obligatoria")
         .custom((value, { req }) => {
@@ -47,4 +49,8 @@ module.exports = [
                 return false; // devuelve falso si da error
             }
         }),
+
+    check("userType")
+        .notEmpty().withMessage('Debe seleccionar un tipo de registro')
+
 ];

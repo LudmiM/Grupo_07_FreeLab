@@ -245,21 +245,67 @@ label {
     border-radius: 10px;
     display: inline-block;
 }
-.registration-option {
-    width: 250px; 
-    height: 45px; 
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+
+
+/* Estilos para los mensajes de error */
+.text-danger {
+    color: red;
+    display: block; 
+    font-size: 10px;
+    margin-top: 5px; 
+}
+.input-line-register {
+    position: relative;
 }
 
-/* Estilo para los options dentro del select */
-.registration-option option {
-    font-size: 14px;
+.password-input {
+    padding-right: 30px; /* Espacio para el ícono */
 }
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: blue; /* Cambia el color del ícono cuando se pasa el mouse sobre él */
+}
+
+.input-line-register input {
+    width: 100%; 
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+}
+
+.select-free-emp select {
+    
+    width: 100%;  
+    padding: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+}
+
+.checkbox-line {
+    display: flex; 
+    align-items: center;
+}
+
+.checkbox-line input[type="checkbox"] {
+    margin:5px; 
+}
+
+.checkbox-line label {
+    font-size: 9px; 
+    color: #cacaca; 
+}
+
+
+
 /* Estilos para los botones de registro */
 .registration-button {
     display: block;
@@ -448,7 +494,7 @@ label {
 /* Estilos para escritorio */
 @media (min-width: 769px) {
     .register-form {
-        width: 60%; /* Puedes ajustar este valor según tus necesidades */
+        width: 60%; 
         max-width: none; /* Elimina el ancho máximo si es necesario */
     }
 
@@ -476,12 +522,6 @@ label {
 
 
 /* Estilos para el contenedor del formulario de registro */
-.select-free-emp {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
 
-    border-radius: 8px;
-}
 
 }
