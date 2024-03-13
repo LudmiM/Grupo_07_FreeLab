@@ -17,25 +17,26 @@
                 <form method="POST" action="/usuarios/registro" class="registration-form-container">
 
                     <label for="email">Correo </label>
-                    <div class="input-line">
+                    <div class="input-line-register">
                         <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com">
                         <small class="text-danger ms-2">
                             <%= locals.errors && errors.email ? errors.email.msg : null %>
                         </small>
                     </div>
 
-                    <label for="userPassword">Contraseña </label>
-                    <div class="input-line">
-                        <input type="password" id="userPassword" name="userPassword">
-                        <small class="text-danger ms-2"></small>
+                    <label for="userPassword">Contraseña</label>
+                    <div class="input-line-register">
+                        <input type="password" id="userPassword" name="userPassword" class="password-input">
+                        <i id="eyeIcon1" class="toggle-password fas fa-eye" onclick="togglePassword('userPassword', 'eyeIcon1')"></i>
                         <small class="text-danger ms-2">
                             <%= locals.errors && errors.userPassword ? errors.userPassword.msg : null %>
                         </small>
                     </div>
-
-                    <label for="confirmPassword">Confirmar Contraseña </label>
-                    <div class="input-line">
-                        <input type="password" id="confirmPassword" name="confirmPassword">
+                
+                    <label for="confirmPassword">Confirmar Contraseña</label>
+                    <div class="input-line-register">
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="password-input">
+                        <i id="eyeIcon2" class="toggle-password fas fa-eye" onclick="togglePassword('confirmPassword', 'eyeIcon2')"></i>
                         <small class="text-danger ms-2">
                             <%= locals.errors && errors.confirmPassword ? errors.confirmPassword.msg : null %>
                         </small>
@@ -48,13 +49,18 @@
                             <option value="2">Registrarse como Freelancer</option>
                             <option value="1">Registrarse como Empresa</option>
                         </select>
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && errors.userType ? errors.userType.msg : null %>
+                        </small>
                     </div>
+                    
+
 
                     <div class="checkbox-line">
                         <input type="checkbox" id="terms" name="terms">
-                        <label for="terms">Acepto los términos, condiciones y aviso de privacidad</label>
+                        <label for="terms">Acepto los términos y condiciones</label>
                     </div>
-                    
+
                     <div class="checkbox-line">
                         <input type="checkbox" id="notifications" name="notifications">
                         <label for="notifications">Acepto recibir notificaciones por correo</label>
@@ -80,5 +86,22 @@
         <%- include('../partials/footer')%>
             <%- include('../partials/scripts') %>
 </body>
+
+<script>
+   function togglePassword(inputId, iconId) {
+            var input = document.getElementById(inputId);
+            var icon = document.getElementById(iconId);
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = "password";
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+</script>
+
 
 </html>

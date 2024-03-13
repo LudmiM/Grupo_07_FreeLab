@@ -1,9 +1,6 @@
 .body-login {
   font-family: 'Montserrat';
   background: var(--colorAzulOscuro);
-
-  margin: 0;
-  padding: 0;
   font-size: 16px;
 }
 .main__section__2{
@@ -27,12 +24,14 @@
   margin: 10% auto 0;
   padding: 20px;
   border-radius: 10px 10px 0 0;
-  
+  height: 480px; /* Ajusta este valor según tus necesidades */
 }
+
+
 .log-form p {
   color: white;
-  font-size: 14px;
-  margin-top: 15px; 
+  font-size: 12px;
+  margin-top: 12px; 
   transition: color 0.3s ease;
   text-align: center;
 }
@@ -60,14 +59,14 @@
 }
 
 .logo-login {
-  width: 150px;
+  width: 140px;
   height: auto;
-  margin: -30px auto 10px; 
+  margin: -30px auto 0px; 
   display: block; 
 }
 
 .log-form h1 {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   font-size: 24px;
   color: white;
   border-radius: 5px;
@@ -77,7 +76,7 @@
 
 .log-form .input-line-login {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .log-form label {
@@ -232,7 +231,7 @@
 
   .log-form .input-line-login input {
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
   }
 
   .log-form .forgot {
@@ -252,4 +251,30 @@
     height: 25px; 
     line-height: 25px; 
   }
+}
+
+/* Estilo para el contenedor del campo de contraseña y el botón */
+.password-input-container {
+  position: relative;
+}
+
+/* Estilo para el botón de alternar visibilidad */
+.toggle-password-btn {
+  position: absolute;
+  right: 60px; /* Puedes ajustar el espacio a la derecha según tus preferencias */
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilo para el ícono del botón */
+.toggle-password-btn i {
+  color: #cbcaca; /* Color del ícono */
+}
+
+/* Estilo para el campo de contraseña */
+#password {
+  padding-right: 35px; /* Ajusta el espacio a la derecha para que el texto no se superponga con el botón */
 }
