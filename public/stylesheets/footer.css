@@ -14,18 +14,16 @@ footer {
 /*Newsletter*/
 .footer__section__cont{
     display: flex;
-    position: relative;
 }
 .footer__section__cont--label{
-    border-radius: 5px;
-    padding: 1px 5px;
+    border-radius: 5px 0px 0px 5px;
+}
+.footer__section__cont--button{
+    background-color: #FFF;
+    border-radius: 0px 5px 5px 0px;
 }
 .footer__section__cont--i{
-    background-color: var(--colorAzulOscuro);
-    color: #FFF;
-    position: absolute;
-    right: 0;
-    padding-right: 3px;
+    color: var(--colorAzulOscuro);
 }
 input:focus {
     outline: none;

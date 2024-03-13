@@ -7,7 +7,10 @@ router
   .get('/', indexController.index)
   .get('/admin',checkRol.admin, indexController.admin)
   .get('/buscar', indexController.search)
-  .post('/newsletter', indexController.newsletter);
+  .post('/newsletter', indexController.newsletter)
+  .post('/guardar/:id')
+  .delete('/guardar/:id');
+  //Los freelancers pueden guardarproyectos, recibo el id del proyecto, pensar bien donde van en PRYECTRO o index router
   //.get('/listar', indexController.listProjects);
 
 //router.get('/listado', indexController.listProducts);
