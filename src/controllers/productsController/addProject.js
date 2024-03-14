@@ -4,30 +4,9 @@ module.exports = (req, res) => {
    // if(error.isEmpty()) { 
   const { title,description,idStatus,category,skilles} = req.body;
   const idCompany = req.session.idCompany;
+  const formData = req.body;
 
-  if(Array.isArray(skilles)) { 
-  db.Project.create({
-    title,
-    description,
-    idStatus,
-    idCompany,
-    category,
-    createdAt : new Date(),
-    updatedAt : new Date()
-  })
-  .then(project => {
-    console.log(project);
-    const newSkills=skilles.map(s => {
-      return {
-        idProject: project.id,
-        idSkill: parseInt(s)
-      };
-    })
-    db.ProjectSkill.bulkCreate(newSkills)
-    .then(projectSkill => {
-      console.log("Asociación creada:", projectSkill);
-    })
-    return res.redirect('/usuarios/perfil');
-  })
-  .catch(error => console.log(error))
-} }
+    console.log("Datos enviados desde el formulario:", formData);
+    
+    res.send('Datos recibidos correctamente', formData);
+ }
