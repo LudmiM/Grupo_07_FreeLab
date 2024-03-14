@@ -9,11 +9,13 @@
     <div class="container-pe mt-5">
         <div class="card edit-product-card">
             <div class="card-header">
-                <h1 class="mb-0">Editar proyecto</h1>
+                <h1 class="mb-0">Editando: "<%= project.title %>"  </h1>
             </div>
-            <p><%= project.title %></p>
+            
             <div class="card-body-pe">
-                <form action="/productos/editar/<%= project.id %>?_method=PUT" method="POST" enctype="multipart/form-data" autocomplete="on">
+                
+
+                <form action="/productos/actualizar/<%= project.id %>?_method=PUT" method="POST" enctype="multipart/form-data" autocomplete="on">
                     <!-- Agregar un input oculto para el ID del producto -->
                     
                     <input type="hidden" name="id" value="<%= project ? project.id : '' %>">
@@ -22,7 +24,7 @@
                         <label for="title" class="form-editpe">Titulo:</label>
                         <input name="title" type="text" class="form-control"  id="title" value="<%= project.title  %>" >
                     </div>
-
+<!-- 
                     <div class="mb-3">
                       <label for="category" class="form-editpe">Categoría:</label><br>
                         <select name="category" class="form-select" id="category" aria-label="Floating label select example">
@@ -32,7 +34,7 @@
                           <% }) %>
                         </select>
                       </div>
-                    
+                    -->
 
                       <div class="form__create mb-3">
                         <label for="description" class="form-editpe">Descripción:</label><br>
@@ -40,8 +42,8 @@
                       </div>       
           
                       <div>
-                        <label for="skilles" class="form-editpe">Habilidades:</label><br>
-                        <select name="skilles" class="mul-select" id="skilles" multiple>
+                        <label for="skills" class="form-editpe">Habilidades:</label><br>
+                        <select name="skills" class="mul-select" id="skills" multiple>
                           <% skills.forEach(s => { %>
                             <option value="<%= s.id %>"><%= s.name %></option>
                           <% }) %>
