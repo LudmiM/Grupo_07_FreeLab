@@ -68,9 +68,13 @@
                 <% if (projects.length) { %>
                     <div class="card-body profile-edit">
                         <h3>Mis proyectos</h3>
+                        
                         <% projects.forEach(p=> { %>
+                            
                             <p><%= p.title %></p>
-                            <p><%= p.id %></p>
+                            <p><%= p.description %></p>
+                            
+
                    
                                 <div class="d-flex">
                                   
