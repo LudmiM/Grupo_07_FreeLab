@@ -3,7 +3,12 @@
   background: var(--colorAzulOscuro);
   font-size: 16px;
 }
-
+.main__section__2{
+  background-color: var(--colorCeleste);
+}
+.Main__section__primerTitulo{
+  color: #000;
+}
 .container-login {
   display: flex;
   flex-direction: column;

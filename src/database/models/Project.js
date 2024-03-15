@@ -8,14 +8,14 @@ module.exports = (sequelize, DataTypes) => {
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      Project.belongsTo(models.Company, { foreignKey: 'idCompany' });
-      Project.belongsToMany(models.Category, {
-        through: 'projectCategory',
-        foreignKey: 'idProject',
-        as: 'categories'
-      });
+    Project.belongsTo(models.Company, { foreignKey: 'idCompany' });
+    Project.belongsToMany(models.Category, {
+      through: 'ProjectCategory',
+      foreignKey: 'idProject',
+      as: 'categories'
+    });
+    */
+     static associate(models) {
       Project.belongsTo(models.Status, { foreignKey: 'idStatus' });  
       Project.belongsToMany(models.Skill, {
         through: 'ProjectSkill',

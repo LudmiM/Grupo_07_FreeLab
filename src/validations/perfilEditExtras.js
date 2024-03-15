@@ -1,6 +1,6 @@
 const { check } = require("express-validator");
 
-const laboralValidator = [
+const extrasValidator = [
     check('name')
         .notEmpty().withMessage('El puesto es obligatorio'),
     check('description')
@@ -24,5 +24,5 @@ const laboralValidator = [
         .isURL().withMessage('Debe ser una URL válida para la imagen')*/
 ];
 
-module.exports = laboralValidator;
+module.exports = extrasValidator;
 

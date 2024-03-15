@@ -68,14 +68,17 @@
                 <% if (projects.length) { %>
                     <div class="card-body profile-edit">
                         <h3>Mis proyectos</h3>
+                        
                         <% projects.forEach(p=> { %>
-                            <p><%= p.title %></p>
-                            <p><%= p.id %></p>
-
                             
+                            <p><%= p.title %></p>
+                            <p><%= p.description %></p>
+                            
+
+                   
                                 <div class="d-flex">
                                   
-                                    <a class="btn btn-sm btn-success" href="/productos/editar/<%= id %>">Editar
+                                    <a class="btn btn-sm btn-success" href="/productos/editar/<%= p.id %>">Editar
                                         <i class="fa-solid fa-pencil"></i>
                                     </a>
 

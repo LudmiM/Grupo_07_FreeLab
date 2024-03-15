@@ -1,6 +1,6 @@
 const eliminate = require('./eliminate')
 const formProject = require('./formProject')
-const updateProduct = require('./updateProduct')
+const updateProject = require('./updateProject')
 const edit = require('./edit')
 const detailProject = require('./detailProject')
 const detailUser = require('./detailUser')
@@ -11,7 +11,7 @@ module.exports = {
     detailUser,
     detailProject,
     edit,
-    updateProduct,
+    updateProject,
     formProject,
     addProject
 }
