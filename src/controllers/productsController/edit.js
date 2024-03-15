@@ -6,9 +6,7 @@ module.exports = async (req, res) => {
       try {
         const project = await db.Project.findByPk(id, {
           include : [
-          
             {model: db.Skill,as:'skills'}
-
           ]
         });
         console.log('this is project '+project+' el id es '+id)

@@ -15,7 +15,7 @@
             <div class="card-body-pe">
                 
 
-                <form action="/productos/actualizar/<%= project.id %>?_method=PUT" method="POST" enctype="multipart/form-data" autocomplete="on">
+                <form action="/productos/actualizar/<%= project.id %>?_method=PUT" method="POST">
                     <!-- Agregar un input oculto para el ID del producto -->
                     
                     <input type="hidden" name="id" value="<%= project ? project.id : '' %>">
@@ -24,18 +24,6 @@
                         <label for="title" class="form-editpe">Titulo:</label>
                         <input name="title" type="text" class="form-control"  id="title" value="<%= project.title  %>" >
                     </div>
-<!-- 
-                    <div class="mb-3">
-                      <label for="category" class="form-editpe">Categoría:</label><br>
-                        <select name="category" class="form-select" id="category" aria-label="Floating label select example">
-                          <option value="" selected hidden></option>
-                          <% categories.forEach(c => { %>
-                            <option value="<%= c.id %>"><%= c.name %></option>
-                          <% }) %>
-                        </select>
-                      </div>
-                    -->
-
                       <div class="form__create mb-3">
                         <label for="description" class="form-editpe">Descripción:</label><br>
                         <textarea id="description" name="description" rows="4" cols="50"><%= project.description%></textarea><br>
@@ -52,44 +40,6 @@
           
                       <input id="idStatus" name="idStatus" type="number" value="1" hidden>
           
-                <!-- <div id="imageFieldsContainer">
-                     
-                        <div class="mb-3 image-field" data-index="2">
-                            <label for="additionalImages" class="form-editpe">Seleccionar Imágenes Adicionales</label>
-                            <input type="file" name="image" id="additionalImages" accept="image/*" class="form-control" multiple onchange="limitImageSelection(this, 4)">
-                        </div>
-                    </div>
-                    
-                        
-                    <div class="mb-3">
-                        <label for="portfolio" class="form-editpe">Link a Portfolio</label>
-                        <input name="portfolio" type="url" class="form-control" id="portfolio" value="<%= project && project.portfolio || '' %>">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="redes_sociales" class="form-editpe">Links a Redes Sociales</label>
-                        <input name="redes_sociales" type="url" class="form-control" id="redes_sociales" value="<%= project && project.redes_sociales || '' %>">
-                    </div> 
-
-
-                    <div class="col-12 mb-3">
-                        <div class="input-group">
-                            <label for="precio" class="form-editpe me-2">Precio:</label>
-                            <div class="input-group">
-                                <span class="input-group-text"> $</span>
-                                <input name="price" type="number" class="form-editpe" id="precio" value="<%= project && project.price || '' %>" required>
-                                <select class="custom-selectpe" id="divisa" name="currency" required>
-                                    <option value="ARS" <%= project && project.currency === 'ARS' ? 'selected' : '' %>>ARS</option>
-                                    <option value="USD" <%= project && project.currency === 'USD' ? 'selected' : '' %>>USD</option>
-                                    <option value="EUR" <%= project && project.currency === 'EUR' ? 'selected' : '' %>>EUR</option>
-                                    <option value="JPY" <%= project && project.currency === 'JPY' ? 'selected' : '' %>>JPY</option>
-                                    <option value="GBP" <%= project && project.currency === 'GBP' ? 'selected' : '' %>>GBP</option>
-                                    <option value="AUD" <%= project && project.currency === 'AUD' ? 'selected' : '' %>>AUD</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div> -->
-
                     <div class="row">
                         <div class="col-6 col-md-5 mx-auto">
                             <button type="button" class="btn btn-form-edit" onclick="window.history.back();">Cancelar</button>
@@ -107,11 +57,3 @@
 
 </body>
 </html>
-<script>
-    function limitImageSelection(input, maxImages) {
-        if (input.files.length > maxImages) {
-            alert('Solo puedes seleccionar hasta ' + maxImages + ' imágenes.');
-            input.value = '';
-        }
-    }
-    </script>

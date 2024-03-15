@@ -7,13 +7,11 @@ module.exports = async (req, res) => {
 
     try{
         await db.Project.update(
-            {title, description, skills},
-            { where : {  id }  }
-
-
+            
+            {title, description},
+            { where :  {id :id}   }
     );
-        
- 
+         
      const projectUpdate = await db.Project.findByPk(id, {
         include: ['skills']
      });
