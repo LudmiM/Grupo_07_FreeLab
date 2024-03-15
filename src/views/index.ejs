@@ -49,15 +49,16 @@
             <h2>¡Últimos agregados en FreeLab!</h2>
             <article>
                 <h3>Postulaciones</h3>
-                <% projects.forEach(p=> { %>
-                    <div class="card mb-3 description" style="max-width: 600px;">
+                <% projects.forEach(p => { %>
+                    <a href="/productos/detalleProyecto/<%= p.id %>" class="card mb-3 description">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="..." class="img-fluid rounded-start" alt="...">
+                                <img src="/images/imgen_no.png" class="img-fluid rounded-start" alt="Placeholder">
+
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title"><a href="/productos/detalleProyecto/<%= p.id %>"><%= p.title %></a></h5>
+                                    <h5 class="card-title"><%= p.title %></h5>
                                     <p class="card-text"><small class="text-body-secondary"><%= p.category %></small></p>
                                     <p class="card-text"><%= p.description %></p>
                                     <div class="d-flex justify-content-end">
@@ -67,9 +68,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 <% }) %>
             </article>
+            
         </section>
 
         <!-- Contenido adicional -->

@@ -93,9 +93,15 @@
     }
 
 
-    .Main__section__primerTitulo {
-        font-size: 40px;
-    }
+.Main__section__primerTitulo {
+    font-size: 36px; 
+    color: #26303a; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-weight: bold; 
+    font-family: "Arial", sans-serif; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
 
     .main__busqueda,
     .main__lupa {
@@ -111,6 +117,7 @@
         justify-content: flex-start;
         width: 50px;
     }
+
 
     .article__image {
         width: 40%;
@@ -135,6 +142,53 @@
     .article__image {
         width: 25vw; /* Ancho relativo al 50% del ancho de la ventana */
         height: auto; /* Altura ajustada automáticamente para mantener la proporción */
+    }
+    .Home__projects h2 {
+        font-size: 36px; 
+        color: #26303a; 
+        margin-top: 20px;
+        margin-bottom: 20px; 
+        font-weight: bold; 
+       
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+    .Home__projects article {
+        background-color: #ffffff; /* Fondo blanco */
+        padding: 20px; /* Añade un espacio interno alrededor del contenido */
+        border-radius: 10px; /* Añade esquinas redondeadas al contenedor */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+    }
+    
+
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 400px; /* Ancho específico en píxeles */
+        height: 150px; /* Alto específico en píxeles */
+    }
+    
+    .img-fluid {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+    .card-body {
+        padding: 5px;
+    }
+    
+    .card-text.price {
+        font-weight: bold;
+        margin-left: 10px;
+    }
+    
+    .text-body-secondary {
+        color: #666;
+        font-size: 0.9rem;
     }
     
 }
