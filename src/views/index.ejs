@@ -1,132 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./partials/head', {title: 'Home | FreeLab'}) %>
+<%- include('./partials/head', {title: 'Home | FreeLab' }) %>
+
 <body class="body__index">
-    <%- include('./partials/header') %>
-    <main class="main">
-        <section class="main__section">
-            <h1 class="Main__section__primerTitulo">
-                Buscá una solución para tu proyecto, en FreeLab!
-            </h1>
-        </section>
-        <section class="main__section__2">
-           
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <article class="article article__1">
-                            <img src="/images/RedCliente.png" alt="RedCliente" class="article__image">
-                            <p class="article__text">En FreeLab, nos dedicamos a simplificar la conexión entre freelancers altamente calificados.</p>
-                        </article>
-                    </div>
-                    <div class="carousel-item">
-                        <article class="article article__2">
-                            <img src="/images/Saludo.png" alt="Saludo" class="article__image">
-                            <div class="article__overlay">
-                                <p> Somos un equipo apasionado</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="carousel-item">
-                        <article class="article article__3">
-                            <p>Proporcionamos una amplia Red de búsqueda para cumplir tus necesidades</p>
-                            <img src="/images/RedFreeLab.jpg" alt="equipo freelancers" class="article__image">
-                        </article>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </section>
-        
-        <section class="Home__projects">
-            <h2>¡Últimos agregados en FreeLab!</h2>
-            <article>
-                <h3>Postulaciones</h3>
-                <% projects.forEach(p=> { %>
-                    <div class="card mb-3 description" style="max-width: 600px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="..." class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="/productos/detalleProyecto/<%= p.id %>"><%= p.title %></a></h5>
-                                    <p class="card-text"><small class="text-body-secondary"><%= p.category %></small></p>
-                                    <p class="card-text"><%= p.description %></p>
-                                    <div class="d-flex justify-content-end">
-                                        <p class="card-text">$<%= p.price %></p>
-                                        <p><%= p.currency %></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <% }) %>
+  
+  <%- include('./partials/header') %>
+  <main class="main">
+    <section class="main__section_index">
+      <h1 class="Main__section__primerTitulo__index">
+        Buscá una solución para tu proyecto, en FreeLab!
+      </h1>
+    </section>
+    <section class="main__section__2">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <article class="article article__1">
+              <img src="/images/RedCliente.png" alt="RedCliente" class="article__image">
+              <div class="article__content article__content-right">
+                <h2>Conéctate con Oportunidades Ilimitadas</h2>
+                <p class="article__text">Bienvenido a nuestra plataforma dedicada a profesionales independientes y empresas en busca de talento. Aquí encontrarás una comunidad vibrante y una variedad de servicios para satisfacer tus necesidades laborales:</p>
+                <ul>
+                  <li><strong>Perfiles Personalizados:</strong> Destaca tus habilidades y experiencia de manera única.</li>
+                  <li><strong>Explora Oportunidades:</strong> Encuentra trabajos freelance en diversas industrias.</li>
+                  <li><strong>Publica Tus Proyectos:</strong> Conecta con expertos globales para llevar a cabo tus ideas.</li>
+                  <li><strong>Crea Tu Reputación:</strong> Obtén calificaciones y comentarios para construir una reputación sólida.</li>
+                </ul>
+              </div>
             </article>
-        </section>
+          </div>
+          <div class="carousel-item">
+            <article class="article article__2">
+              <img src="/images/People.jpg" alt="People" class="article__image">
+              <div class="article__content article__content-left">
+                <h2>Descubre Nuestro Público Objetivo</h2>
+                <ul>
+                  <li><strong>Freelancers:</strong> Profesionales flexibles en busca de nuevas oportunidades.</li>
+                  <li><strong>Empleadores:</strong> Empresas que buscan talento global para sus proyectos.</li>
+                  <li><strong>Personas en Transición:</strong> Cambio de carrera, estudiantes o jubilados.</li>
+                  <li><strong>Emprendedores:</strong> En busca de colaboradores para sus proyectos.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="carousel-item">
+            <article class="article article__3">
+              <img src="/images/Support.jpg" alt="Support" class="article__image">
+              <div class="article__content article__content-left">
+                <h2>Descubre las Ventajas de Nuestra Plataforma</h2>
+                <ul>
+                  <li><strong>Variedad de Oportunidades:</strong> Explora una amplia gama de trabajos freelance.</li>
+                  <li><strong>Fácil de Usar:</strong> Plataforma intuitiva para freelancers y empleadores.</li>
+                  <li><strong>Transparencia y Confianza:</strong> Calificaciones y comentarios para una experiencia transparente.</li>
+                  <li><strong>Soporte Dedicado:</strong> Equipo de soporte listo para ayudarte en cada paso del camino.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+       
+      </div>
+    </section>
 
-        <!-- Contenido adicional -->
-        <section class="additional-content">
-            <h2>Nuestra Propuesta de Valor</h2>
-            <p>En FreeLab, nos comprometemos a ofrecerte:</p>
-            <ul>
-                <li>Acceso a talento freelance altamente calificado en diversas áreas.</li>
-                <li>Una plataforma intuitiva y fácil de usar para publicar y encontrar proyectos.</li>
-                <li>Transparencia y confianza a través de calificaciones y comentarios de usuarios.</li>
-                <li>Soporte dedicado para resolver cualquier problema o duda que puedas tener.</li>
-            </ul>
-        </section>
+    <section class="Home__projects_index">
+      <h2 class="Home__projects_index-title">¡Últimos proyectos en FreeLab!</h2>
+      <article class="Home__projects_index-articles">
+        <h3 class="Home__projects_index-section-title">POSTULACIONES</h3>
+        <div class="row">
+          <% projects.slice(0, 4).forEach((p, index)=> { %>
+         
+          <div class="col-md-6">
+            <a href="/productos/detalleProyecto/<%= p.id %>" class="Home__projects_index-project-card unique-project-card-<%= index %>">
+              <img src="/images/imgen_no.png" class="card-img-top Home__projects_index-project-image unique-project-image" alt="Placeholder">
+              <div class="Home__projects_index-card">
 
-        <section class="testimonials">
-            <h2>Lo que nuestros usuarios dicen</h2>
-            <div class="testimonial">
-                <img src="/images/user1.jpg" alt="User 1">
-                <p>"FreeLab ha sido una herramienta invaluable para encontrar talento para mis proyectos. ¡Altamente recomendado!"</p>
-                <cite>- Juan Pérez, CEO de Acme Inc.</cite>
-            </div>
-            <div class="testimonial">
-                <img src="/images/user2.jpg" alt="User 2">
-                <p>"Gracias a FreeLab, pude expandir mi equipo de manera rápida y eficiente. ¡No podría estar más feliz!"</p>
-                <cite>- María Gómez, Directora de Marketing</cite>
-            </div>
-        </section>
+                <div class="Home__projects_index-card-body">
+                  <h5 class="card-title Home__projects_index-project-title unique-project-title">
+                    <%= p.title %>
+                  </h5>
+                  <p class="card-text Home__projects_index-project-category unique-project-category">
+                    <%= p.category %>
+                  </p>
+                  <p
+                    class="card-text Home__projects_index-project-description unique-project-description">
+                    <%= p.description %>
+                  </p>
+                  <p class="card-text Home__projects_index-project-price unique-project-price">
+                    $<%= p.price %>
+                  </p>
+                  <p class="card-text Home__projects_index-project-publish-time unique-project-publish-time">
+                    Publicado: hace 5 minutos</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <% }) %>
+        </div>
+      </article>
+    </section>
+    
 
-        <!-- Sección de características -->
-        <section class="features">
-            <h2>Características Destacadas</h2>
-            <div class="feature">
-                <img src="/images/feature1.jpg" alt="Feature 1">
-                <h3>Registro Gratuito</h3>
-                <p>Regístrate de forma gratuita y comienza a explorar todas las oportunidades que FreeLab tiene para ofrecer.</p>
-            </div>
-            <div class="feature">
-                <img src="/images/feature2.jpg" alt="Feature 2">
-                <h3>Soporte 24/7</h3>
-                <p>Nuestro equipo de soporte está disponible las 24 horas del día, los 7 días de la semana, para ayudarte en lo que necesites.</p>
-            </div>
-            <div class="feature">
-                <img src="/images/feature3.jpg" alt="Feature 3">
-                <h3>Seguridad Garantizada</h3>
-                <p>Protegemos tus datos y tu privacidad en todo momento, para que puedas trabajar con total tranquilidad.</p>
-            </div>
-        </section>
+    <section class="testimonials-index-section">
+      <h2 class="text-center">Lo que nuestros usuarios dicen</h2>
+      <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="row">
+                      <div class="col-lg-4">
+                          <div class="testimonial-card">
+                              <img src="/images/elon-musk.jpg" alt="User 1">
+                              <div class="testimonial-content">
+                                  <p>"FreeLab ha sido una herramienta invaluable para encontrar talento para mis proyectos. ¡Altamente recomendado!"</p>
+                                  <cite>- Elon Musk, CEO de SpaceX</cite>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4">
+                          <div class="testimonial-card">
+                              <img src="/images/mark_zukerberg.jpg" alt="User 2">
+                              <div class="testimonial-content">
+                                  <p>"Gracias a FreeLab, pude expandir mi equipo de manera rápida y eficiente. ¡No podría estar más feliz!"</p>
+                                  <cite>- Mark Zuckerberg, CEO de Meta Platforms</cite>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4">
+                          <div class="testimonial-card">
+                              <img src="/images/midudev.jpg" alt="User 5">
+                              <div class="testimonial-content">
+                                  <p>"FreeLab me ayudó a encontrar trabajo y proyectos que realmente disfruto. ¡Gracias por conectarme con oportunidades emocionantes!"</p>
+                                  <cite>- MiduDEV, Desarrollador Independiente</cite>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="testimonial-card">
+                          <img src="/images/james-gosling.jpg" alt="User 7">
+                          <div class="testimonial-content">
+                              <p>"Como desarrollador, FreeLab ha sido una herramienta invaluable para conectarme con proyectos emocionantes."</p>
+                              <cite>- James Arthur Gosling, Creador de Java</cite>
+                          </div>
+                      </div>
+                  </div>
+                      <div class="col-lg-4">
+                          <div class="testimonial-card">
+                              <img src="/images/jensen-huang.jpg" alt="User 4">
+                              <div class="testimonial-content">
+                                  <p>"Estoy impresionado por la eficacia de FreeLab en la contratación de talento. ¡Una herramienta excepcional!"</p>
+                                  <cite>- Jensen Huang, CEO de NVIDIA</cite>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4">
+                          <div class="testimonial-card">
+                              <img src="/images/bill-gates.jpg" alt="User 6">
+                              <div class="testimonial-content">
+                                  <p>"FreeLab ha sido una pieza clave. Nos ha permitido encontrar talento excepcional para impulsar nuestros proyectos."</p>
+                                  <cite>- Bill Gates, Cofundador de Microsoft</cite>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
-        <section class="join-us">
-            <h2>¿Te gustaría ser parte de FreeLab?</h2>
-            <p>Únete a nuestra comunidad de freelancers y empleadores hoy mismo.</p>
-            <a href="/usuarios/registro" class="btn btn-primary">Regístrate</a>
-        </section>
-        
-    </main>
-    <%- include('./partials/footer') %>
-    <%- include('./partials/scripts') %>
+              <!-- Agrega más elementos de .carousel-item si necesitas más grupos de testimonios -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+          </button>
+      </div>
+      
+  </section>
+  
+      
+  
+  <section class="join-us">
+    <div class="join-us-content">
+      <h2>¿Te gustaría ser parte de FreeLab?</h2>
+      <p>Regístrate de forma gratuita y únete a nuestra comunidad de freelancers y empleadores hoy mismo.</p>
+      <a href="/usuarios/registro" class="btn btn-primary">Regístrate</a>
+    </div>
+  </section>
+  
+  </main>
+  <%- include('./partials/footer') %>
+  <%- include('./partials/scripts') %>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-+Tlnu6CwkCm7VhF3e3pW2YNdTpBk/Sg6pf/w9kxrRteF3/WYYaAdt/gFO9z9zpxa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-pa2s0re0A2up3K3uYDkHCqL1GA1OWIWKn/wwN+UoMD
 </body>
-</html>
 
+</html>

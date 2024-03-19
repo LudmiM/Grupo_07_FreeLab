@@ -12,8 +12,8 @@
 
 /* Estilos para la clase única */
 .form-editpe {
-    font-size: 18px;
-    color: var(--colorAzulOscuro);
+    font-size: 15px;
+    color: black;
     justify-content: center; /* Alineación horizontal al centro */
     align-items: center;
     
@@ -30,7 +30,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
-    background-color: var(--colorCelesteClaro);
+    background-color: var(--colorGris);
 }
 
 .card-header {
@@ -42,7 +42,7 @@
 
 .card-body-pe {
     padding: 20px;
-    border-top: 2px solid var(--colorCeleste);
+ 
 }
 
 .form-floating {
@@ -99,6 +99,14 @@
 .card-body.profile-edit {
     border-color: var(--colorCeleste);
     border: groove;
+}
+
+.btn-form-edit {
+    background-color: var(--colorAzulOscuro);
+    color: #fff;
+    width: 70%;
+    height: 50%;
+
 }
 /*estilos carga imaegenes */
 

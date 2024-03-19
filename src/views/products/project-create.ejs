@@ -5,23 +5,35 @@
   <body>
 
     <%-include('../partials/header', {title: 'Home | FreeLab' })%>
-<div class="card-body">
-      <main class="main__create w-100">
-        <h4>Crear nuevo proyecto</h4>
+<div class="container-pe mt-5">
+      <main class="card edit-product-card">
+        <div class="card-header ">
+          <h1 class="mb-0">Crear nuevo proyecto</h1>
+      </div>
 
         <form class="form__create formulario__projectCreate" action="/productos/agregarProyecto" method="POST">
             <div class="mb-3">
-              <label for="title">Title:</label><br>
+              <label for="title">Título:</label><br>
               <input type="text" id="title" name="title" required>
             </div>
 
+            <div class="mb-3">
+              <label for="category">Categoría:</label><br>
+              <select name="category" class="form-select" id="category" aria-label="Floating label select example">
+                <option value="" selected hidden></option>
+                <% categories.forEach(c => { %>
+                  <option value="<%= c.id %>"><%= c.name %></option>
+                <% }) %>
+              </select>
+            </div>
+
             <div class="form__create mb-3">
-              <label for="description">Description:</label><br>
+              <label for="description">Descripción:</label><br>
               <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
             </div>       
 
             <div>
-              <label for="skilles">Skill:</label><br>
+              <label for="skilles">Habilidades:</label><br>
               <select name="skilles" class="mul-select" id="skilles" multiple>
                 <% skills.forEach(s => { %>
                   <option value="<%= s.id %>"><%= s.name %></option>
@@ -76,8 +88,8 @@
         </form>
     </main>
     </div>
-    <%-include('../partials/footer')%>
-    <%-include('../partials/scripts')%>    
+    
 </body>
-
+<%-include('../partials/footer')%>
+    <%-include('../partials/scripts')%>    
 </html>

@@ -23,11 +23,15 @@
 }
 
 .form__create button{
-    background-color: var(--colorCelesteOscuro);
+    background-color: var(--colorAzulOscuro)
 }
 
 
 .caja__botones a{
     color: #ffffff;
     text-decoration: none;
+}
+
+.card-header {
+    background-color: var(--colorAzulOscuro);
 }
