@@ -4,10 +4,19 @@
 <!--Al hacer click en el boton, toma el bloque y lo clona-->
 <script>
     document.getElementById('add__individuals').addEventListener('click', function() {
-      const individualsContainer = document.querySelector('.individuals__container');
-      const individualsBlock = document.querySelector('.individuals__container__data').cloneNode(true);
-      individualsContainer.appendChild(individualsBlock);
+    const individualsContainer = document.querySelector('.individuals__container');
+    const individualsBlock = document.querySelector('.individuals__container__data').cloneNode(true);
+    
+    const duplicateCount = individualsContainer.querySelectorAll('.individuals__container__data').length + 1;
+
+    individualsBlock.querySelectorAll('[name]').forEach(element => {
+      const name = element.getAttribute('name');
+      element.setAttribute('name', `${name}_${duplicateCount}`);
     });
+
+    individualsContainer.appendChild(individualsBlock);
+  });
+
 </script>
 
 <!--Scrpt para selecionar multiples opciones-->

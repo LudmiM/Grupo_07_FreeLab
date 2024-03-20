@@ -13,61 +13,54 @@
 
         <form class="form__create formulario__projectCreate" action="/productos/agregarProyecto" method="POST">
             <div class="mb-3">
-              <label for="title">Título:</label><br>
-              <input type="text" id="title" name="title" required>
+              <label for="titlePrincipal">Título:</label><br>
+              <input type="text" id="title" name="titlePrincipal" required>
             </div>
 
-            <div class="mb-3">
-              <label for="category">Categoría:</label><br>
-              <select name="category" class="form-select" id="category" aria-label="Floating label select example">
-                <option value="" selected hidden></option>
-                <% categories.forEach(c => { %>
-                  <option value="<%= c.id %>"><%= c.name %></option>
-                <% }) %>
-              </select>
-            </div>
 
             <div class="form__create mb-3">
-              <label for="description">Descripción:</label><br>
-              <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
+              <label for="descriptionPrincipal">Descripción:</label><br>
+              <textarea id="description" name="descriptionPrincipal" rows="4" cols="50" required></textarea><br>
             </div>       
 
             <div>
-              <label for="skilles">Habilidades:</label><br>
-              <select name="skilles" class="mul-select" id="skilles" multiple>
+              <label for="skillesPrincipal">Habilidades:</label><br>
+              <select name="skillesPrincipal" class="mul-select" id="skilles" multiple>
                 <% skills.forEach(s => { %>
                   <option value="<%= s.id %>"><%= s.name %></option>
                 <% }) %>
               </select>
             </div>
 
-            <input id="idStatus" name="idStatus" type="number" value="1" hidden>
+            <input id="idStatus" name="idStatusPrincipal" type="number" value="1" hidden>
 
             <!--Aca va todo lo de perfil personal-->
 
           <section class="individuals__container">
             <article class="individuals__container__data" id="individuals__container__data">
               <div class="mb-3">
-                <label for="title">Title:</label><br>
-                <input type="text" name="articles[title]" required>
+                <label for="title">Título:</label><br>
+                <input type="text" id="title" name="title" required>
               </div>
             
               <div class="mb-3">
-                <select name="articles[category]" class="form-select" id="category" aria-label="Floating label select example">
+                <label for="category">Categoría:</label><br>
+                <select name="category" class="form-select" id="category" aria-label="Floating label select example">
                   <option value="" selected hidden></option>
                   <% categories.forEach(c => { %>
                     <option value="<%= c.id %>"><%= c.name %></option>
                   <% }) %>
                 </select>
               </div>
+
               <div class="form__create mb-3">
-                  <label for="description">Description:</label><br>
-                  <textarea name="articles[description]" rows="4" cols="50" required></textarea><br>
-              </div>       
+                <label for="description">Descripción:</label><br>
+                <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
+              </div>        
               
               <div>
-                <label for="skilles">Skill:</label><br>
-                <select name="articles[skills][]" class="mul-select" id="skilles" multiple>
+                <label for="skilles">Habilidades:</label><br>
+                <select name="skilles" class="mul-select" id="skilles" multiple>
                   <% skills.forEach(s => { %>
                     <option value="<%= s.id %>"><%= s.name %></option>
                   <% }) %>
@@ -76,7 +69,9 @@
 
             </article>
           </section>
+
           <button id="add__individuals" type="button">Agregar usuario</button>
+
           <div class="caja__botones row">
             <div class="col-6 col-md-5 mx-auto">
               <button type="button" class="btn btn-primary"><a href="/usuarios/perfil">Cancelar</a></button>
