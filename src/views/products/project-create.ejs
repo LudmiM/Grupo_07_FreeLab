@@ -13,34 +13,34 @@
 
         <form class="form__create formulario__projectCreate" action="/productos/agregarProyecto" method="POST">
             <div class="mb-3">
-              <label for="titlePrincipal">Título:</label><br>
-              <input type="text" id="title" name="titlePrincipal" required>
+              <label for="title">Título:</label><br>
+              <input type="text" id="title" name="title" required>
             </div>
 
 
             <div class="form__create mb-3">
-              <label for="descriptionPrincipal">Descripción:</label><br>
-              <textarea id="description" name="descriptionPrincipal" rows="4" cols="50" required></textarea><br>
+              <label for="description">Descripción:</label><br>
+              <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
             </div>       
 
             <div>
-              <label for="skillesPrincipal">Habilidades:</label><br>
-              <select name="skillesPrincipal" class="mul-select" id="skilles" multiple>
+              <label for="skilles">Habilidades:</label><br>
+              <select name="skilles" class="mul-select" id="skilles" multiple>
                 <% skills.forEach(s => { %>
                   <option value="<%= s.id %>"><%= s.name %></option>
                 <% }) %>
               </select>
             </div>
 
-            <input id="idStatus" name="idStatusPrincipal" type="number" value="1" hidden>
+            <input id="idStatus" name="idStatus" type="number" value="1" hidden>
 
             <!--Aca va todo lo de perfil personal-->
 
           <section class="individuals__container">
             <article class="individuals__container__data" id="individuals__container__data">
               <div class="mb-3">
-                <label for="title">Título:</label><br>
-                <input type="text" id="title" name="title" required>
+                <label for="specialty">Título:</label><br>
+                <input type="text" id="specialty" name="specialty" required>
               </div>
             
               <div class="mb-3">
@@ -54,13 +54,18 @@
               </div>
 
               <div class="form__create mb-3">
-                <label for="description">Descripción:</label><br>
-                <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
-              </div>        
+                <label for="about">Descripción:</label><br>
+                <textarea id="about" name="about" rows="4" cols="50" required></textarea><br>
+              </div>
+              
+              <div class="mb-3">
+                <label for="price">Precio:</label><br>
+                <input type="number" id="price" name="price" required>
+              </div>
               
               <div>
-                <label for="skilles">Habilidades:</label><br>
-                <select name="skilles" class="mul-select" id="skilles" multiple>
+                <label for="skillesInd">Habilidades:</label><br>
+                <select name="skillesInd" class="mul-select" id="skilles" multiple>
                   <% skills.forEach(s => { %>
                     <option value="<%= s.id %>"><%= s.name %></option>
                   <% }) %>
