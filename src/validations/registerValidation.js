@@ -14,8 +14,10 @@ module.exports = [
         }),
     body("userPassword")
         .notEmpty().withMessage("La contraseña es obligatoria")
-        .isLength({ min: 4, max: 12 }).withMessage('La contraseña debe tener entre 4 y 12 caracteres'),
-        
+        .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')
+        .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]+$/)
+        .withMessage('La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial'),
+
     body("confirmPassword")
         .notEmpty().withMessage("La confirmación de contraseña es obligatoria")
         .custom((value, { req }) => {

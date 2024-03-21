@@ -247,15 +247,36 @@ label {
 }
 
 
-
+.text-danger-reg-form{
+    color: red;
+    display: block; 
+    font-size: 10px;
+    position: absolute;  
+}
+.text-danger-reg-form-phone{
+    color: red;
+    display: block; 
+    font-size: 10px;
+    top: 100%;
+    position: absolute;  
+}
 /* Estilos para los mensajes de error */
 .text-danger {
     color: red;
     display: block; 
     font-size: 10px;
-    margin-top: 5px; 
+    margin-top: 5px;
+    position: absolute;
+}
+.text-danger-reg-emp {
+    color: red;
+    display: block; 
+    font-size: 10px;
+    margin-top: -2px;
+    position: absolute;
 }
 .input-line-register {
+    margin-bottom: 20px;
     position: relative;
 }
 
@@ -289,10 +310,15 @@ label {
     border: 1px solid #ccc;
     border-radius: 5px; 
 }
-
+.checkbox-line-section{
+    margin-top: 18px;
+    margin-bottom: 15px
+}
 .checkbox-line {
+    
     display: flex; 
     align-items: center;
+    
 }
 
 .checkbox-line input[type="checkbox"] {
@@ -303,7 +329,6 @@ label {
     font-size: 9px; 
     color: #cacaca; 
 }
-
 
 
 /* Estilos para los botones de registro */

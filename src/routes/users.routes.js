@@ -40,8 +40,3 @@ router.get('/salir', logout);
 module.exports = router;
 
 
-
-
-
-// 
-//

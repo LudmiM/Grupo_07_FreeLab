@@ -76,7 +76,7 @@
 
 .log-form .input-line-login {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .log-form label {
@@ -133,9 +133,6 @@
 .log-form .btn:hover {
   background: #23c2cb;
 }
-
-
-
 
 .log-form .forgot {
   color: #fdffff;
@@ -217,6 +214,22 @@
 .log-redes .social-buttons-login .btn:hover {
   background-color: #23c2cb;
 }
+/* Estilos personalizados para los mensajes de error de email */
+.error__message-email-login {
+  color: red;
+  font-size: 10px;
+  margin-top: 5px;
+position:absolute;
+}
+
+/* Estilos personalizados para los mensajes de error de contraseña */
+.error__message-contra-login {
+  color: red;
+  font-size: 10px;
+  margin-top: 5px;
+  position:absolute;
+}
+
 
 /* telefonos */
 @media (max-width: 426px) {
