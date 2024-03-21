@@ -44,8 +44,8 @@
               </div>
             
               <div class="mb-3">
-                <label for="category">Categoría:</label><br>
-                <select name="category" class="form-select" id="category" aria-label="Floating label select example">
+                <label for="idCategory">Categoría:</label><br>
+                <select name="idCategory" class="form-select" id="idCategory" aria-label="Floating label select example">
                   <option value="" selected hidden></option>
                   <% categories.forEach(c => { %>
                     <option value="<%= c.id %>"><%= c.name %></option>
@@ -73,6 +73,7 @@
               </div>
 
             </article>
+            <input type="number" id="duplicateCount" name="duplicateCount" value="1" hidden>
           </section>
 
           <button id="add__individuals" type="button">Agregar usuario</button>
