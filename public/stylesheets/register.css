@@ -293,7 +293,7 @@ label {
 }
 
 .toggle-password:hover {
-    color: blue; /* Cambia el color del ícono cuando se pasa el mouse sobre él */
+    color: blue; 
 }
 
 .input-line-register input {
@@ -331,7 +331,6 @@ label {
 }
 
 
-/* Estilos para los botones de registro */
 .registration-button {
     display: block;
     width: 100%;
@@ -348,12 +347,12 @@ label {
     overflow: hidden;
     background-image: linear-gradient(to right, var( --colorCelesteOscuro), var(--colorNaranja));
     color: #fff;
-    box-shadow: 0 5px 15px rgba(0, 3, 0, 0.4); /* Sombra */
+    box-shadow: 0 5px 15px rgba(0, 3, 0, 0.4); 
 }
 
 .registration-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(175, 124, 76, 0.6); /* Sombra al pasar el cursor */
+    box-shadow: 0 8px 20px rgba(175, 124, 76, 0.6); 
 }
 
 .registration-button::before {
@@ -363,7 +362,7 @@ label {
     left: 50%;
     width: 300px;
     height: 300px;
-    background-color: rgba(255, 255, 255, 0.88); /* Color del efecto 3D */
+    background-color: rgba(255, 255, 255, 0.88);
     border-radius: 50%;
     transition: all 0.6s ease;
     z-index: 0;
@@ -380,7 +379,7 @@ label {
     z-index: 1;
 }
 
-/* Estilos para los botones Freelancer y Empresa */
+
 .registration-button.freelancer {
     background-image: linear-gradient(to right, var(--colorNaranja), var( --colorAzulOscuro));
 }
@@ -388,7 +387,7 @@ label {
 .registration-button.empresa {
     background-image: linear-gradient(to right, var( --colorAzulOscuro), var(--colorNaranja));
 }
-/* telefonos */
+
 @media (max-width: 429px) {
     .register-form {
         width: 90%; 
@@ -544,9 +543,6 @@ label {
         border-radius: 20px;
         margin: 10%; 
     }
-
-
-/* Estilos para el contenedor del formulario de registro */
 
 
 }

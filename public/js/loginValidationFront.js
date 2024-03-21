@@ -33,18 +33,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     loginForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Evita que el formulario se envíe automáticamente
+        event.preventDefault();
 
         if (!validateEmail() || !validatePassword()) {
             return false;
         }
 
-        // Si no hay errores, el formulario se enviará
+    
         this.submit();
     });
 });
-
-//ESTO HACE QUE SE MUESTRE U OCULTE LA CONTRASEÑA 
+ 
 function togglePasswordVisibility() {
     var passwordInput = document.getElementById("password");
     var toggleIcon = document.getElementById("toggle-icon");

@@ -24,7 +24,7 @@
   margin: 10% auto 0;
   padding: 20px;
   border-radius: 10px 10px 0 0;
-  height: 480px; /* Ajusta este valor según tus necesidades */
+  height: 480px; 
 }
 
 
@@ -214,7 +214,7 @@
 .log-redes .social-buttons-login .btn:hover {
   background-color: #23c2cb;
 }
-/* Estilos personalizados para los mensajes de error de email */
+
 .error__message-email-login {
   color: red;
   font-size: 10px;
@@ -222,7 +222,6 @@
 position:absolute;
 }
 
-/* Estilos personalizados para los mensajes de error de contraseña */
 .error__message-contra-login {
   color: red;
   font-size: 10px;
@@ -258,7 +257,6 @@ position:absolute;
     margin-top: 10px; 
   }
 
-  /* Ajustes para los botones en la lista */
   .social-buttons-login .btn {
     font-size: 12px; 
     height: 25px; 
@@ -266,15 +264,13 @@ position:absolute;
   }
 }
 
-/* Estilo para el contenedor del campo de contraseña y el botón */
 .password-input-container {
   position: relative;
 }
 
-/* Estilo para el botón de alternar visibilidad */
 .toggle-password-btn {
   position: absolute;
-  right: 60px; /* Puedes ajustar el espacio a la derecha según tus preferencias */
+  right: 60px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
@@ -282,12 +278,12 @@ position:absolute;
   cursor: pointer;
 }
 
-/* Estilo para el ícono del botón */
+
 .toggle-password-btn i {
-  color: #cbcaca; /* Color del ícono */
+  color: #cbcaca; 
 }
 
-/* Estilo para el campo de contraseña */
+
 #password {
-  padding-right: 35px; /* Ajusta el espacio a la derecha para que el texto no se superponga con el botón */
+  padding-right: 35px;
 }

@@ -48,7 +48,7 @@ module.exports = [
                 return true;
             } catch (error) {
                 console.log(error);
-                return false; // devuelve falso si da error
+                return false; 
             }
         }),
 
