@@ -17,15 +17,6 @@
               <input type="text" id="title" name="title" required>
             </div>
 
-            <div class="mb-3">
-              <label for="category">Categoría:</label><br>
-              <select name="category" class="form-select" id="category" aria-label="Floating label select example">
-                <option value="" selected hidden></option>
-                <% categories.forEach(c => { %>
-                  <option value="<%= c.id %>"><%= c.name %></option>
-                <% }) %>
-              </select>
-            </div>
 
             <div class="form__create mb-3">
               <label for="description">Descripción:</label><br>
@@ -44,16 +35,17 @@
             <input id="idStatus" name="idStatus" type="number" value="1" hidden>
 
             <!--Aca va todo lo de perfil personal-->
-            <!--
+
           <section class="individuals__container">
             <article class="individuals__container__data" id="individuals__container__data">
               <div class="mb-3">
-                <label for="title">Title:</label><br>
-                <input type="text" id="title" name="title" required>
+                <label for="specialty">Título:</label><br>
+                <input type="text" id="specialty" name="specialty" required>
               </div>
-
+            
               <div class="mb-3">
-                <select name="category" class="form-select" id="category" aria-label="Floating label select example">
+                <label for="idCategory">Categoría:</label><br>
+                <select name="idCategory" class="form-select" id="idCategory" aria-label="Floating label select example">
                   <option value="" selected hidden></option>
                   <% categories.forEach(c => { %>
                     <option value="<%= c.id %>"><%= c.name %></option>
@@ -62,29 +54,38 @@
               </div>
 
               <div class="form__create mb-3">
-                <label for="description">Description:</label><br>
-                <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
-              </div>       
-
+                <label for="about">Descripción:</label><br>
+                <textarea id="about" name="about" rows="4" cols="50" required></textarea><br>
+              </div>
+              
+              <div class="mb-3">
+                <label for="price">Precio:</label><br>
+                <input type="number" id="price" name="price" required>
+              </div>
+              
               <div>
-                <select name="skilles" class="form-select" id="skilles" aria-label="Floating label select example">
-                  <option value="" selected hidden></option>
+                <label for="skillesInd">Habilidades:</label><br>
+                <select name="skillesInd" class="mul-select" id="skilles" multiple>
                   <% skills.forEach(s => { %>
                     <option value="<%= s.id %>"><%= s.name %></option>
                   <% }) %>
                 </select>
               </div>
+
             </article>
+            <input type="number" id="duplicateCount" name="duplicateCount" value="1" hidden>
           </section>
-          <button id="add__individuals" type="button">Agregar usuario</button>-->
-            <div class="caja__botones row">
-              <div class="col-6 col-md-5 mx-auto">
-                <button type="button" class="btn btn-primary"><a href="/usuarios/perfil">Cancelar</a></button>
-              </div>
-              <div class="col-6 col-md-5 mx-auto">
-                <button type="submit" class="btn btn-primary">Agregar</button>
-              </div>
+
+          <button id="add__individuals" type="button">Agregar usuario</button>
+
+          <div class="caja__botones row">
+            <div class="col-6 col-md-5 mx-auto">
+              <button type="button" class="btn btn-primary"><a href="/usuarios/perfil">Cancelar</a></button>
             </div>
+            <div class="col-6 col-md-5 mx-auto">
+              <button type="submit" class="btn btn-primary">Agregar</button>
+            </div>
+          </div>
         </form>
     </main>
     </div>
