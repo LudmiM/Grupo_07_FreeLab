@@ -11,6 +11,7 @@ module.exports = {
       },
       idIndividual: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         references: {
           model: {
             tableName: "Individuals",
@@ -19,6 +20,7 @@ module.exports = {
       },
       idSkill: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         references: {
           model: {
             tableName: "Skilles",

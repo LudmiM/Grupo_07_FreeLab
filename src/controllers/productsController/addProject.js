@@ -13,9 +13,9 @@ function estructuraSkillesInd(skilles,id) {
    return newSkills
 }
 
-function cargarIndividuals(specialty,about,price,idProject,idCategory,skillesInd) {
+async function cargarIndividuals(specialty,about,price,idProject,idCategory,skillesInd) {
    console.log(`Estoy en individuals ${specialty} ${about} ${price} category is ${idCategory} skilles is ${skillesInd} a numero proyecto ${idProject}`)
-   const individual = db.Individual.create({
+   const individual = await db.Individual.create({
       specialty,
       about,
       price,
@@ -69,7 +69,7 @@ module.exports = async (req, res) => {
       const idCategory = req.body[`idCategory_${i}`];
       const skillesInd = req.body[`skillesInd_${i}`];
       console.log(`Crgo2 ${specialty} ${about} ${price} ${duplicateCount} ${skillesInd} a numero proyecto ${project.id}`)
-      //cargarIndividuals(specialty,about,price,project.id,idCategory,skillesInd)
+      cargarIndividuals(specialty,about,price,project.id,idCategory,skillesInd)
    }
 
    return res.redirect('/usuarios/perfil');
