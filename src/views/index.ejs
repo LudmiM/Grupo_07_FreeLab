@@ -188,17 +188,15 @@
       </div>
       
   </section>
-  
-      
-  
-  <section class="join-us">
-    <div class="join-us-content">
-      <h2>¿Te gustaría ser parte de FreeLab?</h2>
-      <p>Regístrate de forma gratuita y únete a nuestra comunidad de freelancers y empleadores hoy mismo.</p>
-      <a href="/usuarios/registro" class="btn btn-primary">Regístrate</a>
-    </div>
-  </section>
-  
+  <% if (!locals.userLogin) { %>
+    <section class="join-us">
+      <div class="join-us-content">
+        <h2>¿Te gustaría ser parte de FreeLab?</h2>
+        <p>Regístrate de forma gratuita y únete a nuestra comunidad de freelancers y empleadores hoy mismo.</p>
+        <a href="/usuarios/registro" class="btn btn-primary">Regístrate</a>
+      </div>
+    </section>
+  <% } %>
   </main>
   <%- include('./partials/footer') %>
   <%- include('./partials/scripts') %>
