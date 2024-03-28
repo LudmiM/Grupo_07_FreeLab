@@ -63,6 +63,6 @@ module.exports = async (req, res) => {
    return res.redirect('/usuarios/perfil');
    } catch (error) {
       console.error(error);
-       return res.status(500).send('Error interno del servidor');
+      return res.status(500).send('Error interno del servidor');
    }
 }    
