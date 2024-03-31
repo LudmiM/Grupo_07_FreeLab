@@ -1,0 +1,36 @@
+<article class="individuals__container__data" id="individuals__container__data">
+    <div class="mb-3">
+      <label for="specialty">Título:</label><br>
+      <input type="text" id="specialty" name="specialty" required>
+    </div>
+  
+    <div class="mb-3">
+      <label for="idCategory">Categoría:</label><br>
+      <select name="idCategory" class="form-select" id="idCategory" aria-label="Floating label select example">
+        <option value="" selected hidden></option>
+        <% categories.forEach(c => { %>
+          <option value="<%= c.id %>"><%= c.name %></option>
+        <% }) %>
+      </select>
+    </div>
+
+    <div class="form__create mb-3">
+      <label for="about">Descripción:</label><br>
+      <textarea id="about" name="about" rows="4" cols="50" required></textarea><br>
+    </div>
+    
+    <div class="mb-3">
+      <label for="price">Precio:</label><br>
+      <input type="number" id="price" name="price" required>
+    </div>
+    
+    <div>
+      <label for="skillesInd">Habilidades:</label><br>
+      <select multiple name="skillesInd" class="mul-select" id="skilles">
+        <% skills.forEach(s => { %>
+          <option value="<%= s.id %>"><%= s.name %></option>
+        <% }) %>
+      </select>
+    </div>
+
+</article>

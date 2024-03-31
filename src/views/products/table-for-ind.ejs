@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head')%>
+
+<body>
+    <%-include('../partials/header', {title: 'Home | FreeLab' })%>
+    <main class="card edit-product-card">
+      <section class="individuals__container">
+        <input type="number" id="duplicateCount" name="duplicateCount" value="1" hidden>
+        <%-include('../partials/footer')%>
+      </section>
+      <button id="add__individuals" type="button">Agregar usuario</button>
+      <input id="idStatus" name="idStatus" type="number" value="1" hidden>
+    </main>
+    <%-include('../partials/footer')%>
+</body>
+<%-include('../partials/scripts')%>    
+</html>
