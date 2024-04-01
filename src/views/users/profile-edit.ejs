@@ -74,8 +74,6 @@
                             <p><%= p.title %></p>
                             <p><%= p.description %></p>
                             
-
-                   
                                 <div class="d-flex">
                                   
                                     <a class="btn btn-sm btn-success" href="/productos/editar/<%= p.id %>">Editar
@@ -86,9 +84,6 @@
                                         <i class="fa-solid fa-trash"></i>
                                     </a>
                                 </div>
-
-                            
-                            
                                 
                             <%- include('../partials/modal/confirmacionEliminar',{p}) %>
                         <% }) %>

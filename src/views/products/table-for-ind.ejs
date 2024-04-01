@@ -11,13 +11,16 @@
       <section class="individuals__container">
         <% individuals.forEach(i => { %>
           <article class="article__individuals">
-          <p><%= i.specialty %></p>
-          <p><%= i.about %></p>
-          <p><%= i.price %></p>
-          <article class="section__explicacion__article__habilidades article__skills">
-              
+            <p><%= i.specialty %></p>
+            <p><%= i.about %></p>
+            <p><%= i.price %></p>
+            <article class="section__explicacion__article__habilidades article__skills">
+                
+            </article>
+            <i class="fa-solid fa-pencil"></i>
+
+            <i class="fa-solid fa-trash"></i>
           </article>
-        </article>
           
       <% }) %>
       </section>
