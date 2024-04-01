@@ -1,6 +1,6 @@
 const db = require("../../database/models");
 
-function estructuraSkillesInd(skilles,id) {
+function estructuraSkilles(skilles,id) {
    skilles = [skilles];
    const newSkills=skilles.map(s => {
       return {
@@ -20,26 +20,15 @@ async function cargarIndividuals(specialty,about,price,idProject,idCategory,skil
       idCategory,
       chosen: false
    })
-   const newSkills=estructuraSkillesInd(skillesInd,individual.id)
+   const newSkills=estructuraSkilles(skillesInd,individual.id)
    db.IndividualSkill.bulkCreate(newSkills)
 }
 module.exports = async (req, res) => {
     try {
-        const { title,description,idStatus,skilles} = req.body;
-        const idProject = req.session.idCompany;
-           /*
-   const {specialty,about,price,idCategory,skillesInd}=req.body
-   cargarIndividuals(specialty,about,price,project.id,idCategory,skillesInd)
-   
-   for (let i = 2; i <= +duplicateCount; i++) {
-      const specialty = req.body[`specialty_${i}`];
-      const about = req.body[`about_${i}`];
-      const price = req.body[`price_${i}`];
-      const idCategory = req.body[`idCategory_${i}`];
-      const skillesInd = req.body[`skillesInd_${i}`];
-      cargarIndividuals(specialty,about,price,project.id,idCategory,skillesInd)
-   }*/
-        return res.redirect('/usuarios/perfil');
+        const idProject = +req.params.id;
+        const {specialty,about,price,idCategory,skillesInd}=req.body
+        cargarIndividuals(specialty,about,price,idProject,idCategory,skillesInd)
+        return res.redirect('/productos/agregarIndividual/'+idProject);
     } catch (error) {
         console.error(error);
         return res.status(500).send('Error interno del servidor');
