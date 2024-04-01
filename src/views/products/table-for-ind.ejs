@@ -7,10 +7,19 @@
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         agregarIndividual
       </button>
-      <%-include('../partials/modal/agregarIndividual',{idProject})%>
+      <%-include('../partials/modal/agregarIndividual',{idProject, skills,categories})%>
       <section class="individuals__container">
-        <input type="number" id="duplicateCount" name="duplicateCount" value="1" hidden>
-        <!--For de individuals-->
+        <% individuals.forEach(i => { %>
+          <article class="article__individuals">
+          <p><%= i.specialty %></p>
+          <p><%= i.about %></p>
+          <p><%= i.price %></p>
+          <article class="section__explicacion__article__habilidades article__skills">
+              
+          </article>
+        </article>
+          
+      <% }) %>
       </section>
       <a href="/usuarios/perfil" class="btn">Finalizar</a>
     </main>
