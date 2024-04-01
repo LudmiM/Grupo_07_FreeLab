@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <%-include('../partials/head')%>
-
 <body>
     <%-include('../partials/header', {title: 'Home | FreeLab' })%>
     <main class="card edit-product-card">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+      </button>
       <section class="individuals__container">
         <input type="number" id="duplicateCount" name="duplicateCount" value="1" hidden>
-        <%-include('../partials/footer')%>
+        <%-include('../partials/modal/agregarIndividual',{idProject})%>
       </section>
-      <button id="add__individuals" type="button">Agregar usuario</button>
-      <input id="idStatus" name="idStatus" type="number" value="1" hidden>
+      <a href="/usuarios/perfil" class="btn">Finalizar</a>
     </main>
     <%-include('../partials/footer')%>
 </body>
