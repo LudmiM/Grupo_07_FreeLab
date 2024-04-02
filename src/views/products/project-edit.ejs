@@ -31,7 +31,7 @@
           
                       <div>
                         <label for="skills" class="form-editpe">Habilidades:</label><br>
-                        <select name="skills" class="mul-select" id="skills" multiple>
+                        <select name="skills" class="mul-select" id="skilles" multiple>
                           <% skills.forEach(s => { %>
                             <option value="<%= s.id %>"><%= s.name %></option>
                           <% }) %>
@@ -57,4 +57,5 @@
 
 </body>
 <%- include('../partials/footer') %>
+<%- include('../partials/scripts') %>
 </html>
