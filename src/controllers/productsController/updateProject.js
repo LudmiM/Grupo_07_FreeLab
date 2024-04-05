@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
         });
      
         console.log('Skills:', projectUpdate.skills);
-        return res.redirect('/usuarios/perfil')
+        return res.redirect('/productos/agregarIndividual/'+id)
      
  } catch(error) { 
     console.log(error)
