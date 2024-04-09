@@ -10,15 +10,21 @@ const getAllProducts = async (req,res) => {
                 through: { 
                     attributes: [] 
                   }
-            }
+            }, {
+               
+                association: 'Individuals', 
+                attributes: ['specialty', 'about', 'price'] 
+              }
         ],
         attributes : ['id','title','description']
       })
       
 
       const projects = rows.map(project => {
+        const skills = project.skills.map(skill => skill.name);
         return {
             ...project.dataValues,
+            skills,
             detail : `${req.protocol}://${req.get('host')}/apis/products/${project.id}`
         }
       })
