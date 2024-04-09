@@ -5,6 +5,8 @@ const edit = require('./edit')
 const detailProject = require('./detailProject')
 const detailUser = require('./detailUser')
 const addProject = require('./addProject')
+const formIndividual = require('./formIndividual')
+const addIndividual = require('./addIndividual')
 
 module.exports = {
     eliminate,
@@ -13,5 +15,7 @@ module.exports = {
     edit,
     updateProject,
     formProject,
-    addProject
+    addProject,
+    formIndividual,
+    addIndividual
 }

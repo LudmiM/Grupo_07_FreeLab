@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<%-include('../partials/head')%>
+<body>
+    <%-include('../partials/header', {title: 'Home | FreeLab' })%>
+    <main class="card edit-product-card">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        agregarIndividual
+      </button>
+      <%-include('../partials/modal/agregarIndividual',{idProject, skills,categories})%>
+      <section class="individuals__container">
+        <% individuals.forEach(i => { %>
+          <article class="article__individuals">
+          <p><%= i.specialty %></p>
+          <p><%= i.about %></p>
+          <p><%= i.price %></p>
+          <article class="section__explicacion__article__habilidades article__skills">
+              
+          </article>
+        </article>
+          
+      <% }) %>
+      </section>
+      <a href="/usuarios/perfil" class="btn">Finalizar</a>
+    </main>
+    <%-include('../partials/footer')%>
+</body>
+<%-include('../partials/scripts')%>    
+</html>

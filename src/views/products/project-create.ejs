@@ -5,92 +5,44 @@
   <body>
 
     <%-include('../partials/header', {title: 'Home | FreeLab' })%>
-<div class="container-pe mt-5">
+    <div class="container-pe mt-5">
       <main class="card edit-product-card">
         <div class="card-header ">
           <h1 class="mb-0">Crear nuevo proyecto</h1>
-      </div>
+        </div>
 
         <form class="form__create formulario__projectCreate" action="/productos/agregarProyecto" method="POST">
             <div class="mb-3">
               <label for="title">Título:</label><br>
               <input type="text" id="title" name="title" required>
             </div>
-
-
             <div class="form__create mb-3">
               <label for="description">Descripción:</label><br>
               <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
             </div>       
-
-            <div>
+            <div  class="mb-3">
               <label for="skilles">Habilidades:</label><br>
-              <select name="skilles" class="mul-select" id="skilles" multiple>
-                <% skills.forEach(s => { %>
+              <select multiple name="skilles" class="mul-select" id="skilles">
+                <% skills.filter(s => s.id >= 53).forEach(s => { %>
                   <option value="<%= s.id %>"><%= s.name %></option>
                 <% }) %>
               </select>
             </div>
 
-            <input id="idStatus" name="idStatus" type="number" value="1" hidden>
-
-            <!--Aca va todo lo de perfil personal-->
-
-          <section class="individuals__container">
-            <article class="individuals__container__data" id="individuals__container__data">
-              <div class="mb-3">
-                <label for="specialty">Título:</label><br>
-                <input type="text" id="specialty" name="specialty" required>
-              </div>
-            
-              <div class="mb-3">
-                <label for="idCategory">Categoría:</label><br>
-                <select name="idCategory" class="form-select" id="idCategory" aria-label="Floating label select example">
-                  <option value="" selected hidden></option>
-                  <% categories.forEach(c => { %>
-                    <option value="<%= c.id %>"><%= c.name %></option>
-                  <% }) %>
-                </select>
-              </div>
-
-              <div class="form__create mb-3">
-                <label for="about">Descripción:</label><br>
-                <textarea id="about" name="about" rows="4" cols="50" required></textarea><br>
-              </div>
-              
-              <div class="mb-3">
-                <label for="price">Precio:</label><br>
-                <input type="number" id="price" name="price" required>
-              </div>
-              
-              <div>
-                <label for="skillesInd">Habilidades:</label><br>
-                <select name="skillesInd" class="mul-select" id="skilles" multiple>
-                  <% skills.forEach(s => { %>
-                    <option value="<%= s.id %>"><%= s.name %></option>
-                  <% }) %>
-                </select>
-              </div>
-
-            </article>
-            <input type="number" id="duplicateCount" name="duplicateCount" value="1" hidden>
-          </section>
-
-          <button id="add__individuals" type="button">Agregar usuario</button>
+            <input id="idStatus" name="idStatus" type="number" value="2" hidden>
 
           <div class="caja__botones row">
             <div class="col-6 col-md-5 mx-auto">
               <button type="button" class="btn btn-primary"><a href="/usuarios/perfil">Cancelar</a></button>
             </div>
             <div class="col-6 col-md-5 mx-auto">
-              <button type="submit" class="btn btn-primary">Agregar</button>
+              <button type="submit" class="btn btn-primary">Siguiente</button>
             </div>
           </div>
         </form>
-    </main>
+      </main>
     </div>
-    
+    <%-include('../partials/footer')%>
 </body>
-<%-include('../partials/footer')%>
     <%-include('../partials/scripts')%>    
 </html>
