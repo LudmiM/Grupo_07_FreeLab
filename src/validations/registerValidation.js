@@ -12,7 +12,7 @@ module.exports = [
                 return Promise.reject('El email ya está registrado');
             }
         }),
-    body("userPassword")
+    check("userPassword")
         .notEmpty().withMessage("La contraseña es obligatoria")
         .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')
         .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]+$/)

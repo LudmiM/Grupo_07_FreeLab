@@ -39,19 +39,13 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="country" class="form-label">ciudad:</label>
-                        <input type="text" class="form-control" id="country" name="country" value="<%= country %>">
-                        <small class="text-danger ms-3"><%= locals.errors && errors.country ? errors.country.msg : null %></small>
-                    </div>
-
-                    <div class="mb-3">
                         <label for="phoneCode" class="form-label">Codigo celular:</label>
                         <input type="number" class="form-control" id="phoneCode" name="phoneCode" value="<%= phoneCode %>">
                         <small class="text-danger ms-3"><%= locals.errors && errors.phoneCode ? errors.phoneCode.msg : null %></small>
                     </div>
 
                     <div class="mb-3">
-                        <label for="phone" class="form-label">Codigo celular:</label>
+                        <label for="phone" class="form-label">Celular:</label>
                         <input type="number" class="form-control" id="phone" name="phone" value="<%= phone %>">
                         <small class="text-danger ms-3"><%= locals.errors && errors.phone ? errors.phone.msg : null %></small>
                     </div>
