@@ -244,6 +244,7 @@ label {
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
+    
 }
 
 
@@ -524,9 +525,9 @@ label {
 
     .register-box {
         position: absolute;
-        top: 60%;
-        left: 72%;
-        height: 35%;
+        top: 58%;
+        left: 85%;
+        height: 45%;
         border-radius: 10px;
         transform: translate(-50%, -50%);
         justify-content: center;
@@ -542,6 +543,11 @@ label {
         height: 80%; 
         border-radius: 20px;
         margin: 10%; 
+    }
+
+    .registration-container {
+     width: 50%;
+        
     }
 
 
