@@ -6,13 +6,16 @@ module.exports = {
 
     await queryInterface.bulkInsert('States', [
       {
-        name: 'abierto'
+        name: 'Abierto'
       },
       {
-        name: 'pausado'
+        name: 'Pausado'
       },
       {
-        name: 'finalizado'
+        name: 'Finalizado'
+      },
+      {
+        name: 'Borrador'
       }
     ], {});
   },

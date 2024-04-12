@@ -44,11 +44,19 @@ module.exports = {
           }
         }
       },
-      idCategory: {
+      idSpecialty: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: "Categories",
+            tableName: "Specialties",
+          }
+        }
+      },
+      idKnowledge: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "Knowledges",
           }
         }
       }

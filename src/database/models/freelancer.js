@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Freelancer.belongsTo(models.Category, { foreignKey: 'idCategory' });
+      Freelancer.belongsTo(models.Specialty, { foreignKey: 'idSpecialty' });
+      Freelancer.belongsTo(models.Knowledge, { foreignKey: 'idKnowledge' });
       Freelancer.belongsTo(models.User, { foreignKey: 'idUser' });
       Freelancer.belongsToMany(models.Individual, {
         through: models.Application,
@@ -35,7 +36,8 @@ module.exports = (sequelize, DataTypes) => {
     about: DataTypes.TEXT,
     hourValue: DataTypes.INTEGER,
     idUser: DataTypes.INTEGER,
-    idCategory: DataTypes.INTEGER
+    idSpecialty: DataTypes.INTEGER,
+    idKnowledge: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Freelancer',

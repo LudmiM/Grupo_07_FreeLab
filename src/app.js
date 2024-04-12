@@ -9,6 +9,7 @@ const methodOverride = require('method-override');
 const indexRouter = require('./routes/index.routes');
 const usersRouter = require('./routes/users.routes');
 const productsRouter = require('./routes/products.routes');
+const apisRouter = require('./routes/apis.routes');
 
 const checkLocalSession = require('./middleware/checkLocalSession');
 const checkCookie = require('./middleware/checkCookie');
@@ -46,7 +47,8 @@ app
   // Rutas
   .use('/', indexRouter)
   .use('/usuarios', usersRouter)
-  .use('/productos', productsRouter);
+  .use('/productos', productsRouter)
+  .use('/apis', apisRouter)
 
 // Manejo de errores 404
 app.use(function(req, res, next) {
