@@ -24,7 +24,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Individual.init({
-    specialty: DataTypes.STRING,
     about: DataTypes.TEXT,
     price: DataTypes.INTEGER,
     idProject: DataTypes.INTEGER,

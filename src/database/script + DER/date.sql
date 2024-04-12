@@ -14,13 +14,13 @@ VALUES
 
 -- Inserto Freelancers 
 
-INSERT INTO freelancers (firstName, lastName, country, phoneCode, phone, hourValue, idUser, idCategory, about) 
+INSERT INTO freelancers (firstName, lastName, country, phoneCode, phone, hourValue, idUser, idSpecialty, idKnowledge, about) 
 VALUES 
-('Juan', 'Perez', 'Argentina', 54, 123456789, 60, 4, 1, 'Hola, soy Juan Pérez, un apasionado desarrollador web con una sólida experiencia en la creación de sitios web dinámicos y funcionales. Mi enfoque se centra en la implementación de tecnologías modernas como HTML5, CSS3 y JavaScript para ofrecer experiencias web intuitivas y atractivas.'),
-('Maria', 'Gomez', 'España', 34, 987654321, 40, 5, 2, '¡Hola! Soy María Gómez, una diseñadora gráfica creativa y apasionada. Mi especialidad radica en la creación de diseños impactantes y visualmente atractivos utilizando herramientas como Adobe Photoshop e Illustrator. Me encanta transformar ideas en imágenes cautivadoras y expresivas.'),
-('Emilia', 'Cole', 'Argentina', 54, 123456789, 30, 6, 10, '¡Hola! Me llamo Emilia Cole y soy una desarrolladora web entusiasta con un gran amor por el diseño y la programación. Mi experiencia abarca diversas tecnologías web como HTML, CSS, JavaScript y frameworks como React y Vue.js. Me apasiona crear experiencias web únicas y accesibles para todos.'),
-('Melissa', 'Coop', 'Argentina', 54, 123456789, 25, 7, 7, 'Saludos, soy Melissa Coop, una desarrolladora web enfocada en la creación de interfaces limpias y funcionales. Mi objetivo es desarrollar sitios web que no solo sean estéticamente atractivos, sino también fáciles de usar y accesibles para todos los usuarios.'),
-('Agustin', 'Nuñez', 'España', 34, 987654321, 80, 8, 8, '¡Hola a todos! Soy Agustín Nuñez, un diseñador gráfico con un enfoque centrado en la creatividad y la innovación. Con una sólida experiencia en el uso de herramientas como Adobe Photoshop e Illustrator, mi pasión radica en la creación de diseños que cuentan historias y despiertan emociones.');
+('Juan', 'Perez', 'Argentina', 54, 123456789, 60, 4, 1, 1, 'Hola, soy Juan Pérez, un apasionado desarrollador web con una sólida experiencia en la creación de sitios web dinámicos y funcionales. Mi enfoque se centra en la implementación de tecnologías modernas como HTML5, CSS3 y JavaScript para ofrecer experiencias web intuitivas y atractivas.'),
+('Maria', 'Gomez', 'España', 34, 987654321, 40, 5, 2, 3,'¡Hola! Soy María Gómez, una diseñadora gráfica creativa y apasionada. Mi especialidad radica en la creación de diseños impactantes y visualmente atractivos utilizando herramientas como Adobe Photoshop e Illustrator. Me encanta transformar ideas en imágenes cautivadoras y expresivas.'),
+('Emilia', 'Cole', 'Argentina', 54, 123456789, 30, 6, 10, 5, '¡Hola! Me llamo Emilia Cole y soy una desarrolladora web entusiasta con un gran amor por el diseño y la programación. Mi experiencia abarca diversas tecnologías web como HTML, CSS, JavaScript y frameworks como React y Vue.js. Me apasiona crear experiencias web únicas y accesibles para todos.'),
+('Melissa', 'Coop', 'Argentina', 54, 123456789, 25, 7, 2, 2, 'Saludos, soy Melissa Coop, una desarrolladora web enfocada en la creación de interfaces limpias y funcionales. Mi objetivo es desarrollar sitios web que no solo sean estéticamente atractivos, sino también fáciles de usar y accesibles para todos los usuarios.'),
+('Agustin', 'Nuñez', 'España', 34, 987654321, 80, 8, 8, 4, '¡Hola a todos! Soy Agustín Nuñez, un diseñador gráfico con un enfoque centrado en la creatividad y la innovación. Con una sólida experiencia en el uso de herramientas como Adobe Photoshop e Illustrator, mi pasión radica en la creación de diseños que cuentan historias y despiertan emociones.');
 
 -- Insertar empresas
 INSERT INTO companies (companyName, location, mainImage, website, idUser, description) 
@@ -80,28 +80,27 @@ VALUES
 (15, 57), (15, 58), (15, 59);
 
 -- Inserto en individulas
-INSERT INTO individuals (specialty, about, price, idProject, idCategory, chosen) 
+INSERT INTO individuals (idSpecialty, idKnowledge, about, price, idProject, chosen) 
 VALUES 
-('Desarrollo Web', 'Especializado en desarrollo web utilizando tecnologías modernas como React y Node.js.', 50, 1, 1, 0),
-('Diseño Gráfico', 'Experto en diseño gráfico con experiencia en Adobe Illustrator y Adobe Photoshop.', 60, 2, 2, 0),
-('Redacción de Contenidos', 'Redactor creativo con habilidades para generar contenido persuasivo y atractivo.', 40, 3, 3, 0),
-('Marketing Digital', 'Especialista en marketing digital con experiencia en estrategias SEO y SEM.', 70, 4, 4, 0),
-('Desarrollo de Aplicaciones Móviles', 'Desarrollador de aplicaciones móviles con habilidades en iOS y Android.', 55, 5, 5, 0),
-('Administración de Proyectos', 'Experto en gestión de proyectos con certificación PMP.', 65, 6, 6, 0),
-('Traducción e Idiomas', 'Traductor profesional con dominio de varios idiomas extranjeros.', 45, 7, 7, 0),
-('Consultoría Empresarial', 'Consultor empresarial con experiencia en estrategias de crecimiento.', 75, 8, 8, 0),
-('Diseño Arquitectónico', 'Arquitecto con habilidades en diseño arquitectónico sostenible.', 55, 9, 9, 0),
-('Escritura Creativa', 'Escritor creativo con experiencia en diversos géneros literarios.', 60, 10, 10, 0),
-('Desarrollo Web', 'Especializado en desarrollo web utilizando tecnologías modernas como React y Node.js.', 50, 11, 5, 0),
-('Diseño Gráfico', 'Experto en diseño gráfico con experiencia en Adobe Illustrator y Adobe Photoshop.', 60, 12, 4, 0),
-('Redacción de Contenidos', 'Redactor creativo con habilidades para generar contenido persuasivo y atractivo.', 40, 13, 3, 0),
-('Marketing Digital', 'Especialista en marketing digital con experiencia en estrategias SEO y SEM.', 70, 14, 2, 0),
-('Desarrollo de Aplicaciones Móviles', 'Desarrollador de aplicaciones móviles con habilidades en iOS y Android.', 55, 15, 1, 0),
-('Diseño de Aplicaciones Móviles', 'Diseñador de aplicaciones móviles con experiencia en interfaces intuitivas y atractivas.', 55, 13, 2, 0),
-('Desarrollo de Aplicaciones Web', 'Desarrollador de aplicaciones web con conocimientos en front-end y back-end.', 55, 15, 1, 0),
-('Marketing Digital y Redes Sociales', 'Experto en estrategias de marketing digital y gestión de redes sociales.', 55, 15, 4, 0),
-('Gestión de Proyectos de Software', 'Gestor de proyectos de software con experiencia en metodologías ágiles.', 55, 10, 7, 0),
-('Diseño de Experiencia de Usuario (UX)', 'Diseñador de experiencia de usuario (UX) enfocado en la usabilidad y la accesibilidad.', 55, 5, 2, 0);
+(2, 1, 'Especializado en desarrollo web utilizando tecnologías modernas como React y Node.js.', 50, 1, null),
+(4, 1, 'Experto en diseño gráfico con experiencia en Adobe Illustrator y Adobe Photoshop.', 60, 2, null),
+(6, 2, 'Redactor creativo con habilidades para generar contenido persuasivo y atractivo.', 40, 3, null),
+(8, 2, 'Especialista en marketing digital con experiencia en estrategias SEO y SEM.', 70, 4, null),
+(10, 2, 'Desarrollador de aplicaciones móviles con habilidades en iOS y Android.', 55, 5, null),
+(20, 3, 'Experto en gestión de proyectos con certificación PMP.', 65, 6, null),
+(56, 5, 'Traductor profesional con dominio de varios idiomas extranjeros.', 45, 7, null),
+(66, 5, 'Consultor empresarial con experiencia en estrategias de crecimiento.', 75, 8, null),
+(77, 5, 'Arquitecto con habilidades en diseño arquitectónico sostenible.', 55, 9, null),
+(73, 2, 'Escritor creativo con experiencia en diversos géneros literarios.', 60, 10, null),
+(12, 2, 'Especializado en desarrollo web utilizando tecnologías modernas como React y Node.js.', 50, 11, null),
+(14, 2, 'Experto en diseño gráfico con experiencia en Adobe Illustrator y Adobe Photoshop.', 60, 12, null),
+(26, 4, 'Redactor creativo con habilidades para generar contenido persuasivo y atractivo.', 40, 13, null),
+(28, 4, 'Especialista en marketing digital con experiencia en estrategias SEO y SEM.', 70, 14, null),
+(18, 3, 'Desarrollador de aplicaciones móviles con habilidades en iOS y Android.', 55, 15, null),
+(38, 5, 'Diseñador de aplicaciones móviles con experiencia en interfaces intuitivas y atractivas.', 55, 13, null),
+(81, 4, 'Experto en estrategias de marketing digital y gestión de redes sociales.', 55, 15, null),
+(47, 5, 'Gestor de proyectos de software con experiencia en metodologías ágiles.', 55, 10, null),
+(9, 2, 'Diseñador de experiencia de usuario (UX) enfocado en la usabilidad y la accesibilidad.', 55, 5, null);
 
 -- Inserto en individualskills
 INSERT INTO individualskills (idIndividual, idSkill)
@@ -123,9 +122,9 @@ VALUES
 (15, 50), (15, 51), (15, 52),
 (16, 28), (16, 29), (16, 30), 
 (17, 31), (17, 32), (17, 33),
-(18, 34), (18, 35), (18, 36),
-(19, 37), (19, 38), (19, 39),
-(20, 40), (20, 41), (20, 42);
+(18, 34), (18, 35), (18, 36);
+-- (19, 37), (19, 38), (19, 39),
+-- (20, 40), (20, 41), (20, 42);
 
 -- Inserto en freelancerskill
 INSERT INTO freelancerskills (idFreelancer, idSkill)
