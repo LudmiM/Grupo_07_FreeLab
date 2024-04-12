@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<%-include('../partials/head')%>
+<body>
+    <%-include('../partials/header', {title: 'Home | FreeLab' })%>
+    <main class="card edit-product-card">
+      <section class="individuals__container">
+        <% Postulantes.forEach(p => { %>
+          <article class="article__individuals">
+            <p><%= p.specialty %></p>
+            <!--AddLink-->
+            <p><%= p.about %></p>
+            <p><%= p.price %></p>
+            <article class="section__explicacion__article__habilidades article__skills">
+                
+            </article>
+          </article>   
+        <% }) %>
+      </section>
+    </main>
+    <%-include('../partials/footer')%>
+</body>
+<%-include('../partials/scripts')%>    
+</html>

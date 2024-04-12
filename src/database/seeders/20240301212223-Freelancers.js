@@ -11,7 +11,8 @@ module.exports = {
         about: "Soy una persona responsable",
         hourValue: 15,
         idUser: 3,
-        idCategory:2
+        idSpecialty:2,
+        idKnowledge:2
       }
     ], {});
     

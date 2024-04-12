@@ -27,7 +27,8 @@ module.exports = (sequelize, DataTypes) => {
     about: DataTypes.TEXT,
     price: DataTypes.INTEGER,
     idProject: DataTypes.INTEGER,
-    idCategory: DataTypes.INTEGER,
+    idSpecialty: DataTypes.INTEGER,
+    idKnowledge: DataTypes.INTEGER,
     chosen: DataTypes.BOOLEAN
   }, {
     sequelize,
