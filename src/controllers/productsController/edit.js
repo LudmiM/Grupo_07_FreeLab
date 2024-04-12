@@ -9,15 +9,17 @@ module.exports = async (req, res) => {
             {model: db.Skill,as:'skills'}
           ]
         });
-        console.log('this is project '+project+' el id es '+id)
-        
-        const skills = project.skills;
-    
-      res.render('products/project-edit', { 
-       project: project,
-       skills: skills
-        
-      })
+        const skills = await db.Skill.findAll({
+          where: {
+              id: {
+                  [db.Sequelize.Op.gte]: 53
+              }
+          }
+        });
+        res.render('products/project-edit', { 
+        project: project,
+        skills
+        })
 
     } catch (error) {console.log(error)
    }  

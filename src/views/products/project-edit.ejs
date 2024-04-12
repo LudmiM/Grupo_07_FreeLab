@@ -28,15 +28,32 @@
                         <label for="description" class="form-editpe">Descripción:</label><br>
                         <textarea id="description" name="description" rows="4" cols="50"><%= project.description%></textarea><br>
                       </div>       
-          
-                      <div>
-                        <label for="skills" class="form-editpe">Habilidades:</label><br>
-                        <select name="skills" class="mul-select" id="skilles" multiple>
-                          <% skills.forEach(s => { %>
-                            <option value="<%= s.id %>"><%= s.name %></option>
-                          <% }) %>
-                        </select>
-                      </div>
+                     
+                    <div>
+                      <label for="skills" class="form-editpe">Habilidades:</label><br>
+                      <select name="skills" class="mul-select" id="skills" multiple>
+                        <% 
+                        const skillIds = project.skills.map(skill => skill.id);
+                        skills.forEach(s => {
+                            if (skillIds.includes(s.id)) { 
+                        %>
+                            <option value="<%= s.id %>" selected>
+                                <%= s.name %>
+                            </option>
+                        <% 
+                            } else { 
+                        %>
+                            <option value="<%= s.id %>">
+                                <%= s.name %>
+                            </option>
+                        <% 
+                            }
+                        }) 
+                        %>
+                    </select>
+                    
+                  </div>
+                  
           
                       <input id="idStatus" name="idStatus" type="number" value="1" hidden>
           

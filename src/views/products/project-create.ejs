@@ -22,8 +22,8 @@
             </div>       
             <div  class="mb-3">
               <label for="skilles">Habilidades:</label><br>
-              <select multiple name="skilles" class="mul-select" id="skilles">
-                <% skills.filter(s => s.id >= 53).forEach(s => { %>
+              <select multiple name="skilles" class="mul-select" id="skills">
+                <% skills.forEach(s => { %>
                   <option value="<%= s.id %>"><%= s.name %></option>
                 <% }) %>
               </select>
