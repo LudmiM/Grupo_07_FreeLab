@@ -11,13 +11,13 @@ function estructuraSkilles(skilles,id) {
    return newSkills
 }
 
-async function cargarIndividuals(specialty,about,price,idProject,idCategory,skillesInd) {
+async function cargarIndividuals(about,price,idProject,idSpecialty,idKnowledge,skillesInd) {
    const individual = await db.Individual.create({
-      specialty,
       about,
       price,
       idProject,
-      idCategory,
+      idSpecialty,
+      idKnowledge,
       chosen: false
    })
    const newSkills=estructuraSkilles(skillesInd,individual.id)
@@ -26,8 +26,8 @@ async function cargarIndividuals(specialty,about,price,idProject,idCategory,skil
 module.exports = async (req, res) => {
     try {
         const idProject = +req.params.id;
-        const {specialty,about,price,idCategory,skillesInd}=req.body
-        cargarIndividuals(specialty,about,price,idProject,idCategory,skillesInd)
+        const {about,price,idSpecialty,idKnowledge,skillesInd}=req.body
+        cargarIndividuals(about,price,idProject,idSpecialty,idKnowledge,skillesInd)
         return res.redirect('/productos/agregarIndividual/'+idProject);
     } catch (error) {
         console.error(error);

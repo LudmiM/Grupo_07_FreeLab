@@ -7,11 +7,10 @@
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         agregarIndividual
       </button>
-      <%-include('../partials/modal/agregarIndividual',{idProject, skills,categories})%>
+      <%-include('../partials/modal/agregarIndividual',{idProject, skills,categories,knowledge,specialty})%>
       <section class="individuals__container">
         <% individuals.forEach(i => { %>
           <article class="article__individuals">
-            <p><%= i.specialty %></p>
             <p><%= i.about %></p>
             <p><%= i.price %></p>
             <article class="section__explicacion__article__habilidades article__skills">
@@ -22,8 +21,9 @@
             <i class="fa-solid fa-trash"></i>
           </article>
           
-      <% }) %>
+      <% }) %> 
       </section>
+      <a href="/productos/editar/<%= idProject %>" class="btn">Anterior</a>
       <a href="/usuarios/perfil" class="btn">Finalizar</a>
     </main>
     <%-include('../partials/footer')%>

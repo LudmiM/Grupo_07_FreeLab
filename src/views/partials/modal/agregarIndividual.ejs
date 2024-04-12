@@ -41,6 +41,31 @@
                         <% }) %>
                     </select>
                     </div>
+                    <div class="form-floating">
+                        <select name="specialty"
+                          class="form-select <%= (locals.errors && errors.specialty)  && 'is-invalid'%>"
+                          id="specialty" aria-label="Floating label select example">
+                          <option value="" selected hidden></option>
+                          <% specialty.forEach(s=> { %>
+                            <option value="<%= s.id %>" <%=(locals.old && old.specialty) &&
+                              old.specialty==s.id ? 'selected' : null %>><%= s.name %>
+                            </option>
+                            <% }) %>
+                        </select>
+                        <label for="typeproducts">Producto</label>
+                      </div>
+                      <div class="form-floating">
+                        <select name="knowledge"
+                          class="form-select <%= (locals.errors && errors.knowledge)  && 'is-invalid'%>"
+                          id="knowledge" aria-label="Floating label select example">
+                          <option value="" selected hidden></option>
+                          <% knowledge.forEach(k=> { %>
+                            <option value="<%= k.id %>" <%=(locals.old && old.knowledge) && old.knowledge==k.id ? 'selected' : null %>><%= k.name %>
+                            </option>
+                            <% }) %>
+                        </select>
+                        <label for="typeproducts">Producto</label>
+                      </div>
     
                 </article>
             </div>

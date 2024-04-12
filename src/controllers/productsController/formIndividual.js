@@ -2,6 +2,8 @@ const db = require("../../database/models");
 
 module.exports = async (req, res) => {
     const skills = await db.Skill.findAll({});
+    const knowledge = await db.Knowledge.findAll({});
+    const specialty = await db.Specialty.findAll({});
     const idProject = +req.params.id;
     const individuals = await db.Individual.findAll({
         where: {
@@ -16,5 +18,5 @@ module.exports = async (req, res) => {
             attributes: ['name']
         }]
     });
-    res.render('products/table-for-ind', {skills,individuals,idProject})
+    res.render('products/table-for-ind', {skills,knowledge,specialty,individuals,idProject})
 }
