@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     idCategory: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'Specialty',
+    timestamps: false,
+    modelName: 'Specialty', 
   });
   return Specialty;
 };
