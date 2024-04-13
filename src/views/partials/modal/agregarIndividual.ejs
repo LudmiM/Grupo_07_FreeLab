@@ -8,21 +8,28 @@
             </div>
             <div class="modal-body">
                 <article class="individuals__container__data" id="individuals__container__data">
-                    <div class="mb-3">
-                    <label for="specialty">Título:</label><br>
-                    <input type="text" id="specialty" name="specialty" required>
-                    </div>
-                
-                    <div class="mb-3">
-                    <label for="idCategory">Categoría:</label><br>
-                    <select name="idCategory" class="form-select" id="idCategory" aria-label="Floating label select example">
+                  <div class="mb-3"> 
+                  
+                  <div class="mb-3">
+                    <label for="idSpecialty">Título:</label><br>
+                    <select name="idSpecialty" class="form-select" id="idSpecialty" aria-label="Floating label select example">
+                      <option value="" selected hidden></option>
+                      <% specialty.forEach(s => { %>
+                      <option value="<%= s.id %>"><%= s.name %></option>
+                      <% }) %>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="idKnowledge">Nivel:</label><br>
+                    <select name="idKnowledge" class="form-select" id="idKnowledge" aria-label="Floating label select example">
                         <option value="" selected hidden></option>
-                        <% categories.forEach(c => { %>
-                        <option value="<%= c.id %>"><%= c.name %></option>
+                        <% knowledge.forEach(k => { %>
+                        <option value="<%= k.id %>"><%= k.name %></option>
                         <% }) %>
                     </select>
-                    </div>
-    
+                  </div>
+
                     <div class="form__create mb-3">
                     <label for="about">Descripción:</label><br>
                     <textarea id="about" name="about" rows="4" cols="50" required></textarea><br>
@@ -40,33 +47,7 @@
                         <option value="<%= s.id %>"><%= s.name %></option>
                         <% }) %>
                     </select>
-                    </div>
-                    <div class="form-floating">
-                        <select name="specialty"
-                          class="form-select <%= (locals.errors && errors.specialty)  && 'is-invalid'%>"
-                          id="specialty" aria-label="Floating label select example">
-                          <option value="" selected hidden></option>
-                          <% specialty.forEach(s=> { %>
-                            <option value="<%= s.id %>" <%=(locals.old && old.specialty) &&
-                              old.specialty==s.id ? 'selected' : null %>><%= s.name %>
-                            </option>
-                            <% }) %>
-                        </select>
-                        <label for="typeproducts">Producto</label>
-                      </div>
-                      <div class="form-floating">
-                        <select name="knowledge"
-                          class="form-select <%= (locals.errors && errors.knowledge)  && 'is-invalid'%>"
-                          id="knowledge" aria-label="Floating label select example">
-                          <option value="" selected hidden></option>
-                          <% knowledge.forEach(k=> { %>
-                            <option value="<%= k.id %>" <%=(locals.old && old.knowledge) && old.knowledge==k.id ? 'selected' : null %>><%= k.name %>
-                            </option>
-                            <% }) %>
-                        </select>
-                        <label for="typeproducts">Producto</label>
-                      </div>
-    
+                    </div>   
                 </article>
             </div>
             <div class="modal-footer">

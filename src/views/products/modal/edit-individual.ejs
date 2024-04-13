@@ -1,5 +1,5 @@
 <!-- Modal Scrollable -->
-<div class="modal fade" id="scrollableModalPersonal" tabindex="-1" aria-labelledby="scrollableModalLabel"
+<div class="modal fade" id="scrollableModalEdit-Individual" tabindex="-1" aria-labelledby="scrollableModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
@@ -10,41 +10,53 @@
             <div class="modal-body">
                 <form action="/productos/edit-individual?_method=PUT" method="POST">
                     <div class="mb-3">
-                        <label for="specialty">Título:</label><br>
-                        <input type="text" id="specialty" name="specialty" value="<%= lastName %>">
+                        <label for="idSpecialty">Título:</label><br>
+                        <select name="idSpecialty" class="form-select" id="idSpecialty" aria-label="Floating label select example">
+                        <option value="" selected hidden></option>
+                        <% specialty.forEach(s => { %>
+                        <option value="<%= s.id %>"><%= s.name %></option>
+                        <% }) %>
+                        </select>
                         <small class="text-danger ms-3"><%= locals.errors && errors.specialty ? errors.specialty.msg : null %></small>
                     </div>
-                    
-                        <div class="mb-3">
-                        <label for="idCategory">Categoría:</label><br>
-                        <select name="idCategory" class="form-select" id="idCategory" aria-label="Floating label select example">
+                    <div class="mb-3">
+                        <label for="idKnowledge">Nivel:</label><br>
+                        <select name="idKnowledge" class="form-select" id="idKnowledge" aria-label="Floating label select example">
                             <option value="" selected hidden></option>
-                            <% categories.forEach(c => { %>
-                            <option value="<%= c.id %>"><%= c.name %></option>
+                            <% knowledge.forEach(k => { %>
+                            <option value="<%= k.id %>"><%= k.name %></option>
                             <% }) %>
                         </select>
-                        <small class="text-danger ms-3"><%= locals.errors && errors.idCategory ? errors.idCategory.msg : null %></small>
-                        </div>
+                      </div>
         
-                        <div class="form__create mb-3">
+                    <div class="form__create mb-3">
                         <label for="about">Descripción:</label><br>
-                        <textarea id="about" name="about" rows="4" cols="50" value="<%= lastName %>"></textarea><br>
-                    <small class="text-danger ms-3"><%= locals.errors && errors.about ? errors.about.msg : null %></small>    
+                        <textarea id="about" name="about" rows="4" cols="50"><%= i.about %></textarea><br>
+                        <small class="text-danger ms-3"><%= locals.errors && errors.about ? errors.about.msg : null %></small>    
                     </div>
                         
                         <div class="mb-3">
                             <label for="price">Precio:</label><br>
-                            <input type="number" id="price" name="price" value="<%= lastName %>">
+                            <input type="number" id="price" name="price" value="<%= i.price %>">
                         <small class="text-danger ms-3"><%= locals.errors && errors.price ? errors.price.msg : null %></small>
                         </div>
                         
                         <div>
                         <label for="skillesInd">Habilidades:</label><br>
-                        <select name="skillesInd" class="mul-select" id="skills" multiple>
-                            <% skills.forEach(s => { %>
-                            <option value="<%= s.id %>"><%= s.name %></option>
-                            <% }) %>
-                        </select>
+                        <!--El if no filtra/nuestra bien-->
+                        <select name="skillsInd" class="mul-select" id="skillsInd" multiple>
+                            <% 
+                                const skillIds = i.skills.map(s => s.id);
+                                skills.forEach(s => { if (skillIds.includes(s.id)) { %>
+                                    <option value="<%= s.id %>" selected>
+                                        <%= s.name %>
+                                    </option>
+                                <% } else { %>
+                                    <option value="<%= s.id %>">
+                                        <%= s.name %>
+                                    </option>
+                            <%  } }) %>
+                            </select>
                         <small class="text-danger ms-3"><%= locals.errors && errors.skillesInd ? errors.skillesInd.msg : null %></small>
                         </div>
                                   

@@ -9,19 +9,26 @@
       </button>
       <%-include('../partials/modal/agregarIndividual',{idProject, skills,categories,knowledge,specialty})%>
       <section class="individuals__container">
-        <% individuals.forEach(i => { %>
-          <article class="article__individuals">
-            <p><%= i.about %></p>
-            <p><%= i.price %></p>
-            <article class="section__explicacion__article__habilidades article__skills">
-                
-            </article>
-            <i class="fa-solid fa-pencil"></i>
+        <div>
+          <% individuals.forEach(i => { %>
+            <article class="article__individuals">
+              <p><%= i.about %></p>
+              <p><%= i.price %></p>
+              <p><%= i.skills %></p>
+              <article class="section__explicacion__article__habilidades article__skills">
+                  
+              </article>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalEdit-Individual">
+                <i class="fa-solid fa-pencil"></i>
+              </button>
+              <%-include('./modal/edit-individual',{i})%>
 
-            <i class="fa-solid fa-trash"></i>
-          </article>
+              <i class="fa-solid fa-trash"></i>
+            </article>
+            
+          <% }) %> 
           
-      <% }) %> 
+        </div>
       </section>
       <a href="/productos/editar/<%= idProject %>" class="btn">Anterior</a>
       <a href="/usuarios/perfil" class="btn">Finalizar</a>
