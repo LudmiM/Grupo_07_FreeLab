@@ -15,7 +15,7 @@ module.exports = async (req, res) => {
             through: {
                 attributes: [] 
             },
-            attributes: ['name']
+            attributes: ['id','name']
         }]
     });
     res.render('products/table-for-ind', {skills,knowledge,specialty,individuals,idProject})
