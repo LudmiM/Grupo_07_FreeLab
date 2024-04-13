@@ -173,34 +173,51 @@
     color: #666;
     display: block;
 }
-
-.carousel-control-prev,
-.carousel-control-next {
-  margin-top: 7%;
-    width: 50px; /* Ancho del botón */
-    height: 50px; /* Altura del botón */
-    background-color: rgba(100, 100, 100, 0.212); /* Color de fondo del botón */
-    border-radius: 50%; /* Hacer los botones redondos */
-    border: none; /* Eliminar el borde del botón */
-    color: #fff; /* Color del texto */
-    font-size: 24px; /* Tamaño de fuente del texto */
-    line-height: 20px; /* Centrar verticalmente el texto */
-    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+/* Estilos para los botones de control del carrusel */
+.carousel-control2-prev,
+.carousel-control2-next {
+    background-color: #3b3f439f; /* Color de fondo */
+    border: 2px solid #007bff; /* Borde */
+    border-radius: 50%; /* Borde redondeado */
+    width: 40px; /* Ancho */
+    height: 40px; /* Altura */
+    font-size: 24px; /* Tamaño del ícono */
+    color: #fff; /* Color del ícono */
+    line-height: 60px; /* Alinear verticalmente el texto */
+    text-align: center; /* Alinear horizontalmente el texto */
+    position: absolute; /* Posición absoluta */
+    top: 30%; /* Alinear al centro verticalmente */
+    transform: translateY(-50%); /* Alinear al centro verticalmente */
+    z-index: 1; /* Asegurar que esté por encima del carrusel */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transiciones suaves */
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Cambiar el color de fondo al pasar el mouse */
+/* Estilos adicionales para el botón de control anterior */
+.carousel-control2-prev {
+    left: 5px; /* Distancia desde el borde izquierdo */
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    
-    font-size: 24px; /* Tamaño del icono */
-    vertical-align: middle; /* Alinear verticalmente el icono */
+/* Estilos adicionales para el botón de control siguiente */
+.carousel-control2-next {
+    right: 5px; /* Distancia desde el borde derecho */
 }
 
+/* Estilos al pasar el cursor por encima de los botones */
+.carousel-control2-prev:hover,
+.carousel-control2-next:hover {
+    background-color: transparent; /* Color de fondo transparente al pasar el cursor */
+    color: #007bff19; /* Color del ícono al pasar el cursor */
+}
 
+/* Estilos para el ícono del botón */
+.carousel-control2-prev span,
+.carousel-control2-next span {
+    display: inline-block; /* Hace que los iconos sean visibles */
+    width: 20px; /* Ancho del icono */
+    height: 40px; /* Altura del icono */
+    background-position: center; /* Centra el icono */
+}
 
 
 .main__section__2 {
@@ -264,44 +281,286 @@
   }
 
 
- 
-@media only screen and (max-width: 768px) {
-    .main__section_index {
-        padding: 5px; /* Reducir el espacio entre secciones en pantallas pequeñas */
+  .join-us {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    width: 800px;
+    height: 300px;
+   margin-left: 20%;
+    text-align: center;
+    border-top: 5px solid #007bff;
+    border-bottom: 5px solid #007bff;
+    border-radius: 10%;
+  }
+
+  .join-us-content {
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  .join-us-content h2 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .join-us-content p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .btn-primary {
+padding-right: 200px;
+  }
+
+/* Adaptaciones para teléfonos celulares */
+@media only screen and (max-width: 600px) {
+    .main {
+        box-shadow: 10px 10px 10px 10px rgba(68, 106, 163, 0.5);
+    }
+
+    .Home__projects_index {
+        margin-top: 5%;
+        padding: 10px;
+    }
+    .article__image {
+        width: 50%;
+        height: 50%;
+        border-radius: 10px;
+       align-items: center;
+        display: flex; /* Activa el modelo de caja flexible */
+        justify-content: center; /* Alinea horizontalmente la imagen al centro */
+        align-items: center; /* Alinea verticalmente la imagen al centro */
+      }
+
+      .article h2 {
+        /* Estilos para los encabezados dentro de los artículos */
+        font-size: 12px;
+        color: #333; /* Color del texto */
+        /* Agrega más estilos según sea necesario */
+    }
+    
+    .article p {
+        /* Estilos para los párrafos dentro de los artículos */
+        font-size: 6px;
+        color: #ffffff; /* Color del texto */
+        /* Agrega más estilos según sea necesario */
+    }
+    
+    .article ul {
+        /* Estilos para las listas sin orden dentro de los artículos */
+        list-style-type: disc; /* Tipo de viñetas */
+        margin-left: 6px; /* Espaciado a la izquierda */
+        color: #ffffff; /* Color del texto */
+        /* Agrega más estilos según sea necesario */
+    }
+    
+    .article li {
+
+        font-size: 6px;
+        color: #ffffff; /* Color del texto */
+        /* Agrega más estilos según sea necesario */
+    }
+
+    .carousel-control-prev,
+.carousel-control-next {
+    bottom:50%; /* Ajusta esta propiedad para mover los botones arriba o abajo */
+    margin-left: -12px;
+    
+}
+.carousel-control-next{
+    margin-right: -12px;
+}
+
+    
+    .main__section__2 {
+        margin-top: 50px;
+        height: 180px;
+      }
+      
+    .Home__projects_index-title {
+        font-size: 24px;
+        margin-bottom: 10px;
     }
 
     .Home__projects_index-project-card {
-        width: 100%; /* Hacer que las tarjetas ocupen todo el ancho */
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
     }
 
-    .article__image {
-        width: 100%; /* Ajustar imagen al ancho completo */
+    .Home__projects_index-project-image {
+        width: 30%;
+        border-radius: 8px 8px 0 0;
     }
 
-    .article__content {
-        width: 100%; /* Ajustar contenido al ancho completo */
+    .Home__projects_index-card-body {
+        padding: 10px;
     }
 
-    .carousel-control-pr
-    ev,
-    .carousel-control-next {
-        display: none; /* Ocultar controles del carousel en pantallas pequeñas */
+    .Home__projects_index-project-title {
+        font-size: 16px;
+        margin-bottom: 5px;
     }
+
+    .Home__projects_index-project-category,
+    .Home__projects_index-project-description,
+    .Home__projects_index-project-price,
+    .Home__projects_index-project-publish-time {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+
+    .Main__section__primerTitulo__index {
+        font-size: 24px;
+        margin-left: 10%;
+        margin-bottom: 10px;
+    }
+
+    .description_index {
+        border-radius: 3px;
+        box-shadow: 1px 1px 1px black;
+        padding: 5px;
+    }
+    .testimonials-index-section{
+        align-items: center;
+    }
+
+    .testimonials-index-section h2 {
+        font-size: 19px;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        border-radius: 200px;
+    }
+
+    .testimonial-card img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: -10px;
+    }
+    .testimonial-card{
+        width: 80%;
+        height: 78%;
+        margin-left: 10%;
+        
+        
+    }
+
+    .testimonial-content p {
+        font-size: 8px;
+        margin-bottom: 2px;
+    }
+
+    .testimonial-content cite {
+        font-size: 7px;
+        margin-bottom: 2px;
+    }
+    .carousel-inner {
+        justify-content: flex-start; /* Alinear las tarjetas al inicio */
+    }
+    .carousel-item {
+        width: 1%;
+        scroll-snap-align: start; /* Alinear tarjetas al inicio */
+        margin-right: 0; /* Eliminar margen derecho en dispositivos móviles */
+    }
+    
+
+    .join-us {
+        background-color: #f9f9f9;
+    
+        width: 380px;
+        height: 220px;
+       margin-left: 3%;
+        text-align: center;
+        border-top: 5px solid #007bff;
+        border-bottom: 5px solid #007bff;
+        border-radius: 10%;
+      }
+    
+      .join-us-content {
+        width: 370px;
+        height: 100px;
+    
+      }
+    
+      .join-us-content h2 {
+        color: #333;
+        font-size: 16px;
+        
+        text-transform: uppercase;
+      }
+    
+      .join-us-content p {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 5px;
+        line-height: 1.6;
+      }
 }
 
-/* Ajustes para pantallas medianas */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+/* Adaptaciones para tabletas */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .Home__projects_index {
+        margin-top: 8%;
+        padding: 15px;
+    }
+
+    .Home__projects_index-title {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
     .Home__projects_index-project-card {
-        width: 48%; /* Tarjetas en dos columnas */
+        width: 48%;
+        margin-bottom: 15px;
     }
 
-    .article__image {
-        width: 50%; /* Imagen en dos columnas */
+    .Main__section__primerTitulo__index {
+        font-size: 30px;
+        margin-left: 15%;
+        margin-bottom: 15px;
     }
 
-    .article__content {
-        width: 48%; /* Contenido en dos columnas */
+    .description_index {
+        padding: 10px;
     }
+
+
+     .join-us {
+        background-color: #f9f9f9;
+        
+        width: 380px;
+        height: 220px;
+       margin-left: 3%;
+        text-align: center;
+        border-top: 5px solid #007bff;
+        border-bottom: 5px solid #007bff;
+        border-radius: 10%;
+      }
+    
+      .join-us-content {
+        width: 370px;
+        height: 100px;
+        
+    
+      }
+    
+      .join-us-content h2 {
+        color: #333;
+        font-size: 16px;
+        
+        text-transform: uppercase;
+      }
+    
+      .join-us-content p {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 5px;
+        line-height: 1.6;
+      }
+      
 }
-
-
