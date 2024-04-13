@@ -12,20 +12,25 @@
                     <div class="mb-3">
                         <label for="idSpecialty">Título:</label><br>
                         <select name="idSpecialty" class="form-select" id="idSpecialty" aria-label="Floating label select example">
-                        <option value="" selected hidden></option>
                         <% specialty.forEach(s => { %>
-                        <option value="<%= s.id %>"><%= s.name %></option>
-                        <% }) %>
+                            <% if (s.id == i.idSpecialty) { %>
+                                <option value="<%= s.id %>" selected><%= s.name %></option>
+                            <% } else { %>
+                                <option value="<%= s.id %>"><%= s.name %></option>
+                        <% } }) %>
                         </select>
                         <small class="text-danger ms-3"><%= locals.errors && errors.specialty ? errors.specialty.msg : null %></small>
                     </div>
+
                     <div class="mb-3">
                         <label for="idKnowledge">Nivel:</label><br>
                         <select name="idKnowledge" class="form-select" id="idKnowledge" aria-label="Floating label select example">
-                            <option value="" selected hidden></option>
                             <% knowledge.forEach(k => { %>
-                            <option value="<%= k.id %>"><%= k.name %></option>
-                            <% }) %>
+                                <% if (k.id == i.idKnowledge) { %>
+                                    <option value="<%= k.id %>" selected><%= k.name %></option>
+                                <% } else { %>
+                                <option value="<%= k.id %>"><%= k.name %></option>
+                            <% } }) %>
                         </select>
                       </div>
         
