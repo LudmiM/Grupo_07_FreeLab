@@ -11,6 +11,7 @@ router
   .get('/detalleProyecto/:id', detailProject)
   .get('/agregarProyecto',checkRol.logged, formProject)
   .post('/agregarProyecto', addProject)
+  .put('/agregarProyecto', addProject)
   .get('/agregarIndividual/:id',checkRol.logged, formIndividual)
   .post('/agregarIndividual/:id', addIndividual)
   .get('/detalle/:id',detailUser)

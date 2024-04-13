@@ -63,7 +63,7 @@
                             </select>
                         <small class="text-danger ms-3"><%= locals.errors && errors.skillesInd ? errors.skillesInd.msg : null %></small>
                         </div>
-                                  
+                        <input type="number" id="idIndividual" name="idIndividual" value="<%= i.id %>" hidden>       
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <button type="submit" class="btn btn-primary">Guardar cambios</button>
