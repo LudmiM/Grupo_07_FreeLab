@@ -33,29 +33,20 @@
                       <label for="skills" class="form-editpe">Habilidades:</label><br>
                       <select name="skills" class="mul-select" id="skills" multiple>
                         <% 
-                        const skillIds = project.skills.map(skill => skill.id);
-                        skills.forEach(s => {
-                            if (skillIds.includes(s.id)) { 
-                        %>
+                            const skillIds = project.skills.map(skill => skill.id);
+                            skills.forEach(s => { if (skillIds.includes(s.id)) { %>
                             <option value="<%= s.id %>" selected>
                                 <%= s.name %>
                             </option>
-                        <% 
-                            } else { 
-                        %>
+                        <% } else { %>
                             <option value="<%= s.id %>">
                                 <%= s.name %>
                             </option>
-                        <% 
-                            }
-                        }) 
-                        %>
-                    </select>
+                        <%  } }) %>
+                        </select>
                     
                   </div>
-                  
-          
-                      <input id="idStatus" name="idStatus" type="number" value="1" hidden>
+                  <input id="idStatus" name="idStatus" type="number" value="1" hidden>
           
                     <div class="row">
                         <div class="col-6 col-md-5 mx-auto">

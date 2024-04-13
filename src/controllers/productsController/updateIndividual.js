@@ -2,17 +2,17 @@ const {validationResult} = require('express-validator')
 const db = require("../../database/models");
 
 module.exports = async (req, res) => {
-    const { title, description,skills } = req.body;
-    const id = +req.params.id;
+    const { about,price,idSpecialty,idKnowledge,skillesInd } = req.body;
+    const id = +req.body.idIndividual
 
     try{
-        await db.Project.update(
+        await db.Individual.update(
             
-            {title, description},
+            {about,price,idSpecialty,idKnowledge,skillesInd},
             { where :  {id :id} }
         );
          
-        const projectUpdate = await db.Project.findByPk(id, {
+        const projectUpdate = await db.Individual.findByPk(id, {
             include: ['skills']
         });
      
