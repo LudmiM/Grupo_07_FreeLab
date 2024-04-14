@@ -19,8 +19,9 @@
                 <p class="section__explicacion__article__descripcion--publicacion publicacion">Publicado: hace 5 minutos</p>
                 <p class="section__explicacion__article__descripcion--descripcion descripcion"><%= p.description %></p>
             </article>
-            <%- include('../partials/habilidadesManejadas',{skills})%>
+            <%- include('../partials/habilidadesManejadas',{skills:p.skills})%>
         </section>
+        <button class="section__acciones__botonGuardar boton__cuaternario"><i class="fa-regular fa-bookmark"></i></button>
         <section class="main__PDPost__section section__individuals">
             <article class="article__individuals">
                 <h3>Perfiles Individuales</h3>
@@ -29,7 +30,7 @@
                     <p><%= i.about %></p>
                     <p><%= i.price %></p>
                     <article class="section__explicacion__article__habilidades article__skills">
-                        
+                        <%- include('../partials/habilidadesManejadas',{skills: i.skills})%>
                     </article>
                     <button class="section__acciones__botonPostularme boton__primario">Postularme</button>
                 <% }) %>
@@ -50,7 +51,7 @@
             </div>
         </section>
         <section class="main__PDPost__section section__acciones">
-            <button class="section__acciones__botonGuardar boton__cuaternario"><i class="fa-regular fa-bookmark"></i></button>
+            
         </section>
     </main>
     <%- include('../partials/footer')%>

@@ -14,11 +14,6 @@ module.exports = async (req, res) => {
             }]
         });
 
-        if (!p) {
-            return res.status(404).send('Proyecto no encontrado');
-        }
-        const skills = p.skills.map(skill => skill.name);
-
         const ind = await db.Individual.findAll({
             where: {
                 idProject: p.id
@@ -32,13 +27,8 @@ module.exports = async (req, res) => {
                 attributes: ['name']
             }]
         });
-        console.log(ind)
-        console.log('Son '+ind.skill)
-       /* const skillsInd = ind.map(individual => {
-            return individual.Skills.map(skill => skill.name);
-        });*/
-               
-        return res.render('products/project-detail', { p, skills, ind });
+      
+        return res.render('products/project-detail', { p, ind });
     } catch (error) {
         console.error(error);
         return res.status(500).send('Error interno del servidor');
