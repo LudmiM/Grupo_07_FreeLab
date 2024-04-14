@@ -22,7 +22,7 @@
                 
                     <div class="mb-3">
                         <label for="description" class="form-label">Descripcion:</label>
-                        <input type="text" class="form-control" id="description" name="description" value="<%= description %>">
+                        <textarea type="text" class="form-control" id="description" name="description"><%= description %></textarea>
                         <small class="text-danger ms-3"><%= locals.errors && errors.description ? errors.description.msg : null %></small>
                     </div>
 

@@ -8,26 +8,31 @@ module.exports = async (req, res) => {
     try{
         await db.Individual.update(
             
-            {about,price,idSpecialty,idKnowledge,skillesInd},
+            {about,price,idSpecialty,idKnowledge},
             { where :  {id :id} }
         );
-         
-        const projectUpdate = await db.Individual.findByPk(id, {
-            include: ['skills']
-        });
+        const skillsOld = await db.IndividualSkill.findAll(
+            { where :  {idIndividual :id} }
+        ); 
      
-        console.log('Skills:', projectUpdate.skills);
+        const skillsNew = [skillesInd]
+        var agregar = []
+        var eliminar = []
+
+        skillsOld.forEach(s => {
+            if (skillsNew.includes(s.idSkill)) {
+                agregar.push(s.idSkill)
+            }
+        })
+        skillsNew.forEach(s => {
+            if (skillsOld.idSkill.includes(s)) {
+                eliminar.push(s)
+            }
+        })
+
         return res.redirect('/productos/agregarIndividual/'+id)
      
     } catch(error) { 
         console.log(error)
     } 
-}
-    
-
-
-
-
-        
-    
-        
+}    

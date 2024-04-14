@@ -1,7 +1,6 @@
 const db = require("../../database/models");
 
 function estructuraSkilles(skilles,id) {
-   skilles = [skilles];
    const newSkills=skilles.map(s => {
       return {
          idIndividual: id,
