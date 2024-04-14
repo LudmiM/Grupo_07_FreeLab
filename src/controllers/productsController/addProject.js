@@ -23,9 +23,8 @@ module.exports = async (req, res) => {
          updatedAt : new Date()
       })
       const newSkills=estructuraSkilles(skilles,project.id)
-      db.ProjectSkill.bulkCreate(newSkills)
-      return res.redirect('/productos/agregarIndividual/'+project.id)
-   
+      await db.ProjectSkill.bulkCreate(newSkills)
+      return res.redirect('/productos/agregarIndividual/'+project.id)  
    } catch (error) {
       console.error(error);
       return res.status(500).send('Error interno del servidor');

@@ -20,7 +20,7 @@ async function cargarIndividuals(about,price,idProject,idSpecialty,idKnowledge,s
       chosen: false
    })
    const newSkills=estructuraSkilles(skillesInd,individual.id)
-   db.IndividualSkill.bulkCreate(newSkills)
+   await db.IndividualSkill.bulkCreate(newSkills)
 }
 module.exports = async (req, res) => {
     try {

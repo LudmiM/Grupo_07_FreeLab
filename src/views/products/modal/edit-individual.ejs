@@ -50,7 +50,7 @@
                         <label for="skillesInd">Habilidades:</label><br>
                         <select name="skillsInd" class="mul-select" id="skillsInd" multiple>
                             <% 
-                                const skillIds = i.skills.map(s => s.id);
+                                var skillIds = i.skills.map(s => s.id);
                                 skills.forEach(s => { if (skillIds.includes(s.id)) { %>
                                     <option value="<%= s.id %>" selected>
                                         <%= s.name %>
