@@ -20,3 +20,99 @@
     margin: 5px;
     font-weight: bold;
 }
+/* Estilos para el contenedor de búsqueda */
+.contenedor__busqueda {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Estilos para el campo de entrada de búsqueda */
+  .input__busqueda {
+    padding: 5px 5px 5px 5px;
+    border: 2px solid #ccc;
+    border-radius: 25px 0px 0px 25px;
+    font-size: 16px;
+    color: #333;
+    
+    transition: all 0.3s ease;
+  }
+  
+  /* Estilos para el botón de búsqueda */
+  .boton__busqueda {
+    position: absolute;
+    top: 50%;
+    right: -34px;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 7px 8px;
+    border-radius: 0px 25px 25px 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Estilos para el icono dentro del botón de búsqueda */
+  .boton__busqueda i {
+    font-size: 20px;
+  }
+  
+  /* Estilos para el hover del botón de búsqueda */
+  .boton__busqueda:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para el focus del campo de entrada de búsqueda */
+  .input__busqueda:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.502);
+  }
+  
+
+  /* Estilos para el hover del campo de entrada de búsqueda */
+  .input__busqueda:hover {
+    border-color: #007bff;
+  }
+  
+  /* Estilos para el placeholder del campo de entrada de búsqueda */
+  .input__busqueda::placeholder {
+    color: #999;
+  }
+  
+  /* Estilos para el hover del placeholder del campo de entrada de búsqueda */
+  .input__busqueda:hover::placeholder {
+    color: #777;
+
+    
+  }
+  .modal-edit-empresa .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+  }
+  
+  .modal-edit-empresa .btn-secondary-edit-empresa {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+  }
+  
+  .modal-edit-empresa .btn-primary-edit-empresa {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+
+
+  @media screen and (max-width: 426px) {
+    .input__busqueda {
+      width: 80%; /* Ajusta el ancho del campo de búsqueda para pantallas más pequeñas */
+    }
+    
+    .boton__busqueda {
+      right: 4%; /* Ajusta la posición del botón de búsqueda para pantallas más pequeñas */
+    }
+  }

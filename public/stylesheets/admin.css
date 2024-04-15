@@ -1,125 +1,90 @@
-/* admin-header.css */
-   
-.admin__casa {
-  background-color: #ffffff;
-}
-
-.admin__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--colorAzulOscuro);
-  color: #ffffff;
-  padding: 10px;
-}
-
-.admin__logo h1 {
-  margin: 0;
-}
-
-.admin__formulario-busqueda {
-  display: flex;
-}
-
-.admin__entrada-busqueda {
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.admin__boton-busqueda {
-  margin-left: 5px;
-  padding: 5px 10px;
-  background-color: var(--colorCelesteOscuro);
-  color: #ffffff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.admin__etiqueta-filtro {
-  margin-right: 5px;
-}
-
-.admin__select-filtro {
-  padding: 5px;
-}
-
-.admin__div__boton-nuevo {
-  background-color: var(--colorCelesteOscuro);
-  padding: 5px 10px;
-  border-radius: 3px;
-}
-
-/* Main */
-
-.admin__home {
-  background-color: white;
-}
-
-.admin__logo--a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.admin__logo--a:hover {
-  color: #ffffff;
-}
-
 .admin__table {
-  width: 75%;
-  margin: auto;
-  margin-top: 20px;
-  background-color: var(--colorGris);
+  width: 90%; 
+  max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+  margin: 20px auto 60px auto; 
+  background-color: #ffffff;
+  text-align: center;
   border-collapse: collapse;
 }
 
-.admin__table__header {
-  text-align: center;
-  background-color: #35424a;
+.admin__table th,
+.admin__table td {
+  padding: 1rem; /* Utiliza unidades relativas */
+  border-bottom: 1px solid #ddd; 
+}
+
+.admin__table th {
+  background-color: #35424a; 
   color: #ffffff;
-  padding: 15px;
 }
 
-.admin__table__tbody__tr__td {
-  border: 2px solid #ddd;
-  background-color: #f2f2f2;
-  padding: 15px;
-  text-align: left;
+.admin__table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; 
 }
 
-.admin__table__tbody__tr__td--id {
-  text-align: center;
+.admin__table tbody tr:hover {
+  background-color: #ddd; 
 }
 
-.admin__table__tbody__tr__td--acciones {
-  width: 200px;
+.admin__action-button {
+  padding: 0.5rem 1rem; /* Utiliza unidades relativas */
+  margin-right: 5px; 
+  border: none; 
+  border-radius: 4px; 
+  background-color: #35424a; 
+  color: #ffffff; 
+  cursor: pointer; 
 }
 
-.admin__table__tbody__tr__div {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+.admin__action-button:hover {
+  background-color: #1e2933; 
 }
 
-.admin__table__tbody__tr__div--link {
-  color: #000;
-  text-decoration: none;
+/* Estilos para el formulario */
+.admin__form {
+  margin: 3% auto; 
+  width: 90%; 
+  max-width: 370px; 
+  background-color: var(--colorAzulOscuro); 
+  padding: 1rem; 
+  border-radius: 8px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
-.admin__table__tbody__tr__div--eye:hover {
-  color: #007bff;
+.admin__filtro {
+  margin-left: 5%;
+  display: flex; 
+  align-items: center; 
 }
 
-.admin__table__tbody__tr__div--pencil:hover {
-  color: #28a745;
+.admin__etiqueta-filtro {
+  margin-right: 10px; 
+  font-weight: bold; 
 }
 
-.admin__table__tbody__tr__div--trash:hover {
-  color: #dc3545;
+.admin__select-filtro {
+  width: 100%; /* Ajusta el ancho del select al 100% del contenedor */
+  padding: 0.5rem; /* Utiliza unidades relativas */
+  border: 2px solid #ccc; 
+  border-radius: 4px; 
 }
 
-.fa-eye, .fa-pencil, .fa-trash {
-  font-size: 1rem;
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 426px) {
+  /* Ajustes para la tabla */
+  .admin__table {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .admin__table th,
+  .admin__table td {
+    padding: 0.8rem;
+  }
+  
+  /* Ajustes para el formulario */
+  .admin__form {
+    width: 100%;
+    max-width: none;
+  }
 }
-

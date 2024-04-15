@@ -23,7 +23,7 @@
             <% } else { %>
                 <% if (locals.userLogin.idRole === 3) { %>
                     <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/admin">Administrador</a></li>
-                    <%- include('./filtroAdmin') %>
+                    
                 <% } else { %>
                     <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/perfil">Perfil</a></li>
                     <% if (locals.userLogin.idRole === 2) { %>
@@ -41,3 +41,4 @@
         <i class="fa-solid fa-bars-staggered header--iconoHam"></i>
     </div>
 </header>
+<!--'./partials/filtroAdmin.ejs-->
