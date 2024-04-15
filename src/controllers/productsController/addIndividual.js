@@ -1,7 +1,6 @@
 const db = require("../../database/models");
 
 function estructuraSkilles(skilles,id) {
-   skilles = [skilles];
    const newSkills=skilles.map(s => {
       return {
          idIndividual: id,
@@ -21,7 +20,7 @@ async function cargarIndividuals(about,price,idProject,idSpecialty,idKnowledge,s
       chosen: false
    })
    const newSkills=estructuraSkilles(skillesInd,individual.id)
-   db.IndividualSkill.bulkCreate(newSkills)
+   await db.IndividualSkill.bulkCreate(newSkills)
 }
 module.exports = async (req, res) => {
     try {

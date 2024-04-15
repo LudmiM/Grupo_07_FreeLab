@@ -57,18 +57,41 @@ module.exports = {
             title:{[Op.substring] : key
             }
           },
-          //include:["categories"]
-        })
-        .then(projects=>{
-          return res.render("listado",{projects,key})
+        }) .then(projects=>{
+            const muestro = false;
+          return res.render("listado",{projects,key,muestro})
         })
     },
-    listProjects:{
-        //Falta funcionalidad
+    listProjects: async(req, res) => {
+        try {
+            const { cat } = req.params
+            const individuals = await db.Individual.findAll({
+                include: [
+                    {
+                        model: db.Specialty,
+                        include: [
+                            {
+                                model: db.Category,
+                                where: {
+                                    id: cat  // Suponiendo que 'cat' sea el 'id' de 'Category'
+                                }
+                            }
+                        ]
+                    }
+                ]
+            });
+             
+            const muestro = true;
+            return res.render("listado",{individuals,cat,muestro})
+            
+        } catch (error) {
+            console.error("Error al obtener los proyectos:", error);
+            return res.status(500).send("Error al obtener los perfiles individuales");
+        }
     },
     newsletter: async (req,res) => {
         try {
-            const emailNewsletter = req.body.emailNewsletter;
+            const { emailNewsletter } = req.body;
             if(emailNewsletter){
                 await db.Newsletter.create({
                     email: emailNewsletter,                    
@@ -76,7 +99,9 @@ module.exports = {
                     updatedAt : new Date()
                 })
             }
-            res.redirect('/');
+            console.log(emailNewsletter)
+            //res.json({ success: true });
+            return res.redirect('/')
         } catch (error) {
             console.log(error)
         }

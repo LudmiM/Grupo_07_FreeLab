@@ -3,10 +3,11 @@
 <%-include('../partials/head')%>
 <body>
     <%-include('../partials/header', {title: 'Postulantes | FreeLab' })%>
-    <main class="card edit-product-card">
-      <!--Muestr el titulo del proyecto-->
-      <!--Muestr el titulo de perfil requerido del freelancer-->
-      <!--Muestr el los freelancers postulados-->
+    <main class="card edit-product-card"> 
+      <p>Proyecto: "<a href="/productos/detalleProyecto/<%= project.id %>"><%= project.title %></a>"</p>
+      
+      <p>Perfiles freelancers requeridos: </p>
+      <p></p> <!--Muestra el titulo del puesto al que aplico-->
       <section class="individuals__container">
         <% Postulantes.forEach(p => { %>
           <article class="article__individuals">
