@@ -1,11 +1,28 @@
-<form action="/admin" method="GET">
-    <div class="admin__filtro">
-      <label class="admin__etiqueta-filtro">Filtrar por:</label>
-      <select class="admin__select-filtro" name="optionType">
-          <option value="Proyectos">Proyectos</option>
-          <option value="Freelancers">Freelancers</option>
-          <option value="Empresas">Empresas</option>
-      </select>
-      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </div>
+<form action="/admin" method="GET" class="admin__form" id="adminForm">
+  <div class="admin__filtro">
+    <label class="admin__etiqueta-filtro">Filtrar por:</label>
+    <select class="admin__select-filtro" name="optionType" id="optionType">
+      <option value="Proyectos">Proyectos</option>
+      <option value="Freelancers">Freelancers</option>
+      <option value="Empresas">Empresas</option>
+    </select>
+  </div>
 </form>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const selectElement = document.getElementById('optionType');
+    const formElement = document.getElementById('adminForm');
+
+    const selectedOption = localStorage.getItem('selectedOption');
+    if (selectedOption) {
+      selectElement.value = selectedOption;
+    }
+
+    selectElement.addEventListener('change', function() {
+      
+      localStorage.setItem('selectedOption', this.value);
+      formElement.submit();
+    });
+  });
+</script>
