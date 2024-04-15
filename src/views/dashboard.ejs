@@ -12,8 +12,9 @@
     <thead>
       <tr>
         <th class="admin__table__header admin__table__header--id">ID</th>
+        <%- include('./partials/filtroAdmin.ejs') %>
         <th class="admin__table__header admin__table__header--nombre">Nombre</th>
-        <th class="admin__table__header admin__table__header--email">habilidades</th>
+        <th class="admin__table__header admin__table__header--email">Descripcion</th>
         <th class="admin__table__header admin__table__header--acciones">Acciones</th>
       </tr>
     </thead>
@@ -23,6 +24,7 @@
           <tr>
             <td><%= e.id %></td>
             <td><%= e.companyName %></td>
+            <td><%= e.description %></td>
           </tr>
         <% }) %>
         <% break; case 'Freelancers': %>
@@ -37,6 +39,7 @@
             <tr>
               <td><%= p.id %></td>
               <td><%= p.title %></td>
+              <td><%= p.description %></td>
             </tr>
           <% }) %>
       <% } %>

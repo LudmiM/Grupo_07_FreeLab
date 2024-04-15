@@ -1,4 +1,4 @@
-/* Tabla */
+
 .admin__table {
   width: 75%;
   margin: auto;
@@ -15,14 +15,14 @@
 }
 
 .admin__table-cell {
-  border-top: 1px solid #ddd; /* Añadido */
+  border-top: 1px solid #ddd; 
   background-color: #f2f2f2;
   padding: 15px;
   text-align: left;
 }
 
 .admin__table-cell--id {
-  border-bottom: 1px solid #ddd; /* Añadido */
+  border-bottom: 1px solid #ddd; 
 }
 
 .admin__table__tbody__tr__td--id {
