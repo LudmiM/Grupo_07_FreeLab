@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./../partials/head', {title: 'Busquedas | FreeLab' }) %>
+<body>
+    <%- include('./../partials/header')%>
+    <main class="lp__main">
+
+                <% if (projects.length) { %>
+                    <% projects.forEach(p => { %>
+                        <a href="/productos/detalleProyecto/<%= p.Project.idProject %>">Ir al proyecto</a>
+                        <p> <%= p.Project.idSpecialty %></p>
+                        <p>About: <%= p.Project.about %></p>
+                        <p>Price: <%= p.Project.price %></p>
+                        <p>Knowledge ID: <%= p.Project.idKnowledge %></p>
+                    <% }) %>
+                <% } else { %>
+                    <h2>No hay postulaciones</h2>
+                <% } %>	
+        </section>
+    </main>
+    <%- include('./../partials/footer')%>
+    <%- include('./../partials/scripts') %>
+</body>
+</html>
