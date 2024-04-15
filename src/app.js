@@ -48,7 +48,7 @@ async function main() {
 
 
 //Fin nodemailer
-
+console.log('Holaa',main())
 app
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs');

@@ -8,6 +8,7 @@ const addProject = require('./addProject')
 const formIndividual = require('./formIndividual')
 const addIndividual = require('./addIndividual')
 const showAplications = require('./showAplications')
+const favorites = require('./favorites')
 
 module.exports = {
     eliminate,
@@ -19,5 +20,6 @@ module.exports = {
     addProject,
     formIndividual,
     addIndividual,
+    favorites,
     showAplications
 }

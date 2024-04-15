@@ -22,8 +22,8 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'idFreelancer',
         as: 'skills'
       });
-      /*Freelancer.hasMany(models.Favorite, { foreignKey: 'idFreelancer' })
-      //*/
+      Freelancer.hasMany(models.Favorite, { foreignKey: 'idFreelancer' })
+      
     }
   }
   Freelancer.init({

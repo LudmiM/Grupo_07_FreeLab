@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
-    Project.belongsTo(models.Company, { foreignKey: 'idCompany' });
+    
     Project.belongsToMany(models.Category, {
       through: 'ProjectCategory',
       foreignKey: 'idProject',
@@ -24,7 +24,9 @@ module.exports = (sequelize, DataTypes) => {
       });      
       Project.hasMany(models.Individual, { foreignKey: 'idProject' });
       Project.hasMany(models.Favorite, { foreignKey: 'idProject' });
+      Project.belongsTo(models.Company, { foreignKey: 'idCompany' });
     }
+
   }
   Project.init(
     {
