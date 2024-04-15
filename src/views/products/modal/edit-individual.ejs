@@ -10,7 +10,7 @@
             <div class="modal-body">
                 <form action="/productos/edit-individual?_method=PUT" method="POST">
                     <div class="mb-3">
-                        <label for="idSpecialty">Título:</label><br>
+                        <label class="nnnm" for="idSpecialty">Título:</label><br>
                         <select name="idSpecialty" class="form-select" id="idSpecialty" aria-label="Floating label select example">
                         <% specialty.forEach(s => { %>
                             <% if (s.id == i.idSpecialty) { %>
@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="idKnowledge">Nivel:</label><br>
+                        <label class="nnnm" for="idKnowledge">Nivel:</label><br>
                         <select name="idKnowledge" class="form-select" id="idKnowledge" aria-label="Floating label select example">
                             <% knowledge.forEach(k => { %>
                                 <% if (k.id == i.idKnowledge) { %>
@@ -35,14 +35,14 @@
                       </div>
         
                     <div class="form__create mb-3">
-                        <label for="about">Descripción:</label><br>
-                        <textarea id="about" name="about" rows="4" cols="50"><%= i.about %></textarea><br>
+                        <label class="nnn" for="about">Descripción:</label><br>
+                        <textarea class="form-select" id="about" name="about" rows="4" cols="50"><%= i.about %></textarea><br>
                         <small class="text-danger ms-3"><%= locals.errors && errors.about ? errors.about.msg : null %></small>    
                     </div>
                         
                         <div class="mb-3">
-                            <label for="price">Precio:</label><br>
-                            <input type="number" id="price" name="price" value="<%= i.price %>">
+                            <label class="nnnm" for="price">Precio:</label><br>
+                            <input class="form-select" type="number" id="price" name="price" value="<%= i.price %>">
                         <small class="text-danger ms-3"><%= locals.errors && errors.price ? errors.price.msg : null %></small>
                         </div>
                         
