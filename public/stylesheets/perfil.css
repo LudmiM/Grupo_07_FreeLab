@@ -1,55 +1,237 @@
-/* Main */
-.perfil__user {
-    width: 90%;
-    margin: auto;
+.profile-edit-body{
+    background-color: var( --colorCelesteClaro);
+}
+.perfil__user__section {
     position: relative;
-}
-/*Primer section del main*/
-
-/*Article de datos primarios*/ 
-.perfil__user__section__datosPrimarios{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     flex-direction: column;
-}
-.datosPrimarios--imagen{
-    width: 200px;
-    border-radius: 50%;
-    aspect-ratio: 1 / 1;
-    border: 10px solid blue;
-}
-.datosPrimarios__description{
-    
-}
-/*
-.datosPrimarios__contedor__jobs{
-    display: flex;
-    justify-content: center;
     align-items: center;
-} */
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f6f6f6, #eaeaea);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 500px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 7%;
+}
 
-/*Article de proyectos*/
+.perfil__user__section__datosPrimarios {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
-/*Div botones editar*/
-.perfil__opciones__edit{
-    position: sticky;
-    bottom: 0px;
+.perfil__user__section__datosPrimarios .datosPrimarios--imagen {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.perfil__user__section__datosPrimarios .datosPrimarios__contedor {
+    flex: 1;
+}
+
+.perfil__user__section__datosPrimarios .datosPrimarios__contedor--h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.perfil__user__section__datosPrimarios .datosPrimarios__contedor--h3 {
+    font-size: 24px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.perfil__user__section:before {
+    content: '';
+    position: absolute;
+    top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    z-index: 0;
 }
 
-@media (min-width: 500px) {
-    /*Article de datos primarios*/ 
-    .datosPrimarios--imagen{
-        margin-right: 20px;
-    }
-    .perfil__user__section__datosPrimarios{
-        flex-direction:row;
-        justify-content: space-around;
-        margin: 25px auto;
-    }
+.datosPrimarios__description {
+    position: relative;
+    z-index: 1;
 }
-@media (min-width: 1024px) {
+
+.datosPrimarios__description h3 {
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.datosPrimarios__description p {
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.perfil__user__aside__proyectos {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.perfil__user__aside__proyectos a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.custom-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card-title {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    display: inline-block;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.custom-card-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: #28a745;
+    transition: width 0.3s ease;
+}
+
+.custom-card-title:hover::after {
+    width: 100%;
+}
+
+.custom-card-description {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.custom-button-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los botones horizontalmente */
+    margin-top: 15px; /* Espacio superior */
+}
+
+.custom-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold; /* Hace que el texto sea negrita */
+}
+
+.custom-btn:hover {
+    opacity: 0.8; /* Cambia la opacidad al pasar el mouse */
+}
+
+.custom-btn-edit {
+    background-color: #007bff; /* Color de fondo azul */
+    border: 1px solid #007bff; /* Borde azul */
+}
+
+.custom-btn-delete {
+    background-color: #dc3545; /* Color de fondo rojo */
+    border: 1px solid #dc3545; /* Borde rojo */
+    margin-left: 10px; /* Espacio a la izquierda */
+}
+
+.fa-pencil,
+.fa-trash {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+
+.perfil__user__aside__proyectos a[href="/productos/agregarProyecto"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.perfil__user__aside__proyectos a[href="/productos/agregarProyecto"]:hover {
+    background-color: #0056b3;
+}
+
+.aside__user__proyectosImagen {
+    text-align: center;
+}
+
+.aside__user__proyectosImagen h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.aside__user__proyectosImagen img {
+    width: 100px; 
+    height: auto; 
+    margin: 5px; 
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-body.profile-edit {
+    padding: 20px; 
+}
+
+.card-body.profile-edit h3 {
+    font-size: 24px; 
+    color: #333; 
+    margin-bottom: 15px; 
+    border-bottom: 2px solid #ccc; 
+    padding-bottom: 10px; 
+    font-family: 'Arial', sans-serif; 
+    font-weight: bold; 
     
+}
+
+.perfil__opciones__edit {
+    margin-top: 20px; 
+    text-align: center; 
+}
+
+.btn.btn-primary-emp {
+    background-color: #007bff; 
+    margin-left: 30px;
+    color: #fff; 
+    padding: 10px 10px; 
+    width: 20%;
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.btn.btn-primary:hover {
+    background-color: #0056b3; /* color de fondo del botón al pasar el cursor */
 }

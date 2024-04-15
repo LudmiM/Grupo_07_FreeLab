@@ -3,7 +3,7 @@
 
 <%- include('../partials/head', { title: 'name' }) %>
 
-<body>
+<body class="profile-edit-body">
     <%- include('../partials/header') %>
     <main class="perfil__user">
         <section class="perfil__user__section">
@@ -19,17 +19,7 @@
                             <%= name %>
                         </h3>
                     <% } %>
-                    <!--
-                    <div class="datosPrimarios__contedor__jobs">
-                        <div class="datosPrimarios__contedor__jobs--encargados">
-                            <p>Jobs encargados</p>
-                            <p>0</p>
-                        </div>
-                        <div class="datosPrimarios__contedor__jobs--finalizados">
-                            <p>Jobs finalizados</p>
-                            <p>0</p>
-                        </div>
-                    </div>-->
+
                 </div>
             </article>
             <article class="datosPrimarios__description">
@@ -46,47 +36,28 @@
         <% if (userLogin.idRole===2) { %>
             <aside class="perfil__user__aside__proyectos">
                 <!--Readaptar-->
-                <% if (userLogin.idRole===22 && image.length) { %>
-                    <div class="aside__user__proyectosImagen">
-                        <h3>Mis proyectos</h3>
-                        <% image.forEach(i=> { %>
-                            <img src="./images/productos/<%= i %>" alt="User Image">
-                        <% }) %>
-                    </div>
-                <% } %>
-                <div class="aside__user__miFormacion">
-                    <h3>Formacion</h3>
-                    <p>F1</p>
-                    <p>F1</p>
-                    <p>F1</p>
-                    <p>F1</p>
-                </div>
-            </aside>
         <% } else { %>
             <aside class="perfil__user__aside__proyectos">
                 <div><a href="/productos/agregarProyecto">Crear proyecto</a></div>
                 <% if (projects.length) { %>
                     <div class="card-body profile-edit">
-                        <h3>Mis proyectos</h3>
+                        <h3>MIS PROYECTOS</h3>
                         
-                        <% projects.forEach(p=> { %>
-                            
-                            <p><%= p.title %></p>
-                            <p><%= p.description %></p>
-                            
-                                <div class="d-flex">
-                                  
-                                    <a class="btn btn-sm btn-success" href="/productos/editar/<%= p.id %>">Editar
-                                        <i class="fa-solid fa-pencil"></i>
-                                    </a>
-
-                                    <a class="btn btn-sm btn-danger action-button delete" data-bs-toggle="modal" data-bs-target="#warningRemoveModal<%= p.id %>">Eliminar
-                                        <i class="fa-solid fa-trash"></i>
-                                    </a>
+                        <% projects.forEach(p => { %>
+                            <div class="custom-card">
+                                <div class="custom-card-body">
+                                    <p class="custom-card-title"><%= p.title %></p>
+                                    <p class="custom-card-description"><%= p.description %></p>
+                                    <div class="custom-button-container">
+                                        <a class="custom-btn custom-btn-edit" href="/productos/editar/<%= p.id %>">Editar <i class="fa-solid fa-pencil"></i></a>
+                                        <a class="custom-btn custom-btn-delete action-button delete" data-bs-toggle="modal" data-bs-target="#warningRemoveModal<%= p.id %>">Eliminar <i class="fa-solid fa-trash"></i></a>
+                                    </div>
+                                    <%- include('../partials/modal/confirmacionEliminar',{p}) %>
                                 </div>
-                                
-                            <%- include('../partials/modal/confirmacionEliminar',{p}) %>
+                            </div>
                         <% }) %>
+                        
+                        
                     </div>
                 <% } else { %>
                     <p>Aun no has agregado proyectos...</p>
@@ -99,7 +70,7 @@
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonal">
                     Editar personales
                 </button>
-
+        
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
                     Editar Laborales
                 </button>
@@ -108,12 +79,13 @@
             <%- include('./modal/edit-personal') %>
         <% } else { %>
             <div class="perfil__opciones__edit">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonalEmpresa">
+                <button type="button" class="btn btn-primary-emp" data-bs-toggle="modal" data-bs-target="#scrollableModalPersonalEmpresa">
                     Editar datos de la Empresa
                 </button>
             </div>
             <%- include('./modal/edit-personal-Empresa') %>
         <% } %>
+        
         <!--No es perfil entonces que muestre-->
     </main>
     <%- include('../partials/footer') %>

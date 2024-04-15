@@ -1,7 +1,7 @@
-
 .admin__table {
   width: 90%; 
-  margin: 20px auto; 
+  max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+  margin: 20px auto 60px auto; 
   background-color: #ffffff;
   text-align: center;
   border-collapse: collapse;
@@ -9,14 +9,13 @@
 
 .admin__table th,
 .admin__table td {
-  padding: 12px; 
+  padding: 1rem; /* Utiliza unidades relativas */
   border-bottom: 1px solid #ddd; 
 }
 
 .admin__table th {
   background-color: #35424a; 
   color: #ffffff;
-  text-align: center; 
 }
 
 .admin__table tbody tr:nth-child(even) {
@@ -28,7 +27,7 @@
 }
 
 .admin__action-button {
-  padding: 8px 12px; 
+  padding: 0.5rem 1rem; /* Utiliza unidades relativas */
   margin-right: 5px; 
   border: none; 
   border-radius: 4px; 
@@ -41,66 +40,51 @@
   background-color: #1e2933; 
 }
 
-
 /* Estilos para el formulario */
 .admin__form {
-  margin: 3% 0% 3% 69%; 
-  align-items: center; 
-  width: 400px; 
+  margin: 3% auto; 
+  width: 90%; 
+  max-width: 370px; 
   background-color: var(--colorAzulOscuro); 
-  padding: 10px; 
-  height: 20%;
+  padding: 1rem; 
   border-radius: 8px; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 .admin__filtro {
+  margin-left: 5%;
   display: flex; 
   align-items: center; 
-
 }
 
 .admin__etiqueta-filtro {
   margin-right: 10px; 
   font-weight: bold; 
 }
+
 .admin__select-filtro {
-  width: 250px;
-  padding: 10px; 
+  width: 100%; /* Ajusta el ancho del select al 100% del contenedor */
+  padding: 0.5rem; /* Utiliza unidades relativas */
   border: 2px solid #ccc; 
   border-radius: 4px; 
 }
 
-.admin__submit-button {
-  padding: 12px 20px; 
-  margin-left: 20px; 
-  border: none; 
-  border-radius: 4px; 
-  background-color: #ffffff; 
-  color: #35424a; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
-}
-
-.admin__submit-button:hover {
-  background-color: #1e2933; 
-}
-
-/* Estilos para el contenedor de detalles */
-.admin__details-container {
-  margin-top: 20px;
-  padding: 20px; 
-  border: 1px solid #ddd; 
-  border-radius: 8px; 
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-}
-
-.admin__details-container h2 {
-  margin-bottom: 20px; 
-  color: #35424a; 
-}
-
-.admin__details-container p {
-  margin-bottom: 10px; 
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 426px) {
+  /* Ajustes para la tabla */
+  .admin__table {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .admin__table th,
+  .admin__table td {
+    padding: 0.8rem;
+  }
+  
+  /* Ajustes para el formulario */
+  .admin__form {
+    width: 100%;
+    max-width: none;
+  }
 }

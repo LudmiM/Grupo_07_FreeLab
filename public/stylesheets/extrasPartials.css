@@ -83,7 +83,30 @@
   /* Estilos para el hover del placeholder del campo de entrada de búsqueda */
   .input__busqueda:hover::placeholder {
     color: #777;
+
+    
   }
+  .modal-edit-empresa .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+  }
+  
+  .modal-edit-empresa .btn-secondary-edit-empresa {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+  }
+  
+  .modal-edit-empresa .btn-primary-edit-empresa {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+
+
   @media screen and (max-width: 426px) {
     .input__busqueda {
       width: 80%; /* Ajusta el ancho del campo de búsqueda para pantallas más pequeñas */
