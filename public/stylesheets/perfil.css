@@ -14,7 +14,7 @@
     width: 500px;
     margin-top: 40px;
     margin-bottom: 40px;
-    margin-left: 7%;
+    margin-left: 1%;
 }
 
 .perfil__user__section__datosPrimarios {
@@ -22,6 +22,7 @@
     z-index: 1;
     display: flex;
     align-items: center;
+    margin-right: 98px;
     margin-bottom: 20px;
 }
 
@@ -159,7 +160,8 @@
 }
 
 .custom-btn-delete {
-    background-color: #dc3545; /* Color de fondo rojo */
+    background-color: #ff0000; /* Color de fondo rojo */
+    color: #ffffff;
     border: 1px solid #dc3545; /* Borde rojo */
     margin-left: 10px; /* Espacio a la izquierda */
 }
@@ -228,10 +230,57 @@
     color: #fff; 
     padding: 10px 10px; 
     width: 20%;
+    height: 50px;
+    font-size: 78%;
     border-radius: 5px; 
     cursor: pointer; 
 }
 
 .btn.btn-primary:hover {
     background-color: #0056b3; /* color de fondo del botón al pasar el cursor */
+}
+
+/* Media queries para tablet */
+@media only screen and (max-width: 768px) {
+    .perfil__user__section {
+        width: 90%; /* Ajuste del ancho para pantallas más pequeñas */
+    }
+    .perfil__user__section__datosPrimarios .datosPrimarios--imagen {
+        width: 100px; /* Ejemplo de ajuste de tamaño de imagen para tablet */
+        height: 100px; /* Ejemplo de ajuste de tamaño de imagen para tablet */
+    }
+    .btn.btn-primary-emp {
+        background-color: #007bff; 
+        margin-left: 30px;
+        color: #fff; 
+        padding: 10px 10px; 
+        width: 20%;
+        height: 50px;
+        font-size: 78%;
+        border-radius: 5px; 
+        cursor: pointer; 
+    }
+}
+
+/* Media queries para móvil */
+@media only screen and (max-width: 480px) {
+    .perfil__user__section {
+        width: 100%; /* Ajuste del ancho para pantallas más pequeñas */
+        padding: 10px; /* Reducción del padding para pantallas más pequeñas */
+    }
+    .perfil__user__section__datosPrimarios .datosPrimarios--imagen {
+        width: 80px; /* Ejemplo de ajuste de tamaño de imagen para móvil */
+        height: 80px; /* Ejemplo de ajuste de tamaño de imagen para móvil */
+    }
+    .btn.btn-primary-emp {
+        background-color: #007bff; 
+        margin-left: 30px;
+        color: #fff; 
+        padding: 10px 10px; 
+        width: 40%;
+        height: 50px;
+        font-size: 58%;
+        border-radius: 5px; 
+        cursor: pointer; 
+    }
 }
