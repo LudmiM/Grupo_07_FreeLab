@@ -7,8 +7,7 @@ module.exports = async (req, res) => {
                     idUser: req.session.userLogin.id
                 }
             })
-            console.log('Mis dates son '+idFreelancer)
-            const projects = await db.Favorite.findAll({
+            const p = await db.Favorite.findAll({
                 where: {
                     idFreelancer: idFreelancer.id
                 },
@@ -18,8 +17,7 @@ module.exports = async (req, res) => {
                     }
                 ]
             });
-            console.log('Los prohectos son '+projects)
-            res.render('products/guardados', {projects})  
+            res.render('products/favorites', {p})  
         
     } catch (error) {
         
