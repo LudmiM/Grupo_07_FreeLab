@@ -11,7 +11,7 @@
                   <div class="mb-3"> 
                   
                   <div class="mb-3">
-                    <label for="idSpecialty">Título:</label><br>
+                    <label class="nnn" for="idSpecialty">Título:</label><br>
                     <select name="idSpecialty" class="form-select" id="idSpecialty" aria-label="Floating label select example">
                       <option value="" selected hidden></option>
                       <% specialty.forEach(s => { %>
@@ -21,7 +21,7 @@
                   </div>
 
                   <div class="mb-3">
-                    <label for="idKnowledge">Nivel:</label><br>
+                    <label class="nnn" for="idKnowledge">Nivel:</label><br>
                     <select name="idKnowledge" class="form-select" id="idKnowledge" aria-label="Floating label select example">
                         <option value="" selected hidden></option>
                         <% knowledge.forEach(k => { %>
@@ -31,17 +31,17 @@
                   </div>
 
                     <div class="form__create mb-3">
-                    <label for="about">Descripción:</label><br>
-                    <textarea id="about" name="about" rows="4" cols="50" required></textarea><br>
+                    <label class="nnn" for="about">Descripción:</label><br>
+                    <textarea class="form-select" id="about" name="about" rows="4" cols="50" required></textarea><br>
                     </div>
                     
                     <div class="mb-3">
-                        <label for="price">Precio:</label><br>
-                        <input type="number" id="price" name="price" required>
+                        <label  class="nnn"for="price">Precio:</label><br>
+                        <input class="form-select" type="number" id="price" name="price" required>
                     </div>
                     
                     <div>
-                    <label for="skillesInd">Habilidades:</label><br>
+                    <label class="nnn" for="skillesInd">Habilidades:</label><br>
                     <select name="skillesInd" class="mul-select" id="skills" multiple>
                         <% skills.forEach(s => { %>
                         <option value="<%= s.id %>"><%= s.name %></option>
