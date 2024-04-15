@@ -1,11 +1,9 @@
-/*Estrellas*/
 .contenedor__iconoStart {
     font-size: 20px;
     display: flex;
     flex-wrap:wrap;
 }
 
-/*Habilidades Manejadas*/
 .article__skills{
     display: flex;
     flex-wrap: wrap;
@@ -20,13 +18,11 @@
     margin: 5px;
     font-weight: bold;
 }
-/* Estilos para el contenedor de búsqueda */
 .contenedor__busqueda {
     position: relative;
     display: inline-block;
   }
   
-  /* Estilos para el campo de entrada de búsqueda */
   .input__busqueda {
     padding: 5px 5px 5px 5px;
     border: 2px solid #ccc;
@@ -37,7 +33,6 @@
     transition: all 0.3s ease;
   }
   
-  /* Estilos para el botón de búsqueda */
   .boton__busqueda {
     position: absolute;
     top: 50%;
@@ -52,17 +47,15 @@
     transition: all 0.3s ease;
   }
   
-  /* Estilos para el icono dentro del botón de búsqueda */
   .boton__busqueda i {
     font-size: 20px;
   }
   
-  /* Estilos para el hover del botón de búsqueda */
   .boton__busqueda:hover {
     background-color: #0056b3;
   }
   
-  /* Estilos para el focus del campo de entrada de búsqueda */
+
   .input__busqueda:focus {
     outline: none;
     border-color: #007bff;
@@ -70,17 +63,17 @@
   }
   
 
-  /* Estilos para el hover del campo de entrada de búsqueda */
+
   .input__busqueda:hover {
     border-color: #007bff;
   }
   
-  /* Estilos para el placeholder del campo de entrada de búsqueda */
+
   .input__busqueda::placeholder {
     color: #999;
   }
   
-  /* Estilos para el hover del placeholder del campo de entrada de búsqueda */
+
   .input__busqueda:hover::placeholder {
     color: #777;
 
@@ -109,10 +102,10 @@
 
   @media screen and (max-width: 426px) {
     .input__busqueda {
-      width: 80%; /* Ajusta el ancho del campo de búsqueda para pantallas más pequeñas */
+      width: 80%;
     }
     
     .boton__busqueda {
-      right: 4%; /* Ajusta la posición del botón de búsqueda para pantallas más pequeñas */
+      right: 4%;
     }
   }

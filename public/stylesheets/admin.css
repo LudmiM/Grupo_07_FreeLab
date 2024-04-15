@@ -1,6 +1,6 @@
 .admin__table {
   width: 90%; 
-  max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+  max-width: 1200px; 
   margin: 20px auto 60px auto; 
   background-color: #ffffff;
   text-align: center;
@@ -9,7 +9,7 @@
 
 .admin__table th,
 .admin__table td {
-  padding: 1rem; /* Utiliza unidades relativas */
+  padding: 1rem; 
   border-bottom: 1px solid #ddd; 
 }
 
@@ -27,7 +27,7 @@
 }
 
 .admin__action-button {
-  padding: 0.5rem 1rem; /* Utiliza unidades relativas */
+  padding: 0.5rem 1rem; 
   margin-right: 5px; 
   border: none; 
   border-radius: 4px; 
@@ -40,7 +40,6 @@
   background-color: #1e2933; 
 }
 
-/* Estilos para el formulario */
 .admin__form {
   margin: 3% auto; 
   width: 90%; 
@@ -63,15 +62,15 @@
 }
 
 .admin__select-filtro {
-  width: 100%; /* Ajusta el ancho del select al 100% del contenedor */
-  padding: 0.5rem; /* Utiliza unidades relativas */
+  width: 100%; 
+  padding: 0.5rem; 
   border: 2px solid #ccc; 
   border-radius: 4px; 
 }
 
-/* Media query para dispositivos móviles */
+
 @media only screen and (max-width: 426px) {
-  /* Ajustes para la tabla */
+
   .admin__table {
     width: 100%;
     max-width: none;
@@ -82,7 +81,6 @@
     padding: 0.8rem;
   }
   
-  /* Ajustes para el formulario */
   .admin__form {
     width: 100%;
     max-width: none;

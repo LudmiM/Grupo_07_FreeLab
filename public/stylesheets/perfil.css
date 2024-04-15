@@ -135,8 +135,8 @@
 
 .custom-button-container {
     display: flex;
-    justify-content: space-between; /* Distribuye los botones horizontalmente */
-    margin-top: 15px; /* Espacio superior */
+    justify-content: space-between; 
+    margin-top: 15px;
 }
 
 .custom-btn {
@@ -147,30 +147,29 @@
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-weight: bold; /* Hace que el texto sea negrita */
+    font-weight: bold; 
 }
 
 .custom-btn:hover {
-    opacity: 0.8; /* Cambia la opacidad al pasar el mouse */
+    opacity: 0.8; 
 }
 
 .custom-btn-edit {
-    background-color: #007bff; /* Color de fondo azul */
-    border: 1px solid #007bff; /* Borde azul */
+    background-color: #007bff; 
+    border: 1px solid #007bff; 
 }
 
 .custom-btn-delete {
-    background-color: #ff0000; /* Color de fondo rojo */
+    background-color: #ff0000; 
     color: #ffffff;
-    border: 1px solid #dc3545; /* Borde rojo */
-    margin-left: 10px; /* Espacio a la izquierda */
+    border: 1px solid #dc3545; 
+    margin-left: 10px; 
 }
 
 .fa-pencil,
 .fa-trash {
-    margin-right: 5px; /* Espacio entre el icono y el texto */
+    margin-right: 5px; 
 }
-
 
 .perfil__user__aside__proyectos a[href="/productos/agregarProyecto"] {
     background-color: #007bff;
@@ -237,17 +236,17 @@
 }
 
 .btn.btn-primary:hover {
-    background-color: #0056b3; /* color de fondo del botón al pasar el cursor */
+    background-color: #0056b3; 
 }
 
-/* Media queries para tablet */
+
 @media only screen and (max-width: 768px) {
     .perfil__user__section {
-        width: 90%; /* Ajuste del ancho para pantallas más pequeñas */
+        width: 90%; 
     }
     .perfil__user__section__datosPrimarios .datosPrimarios--imagen {
-        width: 100px; /* Ejemplo de ajuste de tamaño de imagen para tablet */
-        height: 100px; /* Ejemplo de ajuste de tamaño de imagen para tablet */
+        width: 100px; 
+        height: 100px; 
     }
     .btn.btn-primary-emp {
         background-color: #007bff; 
@@ -262,15 +261,15 @@
     }
 }
 
-/* Media queries para móvil */
+
 @media only screen and (max-width: 480px) {
     .perfil__user__section {
-        width: 100%; /* Ajuste del ancho para pantallas más pequeñas */
-        padding: 10px; /* Reducción del padding para pantallas más pequeñas */
+        width: 100%; 
+        padding: 10px; 
     }
     .perfil__user__section__datosPrimarios .datosPrimarios--imagen {
-        width: 80px; /* Ejemplo de ajuste de tamaño de imagen para móvil */
-        height: 80px; /* Ejemplo de ajuste de tamaño de imagen para móvil */
+        width: 80px; 
+        height: 80px; 
     }
     .btn.btn-primary-emp {
         background-color: #007bff; 

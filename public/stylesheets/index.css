@@ -42,14 +42,12 @@
     font-size: 20px;
     margin-bottom: 10px;
     font-weight: bold;
-    /* Hacer el texto en negrita */
+
 
     border-bottom: 2px solid #d3d3d3;
     
     padding-bottom: 5px;
-    /* Agregar un poco de espacio en la parte inferior */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    /* Agregar sombreado al texto */
 
 }
 
@@ -57,7 +55,6 @@
     text-decoration: none;
     background-color: #ffffff;
     border: 1px solid black;
-    /* Borde negro */
     border-radius: 8px;
     height: 80%;
     width: 70%;
@@ -72,10 +69,8 @@
 
 .Home__projects_index-project-image {
     width: 30%;
-    /* Ancho de la imagen */
     height: auto;
     border-radius: 8px 0 0 8px;
-    /* Redondear esquinas izquierdas */
 }
 
 .Home__projects_index-card-body {
@@ -135,11 +130,10 @@
     text-shadow: 2px 2px 4px #000000;
 }
 
-/* Contenedor adicional para el carrusel */
 .carousel-container {
-    height: 350px; /* Altura mínima para mantener espacio */
-    visibility: visible; /* Ocultar el contenedor */
-    overflow: visible; /* Ocultar el desbordamiento */
+    height: 350px;
+    visibility: visible;
+    overflow: visible;
 }
 
 .testimonial-card {
@@ -177,7 +171,6 @@
 }
 
 
-/* Estilos para los botones de control del carrusel */
 .carousel-control2-prev,
 .carousel-control2-next {
     background-color: #3b3f439f; 
@@ -192,7 +185,7 @@
     position: absolute; 
     top: 30%; 
     transform: translateY(-50%); 
-    z-index: 1; /* Asegurar que esté por encima del carrusel */
+    z-index: 1; 
     cursor: pointer; 
     transition: background-color 0.3s ease, border-color 0.3s ease; 
 }

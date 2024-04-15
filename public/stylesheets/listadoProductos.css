@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,15 +9,15 @@ body {
 .lp__main {
     display: flex;
     padding: 20px;
-    justify-content: space-between; /* Alinear los elementos con el espacio entre ellos */
+    justify-content: space-between; 
 }
 
 .lp__filtro__section {
-    width: 30%; /* Establecer un ancho del 30% para el primer section */
-    margin-right: 20px; /* Espacio entre los dos elementos */
+    width: 30%; 
+    margin-right: 20px; 
     border-radius: 10px;
     background-color: var(--colorGris);
-    padding: 10px; /* Aumentar el espacio interno */
+    padding: 10px; 
 }
 
 .lp__resultados {
@@ -54,7 +53,7 @@ body {
 .contenedor__categoria__select {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc; /* Agregar un borde de color gris */
+    border: 1px solid #ccc; 
     border-radius: 5px;
     outline: none;
     background-repeat: no-repeat;
@@ -66,12 +65,11 @@ body {
     margin-bottom: 20px;
 }
 
-/* Estilos para estrellas de puntuación */
 .clasificacion {
     direction: rtl;
     unicode-bidi: bidi-override;
     display: inline-block;
-    font-size: 0; /* Eliminar espacio entre los elementos */
+    font-size: 0; 
 }
 
 .clasificacion input[type='radio'] {
@@ -96,34 +94,32 @@ body {
 }
 
 
-/* Estilos para resultados */
 .products-title {
     margin-bottom: 20px;
     font-size: 24px;
     color: #333;
 }
 
-/* Estilos para el botón de filtrar */
 .submit-filter-product {
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 5px 12px; /* Aumentar el padding para hacer el botón más grande */
+    padding: 5px 12px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Agregar una transición de transformación */
+    transition: background-color 0.3s, transform 0.2s; 
 }
 
 .submit-filter-product:hover {
-    background-color: #0056b3; /* Cambiar el color de fondo al pasar el ratón */
-    transform: translateY(-2px); /* Agregar una pequeña elevación al pasar el ratón */
+    background-color: #0056b3; 
+    transform: translateY(-2px); 
 }
 
 button[type='submit']:hover {
     background-color: #0056b3;
 }
 
-/* Estilos para los enlaces */
+
 a {
     color: #007bff;
     text-decoration: none;
@@ -134,7 +130,6 @@ a:hover {
     color: #0056b3;
 }
 
-/* Estilos para las tarjetas de resultados */
 .product-card {
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -152,7 +147,6 @@ a:hover {
     margin-bottom: 10px;
 }
 
-/* Estilos para la paginación */
 .pagination {
     display: flex;
     justify-content: center;
@@ -184,31 +178,31 @@ a:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
-    color: #333; /* Color del texto */
+    color: #333; 
 }
 
 .lp__OrdenarPor__select:focus {
-    border-color: #007bff; /* Color del borde al enfocar */
+    border-color: #007bff; 
 }
 
 .result_busqued-product {
-    background-color: #f8f9fa; /* Color de fondo del contenedor */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    background-color: #f8f9fa; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .result_busqued-product h2 {
-    color: #333; /* Color del texto */
-    font-size: 24px; /* Tamaño del texto */
+    color: #333; 
+    font-size: 24px; 
 }
 
 .result_busqued-product p {
-    color: #555; /* Color del texto */
-    font-size: 18px; /* Tamaño del texto */
+    color: #555; 
+    font-size: 18px; 
 }
 
 .result_busqued-product h2,
 .result_busqued-product p {
-    margin-bottom: 10px; /* Margen inferior para separar los elementos */
+    margin-bottom: 10px; 
 }
