@@ -7,9 +7,13 @@
 
                 <% if (p.length) { %>
                     <% p.forEach(p => { %>
-                        <a href="/productos/detalleProyecto/<%= p.Project.id %>">Ir al proyecto</a>
-                        <p> <%= p.Project.title %></p>
-                        <p>About: <%= p.Project.description %></p>
+                        <div class="card">
+                            <h5 class="card-header"><%= p.Project.title %></h5>
+                            <div class="card-body">
+                              <p class="card-text"><%= p.Project.description %></p>
+                              <a href="/productos/detalleProyecto/<%= p.Project.id %>" class="btn btn-primary">Ir al proyecto</a>
+                            </div>
+                        </div>
                     <% }) %>
                 <% } else { %>
                     <h2>No hay postulaciones</h2>

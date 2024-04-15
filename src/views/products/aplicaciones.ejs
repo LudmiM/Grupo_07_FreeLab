@@ -7,11 +7,15 @@
 
                 <% if (individuals.length) { %>
                     <% individuals.forEach(i => { %>
-                        <a href="/productos/detalleProyecto/<%= i.Individual.idProject %>">Ir al proyecto</a>
-                        <p> <%= i.Individual.idSpecialty %></p>
-                        <p>About: <%= i.Individual.about %></p>
-                        <p>Price: <%= i.Individual.price %></p>
-                        <p>Knowledge ID: <%= i.Individual.idKnowledge %></p>
+                        <div class="card">
+                            <!--<h5 class="card-header">Featured</h5>-->
+                            <div class="card-body">
+                              <h5 class="card-title">$ <%= i.Individual.price %></h5>
+                              <p class="card-text"><%= i.Individual.about %></p>
+                              <a href="/productos/detalleProyecto/<%= i.Individual.idProject %>" class="btn btn-primary">Proyecto </a>
+                            </div>
+                          </div>
+                        
                     <% }) %>
                 <% } else { %>
                     <h2>No hay postulaciones</h2>

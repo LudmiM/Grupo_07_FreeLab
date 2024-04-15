@@ -5,25 +5,31 @@
     <%-include('../partials/header', {title: 'Home | FreeLab' })%>
     <main class="card edit-product-card">
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        agregarIndividual
+        Agregar Perfil
       </button>
       <%-include('../partials/modal/agregarIndividual',{idProject, skills,categories,knowledge,specialty})%>
       <section class="individuals__container">
         <div>
           <% individuals.forEach(i => { %>
-            <article class="article__individuals">
-              <p><%= i.about %></p>
-              <p><%= i.price %></p>
-              <p><%= i.skills %></p>
-              <article class="section__explicacion__article__habilidades article__skills">
-                  
-              </article>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalEdit-Individual">
-                <i class="fa-solid fa-pencil"></i>
-              </button>
+            <article class="article__individuals"> 
+              <div class="card">
+                
+                <div class="card-body">
+                  <h5 class="card-title">$$ <%= i.price %></h5>
+                  <p class="card-text"><%= i.about %></p>
+                  <%- include('../partials/habilidadesManejadas',{skills: i.skills})%>
+                  <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalEdit-Individual">
+                    <i class="fa-solid fa-pencil"></i>
+                </a>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModalEdit-Individual">
+                  <i class="fa-solid fa-trash"></i>
+              </a>
+                </div>
+              </div>
+              
               <%-include('./modal/edit-individual',{i})%>
 
-              <i class="fa-solid fa-trash"></i>
+              
             </article>
             
           <% }) %> 
