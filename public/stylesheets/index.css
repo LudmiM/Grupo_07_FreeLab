@@ -1,0 +1,689 @@
+.body__index {
+    background-color: var(--colorCelesteClaro);
+}
+
+.main {
+    box-shadow: 100px 100px 100px 100px rgba(68, 106, 163, 0.5);
+    padding: 10px;
+}
+
+.main__section_index {
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.Home__projects_index {
+    margin-top: 10%;
+    padding: 20px;
+    background-color: var(--colorCelesteOscuro);
+    border-radius: 1%;
+}
+
+.Home__projects_index-title {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.Home__projects_index-articles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Home__projects_index-section-title {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    /* Hacer el texto en negrita */
+
+    border-bottom: 2px solid #d3d3d3;
+    
+    padding-bottom: 5px;
+    /* Agregar un poco de espacio en la parte inferior */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Agregar sombreado al texto */
+
+}
+
+.Home__projects_index-project-card {
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 1px solid black;
+    /* Borde negro */
+    border-radius: 8px;
+    height: 80%;
+    width: 70%;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+}
+
+.Home__projects_index-project-card:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.Home__projects_index-project-image {
+    width: 30%;
+    /* Ancho de la imagen */
+    height: auto;
+    border-radius: 8px 0 0 8px;
+    /* Redondear esquinas izquierdas */
+}
+
+.Home__projects_index-card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Home__projects_index-project-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Home__projects_index-project-category,
+.Home__projects_index-project-description,
+.Home__projects_index-project-price,
+.Home__projects_index-project-publish-time {
+    font-size: 68%;
+    margin-bottom: 5px;
+}
+
+
+
+.Main__section__primerTitulo__index {
+
+    font-size: 36px;
+    color: #26303a;
+    text-align: center;
+    margin-left: 20%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.description_index {
+    background-color: var(--colorCelesteOscuro);
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px black;
+    color: #ffffff;
+}
+
+.testimonials-index-section {
+    margin-top: 5%;
+    margin-bottom: -5%;
+}
+
+.testimonials-index-section h2 {
+    font-size: 36px;
+    color: var(--colorCelesteOscuro);
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/* Contenedor adicional para el carrusel */
+.carousel-container {
+    height: 350px; /* Altura mínima para mantener espacio */
+    visibility: visible; /* Ocultar el contenedor */
+    overflow: visible; /* Ocultar el desbordamiento */
+}
+
+.testimonial-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    height: 100%;
+    border-radius: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+.testimonial-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 6px;
+}
+
+.testimonial-content {
+    padding: 20px;
+}
+
+.testimonial-content p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 55px;
+    height: 40px;
+}
+
+.testimonial-content cite {
+  font-size: 12px;
+  font-style: italic;
+  color: #666;
+
+}
+
+
+/* Estilos para los botones de control del carrusel */
+.carousel-control2-prev,
+.carousel-control2-next {
+    background-color: #3b3f439f; 
+    border: 2px solid #007bff; 
+    border-radius: 50%; 
+    width: 40px;
+    height: 40px; 
+    font-size: 24px; 
+    color: #fff; 
+    line-height: 60px; 
+    text-align: center;
+    position: absolute; 
+    top: 30%; 
+    transform: translateY(-50%); 
+    z-index: 1; /* Asegurar que esté por encima del carrusel */
+    cursor: pointer; 
+    transition: background-color 0.3s ease, border-color 0.3s ease; 
+}
+
+
+.carousel-control2-prev {
+    left: 5px; 
+}
+
+
+.carousel-control2-next {
+    right: 5px; 
+}
+
+
+.carousel-control2-prev:hover,
+.carousel-control2-next:hover {
+    background-color: transparent; 
+    color: #007bff19; 
+}
+
+
+.carousel-control2-prev span,
+.carousel-control2-next span {
+    display: inline-block; 
+    width: 20px; 
+    height: 40px; 
+    background-position: center; 
+}
+
+
+.main__section__2 {
+    margin-top: 50px;
+    height: 400px;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    height: 400px;
+  }
+  .carousel-inner2 {
+    display: flex;
+    height: 400px;
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%;
+  }
+  
+  .article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .article__image {
+    width: 500px;
+    height: 100%;
+    border-radius: 10px;
+   align-items: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  
+  .article__content {
+    width: 45%;
+  }
+  
+  .article__content h2 {
+    text-align: center;
+    align-items: center; 
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .article__content p.article__text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .article__content ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .article__content li {
+    margin-bottom: 10px;
+  }
+
+  .index-project-card {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 15%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.25rem;
+    background-color: var(--colorAzulOscuro);
+    padding: 1.5rem;
+  }
+  
+  .index-project-header {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .index-project-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: #fff
+  }
+  
+  .index-project-price {
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: 700;
+    color: #fff
+  }
+  
+  .index-project-desc {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.625;
+    color: rgba(156, 163, 175, 1);
+  }
+  
+  .index-project-lists {
+    margin-bottom: 1.5rem;
+    flex: 1 1 0%;
+    color: rgba(156, 163, 175, 1);
+  }
+  
+  .index-project-lists .index-project-list {
+    margin-bottom: 0.5rem;
+    display: flex;
+    margin-left: 0.5rem;
+  }
+  
+  .index-project-lists .index-project-list svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+    color: rgba(167, 139, 250, 1);
+  }
+ 
+  .index-project-action {
+    border: none;
+    outline: none;
+    display: inline-block;
+    border-radius: 0.25rem;
+    background-color: rgba(167, 139, 250, 1);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: rgba(17, 24, 39, 1);
+    transition: background-color 0.3s, color 0.3s; 
+  }
+  
+  .index-project-action:hover {
+    background-color: rgb(101, 120, 161); 
+    color: rgb(255, 255, 255); 
+  }
+  
+  
+  
+
+/* Adaptaciones para teléfonos celulares */
+@media only screen and (max-width: 600px) {
+    .main {
+        box-shadow: 10px 10px 10px 10px rgba(68, 106, 163, 0.5);
+    }
+
+    .Home__projects_index {
+        margin-top: 5%;
+        padding: 10px;
+    }
+    .article__image {
+        width: 50%;
+        height: 50%;
+        border-radius: 10px;
+       align-items: center;
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+      }
+
+      .article h2 {
+        font-size: 12px;
+        color: #333; 
+    }
+    
+    .article p {
+        font-size: 6px;
+        color: #ffffff; 
+       
+    }
+    
+    .article ul {
+        list-style-type: disc; 
+        margin-left: 6px; 
+        color: #ffffff; 
+        
+    }
+    
+    .article li {
+
+        font-size: 6px;
+        color: #ffffff;
+      
+    }
+
+    .carousel-control-prev,
+.carousel-control-next {
+    bottom:50%; 
+    margin-left: -12px;
+    
+}
+.carousel-control-next{
+    margin-right: -12px;
+}
+
+    
+    .main__section__2 {
+        margin-top: 50px;
+        height: 180px;
+      }
+      
+    .Home__projects_index-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .Home__projects_index-project-card {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .Home__projects_index-project-image {
+        width: 30%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .Home__projects_index-card-body {
+        padding: 10px;
+    }
+
+    .Home__projects_index-project-title {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .Home__projects_index-project-category,
+    .Home__projects_index-project-description,
+    .Home__projects_index-project-price,
+    .Home__projects_index-project-publish-time {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+
+    .Main__section__primerTitulo__index {
+        font-size: 24px;
+        margin-left: 10%;
+        margin-bottom: 10px;
+    }
+
+    .description_index {
+        border-radius: 3px;
+        box-shadow: 1px 1px 1px black;
+        padding: 5px;
+    }
+    .testimonials-index-section{
+        align-items: center;
+    }
+
+    .testimonials-index-section h2 {
+        font-size: 19px;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        border-radius: 200px;
+    }
+
+    .testimonial-card img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: -10px;
+    }
+    .testimonial-card{
+        width: 80%;
+        height: 78%;
+        margin-left: 10%;
+        
+        
+    }
+
+    .testimonial-content p {
+        font-size: 8px;
+        margin-bottom: 2px;
+    }
+
+    .testimonial-content cite {
+        font-size: 7px;
+        margin-bottom: 2px;
+    }
+    .carousel-inner {
+        justify-content: flex-start; 
+    }
+    .carousel-inner2 {
+        justify-content: flex-start; 
+    }
+    .carousel-item {
+        width: 1%;
+        
+        margin-right: 0; 
+    }
+
+      .index-project-card {
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin-top: 7rem;
+        margin-bottom: 2rem;
+        width: 80%;
+        height: 60%;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.25rem;
+        background-color: rgba(17, 24, 39, 1);
+        padding: 1.5rem;
+      }
+      
+      .index-project-header {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .index-project-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        color: #fff
+      }
+      
+      .index-project-price {
+        font-size: 3.75rem;
+        line-height: 1;
+        font-weight: 700;
+        color: #fff
+      }
+      
+      .index-project-desc {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.625;
+        color: rgba(156, 163, 175, 1);
+      }
+      
+      .index-project-lists {
+        margin-bottom: 1.5rem;
+        flex: 1 1 0%;
+        color: rgba(156, 163, 175, 1);
+      }
+      
+      .index-project-lists .index-project-list {
+        margin-bottom: 0.5rem;
+        display: flex;
+        margin-left: 0.5rem;
+      }
+      
+      .index-project-lists .index-project-list svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        flex-shrink: 0;
+        margin-right: 0.5rem;
+        color: rgba(167, 139, 250, 1);
+      }
+     
+       .index-project-action {
+        border: none;
+        outline: none;
+        display: inline-block;
+        border-radius: 0.25rem;
+        background-color: rgba(167, 139, 250, 1);
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        color: rgba(17, 24, 39, 1);
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .index-project-action:hover {
+      background-color: rgb(101, 120, 161); 
+      color: rgb(255, 255, 255); 
+    }
+    .carousel-control2-prev,
+    .carousel-control2-next {
+      display: none; 
+    }
+    
+}
+
+/* Adaptaciones para tabletas */
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+    .Home__projects_index {
+        margin-top: 8%;
+        padding: 15px;
+    }
+
+    .Home__projects_index-title {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .Home__projects_index-project-card {
+        width: 48%;
+        margin-bottom: 15px;
+    }
+
+    .Main__section__primerTitulo__index {
+        font-size: 30px;
+        margin-left: 15%;
+        margin-bottom: 15px;
+    }
+
+    .description_index {
+        padding: 10px;
+    }
+
+
+      .testimonials-index-section{
+        align-items: center;
+        margin-bottom: 390px;
+    }
+
+    .testimonials-index-section h2 {
+        font-size: 35px;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        border-radius: 200px;
+    }
+    .col-lg-4{
+        margin-bottom: 30px;
+    }
+
+    .testimonial-card img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: -10px;
+    }
+    .testimonial-card{
+        width: 80%;
+        height: 98%;
+        margin-left: 10%;
+        
+        
+    }
+
+    .testimonial-content p {
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+
+    .testimonial-content cite {
+        font-size: 17px;
+        margin-bottom: 2px;
+    }
+    .carousel-inner2 {
+        display: flex;
+        height: 400px;
+      }
+
+}

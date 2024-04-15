@@ -1,0 +1,118 @@
+[
+    {
+        "1" : [
+            "Desarrollador Frontend",
+            "Desarrollador Backend",
+            "Desarrollador Full Stack",
+            "Desarrollador Mobile",
+            "Desarrollador Web"
+        ]
+    },
+    {
+        "2": [
+            "Diseñador UX",
+            "Diseñador UI",
+            "Diseñador Gráfico",
+            "Diseñador Web",
+            "Ilustrador Digital",
+            "Diseñador de Animación",
+            "Diseñador de Videojuegos",
+            "Edición de Video",
+            "Diseñador de Identidad Corporativa",
+            "Diseñador de Packaging"
+        ]
+    },
+    {
+        "3": [
+            "SEO",
+            "SEM",
+            "Redes Sociales",
+            "Marketing de Contenidos",
+            "Email Marketing",
+            "Analista de Datos de Marketing",
+            "Community Manager",
+            "Publicidad Digital",
+            "Consultor de Estrategia Digital",
+            "Growth Hacker"
+        ]
+    },
+    {
+        "4": [
+            "Redactor de Contenidos",
+            "Editor de Contenidos",
+            "Escritor Técnico",
+            "Copywriter",
+            "Redactor SEO",
+            "Redactor de Marketing de Contenidos",
+            "Corrector de Textos",
+            "Redactor Publicitario",
+            "Guionista",
+            "Blogger"
+        ]
+    },
+    {
+        "5": [
+            "Administrador de Redes",
+            "Administrador de Sistemas",
+            "Administrador de Bases de Datos",
+            "Gerente de Proyectos",
+            "Asistente de Proyectos",
+            "Coordinador de Proyectos",
+            "Gestión de Proyectos",
+            "Analista de Procesos Empresariales",
+            "Consultor de Gestión Empresarial",
+            "Analista de Calidad",
+            "Soporte Técnico",
+            "Administrador de Servidores",
+            "Servicio al Cliente"
+        ]
+    },
+    {
+        "6": [
+            "Traductor de Inglés",
+            "Traductor de Español",
+            "Intérprete de Conferencias",
+            "Traductor de Francés",
+            "Traductor de Alemán",
+            "Traductor de Portugués",
+            "Adaptación Cultural",
+            "Revisor Lingüístico",
+            "Subtitulador",
+            "Corrector de Textos"
+        ]
+    },
+    {
+        "7": [
+            "Analista Financiero",
+            "Contador",
+            "Finanzas Corporativas",
+            "Consultor de Estrategia Empresarial",
+            "Consultor Financiero",
+            "Consultor de Recursos Humanos",
+            "Consultor de Marketing",
+            "Consultor de Gestión de Proyectos",
+            "Consultor de Tecnología de la Información",
+            "Consultor de Desarrollo Organizacional",
+            "Consultor de Operaciones",
+            "Consultor de Logística",
+            "Consultor de Innovación Empresarial"
+        ]
+    },
+    {
+        "8": [
+            "Arquitecto",
+            "Ingeniero Civil",
+            "Diseñador de Interiores",
+            "Diseñador de Paisajes",
+            "Ingeniero Estructural",
+            "Diseñador de Iluminación",
+            "Ingeniero Eléctrico",
+            "Diseñador de Mobiliario",
+            "Ingeniero Mecánico",
+            "Diseñador Urbanista",
+            "Ingeniero de Software",
+            "Ingeniero de Sistemas",
+            "Ingeniero de Calidad de Software"
+        ]
+    }
+]

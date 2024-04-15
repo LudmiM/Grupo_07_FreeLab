@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<%-include('../partials/head')%>
+<body>
+    <%-include('../partials/header', {title: 'Postulantes | FreeLab' })%>
+    <main class="card edit-product-card"> 
+      <p>Proyecto: "<a href="/productos/detalleProyecto/<%= project.id %>"><%= project.title %></a>"</p>
+      
+      <p>Perfiles freelancers requeridos: </p>
+      <p></p> <!--Muestra el titulo del puesto al que aplico-->
+      <section class="individuals__container">
+        <% Postulantes.forEach(p => { %>
+          <article class="article__individuals">
+            <p><%= p.specialty %></p>
+            <!--AddLink-->
+            <p><%= p.about %></p>
+            <p><%= p.price %></p>
+            <article class="section__explicacion__article__habilidades article__skills">
+                
+            </article>
+          </article>   
+        <% }) %>
+      </section>
+    </main>
+    <%-include('../partials/footer')%>
+</body>
+<%-include('../partials/scripts')%>    
+</html>

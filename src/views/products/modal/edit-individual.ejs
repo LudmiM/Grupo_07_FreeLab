@@ -1,0 +1,76 @@
+<!-- Modal Scrollable -->
+<div class="modal fade" id="scrollableModalEdit-Individual" tabindex="-1" aria-labelledby="scrollableModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="scrollableModalLabel">Datos Personales</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/productos/edit-individual?_method=PUT" method="POST">
+                    <div class="mb-3">
+                        <label class="nnnm" for="idSpecialty">Título:</label><br>
+                        <select name="idSpecialty" class="form-select" id="idSpecialty" aria-label="Floating label select example">
+                        <% specialty.forEach(s => { %>
+                            <% if (s.id == i.idSpecialty) { %>
+                                <option value="<%= s.id %>" selected><%= s.name %></option>
+                            <% } else { %>
+                                <option value="<%= s.id %>"><%= s.name %></option>
+                        <% } }) %>
+                        </select>
+                        <small class="text-danger ms-3"><%= locals.errors && errors.specialty ? errors.specialty.msg : null %></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="nnnm" for="idKnowledge">Nivel:</label><br>
+                        <select name="idKnowledge" class="form-select" id="idKnowledge" aria-label="Floating label select example">
+                            <% knowledge.forEach(k => { %>
+                                <% if (k.id == i.idKnowledge) { %>
+                                    <option value="<%= k.id %>" selected><%= k.name %></option>
+                                <% } else { %>
+                                <option value="<%= k.id %>"><%= k.name %></option>
+                            <% } }) %>
+                        </select>
+                      </div>
+        
+                    <div class="form__create mb-3">
+                        <label class="nnn" for="about">Descripción:</label><br>
+                        <textarea class="form-select" id="about" name="about" rows="4" cols="50"><%= i.about %></textarea><br>
+                        <small class="text-danger ms-3"><%= locals.errors && errors.about ? errors.about.msg : null %></small>    
+                    </div>
+                        
+                        <div class="mb-3">
+                            <label class="nnnm" for="price">Precio:</label><br>
+                            <input class="form-select" type="number" id="price" name="price" value="<%= i.price %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.price ? errors.price.msg : null %></small>
+                        </div>
+                        
+                        <div>
+                        <label for="skillesInd">Habilidades:</label><br>
+                        <select name="skillsInd" class="mul-select" id="skillsInd" multiple>
+                            <% 
+                                var skillIds = i.skills.map(s => s.id);
+                                skills.forEach(s => { if (skillIds.includes(s.id)) { %>
+                                    <option value="<%= s.id %>" selected>
+                                        <%= s.name %>
+                                    </option>
+                                <% } else { %>
+                                    <option value="<%= s.id %>">
+                                        <%= s.name %>
+                                    </option>
+                            <%  } }) %>
+                            </select>
+                        <small class="text-danger ms-3"><%= locals.errors && errors.skillesInd ? errors.skillesInd.msg : null %></small>
+                        </div>
+                        <input type="number" id="idIndividual" name="idIndividual" value="<%= i.id %>" hidden>       
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,548 @@
+.body-register {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--colorCelesteClaro);
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: white;
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+    height: 100%; 
+}
+
+
+.register-form {
+    width: 90%; 
+    background: var(--colorCelesteOscuro);
+    margin: 5% auto 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin: 60px auto 20px;
+    display: block;
+}
+
+.register-form h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.input-line {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+label {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+}
+
+.input-line input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-line-habilidades textarea,
+.input-line-empresa textarea {
+    width: 80%;
+    height: 80px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    line-height: 20px;
+    resize: vertical;
+    overflow-y: auto;
+}
+
+.input-line input::placeholder {
+    color: #999;
+}
+
+.input-line input:focus + label,
+.input-line input:not(:placeholder-shown) + label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+.input-line select {
+    width: 30%;
+    padding: 10px;
+    margin-right: 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-line input[type="text"][name="freelancer-phone"] {
+    width: 65%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-line-phone {
+    position: relative;
+    margin-bottom: 20px;
+    height: 50px; 
+}
+
+.phone-input-container {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 70%;
+    height: 90%; 
+}
+
+.phone-input-container select {
+    flex-grow: 1;
+    border: none;
+    padding: 5px;
+    width: 30%;
+    background-color: #ffffff;
+    
+}
+
+.phone-input-container .separator {
+    height: 100%;
+    border-left: 1px solid #727272; /* Línea negra a la izquierda */
+    display: inline-block;
+}
+
+
+.phone-input-container input {
+    flex-grow: 1;
+    border: none;
+    padding: 5px;
+    width: 70%;
+}
+
+.btn {
+    display: block;
+    margin: 20px 0;
+    height: 45px;
+    width: 46%;
+    /*
+   background: var(--colorAzulOscuro);
+    border: 1px solid #1a939e;
+    color: white */
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background: #23c2cb;
+}
+
+.register-redes {
+    text-align: center;
+}
+
+.social-buttons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-buttons .btn {
+    background-color: #1fb5bf;
+    border: 1px solid #1a939e;
+    color: white;
+    padding: 8px;
+    width: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.social-buttons .btn i {
+    margin-right: 5px;
+}
+
+.social-buttons .btn:hover {
+    background-color: #23c2cb;
+}
+
+.register-container {
+    position: relative;
+}
+
+.register-box {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+    background: var(--colorAzulOscuro);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-box p {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-buttons .btn {
+    margin-bottom: 10px;
+}
+ /* Estilos para el contenedor de botones */
+ .button-container {
+    text-align: center;
+    margin: 20px;
+
+}
+
+/* Estilos para la caja de los botones */
+.registration-container {
+    background-color: var(--colorAzulOscuro); /* Color de fondo azul */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+.text-danger-reg-form{
+    color: red;
+    display: block; 
+    font-size: 10px;
+    position: absolute;  
+}
+.text-danger-reg-form-phone{
+    color: red;
+    display: block; 
+    font-size: 10px;
+    top: 100%;
+    position: absolute;  
+}
+/* Estilos para los mensajes de error */
+.text-danger {
+    color: red;
+    display: block; 
+    font-size: 10px;
+    margin-top: 5px;
+    position: absolute;
+}
+.text-danger-reg-emp {
+    color: red;
+    display: block; 
+    font-size: 10px;
+    margin-top: -2px;
+    position: absolute;
+}
+.input-line-register {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.password-input {
+    padding-right: 30px; /* Espacio para el ícono */
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: blue; 
+}
+
+.input-line-register input {
+    width: 100%; 
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+}
+
+.select-free-emp select {
+    
+    width: 100%;  
+    padding: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+}
+.checkbox-line-section{
+    margin-top: 18px;
+    margin-bottom: 15px
+}
+.checkbox-line {
+    
+    display: flex; 
+    align-items: center;
+    
+}
+
+.checkbox-line input[type="checkbox"] {
+    margin:5px; 
+}
+
+.checkbox-line label {
+    font-size: 9px; 
+    color: #cacaca; 
+}
+
+
+.registration-button {
+    display: block;
+    width: 100%;
+    padding: 15px 25px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to right, var( --colorCelesteOscuro), var(--colorNaranja));
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 3, 0, 0.4); 
+}
+
+.registration-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(175, 124, 76, 0.6); 
+}
+
+.registration-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.88);
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.registration-button:hover::before {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+}
+
+.registration-button span {
+    position: relative;
+    z-index: 1;
+}
+
+
+.registration-button.freelancer {
+    background-image: linear-gradient(to right, var(--colorNaranja), var( --colorAzulOscuro));
+}
+
+.registration-button.empresa {
+    background-image: linear-gradient(to right, var( --colorAzulOscuro), var(--colorNaranja));
+}
+
+@media (max-width: 429px) {
+    .register-form {
+        width: 90%; 
+        border-radius: 5px 5px 0 0;
+    }
+    .input-line input {
+        width: 90%;
+    }
+    .register-form h1 {
+        font-size: 20px;
+        
+    }
+
+    .register-form label {
+        font-size: 14px;
+    }
+
+    .register-form input {
+        font-size: 14px;
+        
+    }
+
+    .btn {
+        margin: 15px 0;
+    }
+
+    .social-buttons .btn {
+        width: 250px; 
+        height: 50px;
+        background: var(--colorAzulOscuro); 
+        border-radius: 35px; 
+        display: flex; 
+        align-items: center; 
+    }
+    
+    .social-buttons .btn i {
+        background: #87CEEB; 
+        border-radius: 50%;
+        padding: 10px; 
+        font-size: 22px; 
+    }
+
+    .logo {
+        width: 100px;
+        height: auto;
+        margin: 40px auto 20px;
+        display: block;
+    }
+    .phone-input-container .separator {
+        height: 80%;
+    }
+
+    .input-line-phone {
+        position: relative;
+        margin-bottom: 20px;
+        height: 60px;
+        width: 130%; 
+    
+    }
+    .input-line-phone input {
+        width: 70%; 
+        padding: 0px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 0 5px 5px 0;
+    }
+    
+    .input-line-phone select {
+        width: 30%;
+        padding: 0px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px 0 0 5px;
+    }
+    
+    .register-box {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 90%; 
+        border-radius: 0 0 5px 5px;
+    }
+
+    .input-line-habilidades textarea,
+.input-line-empresa textarea {
+    width: 90%;
+    height: 80px;}
+
+}
+/* Estilos para tabletas */
+@media (min-width: 429px) and (max-width: 768px) {
+    .register-form {
+        width: 70%; 
+    }
+    
+    .register-box {
+        position: absolute;
+        top: 50%;
+        left: 87%;
+        height: 35%;
+        border-radius: 10px 0 0 10px;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+    }
+    
+    .social-buttons {
+        margin-top: 20%; 
+        text-align: center; 
+    }
+    
+    .social-buttons .btn {
+        width: 140%; 
+        height: 80%; 
+        border-radius: 20px;
+        margin: 10%; 
+    }
+    
+    
+    .vertical-line {
+        height: 90%; 
+        border-left: 1px solid #4a4949; 
+        margin: 0 5px; 
+    }
+    
+}    
+
+/* Estilos para escritorio */
+@media (min-width: 769px) {
+    .register-form {
+        width: 60%; 
+        max-width: none; /* Elimina el ancho máximo si es necesario */
+    }
+
+    .register-box {
+        position: absolute;
+        top: 60%;
+        left: 72%;
+        height: 35%;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+    }
+    
+    .social-buttons {
+        margin-top: 20%; 
+        text-align: center; 
+    }
+    
+    .social-buttons .btn {
+        width: 140%; 
+        height: 80%; 
+        border-radius: 20px;
+        margin: 10%; 
+    }
+
+
+}

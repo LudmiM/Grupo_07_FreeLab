@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head', {title: 'Home | FreeLab' }) %>
+
+<body>
+    <%- include('../partials/header')%>
+    <main class="main__PDPost">
+       <!-- <div class="main__logo">
+            <img src="/images/imagen-ejemplo.jpg" alt="imagen de logo" class="main__logo--img">
+        </div> --> 
+        <div class="botones__PDPost">
+            <a href="/productos/detallePublicacion#section__explicacion" class="boton__terciario">Detalle</a> <!--Descripcion-->
+            <a href="/productos/detallePublicacion#section__sobreEmpresa" class="boton__terciario">Empresa</a><!--Compañia-->
+            <a href="/productos/detallePublicacion#section__sobreEmpresa" class="boton__terciario">Similares</a>
+        </div>
+        <section class="main__PDPost__section section__explicacion" id="section__explicacion">
+            <article class="section__explicacion__article__descripcion section__explicacion__article">
+                <h3 class="section__explicacion__article__descripcion--h3"><%= p.title %></h3>
+                <p class="section__explicacion__article__descripcion--publicacion publicacion">Publicado: hace 5 minutos</p>
+                <p class="section__explicacion__article__descripcion--descripcion descripcion"><%= p.description %></p>
+            </article>
+            <%- include('../partials/habilidadesManejadas',{skills:p.skills})%>
+        </section>
+        <button class="section__acciones__botonGuardar boton__cuaternario"><i class="fa-regular fa-bookmark"></i></button>
+        <section class="main__PDPost__section section__individuals">
+            <article class="article__individuals">
+                <h3>Perfiles Individuales</h3>
+                <% ind.forEach(i => { %>
+                    <p><%= i.specialty %></p>
+                    <p><%= i.about %></p>
+                    <p><%= i.price %></p>
+                    <%- include('../partials/habilidadesManejadas',{skills: i.skills})%>
+                    <button class="section__acciones__botonPostularme boton__primario">Postularme</button>
+                <% }) %>
+            </article>
+        </section>
+        <section class="main__PDPost__section section__sobreEmpresa" id="section__sobreEmpresa">
+            <a href="#" class="section__sobreEmpresa__a">
+                <img src="/images/perfil.png" class="section__sobreEmpresa__a--img" alt="imagen de pelfil">
+            </a>
+            <div class="section__sobreEmpresa__contenedor">
+                <a href="#" class="section__sobreEmpresa__contenedor__a">
+                    <h3 class="section__sobreEmpresa__contenedor__a--h3">Empresa ficticia 123</h3>
+                </a>
+                <article class="section__sobreEmpresa__contenedor__article">
+                    <%- include('../partials/starts')%>
+                    <h4 class="section__sobreEmpresa__contenedor__article--h4">4.5</h4>
+                </article>
+            </div>
+        </section>
+        <section class="main__PDPost__section section__acciones">
+            
+        </section>
+    </main>
+    <%- include('../partials/footer')%>
+    <%- include('../partials/scripts') %>
+</body>
+</html>

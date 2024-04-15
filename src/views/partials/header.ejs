@@ -1,0 +1,44 @@
+<header class="header">
+    <a href="/" class="header__a">
+        <img src="/images/Logo_FreeLab.png" alt="logo" class="header__a--logo">
+    </a>
+    <%- include('./buscador')%>
+    <nav class="header__nav">
+        <ul class="header__nav__ul">
+            <li class="nav-item dropdown header__nav__ul__li ul__categories">
+                <a class="ul__categories_a-categorias header__nav__ul__li--a" href="#">
+                    Categorias
+                </a>
+                <div class="ul__categories_valoresLista">
+                    <% if (categories && categories.length > 0) { %>
+                        <% categories.forEach(c => { %>
+                            <a class="ul__categories_valoresLista--items" href="/listar/<%= c.id %>"><%= c.name %></a>
+                        <% }); %>
+                    <% } %>
+                </div>
+            </li>
+            <% if (!locals.userLogin) { %>
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/ingreso">Login</a></li>
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/registro">Register</a></li>   
+            <% } else { %>
+                <% if (locals.userLogin.idRole === 3) { %>
+                    <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/admin">Administrador</a></li>
+                    
+                <% } else { %>
+                    <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/perfil">Perfil</a></li>
+                    <% if (locals.userLogin.idRole === 2) { %>
+                        <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/productos/guardados">Guardados</a></li>
+                        <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/productos/aplicaciones">Mis postulaciones</a></li>
+                        <!--Freelancer-->
+                    <% } %>
+                <% } %>
+                <li class="header__nav__ul__li"><a class="header__nav__ul__li--a" href="/usuarios/salir">Salir</a></li>
+            <% } %>
+        </ul>
+    </nav>        
+    <div class="header__contIconos">
+        <i class="fa-solid fa-user header--iconoUser"></i>
+        <i class="fa-solid fa-bars-staggered header--iconoHam"></i>
+    </div>
+</header>
+<!--'./partials/filtroAdmin.ejs-->

@@ -1,0 +1,74 @@
+<!-- Modal Scrollable -->
+<div class="modal fade" id="scrollableModalPersonal" tabindex="-1" aria-labelledby="scrollableModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="scrollableModalLabel">Datos Personales</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/usuarios/edit-personal?_method=PUT" method="POST">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" value="<%= userLogin.email %>" readonly>
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First Name:</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" value="<%= firstName %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.firstName ? errors.firstName.msg : null %></small>
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Last Name:</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" value="<%= lastName %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="about" class="form-label">About:</label>
+                        <input type="text" class="form-control" id="about" name="about" value="<%= about %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.about ? errors.about.msg : null %></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="country" class="form-label">ciudad:</label>
+                        <input type="text" class="form-control" id="country" name="country" value="<%= country %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.country ? errors.country.msg : null %></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="country" class="form-label">ciudad:</label>
+                        <input type="text" class="form-control" id="country" name="country" value="<%= country %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.country ? errors.country.msg : null %></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phoneCode" class="form-label">Codigo celular:</label>
+                        <input type="number" class="form-control" id="phoneCode" name="phoneCode" value="<%= phoneCode %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.phoneCode ? errors.phoneCode.msg : null %></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Codigo celular:</label>
+                        <input type="number" class="form-control" id="phone" name="phone" value="<%= phone %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.phone ? errors.phone.msg : null %></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="hourValue" class="form-label">Tu valor por hora:</label>
+                        <input type="number" class="form-control" id="hourValue" name="hourValue" value="<%= hourValue %>">
+                        <small class="text-danger ms-3"><%= locals.errors && errors.hourValue ? errors.hourValue.msg : null %></small>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>

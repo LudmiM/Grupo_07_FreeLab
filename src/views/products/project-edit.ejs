@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head', { title: 'Editar Servicio/Proyecto | FreeLab' }) %>
+
+<body class="body-pe">
+    <%- include('../partials/header') %>
+
+    <div class="container-pe mt-5">
+        <div class="card edit-product-card">
+            <div class="card-header">
+                <h1 class="mb-0">Editando: "<%= project.title %>"  </h1>
+            </div>
+            
+            <div class="card-body-pe">
+                
+
+                <form action="/productos/actualizar/<%= project.id %>?_method=PUT" method="POST">
+                    <!-- Agregar un input oculto para el ID del producto -->
+                    
+                    <input type="hidden" name="id" value="<%= project ? project.id : '' %>">
+                    
+                    <div class="col-12 mb-3">
+                        <label for="title" class="form-editpe">Titulo:</label>
+                        <input name="title" type="text" class="form-control"  id="title" value="<%= project.title  %>" >
+                    </div>
+                      <div class="form__create mb-3">
+                        <label for="description" class="form-editpe">Descripción:</label><br>
+                        <textarea class="form-control text-description" id="description" name="description" rows="4" cols="50"><%= project.description%></textarea><br>
+                      </div>       
+                     
+                    <div>
+                      <label for="skills" class="form-editpe">Habilidades:</label><br>
+                      <select name="skills" class="mul-select" id="skills" multiple>
+                        <% 
+                            const skillIds = project.skills.map(skill => skill.id);
+                            skills.forEach(s => { if (skillIds.includes(s.id)) { %>
+                            <option value="<%= s.id %>" selected>
+                                <%= s.name %>
+                            </option>
+                        <% } else { %>
+                            <option value="<%= s.id %>">
+                                <%= s.name %>
+                            </option>
+                        <%  } }) %>
+                        </select>
+                    
+                  </div>
+                  <input id="idStatus" name="idStatus" type="number" value="1" hidden>
+          
+                    <div class="row">
+                        <div class="col-6 col-md-5 mx-auto">
+                            <button type="button" class="btn btn-form-edit" onclick="window.history.back();">Cancelar</button>
+                        </div>
+                        <div class="col-6 col-md-5 mx-auto">
+                            <button type="submit" class="btn btn-form-edit">Siguiente</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<%- include('../partials/footer') %>
+<%- include('../partials/scripts') %>
+</html>

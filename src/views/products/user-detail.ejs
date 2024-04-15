@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', {title: 'Home | FreeLab' }) %>
+<body>
+    <%- include('../partials/header')%>
+    <main class="main__PD">
+        <section class="main__PD__section section__misDatos">
+            <div class="section__misDatos__contImg">
+                <img src="/images/users/<%= u.mainImage ? u.mainImage : 'default.png' %>" alt="imagen de perfil" class="section__misDatos--img">
+            </div>
+            <div class="section__misDatos__contenedor">
+                <h3 class="section__misDatos--h3"><%= u.firstName+' '+  u.lastName %></h3>
+                <h4><%= u.name %></h4>
+                <div class="section__misDatos__icons">
+                    <%- include('../partials/starts')%>
+                    <button class="boton__cuaternario section__misDatos__botonGuardar"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+                <div class="section__misDatos__ContLinks">
+                    <ul class="section__misDatos__ContLinks__ul">
+                        <li class="section__misDatos__ContLinks__ul"><a href="#" class="section__misDatos__ContLinks__ul--a">Portafolio</a></li>
+                        <li class="section__misDatos__ContLinks__ul"><a href="#" class="section__misDatos__ContLinks__ul--a">Portafolio</a></li>
+                        <li class="section__misDatos__ContLinks__ul"><a href="#" class="section__misDatos__ContLinks__ul--a">Portafolio</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="main__PD__section section__sobreMi">
+            <article class="section__sobreMi__article">
+                <h3 class="section__sobreMi__article--h3">Sobre mi</h3>
+                <p class="section__sobreMi__article--p"><%= u.about %></p>
+            </article>
+            <!--include('../partials/habilidadesManejadas')-->
+        </section>
+        <section class="main__PD__section section__review">
+            <article class="section__review__proOf">
+                <h3 class="section__review__proOf--h3">4.5</h3>
+                <p class="section__review__proOf--promedio">Promedio de 2 opiniones</p>
+            </article>
+            <article class="section__review__ordenC">
+                <p class="section__review__ordenC--OrdenarPor">Ordenar por: </p>
+                <h5 class="section__review__ordenC--filtro">Más relevantes</h5>
+                <i class="fa-solid fa-v section__review__ordenC--icon"></i>
+            </article>
+            <%- include('../partials/comentario')%>
+            <%- include('../partials/comentario')%>
+        </section>
+        <section class="main__PD__section section__contacto">
+            <article class="section__contacto__article PD__article__precio boton__cuaternario">
+                <h4 class="PD__article__precio--h4">$ <%= u.hourValue %></h4>
+                <p class="PD__article__precio--p">Por Hora</p>
+            </article>
+            <article class="section__contacto__article PD__article__contactame">
+                <!--<a href="#" class="PD__article__contactame__a boton__primario" >-->
+                <a href="https://wa.me/+5492213088832" target="_blank">
+                    <i class="fa-regular fa-paper-plane PD__article__contactame__a--iconContac"></i>
+                    <h3 class="PD__article__contactame__a--h3">Cont&aacute;ctame</h3>
+                </a>
+            </article>
+        </section>
+    </main>
+    <%- include('../partials/footer')%>
+    <%- include('../partials/scripts') %>
+</body>
+</html>

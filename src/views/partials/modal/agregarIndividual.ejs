@@ -1,0 +1,60 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form class="form__create " action="/productos/agregarIndividual/<%= idProject %>" method="POST">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <article class="individuals__container__data" id="individuals__container__data">
+                  <div class="mb-3"> 
+                  
+                  <div class="mb-3">
+                    <label class="nnn" for="idSpecialty">Título:</label><br>
+                    <select name="idSpecialty" class="form-select" id="idSpecialty" aria-label="Floating label select example">
+                      <option value="" selected hidden></option>
+                      <% specialty.forEach(s => { %>
+                      <option value="<%= s.id %>"><%= s.name %></option>
+                      <% }) %>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="nnn" for="idKnowledge">Nivel:</label><br>
+                    <select name="idKnowledge" class="form-select" id="idKnowledge" aria-label="Floating label select example">
+                        <option value="" selected hidden></option>
+                        <% knowledge.forEach(k => { %>
+                        <option value="<%= k.id %>"><%= k.name %></option>
+                        <% }) %>
+                    </select>
+                  </div>
+
+                    <div class="form__create mb-3">
+                    <label class="nnn" for="about">Descripción:</label><br>
+                    <textarea class="form-select" id="about" name="about" rows="4" cols="50" required></textarea><br>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label  class="nnn"for="price">Precio:</label><br>
+                        <input class="form-select" type="number" id="price" name="price" required>
+                    </div>
+                    
+                    <div>
+                    <label class="nnn" for="skillesInd">Habilidades:</label><br>
+                    <select name="skillesInd" class="mul-select" id="skills" multiple>
+                        <% skills.forEach(s => { %>
+                        <option value="<%= s.id %>"><%= s.name %></option>
+                        <% }) %>
+                    </select>
+                    </div>   
+                </article>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+        </form>
+      </div>
+    </div>
+</div>

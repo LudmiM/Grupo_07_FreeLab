@@ -1,0 +1,289 @@
+.body-login {
+  font-family: 'Montserrat';
+  background: var(--colorAzulOscuro);
+  font-size: 16px;
+}
+.main__section__2{
+  background-color: var(--colorCeleste);
+}
+.Main__section__primerTitulo{
+  color: #000;
+}
+.container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -8%;
+  
+}
+
+.log-form {
+  width: 80%;
+  max-width: 350px;
+  background: var(--colorCelesteOscuro);
+  margin: 10% auto 0;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  height: 480px; 
+}
+
+
+.log-form p {
+  color: white;
+  font-size: 12px;
+  margin-top: 12px; 
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.log-form a {
+  color: var(--colorAzulOscuro); 
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.log-form a:hover {
+  text-decoration: underline; 
+  color: var(--colorCelesteClaro);
+}
+
+.log-redes {
+  width: 80%;
+  max-width: 350px;
+  background: var(--colorCelesteClaro);
+  margin-top: -10px; 
+  margin-bottom: 10%;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.logo-login {
+  width: 140px;
+  height: auto;
+  margin: -30px auto 0px; 
+  display: block; 
+}
+
+.log-form h1 {
+  margin-bottom: 17px;
+  font-size: 24px;
+  color: white;
+  border-radius: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+
+.log-form .input-line-login {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.log-form label {
+  color: white;
+  font-weight: bold; 
+  font-size: 12px; 
+}
+
+.log-form .input-line-login input {
+  width: 80%;
+  padding: 5px 0 3px;
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  color: white;
+  background: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.log-form .input-line-login input::placeholder {
+  color: #4d4b4b;
+  font-size: 14px;
+}
+
+.log-form .input-line-login input:focus + label,
+.log-form .input-line-login input:not(:placeholder-shown) + label {
+  top: -1.25em;
+  font-size: 12px;
+  color: #23c2cb;
+}
+
+.log-form .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  margin: 25px auto 20px; 
+  height: 27px; 
+  background: var(--colorAzulOscuro);
+  border: 1px solid #1a939e;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.log-form .btn span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.log-form .btn:hover {
+  background: #23c2cb;
+}
+
+.log-form .forgot {
+  color: #fdffff;
+  line-height: .5em;
+  position: relative;
+  top: 1em;
+  text-decoration: none;
+  font-size: 8px;
+  font-weight: bold;
+  margin-right: 20%;
+  padding: 0;
+  float: right;
+}
+
+.log-form .forgot .underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  font-weight: bold; 
+  color: #fdffff;
+}
+
+.container-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  width: 30%; 
+  height: 1px;
+  background: black;
+}
+
+.circle {
+  height: 10px;
+  width: 10px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background: transparent;
+  margin: 0 20px;
+}
+
+
+.log-redes {
+  text-align: center;
+}
+
+.log-redes .social-buttons-login {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.log-redes .social-buttons-login li {
+  margin-bottom: 10px;
+}
+
+.log-redes .social-buttons-login .btn {
+  background-color: #1fb5bf;
+  border: 1px solid #1a939e;
+  color: white;
+  margin-top: 10px;
+  padding: 3px 0;
+  width: 190px; 
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.log-redes .social-buttons-login .btn i {
+  margin-right: 10px; 
+}
+
+.log-redes .social-buttons-login .btn:hover {
+  background-color: #23c2cb;
+}
+
+.error__message-email-login {
+  color: red;
+  font-size: 10px;
+  margin-top: 5px;
+position:absolute;
+}
+
+.error__message-contra-login {
+  color: red;
+  font-size: 10px;
+  margin-top: 5px;
+  position:absolute;
+}
+
+
+/* telefonos */
+@media (max-width: 426px) {
+  .log-form h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .log-form .input-line-login label {
+    font-size: 14px;
+  }
+
+  .log-form .input-line-login input {
+    font-size: 14px;
+    margin-bottom: 1px;
+  }
+
+  .log-form .forgot {
+    font-size: 8px;
+  }
+  .log-form .btn span {
+    font-size: 14px; 
+  }
+  .log-form p {
+    font-size: 12px; 
+    margin-top: 10px; 
+  }
+
+  .social-buttons-login .btn {
+    font-size: 12px; 
+    height: 25px; 
+    line-height: 25px; 
+  }
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.toggle-password-btn i {
+  color: #cbcaca; 
+}
+
+
+#password {
+  padding-right: 35px;
+}

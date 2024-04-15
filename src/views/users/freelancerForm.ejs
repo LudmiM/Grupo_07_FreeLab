@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head', {title: 'Home | FreeLab' }) %>
+
+  <body class="body-register">
+    <%- include('../partials/header')%>
+      <div class="register-container">
+        <!-- Formulario de registro -->
+        <div class="register-form">
+          <form id="freelancer-registration" class="registration-section freelancer" action="/registro/freelancer" method="POST"
+            enctype="multipart/form-data">
+            <h1>Registro Freelancer</h1>
+
+            <div class="input-line">
+              <label for="firstName">Nombre </label>
+              <input type="text" id="firstName" name="firstName" placeholder="Nombre" pattern="[A-Za-zÁ-ÿ\s']{1,}">
+              <small class="text-danger-reg-form ms-2">
+                <%= locals.errors && errors.firstName ? errors.firstName.msg : null %>
+              </small>
+            </div>
+
+            <label for="lastName">Apellido </label>
+            <div class="input-line">
+              <input type="text" id="lastName" name="lastName" placeholder="Apellido" pattern="[A-Za-zÁ-ÿ\s']{1,}">
+              
+                <small class="text-danger-reg-form ms-2">
+                  <%= locals.errors && errors.lastName ? errors.lastName.msg : null %>
+                </small>
+              
+            </div>
+
+            <label for="country">País </label>
+            <div class="input-line">
+              <input type="text" id="country" name="country" placeholder="País" pattern="[A-Za-zÁ-ÿ\s']{1,}">
+              <small class="text-danger-reg-form ms-2">
+                <%= locals.errors && errors.country ? errors.country.msg : null %>
+              </small>
+            </div>
+
+            <label for="phone">Teléfono Celular</label>
+            <div class="input-line-phone">
+              <div class="phone-input-container">
+                <input type="text" id="phoneCode" name="phoneCode" placeholder="Código de país">
+                <div class="separator-container">
+                  <div class="separator"></div>
+                </div>
+                <input type="text" id="phone" name="phone" placeholder="Número de teléfono celular" pattern="[0-9]+">
+                <!--<small class="text-danger-reg-form-phone ms-2" id="phoneCode"></small>-->
+                <small class="text-danger-reg-form-phone ms-2">
+                  <%= locals.errors && errors.phone ? errors.phone.msg : null %>
+                </small>
+              </div>
+            </div>
+            
+
+            <div class="input-line">
+              <label for="mainImage">Agregar imagen de perfil</label>
+              <input type="file" name="mainImage" class="form-control" id="mainImage">
+              <small class="text-danger-reg-form ms-2">
+                <%= locals.errors && errors.mainImage ? errors.mainImage.msg : null %>
+              </small>
+            </div>
+
+            <label for="freelancerkills">Hacerca de mi</label>
+            <div class="input-line-habilidades">
+              <textarea id="about" name="about" placeholder="Acerca de"></textarea>
+
+            </div>
+
+            <label for="hourValue">Valor por Hora</label>
+            <div class="input-line">
+              $ <input type="text" id="hourValue" name="hourValue" placeholder="Valor por Hora">
+              <small class="text-danger-reg-form ms-2">
+                <%= locals.errors && errors.hourValue ? errors.hourValue.msg : null %>
+              </small>
+            </div>
+
+
+            <button type="submit" class="registration-button freelancer">Registrarse como Freelancer</button>
+          </form>
+        </div>
+
+
+      </div>
+      <%- include('../partials/footer')%>
+        <%- include('../partials/scripts') %>
+        <script src="/js/freelancerValidationFront.js"></script>
+  </body>
+
+</html>
