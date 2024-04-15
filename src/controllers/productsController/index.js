@@ -7,6 +7,7 @@ const detailUser = require('./detailUser')
 const addProject = require('./addProject')
 const formIndividual = require('./formIndividual')
 const addIndividual = require('./addIndividual')
+const showAplications = require('./showAplications')
 
 module.exports = {
     eliminate,
@@ -17,5 +18,6 @@ module.exports = {
     formProject,
     addProject,
     formIndividual,
-    addIndividual
+    addIndividual,
+    showAplications
 }

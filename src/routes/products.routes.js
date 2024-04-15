@@ -1,5 +1,5 @@
 const express = require('express');
-const { detailProject, formProject,addIndividual, formIndividual, detailUser, eliminate, edit, updateProject, addProject} = require('../controllers/productsController');
+const { detailProject, formProject,addIndividual, formIndividual, detailUser, eliminate, edit, updateProject, addProject, showAplications} = require('../controllers/productsController');
 const upload = require('../middleware/upload');
 const checkRol = require('../middleware/checkRol');
 const router = express.Router();
@@ -18,4 +18,5 @@ router
   .delete('/eliminar/:id', eliminate) //ruta que elimina el proyecto creado
   .get('/editar/:id',checkRol.logged, edit)
   .put('/actualizar/:id', updateProject)
+  .get('/aplicaciones',checkRol.freelancer, showAplications)
 module.exports = router;

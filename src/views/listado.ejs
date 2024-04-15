@@ -12,6 +12,7 @@
                     <option value="Recomendados">Recomendados</option>
                 </select>
             </section>
+            <% if (muestro) { %>
             <aside class="lp__filtro lp__generales">
                 <h3 class="lp__filtro--h3">Filtros:</h3>
                 
@@ -41,7 +42,7 @@
                     <button type="submit">Filtrar</button>
                 </form>
             </aside>
-
+            <% } %>	
         <section class="lp__resultados lp__generales">
             <h3 class="products-title">Resultados de la búsqueda:</h3>
             <% if (muestro) { %>
@@ -56,6 +57,7 @@
             <% }else { %>
                 <% if (projects.length) { %>
                     <% projects.forEach(p => { %>
+
                         <%- include('./partials/tarjetaProyecto',{p})%>
                     <% }) %>
                 <% } else { %>
