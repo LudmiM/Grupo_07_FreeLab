@@ -60,7 +60,7 @@ app
 
   // Middleware para formularios
   .use(express.json())
-  .use(express.urlencoded({ extended: false }))
+  .use(express.urlencoded({ extended: true }))//Si algo falla hasta el 14/4 estaba en false
   .use(express.static(path.join(__dirname, '..', 'public')))
 
   //Configuracion de sesion

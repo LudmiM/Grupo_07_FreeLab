@@ -44,14 +44,23 @@
 
         <section class="lp__resultados lp__generales">
             <h3 class="products-title">Resultados de la búsqueda:</h3>
-
-			<% if (projects.length) { %>
-				<% projects.forEach(p => { %>
-                    <%- include('./partials/tarjetaProyecto',{p})%>
-				<% }) %>
-			<% } else { %>
-			    <h2>No hay productos que coincidan con esa búsqueda</h2>
-			<% } %>	
+            <% if (muestro) { %>
+                <% if (individuals.length) { %>
+                    <% individuals.forEach(i => { %>
+                        <p><%= i.about %></p>
+                        <p><%= i.price %> </p>
+                    <% }) %>
+                <% } else { %>
+                    <h2>No hay productos que coincidan con esa búsqueda</h2>
+                <% } %>	
+            <% }else { %>
+                <% if (projects.length) { %>
+                    <% projects.forEach(p => { %>
+                        <%- include('./partials/tarjetaProyecto',{p})%>
+                    <% }) %>
+                <% } else { %>
+                    <h2>No hay productos que coincidan con esa búsqueda</h2>
+			<% } } %>	
         </section>
     </main>
     <%- include('./partials/footer')%>

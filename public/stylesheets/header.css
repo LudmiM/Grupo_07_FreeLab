@@ -34,6 +34,32 @@
     font-size: 20px;
     color: #FFF;
 }
+
+/*Ocualta categorias*/
+.ul__categories_valoresLista {
+    display: none;
+}
+
+.ul__categories:hover .ul__categories_valoresLista {
+    display: block;
+    position: absolute;
+    background-color: white; 
+    border: 1px solid #ccc; 
+    z-index: 10; 
+}
+
+.ul__categories_valoresLista a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    width: 230px;
+}
+
+.ul__categories_valoresLista a:hover {
+    background-color: #f0f0f0;
+}
+
 @media (min-width: 500px) {
     .header__contIconos .header--iconoUser{
         display: block;

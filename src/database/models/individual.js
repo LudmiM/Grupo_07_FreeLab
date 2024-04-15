@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Individual.belongsTo(models.Project, { foreignKey: 'idProject' });
       Individual.belongsTo(models.Knowledge, { foreignKey: 'idKnowledge' });
+      Individual.belongsTo(models.Specialty, { foreignKey: 'idSpecialty' });
       Individual.belongsToMany(models.Skill, { 
         through: 'IndividualSkill', 
         foreignKey: 'idIndividual',

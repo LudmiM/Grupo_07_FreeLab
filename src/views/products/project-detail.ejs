@@ -29,9 +29,7 @@
                     <p><%= i.specialty %></p>
                     <p><%= i.about %></p>
                     <p><%= i.price %></p>
-                    <article class="section__explicacion__article__habilidades article__skills">
-                        <%- include('../partials/habilidadesManejadas',{skills: i.skills})%>
-                    </article>
+                    <%- include('../partials/habilidadesManejadas',{skills: i.skills})%>
                     <button class="section__acciones__botonPostularme boton__primario">Postularme</button>
                 <% }) %>
             </article>
